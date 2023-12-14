@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/LOGO_MINI.PNG</file>
+        <file>img/search.png</file>
+        <file>img/bg.jpg</file>
+        <file>img/notebook.png</file>
+        <file>img/notebook_hightlight.png</file>
+        <file>img/dictionary.png</file>
+        <file>img/dictionary_hightlight.png</file>
+        <file>img/chat.png</file>
+        <file>img/chat_hightlight.png</file>
+        <file>img/game.png</file>
+        <file>img/game_hightlight.png</file>
+        <file>qml/Banner.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/component/ListWord.qml</file>
+        <file>qml/component/SearchBar.qml</file>
+        <file>qml/component/NoteResults.qml</file>
+        <file>qml/NoteBook.qml</file>
+        <file>qml/SearchDictionary.qml</file>
+        <file>qml/component/ButtonBase.qml</file>
+        <file>qml/component/BannerItem.qml</file>
+        <file>qml/component/TableBase.qml</file>
+        <file>qml/AIChat.qml</file>
+        <file>qml/Game.qml</file>
+        <file>qml/component/DictionaryResults.qml</file>
+        <file>img/volume.png</file>
+        <file>qml/component/MeanItem.qml</file>
+    </qresource>
+</RCC>
