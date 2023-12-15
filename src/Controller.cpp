@@ -19,3 +19,8 @@ Dictionary *Controller::dictionary()
 {
     return &m_dictionary;
 }
+
+AIChat *Controller::aiChat()
+{
+    return &m_aiChat;
+}

@@ -4,11 +4,12 @@ Item {
     id: root
 
     property string title
+    property int heightTitle: 50
 
     Rectangle {
         id: title
         width: parent.width
-        height: 50
+        height: root.heightTitle
         border.color: "#569bea"
         color: "#45818E"
 

@@ -26,5 +26,12 @@
         <file>qml/component/DictionaryResults.qml</file>
         <file>img/volume.png</file>
         <file>qml/component/MeanItem.qml</file>
+        <file>img/edit.png</file>
+        <file>img/offline.png</file>
+        <file>img/online.png</file>
+        <file>qml/component/BoxChat.qml</file>
+        <file>img/send.png</file>
+        <file>qml/component/PopUp.qml</file>
+        <file>img/done.png</file>
     </qresource>
 </RCC>

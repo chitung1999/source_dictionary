@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("CTRL", Controller::getInstance());
     engine.rootContext()->setContextProperty("NOTEBOOK", Controller::getInstance()->noteBook());
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
+    engine.rootContext()->setContextProperty("AICHAT", Controller::getInstance()->aiChat());
+
 
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

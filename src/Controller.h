@@ -4,6 +4,7 @@
 #include <QObject>
 #include "NoteBook.h"
 #include "Dictionary.h"
+#include "AIChat.h"
 
 class Controller : public QObject
 {
@@ -14,12 +15,14 @@ public:
 public slots:
     NoteBook *noteBook();
     Dictionary *dictionary();
+    AIChat *aiChat();
 
 private:
     explicit Controller(QObject *parent = nullptr);
 
     NoteBook m_noteBook;
     Dictionary m_dictionary;
+    AIChat m_aiChat;
 };
 
 #endif // CONTROLLER_H
