@@ -8,9 +8,6 @@ AIChat::AIChat(QObject *parent) : QObject(parent)
     m_ipAddress = "127.0.0.1";
     connect(m_TCPClient, SIGNAL(disconnectToSever()), this, SLOT(disconnect()));
     connect(m_TCPClient, &TCPClient::getMessage, this, &AIChat::getMessage);
-
-    m_message.append({"Tung", "Hello", true});
-    m_message.append({"Tung", "Hi", false});
 }
 
 AIChat::~AIChat()
@@ -104,7 +101,6 @@ void AIChat::sendMessage(QString mess)
     m_TCPClient->sendMessage(m_userName, mess);
     MessageItem item(m_userName, mess, true);
     m_message.append(item);
-    emit messageChanged();
 }
 
 void AIChat::setIPAddress(QString ip)
@@ -116,5 +112,4 @@ void AIChat::getMessage(QString name, QString msg)
 {
     MessageItem item(name, msg, false);
     m_message.append(item);
-    emit messageChanged();
 }

@@ -30,6 +30,7 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     void append(MessageItem item);
+    int length();
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

@@ -11,7 +11,6 @@ class AIChat : public QObject
     Q_PROPERTY(bool     isConnect       READ isConnect  WRITE setIsConnect  NOTIFY isConnectChanged)
     Q_PROPERTY(QString  userName        READ userName   WRITE setUserName   NOTIFY userNameChanged)
     Q_PROPERTY(QString  ntfMessage      READ ntfMessage WRITE setNtfMessage NOTIFY ntfMessageChanged)
-    Q_PROPERTY(MessageModel* message    READ message                        NOTIFY messageChanged)
 public:
     explicit AIChat(QObject *parent = nullptr);
     ~AIChat();
@@ -31,7 +30,6 @@ signals:
     void isConnectChanged();
     void userNameChanged();
     void ntfMessageChanged();
-    void messageChanged();
 
 public slots:
     void doConnect();
