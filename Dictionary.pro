@@ -25,6 +25,7 @@ SOURCES += \
     src/Controller.cpp \
     src/Dictionary.cpp \
     src/ExcelData.cpp \
+    src/MessageModel.cpp \
     src/NoteBook.cpp \
     src/TCPClient.cpp \
     src/main.cpp
@@ -49,5 +50,6 @@ HEADERS += \
     src/Controller.h \
     src/Dictionary.h \
     src/ExcelData.h \
+    src/MessageModel.h \
     src/NoteBook.h \
     src/TCPClient.h

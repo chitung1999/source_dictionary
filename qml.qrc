@@ -33,5 +33,6 @@
         <file>img/send.png</file>
         <file>qml/component/PopUp.qml</file>
         <file>img/done.png</file>
+        <file>qml/component/MessageItem.qml</file>
     </qresource>
 </RCC>

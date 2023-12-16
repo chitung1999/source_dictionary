@@ -26,8 +26,7 @@ void TCPClient::readSocket()
     QString name;
     QString message;
     data >> name >> message;
-    qDebug() << "Client: " + name + ": " + message;
-    emit getMessage(message);
+    emit getMessage(name, message);
 }
 
 void TCPClient::socketDisconnect()

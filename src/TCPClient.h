@@ -18,7 +18,7 @@ public:
 
 signals:
     void disconnectToSever();
-    void getMessage(QString msg);
+    void getMessage(QString name, QString msg);
 
 public slots:
     void readSocket();

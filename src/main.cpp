@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("NOTEBOOK", Controller::getInstance()->noteBook());
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
     engine.rootContext()->setContextProperty("AICHAT", Controller::getInstance()->aiChat());
+    engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->aiChat()->message());
 
 
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));

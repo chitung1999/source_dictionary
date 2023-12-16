@@ -101,7 +101,7 @@ Item {
         anchors {
             verticalCenter: connect.verticalCenter
             right: box.right
-            rightMargin: 80
+            rightMargin: 40
         }
         source: AICHAT.isConnect ? "qrc:/img/online.png" : "qrc:/img/offline.png"
         MouseArea {
@@ -162,10 +162,12 @@ Item {
             topMargin: 100
         }
         clip: true
-        model: AICHAT.listMsg.length
-        delegate: Text{
-            font.pixelSize: 20
-            text: AICHAT.listMsg[index]
+        currentIndex: LISTMSG.length - 1
+        model: LISTMSG
+        delegate: MessageItem {
+            isCurrentClient: model.isCurrentClient
+            name: model.name
+            message: model.message
         }
 
         ScrollBar.vertical: ScrollBar {

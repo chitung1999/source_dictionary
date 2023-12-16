@@ -8,6 +8,9 @@ AIChat::AIChat(QObject *parent) : QObject(parent)
     m_ipAddress = "127.0.0.1";
     connect(m_TCPClient, SIGNAL(disconnectToSever()), this, SLOT(disconnect()));
     connect(m_TCPClient, &TCPClient::getMessage, this, &AIChat::getMessage);
+
+    m_message.append({"Tung", "Hello", true});
+    m_message.append({"Tung", "Hi", false});
 }
 
 AIChat::~AIChat()
@@ -56,14 +59,9 @@ void AIChat::setNtfMessage(QString newNtfMessage)
     emit ntfMessageChanged();
 }
 
-QList<QString> AIChat::listMsg() const
+MessageModel *AIChat::message()
 {
-    return m_listMsg;
-}
-
-void AIChat::setListMsg(QList<QString> newListMsg)
-{
-
+    return &m_message;
 }
 
 void AIChat::doConnect()
@@ -104,6 +102,9 @@ void AIChat::sendMessage(QString mess)
         return;
     }
     m_TCPClient->sendMessage(m_userName, mess);
+    MessageItem item(m_userName, mess, true);
+    m_message.append(item);
+    emit messageChanged();
 }
 
 void AIChat::setIPAddress(QString ip)
@@ -111,8 +112,9 @@ void AIChat::setIPAddress(QString ip)
     m_ipAddress = ip;
 }
 
-void AIChat::getMessage(QString msg)
+void AIChat::getMessage(QString name, QString msg)
 {
-    m_listMsg.append(msg);
-    emit listMsgChanged();
+    MessageItem item(name, msg, false);
+    m_message.append(item);
+    emit messageChanged();
 }
