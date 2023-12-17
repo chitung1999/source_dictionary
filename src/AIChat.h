@@ -2,6 +2,9 @@
 #define AICHAT_H
 
 #include <QObject>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QDir>
 #include "TCPClient.h"
 #include "MessageModel.h"
 
@@ -11,6 +14,7 @@ class AIChat : public QObject
     Q_PROPERTY(bool     isConnect       READ isConnect  WRITE setIsConnect  NOTIFY isConnectChanged)
     Q_PROPERTY(QString  userName        READ userName   WRITE setUserName   NOTIFY userNameChanged)
     Q_PROPERTY(QString  ntfMessage      READ ntfMessage WRITE setNtfMessage NOTIFY ntfMessageChanged)
+
 public:
     explicit AIChat(QObject *parent = nullptr);
     ~AIChat();
@@ -34,10 +38,14 @@ signals:
 public slots:
     void doConnect();
     void disconnect();
+
+    void getMessage(QString name, QString msg);
     void sendMessage(QString mess);
 
     void setIPAddress(QString ip);
-    void getMessage(QString name, QString msg);
+
+    void userInfo();
+    void setUserInfo();
 
 private:
     TCPClient* m_TCPClient;

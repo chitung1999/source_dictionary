@@ -50,7 +50,6 @@ void TCPSever::readSocket()
      QString name;
      QString message;
      data >> name >> message;
-     qDebug() << name + ": " + message;
 
     foreach (QTcpSocket *client_socket, m_listSocket) {
         if (client_socket != sender()) {

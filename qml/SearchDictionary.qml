@@ -29,11 +29,7 @@ Item {
         source: "qrc:/img/search.png"
         MouseArea {
             anchors.fill: parent
-            onClicked: {
-                DICTIONARY.search(text_input.text)
-                text_input.text = ""
-                text_input.focus = false
-            }
+            onClicked: search()
         }
     }
 
@@ -49,11 +45,14 @@ Item {
         font.pixelSize: 20
         clip: true
         verticalAlignment: Text.AlignVCenter
-        Keys.onReturnPressed: {
-            DICTIONARY.search(text_input.text)
-            text_input.text = ""
-            text_input.focus = false
-        }
+        Keys.onReturnPressed: search()
+    }
+
+    function search() {
+        DICTIONARY.search(text_input.text)
+        text_input.text = ""
+        text_input.focus = false
+        results.visible = true
     }
 
     DictionaryResults {
@@ -63,5 +62,6 @@ Item {
             topMargin: 200
             horizontalCenter: parent.horizontalCenter
         }
+        visible: false
     }
 }

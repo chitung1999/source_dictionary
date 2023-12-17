@@ -68,9 +68,12 @@ Item {
             height: parent.height - 50
             anchors.bottom: parent.bottom
             clip: true
-            model: DICTIONARY.means.length
+            model: LISTMEAN
             delegate: MeanItem {
-                itemIndex: index
+                partSpeed: model.part
+                synonyms: model.synonyms
+                antonyms: model.antonyms
+                definitions: model.definitions
             }
             ScrollBar.vertical: ScrollBar {
                 background: Rectangle {

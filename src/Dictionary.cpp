@@ -44,17 +44,9 @@ void Dictionary::setUrlAudio(const QString &newUrlAudio)
     emit urlAudioChanged();
 }
 
-const QList<QList<QString>> &Dictionary::means() const
+MeanModel *Dictionary::means()
 {
-    return m_means;
-}
-
-void Dictionary::setMeans(const QList<QList<QString>> &newMeans)
-{
-    if (m_means == newMeans)
-        return;
-    m_means = newMeans;
-    emit meansChanged();
+    return &m_means;
 }
 
 void Dictionary::search(QString key)
@@ -96,31 +88,33 @@ void Dictionary::getDataRequest(QString data)
         }
 
         foreach (QJsonValue value, jObj.value("meanings").toArray()) {
-            QList<QString> listMeans;
-            listMeans.append(value.toObject().value("partOfSpeech").toString());
+            MeanItem item;
+
+            // PartOfSpeech
+            QString str = value.toObject().value("partOfSpeech").toString();
+            str = str[0].toUpper() + str.mid(1) + ":";
+            item.part = str;
 
             // Synonyms
-            QString str = "";
+            str = "";
             foreach (QJsonValue var, value.toObject().value("synonyms").toArray()) {
                 str += (str != "" ? ", " : "") + var.toString();
             }
-            listMeans.append(str);
+            item.synonyms = str;
 
             // Antonyms
             str = "";
             foreach (QJsonValue var, value.toObject().value("antonyms").toArray()) {
                 str += (str != "" ? ", " : "") + var.toString();
             }
-            listMeans.append(str);
-
+            item.antonyms = str;
             // Mean
             foreach (QJsonValue var, value.toObject().value("definitions").toArray()) {
-                listMeans.append(var.toObject().value("definition").toString());
-                listMeans.append(var.toObject().value("example").toString());
+                item.definitions.append(var.toObject().value("definition").toString());
+                item.definitions.append(var.toObject().value("example").toString());
             }
 
-            m_means.append(listMeans);
-            emit meansChanged();
+            m_means.append(item);
         }
     }
 }

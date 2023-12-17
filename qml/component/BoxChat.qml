@@ -86,11 +86,7 @@ Item {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {
-                if (username.isEdit)
-                    AICHAT.setUserName(username.text)
-                username.isEdit = !username.isEdit
-            }
+            onClicked: changeUserName()
         }
     }
 
@@ -144,11 +140,7 @@ Item {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {
-                if (ip_address.isEdit)
-                    AICHAT.setIPAddress(ip_address.text)
-                ip_address.isEdit = !ip_address.isEdit
-            }
+            onClicked: changeIP()
         }
     }
 
@@ -181,5 +173,24 @@ Item {
                 color: "gray"
             }
         }
+    }
+
+    function changeUserName() {
+        if (username.isEdit)
+            AICHAT.setUserName(username.text)
+        username.isEdit = !username.isEdit
+    }
+
+    function changeIP() {
+        if (ip_address.isEdit)
+            AICHAT.setIPAddress(ip_address.text)
+        ip_address.isEdit = !ip_address.isEdit
+    }
+
+    Keys.onReturnPressed: {
+        if (username.focus)
+            changeUserName()
+        else if (ip_address.focus)
+            changeIP()
     }
 }

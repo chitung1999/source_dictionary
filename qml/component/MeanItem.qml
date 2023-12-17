@@ -3,97 +3,106 @@ import QtQuick 2.0
 Item {
     id: root
     width: parent.width
-    height: 90 * root.count
 
-    property int itemIndex
-    property int count: (DICTIONARY.means[itemIndex].length - 3) / 2
-
-    Rectangle {
-        id: part_speech
-        width: 130
-        height: parent.height
-        border.color: "#000"
-        Text {
-            anchors.centerIn: parent
-            font.pixelSize: 18
-            font.bold: true
-            text:  DICTIONARY.means[itemIndex][0]
-        }
-    }
+    property string partSpeed
+    property string synonyms
+    property string antonyms
+    property var definitions
 
     Rectangle {
-        id: synonyms
-        anchors.left: part_speech.right
-        width: 260
+        id: box
+        width: 520
         height: parent.height
         border.color: "#000"
-        Text {
-            anchors {
-                left: parent.left
-                leftMargin: 10
-                verticalCenter: parent.verticalCenter
+
+        Column {
+            height: part_speech.height + synonyms_id.height + antonyms_id.height + spacing * 2
+            anchors.verticalCenter: parent.verticalCenter
+            spacing: 15
+            Text {
+                id: part_speech
+                anchors.left: parent.left
+                anchors.leftMargin: 20
+                font.pixelSize: 30
+                font.bold: true
+                text:  root.partSpeed
             }
-            wrapMode: Text.Wrap
-            width: 240
-            font.pixelSize: 20
-            text: "<p><b>❁ Synonyms: </b></p>" + DICTIONARY.means[itemIndex][1]
-        }
-    }
 
-    Rectangle {
-        id: antonyms
-        anchors.left: synonyms.right
-        width: 260
-        height: parent.height
-        border.color: "#000"
-        Text {
-            anchors {
-                left: parent.left
-                leftMargin: 10
-                verticalCenter: parent.verticalCenter
+            Text {
+                id: synonyms_id
+                anchors {
+                    left: parent.left
+                    leftMargin: 40
+                }
+                wrapMode: Text.Wrap
+                width: 460
+                font.pixelSize: 20
+                text: "❁ Synonyms: " + root.synonyms
             }
-            wrapMode: Text.Wrap
-            width: 240
-            font.pixelSize: 20
-            text: "<p><b>❁ Antonyms: </b></p>" + DICTIONARY.means[itemIndex][2]
+
+            Text {
+                id: antonyms_id
+                anchors {
+                    left: parent.left
+                    leftMargin: 40
+                }
+                wrapMode: Text.Wrap
+                width: 460
+                font.pixelSize: 20
+                text: "❁ Antonyms: " + root.antonyms
+            }
         }
     }
 
     Column {
         Repeater {
-            model: root.count
+            id: repeat
+            model: root.definitions.length / 2
             Rectangle {
-                x: 130 * 5
-                width: root.width - 130 * 5
-                height: 90
+                x: box.width
+                width: root.width - box.width
+                height: definition.height + example.height + 15
                 border.color: "black"
 
                 Text {
+                    id: definition
                     anchors {
                         left: parent.left
-                        leftMargin: 10
+                        leftMargin: 20
                         top: parent.top
                         topMargin: 5
                     }
                     wrapMode: Text.Wrap
-                    width: parent.width - 20
+                    width: parent.width - 30
                     font.pixelSize: 16
-                    text: "<b>❁ Mean: </b>" + DICTIONARY.means[itemIndex][index * 2 + 3]
+                    text: "<b>❁ Mean: </b>" + root.definitions[index * 2]
                 }
 
                 Text {
+                    id: example
                     anchors {
-                        left: parent.left
-                        leftMargin: 10
-                        top: parent.top
-                        topMargin: 45
+                        left: definition.left
+                        top: definition.bottom
+                        topMargin: 5
                     }
                     wrapMode: Text.Wrap
-                    width: parent.width - 20
+                    width: parent.width - 30
                     font.pixelSize: 16
-                    text: "<b>❁ Ex: </b>" + DICTIONARY.means[itemIndex][index * 2 + 4]
+                    text: "<b>❁ Ex: </b>" + root.definitions[index * 2 + 1]
                 }
             }
         }
     }
+
+    function rootHeight() {
+        var height = 0;
+        for(var i = 0; i < root.definitions.length / 2; i++) {
+            height += repeat.itemAt(i).height
+        }
+        if(height < 150)
+            height = 150
+        return height
+    }
+
+    Component.onCompleted: root.height = rootHeight()
 }

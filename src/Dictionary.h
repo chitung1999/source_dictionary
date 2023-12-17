@@ -6,6 +6,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include "APIRequest.h"
+#include "MeanModel.h"
 
 class Dictionary : public QObject
 {
@@ -13,7 +14,6 @@ class Dictionary : public QObject
     Q_PROPERTY(QString key                  READ key            WRITE setKey            NOTIFY keyChanged)
     Q_PROPERTY(QString phonetic             READ phonetic       WRITE setPhonetic       NOTIFY phoneticChanged)
     Q_PROPERTY(QString urlAudio             READ urlAudio       WRITE setUrlAudio       NOTIFY urlAudioChanged)
-    Q_PROPERTY(QList<QList<QString>> means  READ means          WRITE setMeans          NOTIFY meansChanged)
 public:
     explicit Dictionary(QObject *parent = nullptr);
 
@@ -26,9 +26,7 @@ public:
     const QString &urlAudio() const;
     void setUrlAudio(const QString &newUrlAudio);
 
-    const QList<QList<QString>> &means() const;
-    void setMeans(const QList<QList<QString>> &newMeans);
-
+    MeanModel *means();
 
 public slots:
     void search(QString key);
@@ -38,14 +36,13 @@ signals:
     void keyChanged();
     void phoneticChanged();
     void urlAudioChanged();
-    void meansChanged();
 
 private:
     QString m_key;
     QString m_phonetic;
     QString m_urlAudio;
     APIRequest m_apiRequest;
-    QList<QList<QString>> m_means;
+    MeanModel m_means;
 };
 
 #endif // DICTIONARY_H

@@ -4,8 +4,7 @@ AIChat::AIChat(QObject *parent) : QObject(parent)
 {
     m_TCPClient = new TCPClient(this);
     m_isConnect = false;
-    m_userName = "Admin";
-    m_ipAddress = "127.0.0.1";
+    userInfo();
     connect(m_TCPClient, SIGNAL(disconnectToSever()), this, SLOT(disconnect()));
     connect(m_TCPClient, &TCPClient::getMessage, this, &AIChat::getMessage);
 }
@@ -42,6 +41,7 @@ void AIChat::setUserName(QString newUserName)
         return;
     m_userName = newUserName;
     emit userNameChanged();
+    setUserInfo();
 }
 
 QString AIChat::ntfMessage() const
@@ -106,6 +106,57 @@ void AIChat::sendMessage(QString mess)
 void AIChat::setIPAddress(QString ip)
 {
     m_ipAddress = ip;
+    setUserInfo();
+}
+
+void AIChat::userInfo()
+{
+    QFile file(QDir::homePath() + "/Desktop/data.json");
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        qDebug() << "Cannot open file : " << file.errorString();
+        return;
+    }
+    QString data = file.readAll();
+    file.close();
+
+    QJsonObject jObj = QJsonDocument::fromJson(data.toUtf8()).object();
+    if (!jObj.value("name").toString().isEmpty())
+        m_userName = jObj.value("name").toString();
+    else
+        m_userName = "Admin";
+
+    if (!jObj.value("IPAddress").toString().isEmpty())
+        m_ipAddress = jObj.value("IPAddress").toString();
+    else
+        m_ipAddress = "127.0.0.1";
+
+    emit userNameChanged();
+}
+
+void AIChat::setUserInfo()
+{
+    QFile file(QDir::homePath() + "/Desktop/data.json");
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        qDebug() << "Cannot open file : " << file.errorString();
+        return;
+    }
+    QString data = file.readAll();
+    file.close();
+
+    QJsonObject jObj = QJsonDocument::fromJson(data.toUtf8()).object();
+    jObj["name"] = m_userName;
+    jObj["IPAddress"] = m_ipAddress;
+    QJsonDocument jDoc(jObj);
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qDebug() << "Cannot open file : " << file.errorString();
+        return;
+    }
+    file.write(jDoc.toJson());
+    file.close();
 }
 
 void AIChat::getMessage(QString name, QString msg)

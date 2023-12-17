@@ -28,16 +28,17 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
+int MessageModel::length() const
+{
+    return m_listMessage.length();
+}
+
 void MessageModel::append(MessageItem item)
 {
     beginInsertRows(QModelIndex(), m_listMessage.count(), m_listMessage.count());
     m_listMessage.append(item);
     endInsertRows();
-}
-
-int MessageModel::length()
-{
-    return m_listMessage.length();
+    emit lengthChanged();
 }
 
 QHash<int, QByteArray> MessageModel::roleNames() const

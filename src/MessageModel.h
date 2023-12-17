@@ -17,6 +17,7 @@ struct MessageItem {
 class MessageModel : public QAbstractListModel
 {
     Q_OBJECT
+     Q_PROPERTY(int length  READ length  NOTIFY lengthChanged)
 public:
     explicit MessageModel(QObject *parent = nullptr);
 
@@ -29,8 +30,12 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role) const override;
 
+    int length() const;
+
     void append(MessageItem item);
-    int length();
+
+signals:
+    void lengthChanged();
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

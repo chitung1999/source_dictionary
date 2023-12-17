@@ -45,14 +45,24 @@ Item {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {
-                AICHAT.sendMessage(text_input.text)
-            }
+            onClicked: sendMessage()
         }
     }
 
     PopUp {
         id: popup
         anchors.fill: parent
+    }
+
+    function sendMessage() {
+        if(text_input.text != "") {
+            AICHAT.sendMessage(text_input.text)
+            text_input.text = ""
+        }
+    }
+
+    Keys.onReturnPressed: {
+        if (text_input.focus)
+            sendMessage()
     }
 }

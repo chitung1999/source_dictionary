@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("CTRL", Controller::getInstance());
     engine.rootContext()->setContextProperty("NOTEBOOK", Controller::getInstance()->noteBook());
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
+    engine.rootContext()->setContextProperty("LISTMEAN", Controller::getInstance()->dictionary()->means());
     engine.rootContext()->setContextProperty("AICHAT", Controller::getInstance()->aiChat());
     engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->aiChat()->message());
 
