@@ -40,8 +40,8 @@ Item {
         BannerItem {
             id: game
             anchors.left: aichat.right
-            source: "qrc:/img/game.png"
-            onClick: root.state = AppEnum.GAME
+            source: "qrc:/img/setting.png"
+            onClick: root.state = AppEnum.SETTING
         }
     }
 
@@ -96,9 +96,9 @@ Item {
             PropertyChanges {target: aichat; source: "qrc:/img/chat_hightlight.png"}
         },
         State {
-            name: AppEnum.GAME
+            name: AppEnum.SETTING
             PropertyChanges {target: choose; x: root.width * 3/4}
-            PropertyChanges {target: game; source: "qrc:/img/game_hightlight.png"}
+            PropertyChanges {target: game; source: "qrc:/img/setting_hightlight.png"}
         }
     ]
 }

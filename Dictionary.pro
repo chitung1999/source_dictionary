@@ -28,6 +28,7 @@ SOURCES += \
     src/MeanModel.cpp \
     src/MessageModel.cpp \
     src/NoteBook.cpp \
+    src/Setting.cpp \
     src/TCPClient.cpp \
     src/main.cpp
 
@@ -49,9 +50,11 @@ HEADERS += \
     src/APIRequest.h \
     src/AppEnum.h \
     src/Controller.h \
+    src/Define.h \
     src/Dictionary.h \
     src/ExcelData.h \
     src/MeanModel.h \
     src/MessageModel.h \
     src/NoteBook.h \
+    src/Setting.h \
     src/TCPClient.h

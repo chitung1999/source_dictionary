@@ -53,7 +53,7 @@ Item {
             }
         }
     }
-
+    property int itemHeight
     Column {
         Repeater {
             id: repeat
@@ -61,8 +61,8 @@ Item {
             Rectangle {
                 x: box.width
                 width: root.width - box.width
-                height: definition.height + example.height + 15
                 border.color: "black"
+                property int number: definition.height + example.height + 15
 
                 Text {
                     id: definition
@@ -97,11 +97,14 @@ Item {
     function rootHeight() {
         var height = 0;
         for(var i = 0; i < root.definitions.length / 2; i++) {
-            height += repeat.itemAt(i).height
+            height += repeat.itemAt(i).number
         }
-        if(height < 150)
-            height = 150
-        return height
+
+        for(i = 0; i < root.definitions.length / 2; i++) {
+            repeat.itemAt(i).height = (height < 150 ? (300 / root.definitions.length) : repeat.itemAt(i).number)
+        }
+
+        return (height < 150 ? 150 : height)
     }
 
     Component.onCompleted: root.height = rootHeight()

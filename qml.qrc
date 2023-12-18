@@ -22,7 +22,7 @@
         <file>qml/component/BannerItem.qml</file>
         <file>qml/component/TableBase.qml</file>
         <file>qml/AIChat.qml</file>
-        <file>qml/Game.qml</file>
+        <file>qml/Setting.qml</file>
         <file>qml/component/DictionaryResults.qml</file>
         <file>img/volume.png</file>
         <file>qml/component/MeanItem.qml</file>
@@ -34,5 +34,11 @@
         <file>qml/component/PopUp.qml</file>
         <file>img/done.png</file>
         <file>qml/component/MessageItem.qml</file>
+        <file>img/setting.png</file>
+        <file>img/setting_hightlight.png</file>
+        <file>qml/component/BorderBase.qml</file>
+        <file>img/language.png</file>
+        <file>img/username.png</file>
+        <file>img/connect.png</file>
     </qresource>
 </RCC>

@@ -40,7 +40,7 @@ void TCPSever::appendToSocketList(QTcpSocket* socket)
     connect(socket, &QTcpSocket::readyRead, this, &TCPSever::readSocket);
     connect(socket, &QTcpSocket::disconnected, this, &TCPSever::socketDisconnect);
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(socketError(QAbstractSocket::SocketError)));
-    qDebug() << "Client with socket" << socket->socketDescriptor() << "has just entered the room";
+    qInfo()<<"New connected with IP: " << socket->peerAddress().toString() << "- Port: " << socket->peerPort();
 }
 
 void TCPSever::readSocket()
@@ -64,7 +64,7 @@ void TCPSever::socketDisconnect()
     QTcpSocket* socket = reinterpret_cast<QTcpSocket*>(sender());
     QSet<QTcpSocket*>::iterator it = m_listSocket.find(socket);
     if (it != m_listSocket.end()){
-        qDebug() << "A client has just left the room:" << socket->socketDescriptor();
+        qDebug() <<"A client has been disconnected with IP: " << socket->peerAddress().toString() << " - Port: " << socket->peerPort();
         m_listSocket.remove(*it);
     }
 

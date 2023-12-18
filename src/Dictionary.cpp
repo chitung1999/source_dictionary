@@ -51,7 +51,7 @@ MeanModel *Dictionary::means()
 
 void Dictionary::search(QString key)
 {
-    m_apiRequest.doRequest("https://api.dictionaryapi.dev/api/v2/entries/en/" + key);
+    m_apiRequest.doRequest(DICTIONARY_API + key);
 }
 
 void Dictionary::getDataRequest(QString data)

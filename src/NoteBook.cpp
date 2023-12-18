@@ -79,7 +79,7 @@ void NoteBook::searchChar(QString key, bool isENG)
 
 void NoteBook::updateData()
 {
-    m_excelData.updateData(QDir::homePath() + "/Desktop/data.xlsx");
+    m_excelData.updateData(PATH_HOME + "/data.xlsx");
 //    m_excelData.updateData(QDir::currentPath() + "/data.xlsx");
     setAllData(m_excelData.getListKey());
 }

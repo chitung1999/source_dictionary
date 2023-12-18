@@ -4,7 +4,7 @@ Item {
     id: root
     visible: false
 
-    property string message: AICHAT.ntfMessage
+    property string message: AICHAT.ntfUI
 
     Rectangle {
         anchors.fill: parent
@@ -41,7 +41,7 @@ Item {
 
     Connections {
         target: AICHAT
-        function onNtfMessageChanged() {
+        function onNtfUIChanged() {
             root.visible = true
             timer.start()
         }

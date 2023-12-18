@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QDir>
 #include "ExcelData.h"
+#include "Define.h"
 
 class NoteBook : public QObject
 {

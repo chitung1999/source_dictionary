@@ -1,13 +1,12 @@
 import QtQuick 2.0
-import QtGraphicalEffects 1.14
 import QtQuick.Controls 2.14
 
 Item {
     id: root
     anchors.fill: parent
 
-    Rectangle {
-        id: box
+    TableBase {
+        id: content
         width: parent.width * 4/5
         height: 780
         anchors {
@@ -15,29 +14,14 @@ Item {
             top: parent.top
             topMargin: 100
         }
-        radius: 20
-        visible: false
-    }
-
-    TableBase {
-        id: content
-        anchors.fill: box
         heightTitle: 80
         visible: false
     }
 
-    OpacityMask {
-        id: mask
-        anchors.fill: box
+    BorderBase {
+        id: box
+        anchors.fill: content
         source: content
-        maskSource: box
-    }
-
-    Rectangle {
-        anchors.fill: box
-        radius: 20
-        color: "transparent"
-        border.color: "#569bea"
     }
 
     Rectangle {
@@ -54,9 +38,8 @@ Item {
         color: AICHAT.isConnect ? "#39ff00" : "gray"
     }
 
-    TextInput {
+    Text {
         id: username
-        property bool isEdit: false
 
         font.pixelSize: 25
         font.bold: true
@@ -67,27 +50,6 @@ Item {
         }
         color: "white"
         text: AICHAT.userName
-        focus: isEdit
-        readOnly: !isEdit
-    }
-
-    Image {
-        id: changeUser
-        width: 20
-        height: 20
-        anchors {
-            bottom: username.bottom
-            left: username.right
-            leftMargin: 10
-        }
-        opacity: 0.7
-        source: username.isEdit ? "qrc:/img/done.png" : "qrc:/img/edit.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: changeUserName()
-        }
     }
 
     Image {
@@ -105,42 +67,6 @@ Item {
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
             onClicked: AICHAT.isConnect ? AICHAT.disconnect() : AICHAT.doConnect()
-        }
-    }
-    TextInput {
-        id: ip_address
-        property bool isEdit: false
-
-        font.pixelSize: 20
-        font.bold: true
-        anchors {
-            verticalCenter: connect.verticalCenter
-            right: change_IP.left
-            rightMargin: 10
-        }
-        color: "white"
-        text: "127.0.0.1"
-        focus: isEdit
-        readOnly: !isEdit
-        visible: isEdit
-    }
-
-    Image {
-        id: change_IP
-        width: 20
-        height: 20
-        anchors {
-            bottom: connect_button.bottom
-            right: connect_button.left
-            rightMargin: 10
-        }
-        opacity: 0.7
-        source: ip_address.isEdit ? "qrc:/img/done.png" : "qrc:/img/edit.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: changeIP()
         }
     }
 
@@ -173,24 +99,5 @@ Item {
                 color: "gray"
             }
         }
-    }
-
-    function changeUserName() {
-        if (username.isEdit)
-            AICHAT.setUserName(username.text)
-        username.isEdit = !username.isEdit
-    }
-
-    function changeIP() {
-        if (ip_address.isEdit)
-            AICHAT.setIPAddress(ip_address.text)
-        ip_address.isEdit = !ip_address.isEdit
-    }
-
-    Keys.onReturnPressed: {
-        if (username.focus)
-            changeUserName()
-        else if (ip_address.focus)
-            changeIP()
     }
 }

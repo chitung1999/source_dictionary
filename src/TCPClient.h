@@ -10,21 +10,24 @@ class TCPClient : public QObject
 {
     Q_OBJECT
 public:
-    TCPClient();
     explicit TCPClient(QObject *parent = nullptr);
     ~TCPClient();
 
     QTcpSocket *getSocket();
 
 signals:
-    void disconnectToSever();
-    void getMessage(QString name, QString msg);
+    void receiveMessage(QString name, QString msg);
+    void sendNtfUI(QString ntf);
+    void connectCompleted(bool isConnect);
 
 public slots:
     void readSocket();
     void socketDisconnect();
     void socketError(QAbstractSocket::SocketError socketError);
 
+    //receive slots from AIChat
+    void doConnect(QString ip);
+    void disconnect();
     void sendMessage(QString name, QString message);
 
 private:

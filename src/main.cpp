@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("LISTMEAN", Controller::getInstance()->dictionary()->means());
     engine.rootContext()->setContextProperty("AICHAT", Controller::getInstance()->aiChat());
     engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->aiChat()->message());
+    engine.rootContext()->setContextProperty("SETTING", Controller::getInstance()->setting());
 
 
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));

@@ -4,7 +4,6 @@ Item {
     id: root
 
     property bool isENG
-    anchors.fill: parent
 
     TableBase {
         id: english

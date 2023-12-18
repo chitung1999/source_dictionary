@@ -69,12 +69,14 @@ Item {
             anchors.bottom: parent.bottom
             clip: true
             model: LISTMEAN
+
             delegate: MeanItem {
                 partSpeed: model.part
                 synonyms: model.synonyms
                 antonyms: model.antonyms
                 definitions: model.definitions
             }
+
             ScrollBar.vertical: ScrollBar {
                 background: Rectangle {
                     implicitWidth: 10

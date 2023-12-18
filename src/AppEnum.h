@@ -6,13 +6,29 @@
 class AppEnum : public QObject
 {
     Q_OBJECT
-    Q_ENUMS(APP)
 public:
     enum APP {
         NOTEBOOK = 0,
         SEARCH,
         AICHAT,
-        GAME
+        SETTING
+    }Q_ENUMS(APP);
+
+    enum SETTING {
+        LANGUAGE = 0,
+        USERNAME,
+        CONNECT
+    }Q_ENUMS(SETTING);
+
+    enum LANGUAGE {
+        ENGLISH = 0,
+        VIETNAMESE
+    }Q_ENUMS(LANGUAGE);
+
+    enum NOTIFYCHANGED {
+        LANGCHANGED = 0,
+        NAMECHANGED,
+        IPCHANGED
     };
 };
 

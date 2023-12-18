@@ -47,8 +47,8 @@ Window {
                     PropertyChanges {target: content; source: "qrc:/qml/AIChat.qml"}
                 },
                 State {
-                    name: AppEnum.GAME
-                    PropertyChanges {target: content; source: "qrc:/qml/Game.qml"}
+                    name: AppEnum.SETTING
+                    PropertyChanges {target: content; source: "qrc:/qml/Setting.qml"}
                 }
             ]
         }
