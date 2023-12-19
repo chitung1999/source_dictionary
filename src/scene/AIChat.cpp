@@ -15,7 +15,6 @@ AIChat::AIChat(QObject *parent) : QObject(parent)
     //request from TCPClient to AIChat
     connect(m_TCPClient, &TCPClient::receiveMessage, this, &AIChat::receiveMessage);
     connect(m_TCPClient, &TCPClient::connectCompleted, this, &AIChat::onConnectCompleted);
-    connect(m_TCPClient, &TCPClient::sendNtfUI, this, &AIChat::receiveNtf);
 
     m_thread->start();
 }
@@ -57,21 +56,14 @@ void AIChat::setUserName(QString newUserName)
     emit userNameChanged();
 }
 
-QString AIChat::ntfUI() const
-{
-    return m_ntfUI;
-
-}
-
-void AIChat::setNtfUI(QString newNtfUI)
-{
-    m_ntfUI = newNtfUI;
-    emit ntfUIChanged();
-}
-
 MessageModel *AIChat::message()
 {
     return &m_message;
+}
+
+TCPClient *AIChat::tcpClient()
+{
+    return m_TCPClient;
 }
 
 void AIChat::doConnect()
@@ -86,12 +78,10 @@ void AIChat::disconnect()
 
 void AIChat::sendMessage(QString mess)
 {
-    if (!m_isConnect) {
-        setNtfUI("Bạn đang Offline!");
-        return;
-    }
-
     emit requestMessage(m_userName, mess);
+
+    if (!m_isConnect)
+        return;
     MessageItem item(m_userName, mess, true);
     m_message.append(item);
 }
@@ -105,11 +95,6 @@ void AIChat::receiveMessage(QString name, QString msg)
 {
     MessageItem item(name, msg, false);
     m_message.append(item);
-}
-
-void AIChat::receiveNtf(QString ntf)
-{
-    setNtfUI(ntf);
 }
 
 void AIChat::onConnectCompleted(bool isConnect)

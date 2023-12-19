@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
+import "../Common"
 
 Item {
     id: root
@@ -13,7 +14,7 @@ Item {
             top: parent.top
             topMargin: 90
         }
-        text: "Danh sách từ mới"
+        text: qsTr("New words dictionary")
         font.pixelSize: 30
         font.bold: true
         style: Text.Raised
@@ -46,7 +47,7 @@ Item {
             height: 40
             radius: 5
             border.color: "#cccccc"
-
+            color: index == list_word.currentIndex ? "#eeeeee" : "#fff"
             Text {
                 text: NOTEBOOK.allData[index]
                 font.pixelSize: 20
@@ -56,8 +57,15 @@ Item {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    list_word.currentIndex = index
+                    list_word.focus = true
                     NOTEBOOK.search(NOTEBOOK.allData[index], true)
                 }
+            }
+
+            Keys.onReturnPressed: {
+                if(list_word.focus)
+                    NOTEBOOK.search(NOTEBOOK.allData[list_word.currentIndex], true)
             }
         }
 
@@ -83,7 +91,7 @@ Item {
             top: box.bottom
             topMargin: 30
         }
-        name: "Cập nhật"
+        name: qsTr("Update")
         colorCenter: "#569bea"
         colorOutside: "#f4cccc"
         onClickButton: NOTEBOOK.updateData()

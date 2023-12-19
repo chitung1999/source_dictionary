@@ -1,5 +1,6 @@
 import QtQuick 2.0
-import "component/"
+import "../Common/"
+import "../Component/"
 
 Item {
     id: root

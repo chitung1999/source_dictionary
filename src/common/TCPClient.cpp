@@ -41,7 +41,7 @@ void TCPClient::socketError(QAbstractSocket::SocketError socketError)
     switch (socketError) {
     case QAbstractSocket::RemoteHostClosedError:
         qDebug() << "Remote host closed Error. Please check the host name and port settings.";
-        emit sendNtfUI("Mất kết nối với máy chủ!");
+        emit sendNtfUI(tr("Lost connection to the server!"));
         break;
     case QAbstractSocket::HostNotFoundError:
         qDebug() <<"The host was not found. Please check the host name and port settings.";
@@ -67,7 +67,7 @@ void TCPClient::doConnect(QString ip)
 
     if (!m_socket->waitForConnected(4000)) {
         qDebug() << "Error: " << m_socket->errorString();
-        emit sendNtfUI("Không thể kết nối với máy chủ!");
+        emit sendNtfUI(tr("Can not connect to server!"));
         emit connectCompleted(false);
         return;
     }
@@ -84,7 +84,7 @@ void TCPClient::disconnect()
 
     m_socket->disconnectFromHost();
     emit connectCompleted(false);
-    emit sendNtfUI("Đã ngắt kết nối với máy chủ!");
+    emit sendNtfUI(tr("Disconnected from server!"));
     qDebug() << "Disconnected to server!";
 }
 
@@ -96,5 +96,8 @@ void TCPClient::sendMessage(QString name, QString data)
         socketStream << name << data;
     }
     else
+    {
         qDebug() << "Socket doesn't seem to be opened!";
+        emit sendNtfUI(tr("You are Offline!"));
+    }
 }

@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import "../Common"
 
 Item {
     id: root
@@ -9,7 +10,7 @@ Item {
         id: english
         width: parent.width / 2
         height: 430
-        title: "Từ Tiếng Anh"
+        title: qsTr("Keys") + CTRL.translator
 
         Column {
             anchors {
@@ -35,7 +36,7 @@ Item {
         width: parent.width / 2
         height: english.height
         anchors.left: english.right
-        title: "Nghĩa Tiếng Việt"
+        title: qsTr("Meanings")
 
         Column {
             anchors {
@@ -61,6 +62,6 @@ Item {
         width: parent.width
         height: english.height
         anchors.top: english.bottom
-        title: "Ghi chú"
+        title: qsTr("Note")
     }
 }

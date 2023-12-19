@@ -7,6 +7,8 @@ Controller::Controller(QObject *parent) : QObject(parent)
     connect(&m_setting, &Setting::userNameChanged, this, &Controller::userInfoChanged);
     connect(&m_setting, &Setting::ipAddressChanged, this, &Controller::userInfoChanged);
     connect(&m_setting, &Setting::languageChanged, this, &Controller::userInfoChanged);
+
+    connect(m_aiChat.tcpClient(),&TCPClient::sendNtfUI, this, &Controller::receiveNtf);
 }
 
 Controller *Controller::getInstance()
@@ -40,8 +42,11 @@ void Controller::initialize()
     if (!jObj.value("language").toString().isEmpty()) {
         if (jObj.value("language").toString() == "eng")
             lang = AppEnum::LANGUAGE::ENGLISH;
-        else
+        else {
             lang = AppEnum::LANGUAGE::VIETNAMESE;
+            m_translator.load(PATH_HOME + "/vi_VN.qm");
+            qApp->installTranslator(&m_translator);
+        }
     }
 
     m_aiChat.setUserName(name);
@@ -49,6 +54,22 @@ void Controller::initialize()
     m_setting.setUserName(name);
     m_setting.setIpAddress(ip);
     m_setting.setLanguage(lang);
+}
+
+QString Controller::notifyMsg() const
+{
+    return m_notifyMsg;
+}
+
+void Controller::setNotifyMsg(QString newNotifyMsg)
+{
+    m_notifyMsg = newNotifyMsg;
+    emit notifyMsgChanged();
+}
+
+QString Controller::translator()
+{
+    return "";
 }
 
 NoteBook *Controller::noteBook()
@@ -94,7 +115,20 @@ void Controller::userInfoChanged(int changed)
         m_aiChat.setUserName(m_setting.userName());
         break;
     case AppEnum::NOTIFYCHANGED::LANGCHANGED:
-        jObj["language"] = (m_setting.language() == AppEnum::LANGUAGE::ENGLISH ? "eng" : "vn");
+        switch (m_setting.language()) {
+        case AppEnum::LANGUAGE::VIETNAMESE:
+            jObj["language"] = "vn";
+            m_translator.load(PATH_HOME + "/vi_VN.qm");
+            qApp->installTranslator(&m_translator);
+            break;
+        case AppEnum::LANGUAGE::ENGLISH:
+            jObj["language"] = "eng";
+            qApp->removeTranslator(&m_translator);
+            break;
+        default:
+            break;
+        }
+        emit translatorChanged();
         break;
     default:
         break;
@@ -108,4 +142,9 @@ void Controller::userInfoChanged(int changed)
     }
     file.write(jDoc.toJson());
     file.close();
+}
+
+void Controller::receiveNtf(QString ntf)
+{
+    setNotifyMsg(ntf);
 }

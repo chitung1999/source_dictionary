@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import AppEnum 1.0
-import "component/"
+import "../Common/"
+import "../Component/"
 
 Item {
     id: root
@@ -37,23 +38,23 @@ Item {
         }
         font.pixelSize: 30
         font.bold: true
-        text: qsTr("Setting")
+        text: qsTr("Setting") + CTRL.translator
     }
 
     ListModel {
         id: option
         ListElement {
-            titleItem: "Language"
+            titleItem: qsTr("Language")/* + CTRL.translator*/
             stateItem: AppEnum.LANGUAGE
             sourceItem: "qrc:/img/language.png"
         }
         ListElement {
-            titleItem: "User Name"
+            titleItem: qsTr("User Name") /*+ CTRL.translator*/
             stateItem: AppEnum.USERNAME
             sourceItem: "qrc:/img/username.png"
         }
         ListElement {
-            titleItem: "Connect"
+            titleItem: qsTr("Connect")/* + CTRL.translator*/
             stateItem: AppEnum.CONNECT
             sourceItem: "qrc:/img/connect.png"
         }
@@ -136,7 +137,7 @@ Item {
                 anchors.centerIn: parent
                 font.pixelSize: 20
                 color: parent.textColor
-                text: qsTr("English")
+                text: qsTr("English") + CTRL.translator
             }
             MouseArea {
                 anchors.fill: parent
@@ -158,7 +159,7 @@ Item {
                 anchors.centerIn: parent
                 color: parent.textColor
                 font.pixelSize: 20
-                text: qsTr("Vietnamese")
+                text: qsTr("Vietnamese") + CTRL.translator
             }
             MouseArea {
                 anchors.fill: parent
@@ -188,12 +189,13 @@ Item {
         visible: false
 
         Text {
+            id: username_title
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
                 leftMargin: 200
             }
-            text: qsTr("User name:")
+            text: qsTr("User name:") + CTRL.translator
             font.pixelSize: 30
             font.bold: true
         }
@@ -203,8 +205,8 @@ Item {
             height: 60
             anchors {
                 verticalCenter: parent.verticalCenter
-                left: parent.left
-                leftMargin: 380
+                left: username_title.right
+                leftMargin: 20
             }
             border.color: "#000"
 
@@ -259,12 +261,13 @@ Item {
         visible: false
 
         Text {
+            id: connect_title
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
                 leftMargin: 100
             }
-            text: qsTr("IP Adress Connect:")
+            text: qsTr("IP Adress Connect:") + CTRL.translator
             font.pixelSize: 30
             font.bold: true
         }
@@ -274,8 +277,8 @@ Item {
             height: 60
             anchors {
                 verticalCenter: parent.verticalCenter
-                left: parent.left
-                leftMargin: 400
+                left: connect_title.right
+                leftMargin: 20
             }
             border.color: "#000"
 

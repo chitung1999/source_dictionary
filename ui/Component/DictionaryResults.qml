@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
 import QtMultimedia 5.14
+import "../Common"
 
 Item {
     id: root
@@ -11,7 +12,7 @@ Item {
         id: key
         width: parent.width
         height: 120
-        title: "Key"
+        title: qsTr("Key")
 
         Text {
             id: key_word
@@ -62,7 +63,7 @@ Item {
         width: parent.width
         height: parent.height - key.height
         anchors.top: key.bottom
-        title: "Meanings"
+        title: qsTr("Meanings")
         ListView {
             width: parent.width
             height: parent.height - 50

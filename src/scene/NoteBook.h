@@ -3,8 +3,8 @@
 
 #include <QObject>
 #include <QDir>
-#include "ExcelData.h"
-#include "Define.h"
+#include "../component/ExcelData.h"
+#include "../common/Define.h"
 
 class NoteBook : public QObject
 {

@@ -81,6 +81,9 @@ Item {
 
             MouseArea {
                 anchors.fill: parent
+                hoverEnabled: true
+                onEntered: parent.color = "#eeeeee"
+                onExited: parent.color = "#f8f8f8"
                 onClicked: {
                     NOTEBOOK.search(NOTEBOOK.searchData[index], root.isENG)
                 }

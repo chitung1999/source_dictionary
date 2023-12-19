@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import AppEnum 1.0
+import "Common/"
 
 Window {
     id: root
@@ -32,23 +33,23 @@ Window {
             id: content
             anchors.fill: parent
             state: banner.state
-            source: "qrc:/qml/NoteBook.qml"
+            source: "qrc:/ui/Scene/NoteBook.qml"
             states: [
                 State {
                     name: AppEnum.NOTEBOOK
-                    PropertyChanges {target: content; source: "qrc:/qml/NoteBook.qml"}
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/NoteBook.qml"}
                 },
                 State {
                     name: AppEnum.SEARCH
-                    PropertyChanges {target: content; source: "qrc:/qml/SearchDictionary.qml"}
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/SearchDictionary.qml"}
                 },
                 State {
                     name: AppEnum.AICHAT
-                    PropertyChanges {target: content; source: "qrc:/qml/AIChat.qml"}
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/AIChat.qml"}
                 },
                 State {
                     name: AppEnum.SETTING
-                    PropertyChanges {target: content; source: "qrc:/qml/Setting.qml"}
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/Setting.qml"}
                 }
             ]
         }

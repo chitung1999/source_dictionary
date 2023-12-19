@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import AppEnum 1.0
-import "component/"
+import "../Component/"
 
 Item {
     id: root
@@ -70,7 +70,7 @@ Item {
                 top: logo.top
                 topMargin: 10
             }
-            text: qsTr("DICTIONARY")
+            text: "DICTIONARY"
             font.pixelSize: 30
             font.bold: true
             style: Text.Raised

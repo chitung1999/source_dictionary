@@ -8,7 +8,7 @@ void ExcelData::updateData(QString path)
 {
     Document data(path);
     if (!data.load()) {
-        qDebug() << "Cann't open file Excel";
+        qDebug() << "Cann't open file Excel: " << path;
         return;
     }
 

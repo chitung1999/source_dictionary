@@ -20,19 +20,21 @@ include(./QXlsx/QXlsx.pri)
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    src/AIChat.cpp \
-    src/APIRequest.cpp \
+    src/common/APIRequest.cpp \
+    src/common/TCPClient.cpp \
+    src/component/ExcelData.cpp \
+    src/model/MeanModel.cpp \
+    src/model/MessageModel.cpp \
+    src/scene/AIChat.cpp \
+    src/scene/Dictionary.cpp \
+    src/scene/NoteBook.cpp \
+    src/scene/Setting.cpp \
     src/Controller.cpp \
-    src/Dictionary.cpp \
-    src/ExcelData.cpp \
-    src/MeanModel.cpp \
-    src/MessageModel.cpp \
-    src/NoteBook.cpp \
-    src/Setting.cpp \
-    src/TCPClient.cpp \
     src/main.cpp
 
 RESOURCES += qml.qrc
+
+TRANSLATIONS += vi_VN.ts
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -46,15 +48,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    src/AIChat.h \
-    src/APIRequest.h \
-    src/AppEnum.h \
+    src/common/APIRequest.h \
+    src/common/TCPClient.h \
+    src/common/Define.h \
+    src/common/AppEnum.h \
+    src/component/ExcelData.h \
+    src/model/MeanModel.h \
+    src/model/MessageModel.h \
+    src/scene/AIChat.h \
+    src/scene/Dictionary.h \
+    src/scene/NoteBook.h \
+    src/scene/Setting.h \
     src/Controller.h \
-    src/Define.h \
-    src/Dictionary.h \
-    src/ExcelData.h \
-    src/MeanModel.h \
-    src/MessageModel.h \
-    src/NoteBook.h \
-    src/Setting.h \
-    src/TCPClient.h

@@ -5,7 +5,7 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
-#include "AppEnum.h"
+#include "../common/AppEnum.h"
 
 class Setting : public QObject
 {

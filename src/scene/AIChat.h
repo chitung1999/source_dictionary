@@ -6,16 +6,15 @@
 #include <QJsonObject>
 #include <QThread>
 #include <QDir>
-#include "TCPClient.h"
-#include "MessageModel.h"
-#include "Define.h"
+#include "../common/TCPClient.h"
+#include "../common/Define.h"
+#include "../model/MessageModel.h"
 
 class AIChat : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool     isConnect       READ isConnect  WRITE setIsConnect  NOTIFY isConnectChanged)
     Q_PROPERTY(QString  userName        READ userName   WRITE setUserName   NOTIFY userNameChanged)
-    Q_PROPERTY(QString  ntfUI           READ ntfUI      WRITE setNtfUI      NOTIFY ntfUIChanged)
 
 public:
     explicit AIChat(QObject *parent = nullptr);
@@ -27,10 +26,8 @@ public:
     QString userName() const;
     void setUserName(QString newUserName);
 
-    QString ntfUI() const;
-    void setNtfUI(QString newNtfUI);
-
     MessageModel* message();
+    TCPClient *tcpClient();
 
 signals:
     void isConnectChanged();
@@ -51,7 +48,6 @@ public slots:
 
     //receive slots from TCPClient
     void receiveMessage(QString name, QString msg);
-    void receiveNtf(QString ntf);
     void onConnectCompleted(bool isConnect);
 
 

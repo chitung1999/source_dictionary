@@ -5,9 +5,9 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
-#include "APIRequest.h"
-#include "MeanModel.h"
-#include "Define.h"
+#include "../common/APIRequest.h"
+#include "../common/Define.h"
+#include "../model/MeanModel.h"
 
 class Dictionary : public QObject
 {

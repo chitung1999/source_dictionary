@@ -1,5 +1,6 @@
 import QtQuick 2.0
-import "component/"
+import "../Common/"
+import "../Component/"
 
 Item {
     id: root
@@ -43,6 +44,7 @@ Item {
         }
         font.pixelSize: 20
         clip: true
+        focus: false
         verticalAlignment: Text.AlignVCenter
         Keys.onReturnPressed: search()
     }
