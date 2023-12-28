@@ -40,5 +40,6 @@
         <file>ui/Scene/SearchDictionary.qml</file>
         <file>ui/Scene/AIChat.qml</file>
         <file>ui/Scene/Setting.qml</file>
+        <file>ui/Common/TextInputBase.qml</file>
     </qresource>
 </RCC>

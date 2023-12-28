@@ -68,7 +68,7 @@ TCPClient *AIChat::tcpClient()
 
 void AIChat::doConnect()
 {
-    emit requestConnect(m_ipAddress);
+    emit requestConnect(m_ipAddress, m_port);
 }
 
 void AIChat::disconnect()
@@ -89,6 +89,11 @@ void AIChat::sendMessage(QString mess)
 void AIChat::setIPAddress(QString ip)
 {
     m_ipAddress = ip;
+}
+
+void AIChat::setPort(int port)
+{
+    m_port =port;
 }
 
 void AIChat::receiveMessage(QString name, QString msg)

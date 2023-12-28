@@ -43,3 +43,16 @@ void Setting::setIpAddress(QString newIpAddress)
     m_ipAddress = newIpAddress;
     emit ipAddressChanged(AppEnum::NOTIFYCHANGED::IPCHANGED);
 }
+
+int Setting::port() const
+{
+    return m_port;
+}
+
+void Setting::setPort(int newPort)
+{
+    if (m_port == newPort)
+        return;
+    m_port = newPort;
+    emit portChanged(AppEnum::NOTIFYCHANGED::PORTCHANGED);
+}

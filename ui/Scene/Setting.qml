@@ -44,17 +44,17 @@ Item {
     ListModel {
         id: option
         ListElement {
-            titleItem: qsTr("Language")/* + CTRL.translator*/
+            titleItem: qsTr("Language")
             stateItem: AppEnum.LANGUAGE
             sourceItem: "qrc:/img/language.png"
         }
         ListElement {
-            titleItem: qsTr("User Name") /*+ CTRL.translator*/
+            titleItem: qsTr("User Name")
             stateItem: AppEnum.USERNAME
             sourceItem: "qrc:/img/username.png"
         }
         ListElement {
-            titleItem: qsTr("Connect")/* + CTRL.translator*/
+            titleItem: qsTr("Connect")
             stateItem: AppEnum.CONNECT
             sourceItem: "qrc:/img/connect.png"
         }
@@ -90,7 +90,7 @@ Item {
                         verticalCenter: parent.verticalCenter
                     }
                     font.pixelSize: 20
-                    text: titleItem
+                    text: titleItem + CTRL.translator
                 }
                 MouseArea {
                     anchors.fill: parent
@@ -112,21 +112,22 @@ Item {
     }
 
     Item {
-        id: language_content
+        id: content
         width: 900
         height: 600
         anchors {
             top: box.top
             right: box.right
         }
-        visible: false
-        state: SETTING.language
 
         Rectangle {
             id: eng
             width: 200
             height: 80
+            visible: false
+            color: SETTING.language == AppEnum.ENGLISH ? "#5ca5d1" : "#fff"
             border.color: "black"
+            border.width: 3
             property string textColor: "#000"
             anchors {
                 horizontalCenter: parent.horizontalCenter
@@ -148,7 +149,10 @@ Item {
             id: vn
             width: 200
             height: 80
+            visible: false
+            color: SETTING.language == AppEnum.VIETNAMESE ? "#5ca5d1" : "#fff"
             border.color: "black"
+            border.width: 3
             property string textColor: "#000"
             anchors {
                 horizontalCenter: parent.horizontalCenter
@@ -166,176 +170,77 @@ Item {
                 onClicked: SETTING.setLanguage(AppEnum.VIETNAMESE)
             }
         }
-        states: [
-            State {
-                name: AppEnum.ENGLISH
-                PropertyChanges {target: eng; color: "#5ca5d1"; textColor: "#fff"}
-            },
-            State {
-                name: AppEnum.VIETNAMESE
-                PropertyChanges {target: vn; color: "#5ca5d1"; textColor: "#fff"}
-            }
-        ]
-    }
 
-    Item {
-        id: username_content
-        width: 900
-        height: 600
-        anchors {
-            top: box.top
-            right: box.right
-        }
-        visible: false
-
-        Text {
-            id: username_title
+        TextInputBase {
+            id: username_input
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
                 leftMargin: 200
             }
-            text: qsTr("User name:") + CTRL.translator
-            font.pixelSize: 30
-            font.bold: true
+            visible: false
+            title: qsTr("User name:") + CTRL.translator
+            boxWidth: 250
+            boxHeight: 60
+            boxLeft: 200
+            content: SETTING.userName
+
+            onTextChanged: SETTING.setUserName(username_input.textInput)
         }
 
-        Rectangle {
-            width: 250
-            height: 60
+        TextInputBase {
+            id: ip_input
             anchors {
                 verticalCenter: parent.verticalCenter
-                left: username_title.right
-                leftMargin: 20
-            }
-            border.color: "#000"
-
-            TextInput {
-                id: username
-                font.pixelSize: 30
-                width: 220
-                anchors.centerIn: parent
-                text: SETTING.userName
-                focus: false
-                clip: true
-            }
-
-            Image {
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: username.right
-                    leftMargin: 25
-                }
-                visible: username.focus
-                source: "qrc:/img/done.png"
-                MouseArea {
-                    anchors.fill: parent
-                    onPressed: parent.scale = 0.7
-                    onReleased: parent.scale = 1
-                    onClicked: {
-                        if (username.focus) {
-                            username.focus = false
-                            SETTING.setUserName(username.text)
-                        }
-                    }
-                }
-            }
-
-            Keys.onReturnPressed: {
-                if (username.focus) {
-                    username.focus = false
-                    SETTING.setUserName(username.text)
-                }
-            }
-        }
-    }
-
-    Item {
-        id: connect_content
-        width: 900
-        height: 600
-        anchors {
-            top: box.top
-            right: box.right
-        }
-        visible: false
-
-        Text {
-            id: connect_title
-            anchors {
-                verticalCenter: parent.verticalCenter
+                verticalCenterOffset: -70
                 left: parent.left
                 leftMargin: 100
             }
-            text: qsTr("IP Adress Connect:") + CTRL.translator
-            font.pixelSize: 30
-            font.bold: true
+            visible: false
+            title: qsTr("IP Adress Connect:") + CTRL.translator
+            boxWidth: 250
+            boxHeight: 60
+            boxLeft: 320
+            content: SETTING.ipAddress
+            onTextChanged: SETTING.setIpAddress(ip_input.textInput)
         }
 
-        Rectangle {
-            width: 250
-            height: 60
+        TextInputBase {
+            id: port_input
             anchors {
                 verticalCenter: parent.verticalCenter
-                left: connect_title.right
-                leftMargin: 20
+                verticalCenterOffset: 25
+                left: parent.left
+                leftMargin: 100
             }
-            border.color: "#000"
+            visible: false
+            title: qsTr("Port:") + CTRL.translator
+            boxWidth: 250
+            boxHeight: 60
+            boxLeft: 320
+            content: SETTING.port
 
-            TextInput {
-                id: ip
-                font.pixelSize: 30
-                width: 220
-                anchors.centerIn: parent
-                text: SETTING.ipAddress
-                focus: false
-                clip: true
-            }
-
-            Image {
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: ip.right
-                    leftMargin: 25
-                }
-                visible: ip.focus
-                source: "qrc:/img/done.png"
-                MouseArea {
-                    anchors.fill: parent
-                    onPressed: parent.scale = 0.7
-                    onReleased: parent.scale = 1
-                    onClicked: {
-                        if (ip.focus) {
-                            ip.focus = false
-                            SETTING.setIpAddress(ip.text)
-                        }
-                    }
-                }
-            }
-
-            Keys.onReturnPressed: {
-                if (ip.focus) {
-                    ip.focus = false
-                    SETTING.setIpAddress(ip.text)
-                }
-            }
+            onTextChanged: SETTING.setPort(port_input.textInput)
         }
     }
+
     states: [
         State {
             name: AppEnum.LANGUAGE
             PropertyChanges {target: choose; y: 290}
-            PropertyChanges {target: language_content; visible: true}
+            PropertyChanges {target: eng; visible: true}
+            PropertyChanges {target: vn; visible: true}
         },
         State {
             name: AppEnum.USERNAME
             PropertyChanges {target: choose; y: 370}
-            PropertyChanges {target: username_content; visible: true}
+            PropertyChanges {target: username_input; visible: true}
         },
         State {
             name: AppEnum.CONNECT
             PropertyChanges {target: choose; y: 450}
-            PropertyChanges {target: connect_content; visible: true}
+            PropertyChanges {target: ip_input; visible: true}
+            PropertyChanges {target: port_input; visible: true}
         }
     ]
 }

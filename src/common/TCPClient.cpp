@@ -56,14 +56,14 @@ void TCPClient::socketError(QAbstractSocket::SocketError socketError)
     emit connectCompleted(false);
 }
 
-void TCPClient::doConnect(QString ip)
+void TCPClient::doConnect(QString ip, int port)
 {
     if (m_socket->state() == QAbstractSocket::ConnectedState) {
         qDebug() << "The client is connected to the server!";
         return;
     }
 
-    m_socket->connectToHost(ip,6060);
+    m_socket->connectToHost(ip, port);
 
     if (!m_socket->waitForConnected(4000)) {
         qDebug() << "Error: " << m_socket->errorString();

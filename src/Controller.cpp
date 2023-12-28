@@ -4,9 +4,10 @@ Controller::Controller(QObject *parent) : QObject(parent)
 {
     initialize();
 
-    connect(&m_setting, &Setting::userNameChanged, this, &Controller::userInfoChanged);
+    connect(&m_setting, &Setting::userNameChanged,  this, &Controller::userInfoChanged);
     connect(&m_setting, &Setting::ipAddressChanged, this, &Controller::userInfoChanged);
-    connect(&m_setting, &Setting::languageChanged, this, &Controller::userInfoChanged);
+    connect(&m_setting, &Setting::portChanged,      this, &Controller::userInfoChanged);
+    connect(&m_setting, &Setting::languageChanged,  this, &Controller::userInfoChanged);
 
     connect(m_aiChat.tcpClient(),&TCPClient::sendNtfUI, this, &Controller::receiveNtf);
 }
@@ -20,6 +21,7 @@ Controller *Controller::getInstance()
 void Controller::initialize()
 {
     QString ip = IP_ADDRESS;
+    int port = PORT_CONENCT;
     QString name = "Admin";
     int lang = AppEnum::LANGUAGE::ENGLISH;
 
@@ -39,6 +41,9 @@ void Controller::initialize()
     if (!jObj.value("IPAddress").toString().isEmpty())
         ip = jObj.value("IPAddress").toString();
 
+    if (!jObj.value("port").isNull())
+        port = jObj.value("port").toInt();
+
     if (!jObj.value("language").toString().isEmpty()) {
         if (jObj.value("language").toString() == "eng")
             lang = AppEnum::LANGUAGE::ENGLISH;
@@ -51,9 +56,11 @@ void Controller::initialize()
 
     m_aiChat.setUserName(name);
     m_aiChat.setIPAddress(ip);
+    m_aiChat.setPort(port);
     m_setting.setUserName(name);
     m_setting.setIpAddress(ip);
     m_setting.setLanguage(lang);
+    m_setting.setPort(port);
 }
 
 QString Controller::notifyMsg() const
@@ -113,6 +120,10 @@ void Controller::userInfoChanged(int changed)
     case AppEnum::NOTIFYCHANGED::NAMECHANGED:
         jObj["name"] = m_setting.userName();
         m_aiChat.setUserName(m_setting.userName());
+        break;
+    case AppEnum::NOTIFYCHANGED::PORTCHANGED:
+        jObj["port"] = m_setting.port();
+        m_aiChat.setPort(m_setting.port());
         break;
     case AppEnum::NOTIFYCHANGED::LANGCHANGED:
         switch (m_setting.language()) {

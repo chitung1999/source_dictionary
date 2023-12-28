@@ -1,4 +1,5 @@
 {
-    "name": "Admin",
-	"IPAddress": "127.0.0.1"
+    "IPAddress": "127.0.0.1",
+    "language": "eng",
+    "name": "Chi Tung"
 }

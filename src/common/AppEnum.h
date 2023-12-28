@@ -28,7 +28,8 @@ public:
     enum NOTIFYCHANGED {
         LANGCHANGED = 0,
         NAMECHANGED,
-        IPCHANGED
+        IPCHANGED,
+        PORTCHANGED
     };
 };
 

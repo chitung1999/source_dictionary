@@ -26,7 +26,7 @@ public slots:
     void socketError(QAbstractSocket::SocketError socketError);
 
     //receive slots from AIChat
-    void doConnect(QString ip);
+    void doConnect(QString ip, int port);
     void disconnect();
     void sendMessage(QString name, QString message);
 
