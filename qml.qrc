@@ -38,8 +38,9 @@
         <file>ui/Component/NoteResults.qml</file>
         <file>ui/Scene/NoteBook.qml</file>
         <file>ui/Scene/SearchDictionary.qml</file>
-        <file>ui/Scene/AIChat.qml</file>
+        <file>ui/Scene/VoiceChat.qml</file>
         <file>ui/Scene/Setting.qml</file>
         <file>ui/Common/TextInputBase.qml</file>
+        <file>ui/Component/NoteItem.qml</file>
     </qresource>
 </RCC>

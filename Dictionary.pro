@@ -8,12 +8,6 @@ CONFIG += c++11
 # deprecated API to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 
-# QXlsx code for Application Qt project
-QXLSX_PARENTPATH=./QXlsx/         # current QXlsx path is . (. means curret directory)
-QXLSX_HEADERPATH=./QXlsx/header/  # current QXlsx header path is ./header/
-QXLSX_SOURCEPATH=./QXlsx/source/  # current QXlsx source path is ./source/
-include(./QXlsx/QXlsx.pri)
-
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -22,15 +16,14 @@ include(./QXlsx/QXlsx.pri)
 SOURCES += \
     src/common/APIRequest.cpp \
     src/common/TCPClient.cpp \
-    src/component/ExcelData.cpp \
     src/model/MeanModel.cpp \
     src/model/MessageModel.cpp \
-    src/scene/AIChat.cpp \
     src/scene/Dictionary.cpp \
     src/scene/NoteBook.cpp \
     src/scene/Setting.cpp \
     src/Controller.cpp \
-    src/main.cpp
+    src/main.cpp \
+    src/scene/VoiceChat.cpp
 
 RESOURCES += qml.qrc
 
@@ -52,11 +45,10 @@ HEADERS += \
     src/common/TCPClient.h \
     src/common/Define.h \
     src/common/AppEnum.h \
-    src/component/ExcelData.h \
     src/model/MeanModel.h \
     src/model/MessageModel.h \
-    src/scene/AIChat.h \
     src/scene/Dictionary.h \
     src/scene/NoteBook.h \
     src/scene/Setting.h \
-    src/Controller.h \
+    src/Controller.h \ \
+    src/scene/VoiceChat.h

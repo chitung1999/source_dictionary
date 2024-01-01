@@ -15,14 +15,6 @@ Item {
             left: parent.left
             leftMargin: 100
         }
-        isENG:search.isENG
-        visible: false
-    }
-
-    BorderBase {
-        id: box
-        anchors.fill: results
-        source: results
     }
 
     SearchBar {

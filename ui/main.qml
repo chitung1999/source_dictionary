@@ -44,8 +44,8 @@ Window {
                     PropertyChanges {target: content; source: "qrc:/ui/Scene/SearchDictionary.qml"}
                 },
                 State {
-                    name: AppEnum.AICHAT
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/AIChat.qml"}
+                    name: AppEnum.VOICECHAT
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/VoiceChat.qml"}
                 },
                 State {
                     name: AppEnum.SETTING

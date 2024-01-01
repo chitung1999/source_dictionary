@@ -36,7 +36,7 @@ Item {
             left: box.left
             leftMargin: 30
         }
-        color: AICHAT.isConnect ? "#39ff00" : "gray"
+        color: VOICECHAT.isConnect ? "#39ff00" : "gray"
     }
 
     Text {
@@ -50,7 +50,7 @@ Item {
             leftMargin: 30
         }
         color: "white"
-        text: AICHAT.userName
+        text: VOICECHAT.userName
     }
 
     Image {
@@ -62,12 +62,12 @@ Item {
             right: box.right
             rightMargin: 40
         }
-        source: AICHAT.isConnect ? "qrc:/img/online.png" : "qrc:/img/offline.png"
+        source: VOICECHAT.isConnect ? "qrc:/img/online.png" : "qrc:/img/offline.png"
         MouseArea {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: AICHAT.isConnect ? AICHAT.disconnect() : AICHAT.doConnect()
+            onClicked: VOICECHAT.isConnect ? VOICECHAT.disconnect() : VOICECHAT.doConnect()
         }
     }
 

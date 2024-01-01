@@ -41,7 +41,7 @@ Item {
         height: 720
         clip: true
         anchors.centerIn: box
-        model: NOTEBOOK.allData.length
+        model: NOTEBOOK.keys.length
         delegate: Rectangle {
             width: 400
             height: 40
@@ -49,7 +49,7 @@ Item {
             border.color: "#cccccc"
             color: index == list_word.currentIndex ? "#eeeeee" : "#fff"
             Text {
-                text: NOTEBOOK.allData[index]
+                text: NOTEBOOK.keys[index]
                 font.pixelSize: 20
                 anchors.centerIn: parent
             }
@@ -59,13 +59,13 @@ Item {
                 onClicked: {
                     list_word.currentIndex = index
                     list_word.focus = true
-                    NOTEBOOK.search(NOTEBOOK.allData[index], true)
+                    NOTEBOOK.search(NOTEBOOK.keys[index], true)
                 }
             }
 
             Keys.onReturnPressed: {
                 if(list_word.focus)
-                    NOTEBOOK.search(NOTEBOOK.allData[list_word.currentIndex], true)
+                    NOTEBOOK.search(NOTEBOOK.keys[list_word.currentIndex], true)
             }
         }
 
@@ -94,6 +94,6 @@ Item {
         name: qsTr("Update")
         colorCenter: "#569bea"
         colorOutside: "#f4cccc"
-        onClickButton: NOTEBOOK.updateData()
+//        onClickButton: NOTEBOOK.updateData()
     }
 }

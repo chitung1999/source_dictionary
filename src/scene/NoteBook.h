@@ -3,38 +3,68 @@
 
 #include <QObject>
 #include <QDir>
-#include "../component/ExcelData.h"
+#include <QMap>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QDebug>
 #include "../common/Define.h"
+
+struct NoteItem {
+    NoteItem(){}
+    NoteItem(int i, QString w, QString m, QStringList n) {
+        index = i;
+        words = w;
+        means = m;
+        notes = n;
+    }
+    int index;
+    QString words;
+    QString means;
+    QStringList notes;
+};
+
+struct Data {
+    QList<NoteItem> data;
+    QMap <QString, QList<int>> keysEng;
+    QMap <QString, QList<int>> keysVn;
+
+    void clear() {
+        data.clear();
+        keysEng.clear();
+        keysVn.clear();
+    }
+};
 
 class NoteBook : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString currentKey           READ currentKey     WRITE setCurrentKey     NOTIFY currentKeyChanged)
-    Q_PROPERTY(QList<QString> currentData   READ currentData    WRITE setCurrentData    NOTIFY currentDataChanged)
-    Q_PROPERTY(QList<QString> allData       READ allData        WRITE setAllData       NOTIFY allDataChanged)
-    Q_PROPERTY(QList<QString> searchData    READ searchData     WRITE setSearchData     NOTIFY searchDataChanged)
+    Q_PROPERTY(QString currentKey               READ currentKey     WRITE setCurrentKey     NOTIFY currentKeyChanged)
+    Q_PROPERTY(QStringList keys                 READ keys           WRITE setKeys           NOTIFY keysChanged)
+    Q_PROPERTY(QStringList searchKeys           READ searchKeys     WRITE setSearchKeys     NOTIFY searchKeysChanged)
+    Q_PROPERTY(QList<QVariantMap> currentData   READ currentData    WRITE setCurrentData    NOTIFY currentDataChanged)
 public:
     explicit NoteBook(QObject *parent = nullptr);
+    void initialize();
 
     const QString &currentKey() const;
     void setCurrentKey(const QString &newCurrentKey);
 
-    const QList<QString> &currentData() const;
-    void setCurrentData(const QList<QString> &newCurrentData);
+    const QList<QVariantMap> &currentData() const;
+    void setCurrentData(const QList<QVariantMap> &newCurrentData);
 
-    const QList<QString> &allData() const;
-    void setAllData(const QList<QString> &newAllData);
+    const QStringList &keys() const;
+    void setKeys(const QStringList &newKeys);
 
-    const QList<QString> &searchData() const;
-    void setSearchData(const QList<QString> &newSearchData);
+    const QStringList &searchKeys() const;
+    void setSearchKeys(const QStringList &newsearchKeys);
 
 signals:
     void currentKeyChanged();
     void currentDataChanged();
-    void allDataChanged();
-    void searchDataChanged();
+    void keysChanged();
+    void searchKeysChanged();
     void requestSearch();
-
 
 public slots:
     void search(QString key, bool isENG);
@@ -43,10 +73,10 @@ public slots:
 
 private:
     QString m_currentKey;
-    QList<QString> m_currentData;
-    QList<QString> m_allData;
-    QList<QString> m_searchData;
-    ExcelData m_excelData;
+    QList<QVariantMap> m_currentData;
+    QStringList m_keys;
+    QStringList m_searchKeys;
+    Data m_data;
 };
 
 #endif // NOTEBOOK_H

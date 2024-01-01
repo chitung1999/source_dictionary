@@ -2,49 +2,55 @@
 
 NoteBook::NoteBook(QObject *parent) : QObject(parent)
 {
-    m_currentKey = "";
-    for (int i = 0; i < 12; i++)
-        m_currentData.append("");
-    updateData();
+    initialize();
 }
 
-const QList<QString> &NoteBook::currentData() const
+void NoteBook::initialize()
+{
+    updateData();
+    QVariantMap item;
+    item["index"] = 0;
+    item["words"] = QStringList();
+    item["means"] = QStringList();
+    item["notes"] = QStringList();
+    m_currentData.append(item);
+}
+
+const QList<QVariantMap> &NoteBook::currentData() const
 {
     return m_currentData;
 }
 
-void NoteBook::setCurrentData(const QList<QString> &newCurrentData)
+void NoteBook::setCurrentData(const QList<QVariantMap> &newCurrentData)
 {
-    if (m_currentData == newCurrentData)
-        return;
     m_currentData = newCurrentData;
     emit currentDataChanged();
 }
 
-const QList<QString> &NoteBook::allData() const
+const QStringList &NoteBook::keys() const
 {
-    return m_allData;
+    return m_keys;
 }
 
-void NoteBook::setAllData(const QList<QString> &newAllData)
+void NoteBook::setKeys(const QStringList &newKeys)
 {
-    if (m_allData == newAllData)
+    if (m_keys == newKeys)
         return;
-    m_allData = newAllData;
-    emit allDataChanged();
+    m_keys = newKeys;
+    emit keysChanged();
 }
 
-const QList<QString> &NoteBook::searchData() const
+const QStringList &NoteBook::searchKeys() const
 {
-    return m_searchData;
+    return m_searchKeys;
 }
 
-void NoteBook::setSearchData(const QList<QString> &newSearchData)
+void NoteBook::setSearchKeys(const QStringList &newsearchKeys)
 {
-    if (m_searchData == newSearchData)
+    if (m_searchKeys == newsearchKeys)
         return;
-    m_searchData = newSearchData;
-    emit searchDataChanged();
+    m_searchKeys = newsearchKeys;
+    emit searchKeysChanged();
 }
 
 const QString &NoteBook::currentKey() const
@@ -63,24 +69,68 @@ void NoteBook::setCurrentKey(const QString &newCurrentKey)
 void NoteBook::search(QString key, bool isENG)
 {
     setCurrentKey(key);
-    setCurrentData(m_excelData.getCurrentData(key, isENG));
+    auto it = isENG ? m_data.keysEng.find(key) : m_data.keysVn.find(key);
+    QList<QVariantMap> listdata;
+    foreach (auto index, it.value()) {
+        QVariantMap item;
+        item["index"] = m_data.data[index].index;
+        item["words"] = m_data.data[index].words;
+        item["means"] = m_data.data[index].means;
+        item["notes"] = m_data.data[index].notes;
+        listdata.append(item);
+    }
+    setCurrentData(listdata);
     emit requestSearch();
 }
 
 void NoteBook::searchChar(QString key, bool isENG)
 {
-    if (key == "") {
-        m_searchData.clear();
-        emit searchDataChanged();
-        return;
+    m_searchKeys.clear();
+
+    if (key != "") {
+        foreach (auto data, (isENG ? m_data.keysEng.keys() : m_data.keysVn.keys())) {
+            if(data.contains(key))
+                m_searchKeys.append(data);
+        }
     }
-    setSearchData(m_excelData.getListSearch(key, isENG));
+
+    emit searchKeysChanged();
 }
 
 void NoteBook::updateData()
 {
-    m_excelData.updateData(PATH_HOME + "/data.xlsx");
-//    m_excelData.updateData(QDir::currentPath() + "/data.xlsx");
-    setAllData(m_excelData.getListKey());
-}
+    QString path = PATH_HOME + "/data.json";
+    QFile file(path);
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug() << "Cannot open file: " << path;
+        qDebug() << "Error: " << file.errorString();
+        return;
+    }
+    QString data = file.readAll();
+    file.close();
 
+    m_data.clear();
+    QJsonArray arr = QJsonDocument::fromJson(data.toUtf8()).array();
+    foreach (const QJsonValue &valueObj, arr) {
+        NoteItem item;
+        item.index = valueObj.toObject().value("index").toInt();
+        QJsonArray arrWord = valueObj.toObject().value("words").toArray();
+        foreach (const QJsonValue &valueWord, arrWord) {
+            item.words += ((item.words == "" ? "" : ", ") + valueWord.toString());
+            m_data.keysEng[valueWord.toString()].append(item.index);
+        }
+        arrWord = valueObj.toObject().value("means").toArray();
+        foreach (const QJsonValue &valueWord, arrWord) {
+            item.means += ((item.means == "" ? "" : ", ") + valueWord.toString());
+            m_data.keysVn[valueWord.toString()].append(item.index);
+        }
+        arrWord = valueObj.toObject().value("notes").toArray();
+        foreach (const QJsonValue &valueWord, arrWord) {
+            item.notes.append(valueWord.toString());
+        }
+        m_data.data.append(item);
+    }
+
+    setKeys(m_data.keysEng.keys());
+}

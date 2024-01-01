@@ -57,7 +57,7 @@ Item {
 
     function sendMessage() {
         if(text_input.text != "") {
-            AICHAT.sendMessage(text_input.text)
+            VOICECHAT.sendMessage(text_input.text)
             text_input.text = ""
         }
     }

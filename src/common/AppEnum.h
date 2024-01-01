@@ -10,7 +10,7 @@ public:
     enum APP {
         NOTEBOOK = 0,
         SEARCH,
-        AICHAT,
+        VOICECHAT,
         SETTING
     }Q_ENUMS(APP);
 

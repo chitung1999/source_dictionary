@@ -1,67 +1,66 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.14
 import "../Common"
 
 Item {
     id: root
 
-    property bool isENG
-
     TableBase {
-        id: english
-        width: parent.width / 2
-        height: 430
-        title: qsTr("Keys") + CTRL.translator
+        id: box
+        anchors.fill: parent
+        title: NOTEBOOK.currentKey
+        titleSize: 40
+        heightTitle: 80
+        visible: false
+    }
 
-        Column {
-            anchors {
-                left: parent.left
-                leftMargin: 60
-                verticalCenter: parent.verticalCenter
-                verticalCenterOffset: 25
+    BorderBase {
+        anchors.fill: box
+        source: box
+    }
+
+    ListView {
+        id: results
+        width: box.width
+        height: box.height - 120
+        anchors {
+            verticalCenter: box.verticalCenter
+            verticalCenterOffset: 40
+        }
+        clip: true
+        visible: false
+        model: NOTEBOOK.currentData
+
+//        delegate: MeanItem {
+//            partSpeed: model.part
+//            synonyms: model.synonyms
+//            antonyms: model.antonyms
+//            definitions: model.definitions
+//        }
+        delegate: Rectangle {
+            width: 500
+            height: 500
+            color: "red"
+            border.color: "black"
+        }
+
+        ScrollBar.vertical: ScrollBar {
+            background: Rectangle {
+                implicitWidth: 10
+                color: "transparent"
             }
-            spacing: 15
-            Repeater {
-                model: 8
-                Text {
-                    text: NOTEBOOK.currentData[index] === "" ? "" : "❁ " + NOTEBOOK.currentData[index]
-                    font.pixelSize: 25
-                    color: NOTEBOOK.currentData[index] === NOTEBOOK.currentKey ? "red" : "#000"
-                }
+            contentItem: Rectangle {
+                implicitWidth: 10
+                radius: 5
+                color: "gray"
             }
         }
     }
 
-    TableBase {
-        id: vietnamese
-        width: parent.width / 2
-        height: english.height
-        anchors.left: english.right
-        title: qsTr("Meanings")
-
-        Column {
-            anchors {
-                left: parent.left
-                leftMargin: 60
-                verticalCenter: parent.verticalCenter
-                verticalCenterOffset: 25
-            }
-            spacing: 10
-            Repeater {
-                model: 4
-                Text {
-                    text: NOTEBOOK.currentData[index + 8] === "" ? "" : "❁ " + NOTEBOOK.currentData[index + 8]
-                    font.pixelSize: 25
-                    color: NOTEBOOK.currentData[index + 8] === NOTEBOOK.currentKey ? "red" : "#000"
-                }
-            }
+    Connections {
+        target: NOTEBOOK
+        function onRequestSearch() {
+            results.visible = true
         }
-    }
-
-    TableBase {
-        id: note
-        width: parent.width
-        height: english.height
-        anchors.top: english.bottom
-        title: qsTr("Note")
     }
 }

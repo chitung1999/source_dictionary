@@ -1,5 +1,5 @@
-#ifndef AICHAT_H
-#define AICHAT_H
+#ifndef VOICECHAT_H
+#define VOICECHAT_H
 
 #include <QObject>
 #include <QJsonDocument>
@@ -10,15 +10,15 @@
 #include "../common/Define.h"
 #include "../model/MessageModel.h"
 
-class AIChat : public QObject
+class VoiceChat : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool     isConnect       READ isConnect  WRITE setIsConnect  NOTIFY isConnectChanged)
     Q_PROPERTY(QString  userName        READ userName   WRITE setUserName   NOTIFY userNameChanged)
 
 public:
-    explicit AIChat(QObject *parent = nullptr);
-    ~AIChat();
+    explicit VoiceChat(QObject *parent = nullptr);
+    ~VoiceChat();
 
     bool isConnect() const;
     void setIsConnect(bool newIsConnect);
@@ -64,4 +64,4 @@ private:
     MessageModel m_message;
 };
 
-#endif // AICHAT_H
+#endif // VOICECHAT_H

@@ -32,14 +32,14 @@ Item {
             onClick: root.state = AppEnum.SEARCH
         }
         BannerItem {
-            id: aichat
+            id: voicechat
             anchors.left: search.right
             source: "qrc:/img/chat.png"
-            onClick: root.state = AppEnum.AICHAT
+            onClick: root.state = AppEnum.VOICECHAT
         }
         BannerItem {
             id: game
-            anchors.left: aichat.right
+            anchors.left: voicechat.right
             source: "qrc:/img/setting.png"
             onClick: root.state = AppEnum.SETTING
         }
@@ -91,9 +91,9 @@ Item {
             PropertyChanges {target: search; source: "qrc:/img/dictionary_hightlight.png"}
         },
         State {
-            name: AppEnum.AICHAT
+            name: AppEnum.VOICECHAT
             PropertyChanges {target: choose; x: root.width * 2/4}
-            PropertyChanges {target: aichat; source: "qrc:/img/chat_hightlight.png"}
+            PropertyChanges {target: voicechat; source: "qrc:/img/chat_hightlight.png"}
         },
         State {
             name: AppEnum.SETTING

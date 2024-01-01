@@ -9,7 +9,7 @@ Controller::Controller(QObject *parent) : QObject(parent)
     connect(&m_setting, &Setting::portChanged,      this, &Controller::userInfoChanged);
     connect(&m_setting, &Setting::languageChanged,  this, &Controller::userInfoChanged);
 
-    connect(m_aiChat.tcpClient(),&TCPClient::sendNtfUI, this, &Controller::receiveNtf);
+    connect(m_voiceChat.tcpClient(),&TCPClient::sendNtfUI, this, &Controller::receiveNtf);
 }
 
 Controller *Controller::getInstance()
@@ -25,7 +25,7 @@ void Controller::initialize()
     QString name = "Admin";
     int lang = AppEnum::LANGUAGE::ENGLISH;
 
-    QFile file(PATH_HOME + "/data.json");
+    QFile file(PATH_HOME + "/config.json");
     if(!file.open(QIODevice::ReadOnly))
     {
         qDebug() << "Cannot open file : " << file.errorString();
@@ -54,9 +54,9 @@ void Controller::initialize()
         }
     }
 
-    m_aiChat.setUserName(name);
-    m_aiChat.setIPAddress(ip);
-    m_aiChat.setPort(port);
+    m_voiceChat.setUserName(name);
+    m_voiceChat.setIPAddress(ip);
+    m_voiceChat.setPort(port);
     m_setting.setUserName(name);
     m_setting.setIpAddress(ip);
     m_setting.setLanguage(lang);
@@ -89,9 +89,9 @@ Dictionary *Controller::dictionary()
     return &m_dictionary;
 }
 
-AIChat *Controller::aiChat()
+VoiceChat *Controller::voiceChat()
 {
-    return &m_aiChat;
+    return &m_voiceChat;
 }
 
 Setting *Controller::setting()
@@ -101,7 +101,7 @@ Setting *Controller::setting()
 
 void Controller::userInfoChanged(int changed)
 {
-    QFile file(PATH_HOME + "/data.json");
+    QFile file(PATH_HOME + "/config.json");
     if(!file.open(QIODevice::ReadOnly))
     {
         qDebug() << "Cannot open file : " << file.errorString();
@@ -115,15 +115,15 @@ void Controller::userInfoChanged(int changed)
     switch (changed) {
     case AppEnum::NOTIFYCHANGED::IPCHANGED:
         jObj["IPAddress"] = m_setting.ipAddress();
-        m_aiChat.setIPAddress(m_setting.ipAddress());
+        m_voiceChat.setIPAddress(m_setting.ipAddress());
         break;
     case AppEnum::NOTIFYCHANGED::NAMECHANGED:
         jObj["name"] = m_setting.userName();
-        m_aiChat.setUserName(m_setting.userName());
+        m_voiceChat.setUserName(m_setting.userName());
         break;
     case AppEnum::NOTIFYCHANGED::PORTCHANGED:
         jObj["port"] = m_setting.port();
-        m_aiChat.setPort(m_setting.port());
+        m_voiceChat.setPort(m_setting.port());
         break;
     case AppEnum::NOTIFYCHANGED::LANGCHANGED:
         switch (m_setting.language()) {

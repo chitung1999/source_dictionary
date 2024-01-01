@@ -5,6 +5,7 @@ Item {
 
     property string title
     property int heightTitle: 50
+    property int titleSize: 20
 
     Rectangle {
         id: title
@@ -16,7 +17,7 @@ Item {
         Text {
             anchors.centerIn: parent
             text: root.title
-            font.pixelSize: 20
+            font.pixelSize: root.titleSize
             font.bold: true
             color: "#FFF"
         }

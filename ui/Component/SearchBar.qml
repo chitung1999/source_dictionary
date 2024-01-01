@@ -49,6 +49,7 @@ Item {
                 text_input.text = ""
             }
         }
+        Keys.onDownPressed: changedFocus(true)
     }
 
     ListView {
@@ -62,15 +63,15 @@ Item {
             left: search_box.left
             leftMargin: 30
         }
-        model: NOTEBOOK.searchData.length
+        model: NOTEBOOK.searchKeys.length
         delegate: Rectangle {
             width: 420
             height: 40
             border.color: "#cccccc"
-            color: "#f8f8f8"
+            color: index == list_search.currentIndex ? "#bcbcbc" : "#f8f8f8"
 
             Text {
-                text: NOTEBOOK.searchData[index]
+                text: NOTEBOOK.searchKeys[index]
                 font.pixelSize: 20
                 anchors {
                     verticalCenter: parent.verticalCenter
@@ -78,19 +79,14 @@ Item {
                     leftMargin: 20
                 }
             }
-
             MouseArea {
                 anchors.fill: parent
-                hoverEnabled: true
-                onEntered: parent.color = "#eeeeee"
-                onExited: parent.color = "#f8f8f8"
-                onClicked: {
-                    NOTEBOOK.search(NOTEBOOK.searchData[index], root.isENG)
-                }
+                onClicked: NOTEBOOK.search(NOTEBOOK.searchKeys[index], root.isENG)
             }
+            Keys.onReturnPressed: NOTEBOOK.search(NOTEBOOK.searchKeys[index], root.isENG)
+            Keys.onRightPressed: changedFocus(false)
         }
     }
-
 
     Item {
         id: language
@@ -179,5 +175,10 @@ Item {
         property: "anchors.leftMargin"
         to: root.isENG ? 34 : 0
         duration: 100
+    }
+
+    function changedFocus(isListFocus) {
+        list_search.focus = isListFocus
+        text_input.focus = !isListFocus
     }
 }

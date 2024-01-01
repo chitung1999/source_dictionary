@@ -6,7 +6,7 @@
 #include <QGuiApplication>
 #include "scene/NoteBook.h"
 #include "scene/Dictionary.h"
-#include "scene/AIChat.h"
+#include "scene/VoiceChat.h"
 #include "scene/Setting.h"
 
 class Controller : public QObject
@@ -30,7 +30,7 @@ signals:
 public slots:
     NoteBook *noteBook();
     Dictionary *dictionary();
-    AIChat *aiChat();
+    VoiceChat *voiceChat();
     Setting *setting();
 
     void userInfoChanged(int changed);
@@ -41,7 +41,7 @@ private:
 
     NoteBook m_noteBook;
     Dictionary m_dictionary;
-    AIChat m_aiChat;
+    VoiceChat m_voiceChat;
     Setting m_setting;
 
     QString m_notifyMsg;

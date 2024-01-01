@@ -25,7 +25,7 @@ public slots:
     void socketDisconnect();
     void socketError(QAbstractSocket::SocketError socketError);
 
-    //receive slots from AIChat
+    //receive slots from VoiceChat
     void doConnect(QString ip, int port);
     void disconnect();
     void sendMessage(QString name, QString message);
