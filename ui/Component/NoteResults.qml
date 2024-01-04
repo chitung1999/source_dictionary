@@ -5,7 +5,7 @@ import "../Common"
 Item {
     id: root
 
-    TableBase {
+    TableVBase {
         id: box
         anchors.fill: parent
         title: NOTEBOOK.currentKey
@@ -22,26 +22,20 @@ Item {
     ListView {
         id: results
         width: box.width
-        height: box.height - 120
+        height: box.height - 140
         anchors {
             verticalCenter: box.verticalCenter
             verticalCenterOffset: 40
         }
         clip: true
         visible: false
-        model: NOTEBOOK.currentData
+        model: LISTNOTE
 
-//        delegate: MeanItem {
-//            partSpeed: model.part
-//            synonyms: model.synonyms
-//            antonyms: model.antonyms
-//            definitions: model.definitions
-//        }
-        delegate: Rectangle {
-            width: 500
-            height: 500
-            color: "red"
-            border.color: "black"
+        delegate: NoteItem {
+            index: model.index
+            words: model.words
+            means: model.means
+            notes: model.notes
         }
 
         ScrollBar.vertical: ScrollBar {

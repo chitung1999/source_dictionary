@@ -25,7 +25,7 @@ void Controller::initialize()
     QString name = "Admin";
     int lang = AppEnum::LANGUAGE::ENGLISH;
 
-    QFile file(PATH_HOME + "/config.json");
+    QFile file(PATH_HOME + QString("/config.json"));
     if(!file.open(QIODevice::ReadOnly))
     {
         qDebug() << "Cannot open file : " << file.errorString();
@@ -49,7 +49,7 @@ void Controller::initialize()
             lang = AppEnum::LANGUAGE::ENGLISH;
         else {
             lang = AppEnum::LANGUAGE::VIETNAMESE;
-            m_translator.load(PATH_HOME + "/vi_VN.qm");
+            m_translator.load(PATH_HOME + QString("/vi_VN.qm"));
             qApp->installTranslator(&m_translator);
         }
     }
@@ -101,7 +101,7 @@ Setting *Controller::setting()
 
 void Controller::userInfoChanged(int changed)
 {
-    QFile file(PATH_HOME + "/config.json");
+    QFile file(PATH_HOME + QString("/config.json"));
     if(!file.open(QIODevice::ReadOnly))
     {
         qDebug() << "Cannot open file : " << file.errorString();
@@ -129,7 +129,7 @@ void Controller::userInfoChanged(int changed)
         switch (m_setting.language()) {
         case AppEnum::LANGUAGE::VIETNAMESE:
             jObj["language"] = "vn";
-            m_translator.load(PATH_HOME + "/vi_VN.qm");
+            m_translator.load(PATH_HOME + QString("/vi_VN.qm"));
             qApp->installTranslator(&m_translator);
             break;
         case AppEnum::LANGUAGE::ENGLISH:

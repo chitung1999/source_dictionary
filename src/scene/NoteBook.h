@@ -3,46 +3,22 @@
 
 #include <QObject>
 #include <QDir>
-#include <QMap>
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QDebug>
+#include <QTimer>
+#include <QRandomGenerator>
 #include "../common/Define.h"
-
-struct NoteItem {
-    NoteItem(){}
-    NoteItem(int i, QString w, QString m, QStringList n) {
-        index = i;
-        words = w;
-        means = m;
-        notes = n;
-    }
-    int index;
-    QString words;
-    QString means;
-    QStringList notes;
-};
-
-struct Data {
-    QList<NoteItem> data;
-    QMap <QString, QList<int>> keysEng;
-    QMap <QString, QList<int>> keysVn;
-
-    void clear() {
-        data.clear();
-        keysEng.clear();
-        keysVn.clear();
-    }
-};
+#include "../model/NoteModel.h"
 
 class NoteBook : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString currentKey               READ currentKey     WRITE setCurrentKey     NOTIFY currentKeyChanged)
+    Q_PROPERTY(QString randomKey                READ randomKey      WRITE setRandomKey      NOTIFY randomKeyChanged)
     Q_PROPERTY(QStringList keys                 READ keys           WRITE setKeys           NOTIFY keysChanged)
     Q_PROPERTY(QStringList searchKeys           READ searchKeys     WRITE setSearchKeys     NOTIFY searchKeysChanged)
-    Q_PROPERTY(QList<QVariantMap> currentData   READ currentData    WRITE setCurrentData    NOTIFY currentDataChanged)
 public:
     explicit NoteBook(QObject *parent = nullptr);
     void initialize();
@@ -50,8 +26,8 @@ public:
     const QString &currentKey() const;
     void setCurrentKey(const QString &newCurrentKey);
 
-    const QList<QVariantMap> &currentData() const;
-    void setCurrentData(const QList<QVariantMap> &newCurrentData);
+    const QString &randomKey() const;
+    void setRandomKey(const QString &newRandomKey);
 
     const QStringList &keys() const;
     void setKeys(const QStringList &newKeys);
@@ -59,8 +35,13 @@ public:
     const QStringList &searchKeys() const;
     void setSearchKeys(const QStringList &newsearchKeys);
 
+    NoteModel *notes();
+
+    void clearData();
+
 signals:
     void currentKeyChanged();
+    void randomKeyChanged();
     void currentDataChanged();
     void keysChanged();
     void searchKeysChanged();
@@ -70,13 +51,18 @@ public slots:
     void search(QString key, bool isENG);
     void searchChar(QString key, bool isENG);
     void updateData();
+    void onChangedRandomKey();
 
 private:
     QString m_currentKey;
-    QList<QVariantMap> m_currentData;
+    QString m_randomKey;
     QStringList m_keys;
     QStringList m_searchKeys;
-    Data m_data;
+    NoteModel m_currentData;
+    QList <NoteItem> m_data;
+    QMap <QString, QList<int>> m_keysEng;
+    QMap <QString, QList<int>> m_keysVn;
+    QTimer m_timer;
 };
 
 #endif // NOTEBOOK_H

@@ -8,7 +8,7 @@ Item {
     width: 1700
     height: 680
 
-    TableBase {
+    TableVBase {
         id: key
         width: parent.width
         height: 120
@@ -58,7 +58,7 @@ Item {
             source: DICTIONARY.urlAudio
         }
     }
-    TableBase {
+    TableVBase {
         id: meanings
         width: parent.width
         height: parent.height - key.height

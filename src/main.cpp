@@ -14,11 +14,16 @@ int main(int argc, char *argv[])
 
     qmlRegisterUncreatableType<AppEnum>("AppEnum", 1, 0, "AppEnum", "Not creatable as it is an enum type");
     engine.rootContext()->setContextProperty("CTRL", Controller::getInstance());
+
     engine.rootContext()->setContextProperty("NOTEBOOK", Controller::getInstance()->noteBook());
+    engine.rootContext()->setContextProperty("LISTNOTE", Controller::getInstance()->noteBook()->notes());
+
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
     engine.rootContext()->setContextProperty("LISTMEAN", Controller::getInstance()->dictionary()->means());
+
     engine.rootContext()->setContextProperty("VOICECHAT", Controller::getInstance()->voiceChat());
     engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->voiceChat()->message());
+
     engine.rootContext()->setContextProperty("SETTING", Controller::getInstance()->setting());
 
 

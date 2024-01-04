@@ -3,28 +3,14 @@
 NoteBook::NoteBook(QObject *parent) : QObject(parent)
 {
     initialize();
+    connect(&m_timer, &QTimer::timeout, this, &NoteBook::onChangedRandomKey);
+    m_timer.start(10000);
 }
 
 void NoteBook::initialize()
 {
     updateData();
-    QVariantMap item;
-    item["index"] = 0;
-    item["words"] = QStringList();
-    item["means"] = QStringList();
-    item["notes"] = QStringList();
-    m_currentData.append(item);
-}
-
-const QList<QVariantMap> &NoteBook::currentData() const
-{
-    return m_currentData;
-}
-
-void NoteBook::setCurrentData(const QList<QVariantMap> &newCurrentData)
-{
-    m_currentData = newCurrentData;
-    emit currentDataChanged();
+    onChangedRandomKey();
 }
 
 const QStringList &NoteBook::keys() const
@@ -53,6 +39,18 @@ void NoteBook::setSearchKeys(const QStringList &newsearchKeys)
     emit searchKeysChanged();
 }
 
+NoteModel *NoteBook::notes()
+{
+    return &m_currentData;
+}
+
+void NoteBook::clearData()
+{
+    m_data.clear();
+    m_keysEng.clear();
+    m_keysVn.clear();
+}
+
 const QString &NoteBook::currentKey() const
 {
     return m_currentKey;
@@ -66,20 +64,28 @@ void NoteBook::setCurrentKey(const QString &newCurrentKey)
     emit currentKeyChanged();
 }
 
+const QString &NoteBook::randomKey() const
+{
+    return m_randomKey;
+}
+
+void NoteBook::setRandomKey(const QString &newRandomKey)
+{
+    if (m_randomKey == newRandomKey)
+        return;
+    m_randomKey = newRandomKey;
+    emit randomKeyChanged();
+}
+
 void NoteBook::search(QString key, bool isENG)
 {
     setCurrentKey(key);
-    auto it = isENG ? m_data.keysEng.find(key) : m_data.keysVn.find(key);
-    QList<QVariantMap> listdata;
+    m_currentData.clear();
+    auto it = isENG ? m_keysEng.find(key) : m_keysVn.find(key);
     foreach (auto index, it.value()) {
-        QVariantMap item;
-        item["index"] = m_data.data[index].index;
-        item["words"] = m_data.data[index].words;
-        item["means"] = m_data.data[index].means;
-        item["notes"] = m_data.data[index].notes;
-        listdata.append(item);
+        m_currentData.append(m_data[index]);
     }
-    setCurrentData(listdata);
+
     emit requestSearch();
 }
 
@@ -88,7 +94,7 @@ void NoteBook::searchChar(QString key, bool isENG)
     m_searchKeys.clear();
 
     if (key != "") {
-        foreach (auto data, (isENG ? m_data.keysEng.keys() : m_data.keysVn.keys())) {
+        foreach (auto data, (isENG ? m_keysEng.keys() : m_keysVn.keys())) {
             if(data.contains(key))
                 m_searchKeys.append(data);
         }
@@ -99,7 +105,7 @@ void NoteBook::searchChar(QString key, bool isENG)
 
 void NoteBook::updateData()
 {
-    QString path = PATH_HOME + "/data.json";
+    QString path = PATH_HOME + QString("/data.json");
     QFile file(path);
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -110,27 +116,42 @@ void NoteBook::updateData()
     QString data = file.readAll();
     file.close();
 
-    m_data.clear();
+    clearData();
     QJsonArray arr = QJsonDocument::fromJson(data.toUtf8()).array();
     foreach (const QJsonValue &valueObj, arr) {
         NoteItem item;
         item.index = valueObj.toObject().value("index").toInt();
         QJsonArray arrWord = valueObj.toObject().value("words").toArray();
         foreach (const QJsonValue &valueWord, arrWord) {
-            item.words += ((item.words == "" ? "" : ", ") + valueWord.toString());
-            m_data.keysEng[valueWord.toString()].append(item.index);
+            item.words.append(valueWord.toString());
+            m_keysEng[valueWord.toString()].append(item.index);
         }
+
         arrWord = valueObj.toObject().value("means").toArray();
         foreach (const QJsonValue &valueWord, arrWord) {
-            item.means += ((item.means == "" ? "" : ", ") + valueWord.toString());
-            m_data.keysVn[valueWord.toString()].append(item.index);
+            item.means.append(valueWord.toString());
+            m_keysVn[valueWord.toString()].append(item.index);
         }
-        arrWord = valueObj.toObject().value("notes").toArray();
-        foreach (const QJsonValue &valueWord, arrWord) {
-            item.notes.append(valueWord.toString());
-        }
-        m_data.data.append(item);
+
+        item.notes = valueObj.toObject().value("notes").toString();
+
+        m_data.append(item);
     }
 
-    setKeys(m_data.keysEng.keys());
+    setKeys(m_keysEng.keys());
+}
+
+void NoteBook::onChangedRandomKey()
+{
+    int index = QRandomGenerator::global()->bounded(0, m_data.length());
+    int indexKey = QRandomGenerator::global()->bounded(0, m_data[index].words.length());
+
+    QString str;
+    foreach (auto &value, m_data.at(index).means) {
+        if (!str.isEmpty())
+            str += ", ";
+        str += value;
+    }
+
+    setRandomKey(m_data.at(index).words.at(indexKey) + ": " + str);
 }

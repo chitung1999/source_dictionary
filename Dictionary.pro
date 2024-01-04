@@ -18,6 +18,7 @@ SOURCES += \
     src/common/TCPClient.cpp \
     src/model/MeanModel.cpp \
     src/model/MessageModel.cpp \
+    src/model/NoteModel.cpp \
     src/scene/Dictionary.cpp \
     src/scene/NoteBook.cpp \
     src/scene/Setting.cpp \
@@ -47,6 +48,7 @@ HEADERS += \
     src/common/AppEnum.h \
     src/model/MeanModel.h \
     src/model/MessageModel.h \
+    src/model/NoteModel.h \
     src/scene/Dictionary.h \
     src/scene/NoteBook.h \
     src/scene/Setting.h \

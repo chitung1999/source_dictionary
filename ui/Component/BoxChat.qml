@@ -6,7 +6,7 @@ Item {
     id: root
     anchors.fill: parent
 
-    TableBase {
+    TableVBase {
         id: content
         width: parent.width * 4/5
         height: 780
