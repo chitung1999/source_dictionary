@@ -38,6 +38,26 @@ void NoteModel::append(NoteItem item)
     endInsertRows();
 }
 
+void NoteModel::removeAt(int index)
+{
+    beginResetModel();
+    for(int i = 0; i < m_listNote.length(); i++) {
+        if (index == m_listNote[i].index)
+            m_listNote.removeAt(i);
+    }
+    endResetModel();
+}
+
+void NoteModel::replace(int index, NoteItem &item)
+{
+    beginResetModel();
+    for(int i = 0; i < m_listNote.length(); i++) {
+        if (index == m_listNote[i].index)
+            m_listNote.replace(i, item);
+    }
+    endResetModel();
+}
+
 void NoteModel::clear()
 {
     beginResetModel();

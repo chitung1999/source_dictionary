@@ -19,7 +19,7 @@ Item {
             left: parent.left
             leftMargin: 30
         }
-        title: qsTr("Words")
+        title: "Words"
         content: formatList(root.words)
     }
 
@@ -32,7 +32,7 @@ Item {
             top: words.bottom
             topMargin: - means.borderWidth
         }
-        title: qsTr("Means")
+        title: "Means"
         content: formatList(root.means)
     }
 
@@ -45,16 +45,17 @@ Item {
             top: means.bottom
             topMargin: - means.borderWidth
         }
-        title: qsTr("Notes")
+        title: "Notes"
         content: root.notes
     }
 
     Image {
         id: modify
         anchors {
-            left: means.right
-            leftMargin: 10
-            verticalCenter: means.verticalCenter
+            right: root.right
+            rightMargin: 30
+            verticalCenter: root.verticalCenter
+            verticalCenterOffset: -30
         }
         opacity: 0.5
         source: "qrc:/img/edit.png"
@@ -65,7 +66,72 @@ Item {
             onExited: parent.opacity = 0.5
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {}
+            onClicked: {
+                NOTEBOOK.requestModifyData(root.index)
+            }
+        }
+    }
+
+    Image {
+        id: remove
+        anchors {
+            right: modify.right
+            verticalCenter: root.verticalCenter
+            verticalCenterOffset: 30
+        }
+        opacity: 0.5
+        source: "qrc:/img/remove.png"
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered: parent.opacity = 0.8
+            onExited: parent.opacity = 0.4
+            onPressed: parent.scale = 0.7
+            onReleased: parent.scale = 1
+            onClicked: {
+                check_remove.visible = true
+                remove.visible = false
+            }
+        }
+    }
+
+    Item {
+        id: check_remove
+        anchors.fill: remove
+        visible: false
+        Image {
+            id: cancel
+            anchors.fill: parent
+            source: "qrc:/img/cancel.png"
+            MouseArea {
+                anchors.fill: parent
+                onPressed: parent.scale = 0.7
+                onReleased: parent.scale = 1
+                onClicked: {
+                    check_remove.visible = false
+                    remove.visible = true
+                }
+            }
+        }
+
+        Image {
+            id: ok
+            anchors {
+                top: cancel.bottom
+                topMargin: 15
+                left: cancel.left
+            }
+            source: "qrc:/img/ok.png"
+            MouseArea {
+                anchors.fill: parent
+                onPressed: parent.scale = 0.7
+                onReleased: parent.scale = 1
+                onClicked: {
+                    check_remove.visible = false
+                    remove.visible = true
+                    CTRL.removeItemNote(root.index)
+                }
+            }
         }
     }
 

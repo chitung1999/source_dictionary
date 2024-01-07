@@ -17,7 +17,7 @@ Item {
         Rectangle {
             width: 300
             height: 600
-            color: "#eeeeee"
+            color: "#969696"
         }
         visible: false
     }
@@ -26,6 +26,8 @@ Item {
         id: box
         anchors.fill: box_hide
         source: box_hide
+        borderWidth: 3
+        opacity: 0.8
     }
 
     Text {
@@ -57,6 +59,16 @@ Item {
             titleItem: qsTr("Connect")
             stateItem: AppEnum.CONNECT
             sourceItem: "qrc:/img/connect.png"
+        }
+        ListElement {
+            titleItem: qsTr("BackGround")
+            stateItem: AppEnum.BACKGROUND
+            sourceItem: "qrc:/img/bg_icon.png"
+        }
+        ListElement {
+            titleItem: qsTr("Color")
+            stateItem: AppEnum.COLOR
+            sourceItem: "qrc:/img/color.png"
         }
     }
 
@@ -105,7 +117,7 @@ Item {
 
     Rectangle {
         id: choose
-        width: 5
+        width: 8
         height: 80
         anchors.left: box.left
         color: "#5ca5d1"
@@ -142,7 +154,7 @@ Item {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: SETTING.setLanguage(AppEnum.ENGLISH)
+                onClicked: CTRL.setLanguage(AppEnum.ENGLISH)
             }
         }
         Rectangle {
@@ -167,61 +179,78 @@ Item {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: SETTING.setLanguage(AppEnum.VIETNAMESE)
+                onClicked: CTRL.setLanguage(AppEnum.VIETNAMESE)
             }
         }
 
         TextInputBase {
             id: username_input
-            anchors {
-                verticalCenter: parent.verticalCenter
-                left: parent.left
-                leftMargin: 200
-            }
+            anchors.centerIn: parent
             visible: false
             title: qsTr("User name:") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
-            boxLeft: 200
+            boxLeft: username_input.textLeft + 20
             content: SETTING.userName
 
-            onTextChanged: SETTING.setUserName(username_input.textInput)
+            onTextChanged: CTRL.setUserName(username_input.textInput)
         }
 
         TextInputBase {
             id: ip_input
             anchors {
                 verticalCenter: parent.verticalCenter
-                verticalCenterOffset: -70
-                left: parent.left
-                leftMargin: 100
+                verticalCenterOffset: -40
+                horizontalCenter: parent.horizontalCenter
             }
             visible: false
             title: qsTr("IP Adress Connect:") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
-            boxLeft: 320
+            boxLeft: ip_input.textLeft + 20
             content: SETTING.ipAddress
-            onTextChanged: SETTING.setIpAddress(ip_input.textInput)
+            onTextChanged: CTRL.setIpAddress(ip_input.textInput)
         }
 
         TextInputBase {
             id: port_input
             anchors {
                 verticalCenter: parent.verticalCenter
-                verticalCenterOffset: 25
-                left: parent.left
-                leftMargin: 100
+                verticalCenterOffset: 40
+                left: ip_input.left
             }
             visible: false
             title: qsTr("Port:") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
-            boxLeft: 320
+            boxLeft: ip_input.textLeft + 20
             content: SETTING.port
 
-            onTextChanged: SETTING.setPort(port_input.textInput)
+            onTextChanged: CTRL.setPort(port_input.textInput)
         }
+
+        TextInputBase {
+            id: background_input
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+                leftMargin: 30
+            }
+            visible: false
+            title: qsTr("Path:") + CTRL.translator
+            boxWidth: 620
+            boxHeight: 60
+            boxLeft: background_input.textLeft + 20
+            fontSize: 25
+            content: SETTING.background
+
+            onTextChanged: CTRL.setBackground(background_input.textInput)
+        }
+    }
+
+    PopUp {
+        id: popup
+        anchors.fill: parent
     }
 
     states: [
@@ -241,6 +270,16 @@ Item {
             PropertyChanges {target: choose; y: 450}
             PropertyChanges {target: ip_input; visible: true}
             PropertyChanges {target: port_input; visible: true}
+        },
+        State {
+            name: AppEnum.BACKGROUND
+            PropertyChanges {target: choose; y: 530}
+            PropertyChanges {target: background_input; visible: true}
+        },
+        State {
+            name: AppEnum.COLOR
+            PropertyChanges {target: choose; y: 610}
+            PropertyChanges {target: background_input; visible: true}
         }
     ]
 }

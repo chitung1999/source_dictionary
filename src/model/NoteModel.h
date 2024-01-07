@@ -34,6 +34,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     void append(NoteItem item);
+    void removeAt(int index);
+    void replace(int index, NoteItem &item);
     void clear();
 
 protected:

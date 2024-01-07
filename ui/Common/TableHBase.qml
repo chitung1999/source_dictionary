@@ -20,6 +20,7 @@ Item {
         }
         border.color: "#000"
         border.width: root.borderWidth
+        color: "transparent"
         Text {
             anchors.centerIn: parent
             text: root.title
@@ -39,6 +40,7 @@ Item {
         }
         border.color: "#000"
         border.width: root.borderWidth
+        color: "transparent"
         Text {
             id: content_text
             width: parent.width - content_text.anchors.leftMargin * 2

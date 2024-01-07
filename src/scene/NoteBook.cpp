@@ -2,15 +2,8 @@
 
 NoteBook::NoteBook(QObject *parent) : QObject(parent)
 {
-    initialize();
     connect(&m_timer, &QTimer::timeout, this, &NoteBook::onChangedRandomKey);
     m_timer.start(10000);
-}
-
-void NoteBook::initialize()
-{
-    updateData();
-    onChangedRandomKey();
 }
 
 const QStringList &NoteBook::keys() const
@@ -42,6 +35,11 @@ void NoteBook::setSearchKeys(const QStringList &newsearchKeys)
 NoteModel *NoteBook::notes()
 {
     return &m_currentData;
+}
+
+NewData *NoteBook::newData()
+{
+    return &m_newData;
 }
 
 void NoteBook::clearData()
@@ -85,7 +83,6 @@ void NoteBook::search(QString key, bool isENG)
     foreach (auto index, it.value()) {
         m_currentData.append(m_data[index]);
     }
-
     emit requestSearch();
 }
 
@@ -103,22 +100,11 @@ void NoteBook::searchChar(QString key, bool isENG)
     emit searchKeysChanged();
 }
 
-void NoteBook::updateData()
+void NoteBook::updateData(const QJsonArray &data)
 {
-    QString path = PATH_HOME + QString("/data.json");
-    QFile file(path);
-    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        qDebug() << "Cannot open file: " << path;
-        qDebug() << "Error: " << file.errorString();
-        return;
-    }
-    QString data = file.readAll();
-    file.close();
 
     clearData();
-    QJsonArray arr = QJsonDocument::fromJson(data.toUtf8()).array();
-    foreach (const QJsonValue &valueObj, arr) {
+    foreach (const QJsonValue &valueObj, data) {
         NoteItem item;
         item.index = valueObj.toObject().value("index").toInt();
         QJsonArray arrWord = valueObj.toObject().value("words").toArray();
@@ -141,6 +127,11 @@ void NoteBook::updateData()
     setKeys(m_keysEng.keys());
 }
 
+void NoteBook::updateCurrentData()
+{
+   m_currentData.replace(m_newData.index(), m_data[m_newData.index()]);
+}
+
 void NoteBook::onChangedRandomKey()
 {
     int index = QRandomGenerator::global()->bounded(0, m_data.length());
@@ -154,4 +145,24 @@ void NoteBook::onChangedRandomKey()
     }
 
     setRandomKey(m_data.at(index).words.at(indexKey) + ": " + str);
+}
+
+void NoteBook::requestModifyData(int index)
+{
+    m_newData.setIndex(index);
+    m_newData.setIsNewData(false);
+    m_newData.requestChangedData(m_data[index].words, m_data[index].means, m_data[index].notes);
+    emit requestChangedData();
+}
+
+void NoteBook::requestAddNewData()
+{
+    m_newData.setIsNewData(true);
+    m_newData.requestChangedData(QStringList(), QStringList(), QString());
+    emit requestChangedData();
+}
+
+void NoteBook::requestAddItem(bool isKey, QStringList list)
+{
+    isKey ? m_newData.setKeys(list << "") : m_newData.setMeans(list << "");
 }

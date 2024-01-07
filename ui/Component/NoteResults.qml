@@ -7,9 +7,14 @@ Item {
 
     TableVBase {
         id: box
-        anchors.fill: parent
-        title: NOTEBOOK.currentKey
-        titleSize: 40
+        width: 1160
+        height: 680
+        anchors {
+            top: parent.top
+            topMargin: 200
+            left: parent.left
+            leftMargin: 100
+        }
         heightTitle: 80
         visible: false
     }
@@ -17,6 +22,42 @@ Item {
     BorderBase {
         anchors.fill: box
         source: box
+        opacity: 0.8
+    }
+
+
+    Text {
+        id: box_title
+        anchors {
+            top: box.top
+            topMargin: 15
+            horizontalCenter: box.horizontalCenter
+        }
+        font.pixelSize: 40
+        font.bold: true
+        color: "#fff"
+        text: NOTEBOOK.currentKey
+    }
+
+    Image {
+        id: add_new
+        anchors {
+            top: box.top
+            topMargin: 20
+            right: box.right
+            rightMargin: 20
+        }
+        width: 40
+        height: 40
+        source: "qrc:/img/add.png"
+        MouseArea {
+            anchors.fill: parent
+            onPressed: parent.scale = 0.7
+            onReleased: parent.scale = 1
+            onClicked: {
+                NOTEBOOK.requestAddNewData()
+            }
+        }
     }
 
     ListView {
@@ -24,6 +65,7 @@ Item {
         width: box.width
         height: box.height - 140
         anchors {
+            left: box.left
             verticalCenter: box.verticalCenter
             verticalCenterOffset: 40
         }
@@ -51,10 +93,25 @@ Item {
         }
     }
 
+    SearchBar {
+        id: search
+        anchors.fill: parent
+    }
+
+    NewData {
+        id: change_data
+        anchors.fill: parent
+        visible: false
+    }
+
     Connections {
         target: NOTEBOOK
         function onRequestSearch() {
             results.visible = true
+        }
+
+        function onRequestChangedData() {
+            change_data.visible = true
         }
     }
 }

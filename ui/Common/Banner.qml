@@ -14,7 +14,7 @@ Item {
 
         Rectangle {
             id: choose
-            width: parent.width / 4
+            width: parent.width / 5
             height: 5
             anchors.bottom: banner_top.bottom
             color: "#5ca5d1"
@@ -26,8 +26,14 @@ Item {
             onClick: root.state = AppEnum.NOTEBOOK
         }
         BannerItem {
-            id: search
+            id: grammar
             anchors.left: notebook.right
+            source: "qrc:/img/grammar.png"
+            onClick: root.state = AppEnum.GRAMMAR
+        }
+        BannerItem {
+            id: search
+            anchors.left: grammar.right
             source: "qrc:/img/dictionary.png"
             onClick: root.state = AppEnum.SEARCH
         }
@@ -74,30 +80,35 @@ Item {
             font.pixelSize: 30
             font.bold: true
             style: Text.Raised
-            styleColor: "black"
-            color: "#FFF"
+            styleColor: "#FFF"
+            color: "#45818E"
         }
     }
 
     states: [
         State {
             name: AppEnum.NOTEBOOK
-            PropertyChanges {target: choose; x: root.width * 0/4}
+            PropertyChanges {target: choose; x: root.width * 0/5}
             PropertyChanges {target: notebook; source: "qrc:/img/notebook_hightlight.png"}
         },
         State {
+            name: AppEnum.GRAMMAR
+            PropertyChanges {target: choose; x: root.width * 1/5}
+            PropertyChanges {target: grammar; source: "qrc:/img/grammar_hightlight.png"}
+        },
+        State {
             name: AppEnum.SEARCH
-            PropertyChanges {target: choose; x: root.width * 1/4}
+            PropertyChanges {target: choose; x: root.width * 2/5}
             PropertyChanges {target: search; source: "qrc:/img/dictionary_hightlight.png"}
         },
         State {
             name: AppEnum.VOICECHAT
-            PropertyChanges {target: choose; x: root.width * 2/4}
+            PropertyChanges {target: choose; x: root.width * 3/5}
             PropertyChanges {target: voicechat; source: "qrc:/img/chat_hightlight.png"}
         },
         State {
             name: AppEnum.SETTING
-            PropertyChanges {target: choose; x: root.width * 3/4}
+            PropertyChanges {target: choose; x: root.width * 4/5}
             PropertyChanges {target: game; source: "qrc:/img/setting_hightlight.png"}
         }
     ]

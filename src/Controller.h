@@ -8,6 +8,7 @@
 #include "scene/Dictionary.h"
 #include "scene/VoiceChat.h"
 #include "scene/Setting.h"
+#include "common/FileControl.h"
 
 class Controller : public QObject
 {
@@ -23,17 +24,25 @@ public:
 
      QString translator();
 
+     NoteBook *noteBook();
+     Dictionary *dictionary();
+     VoiceChat *voiceChat();
+     Setting *setting();
+
 signals:
      void notifyMsgChanged();
      void translatorChanged();
 
 public slots:
-    NoteBook *noteBook();
-    Dictionary *dictionary();
-    VoiceChat *voiceChat();
-    Setting *setting();
+    void setLanguage(int lang);
+    void setUserName(QString name);
+    void setIpAddress(QString ip);
+    void setPort(int port);
+    void setBackground(QString path);
 
-    void userInfoChanged(int changed);
+    void removeItemNote(int index);
+    void changeItemNote(QStringList keys, QStringList means, QString notes);
+
     void receiveNtf(QString ntf);
 
 private:
@@ -43,9 +52,10 @@ private:
     Dictionary m_dictionary;
     VoiceChat m_voiceChat;
     Setting m_setting;
-
     QString m_notifyMsg;
     QTranslator m_translator;
+    QJsonObject m_dataJson;
+    FileControl m_file;
 };
 
 #endif // CONTROLLER_H

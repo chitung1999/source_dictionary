@@ -15,7 +15,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     src/common/APIRequest.cpp \
+    src/common/FileControl.cpp \
     src/common/TCPClient.cpp \
+    src/component/NewData.cpp \
     src/model/MeanModel.cpp \
     src/model/MessageModel.cpp \
     src/model/NoteModel.cpp \
@@ -43,9 +45,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     src/common/APIRequest.h \
+    src/common/FileControl.h \
     src/common/TCPClient.h \
     src/common/Define.h \
     src/common/AppEnum.h \
+    src/component/NewData.h \
     src/model/MeanModel.h \
     src/model/MessageModel.h \
     src/model/NoteModel.h \

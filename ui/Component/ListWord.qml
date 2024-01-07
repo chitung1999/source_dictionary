@@ -14,7 +14,7 @@ Item {
             top: parent.top
             topMargin: 90
         }
-        text: qsTr("New words dictionary")
+        text: qsTr("New words dictionary") + CTRL.translator
         font.pixelSize: 30
         font.bold: true
         style: Text.Raised
@@ -25,29 +25,56 @@ Item {
     Rectangle {
         id: box
         width: list_word.width + box.border.width * 2
-        height: list_word.height + box.border.width * 2
+        height: list_word.height + box.border.width * 2 + 40
+        radius: 5
         anchors {
             top: title.bottom
-            topMargin: 30
+            topMargin: 20
             left: parent.left
         }
         border.width: 3
         border.color: "#45818E"
+        opacity: 0.9
+
+        Rectangle {
+            width: list_word.width
+            height: 40
+            anchors{
+                left: parent.left
+                leftMargin: box.border.width
+                bottom: box.bottom
+                bottomMargin: box.border.width
+            }
+            Text {
+                anchors.centerIn: parent
+                font.pixelSize: 20
+                font.bold: true
+                text: qsTr("Count: ") + CTRL.translator + NOTEBOOK.keys.length
+            }
+        }
     }
 
     ListView {
         id: list_word
         width: 400
-        height: 720
+        height: 780
         clip: true
-        anchors.centerIn: box
+        anchors {
+            top: box.top
+            topMargin: box.border.width
+            horizontalCenter: box.horizontalCenter
+        }
         model: NOTEBOOK.keys.length
-        delegate: Rectangle {
+        delegate: Item {
             width: 400
             height: 40
-            radius: 5
-            border.color: "#cccccc"
-            color: index == list_word.currentIndex ? "#eeeeee" : "#fff"
+            Rectangle {
+                radius: 5
+                anchors.fill: parent
+                border.color: "#cccccc"
+                color: index == list_word.currentIndex ? "#bcbcbc" : "transparent"
+            }
+
             Text {
                 text: NOTEBOOK.keys[index]
                 font.pixelSize: 20
@@ -80,20 +107,5 @@ Item {
                 color: "gray"
             }
         }
-    }
-
-    ButtonBase {
-        id: update
-        width: 160
-        height: 50
-        anchors {
-            horizontalCenter: box.horizontalCenter
-            top: box.bottom
-            topMargin: 30
-        }
-        name: qsTr("Update")
-        colorCenter: "#569bea"
-        colorOutside: "#f4cccc"
-//        onClickButton: NOTEBOOK.updateData()
     }
 }

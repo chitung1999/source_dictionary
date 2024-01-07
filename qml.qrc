@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>img/LOGO_MINI.PNG</file>
         <file>img/search.png</file>
-        <file>img/bg.jpg</file>
         <file>img/notebook.png</file>
         <file>img/notebook_hightlight.png</file>
         <file>img/dictionary.png</file>
@@ -43,5 +42,17 @@
         <file>ui/Common/TextInputBase.qml</file>
         <file>ui/Component/NoteItem.qml</file>
         <file>ui/Common/TableHBase.qml</file>
+        <file>ui/Component/NewData.qml</file>
+        <file>ui/Component/NewDataItem.qml</file>
+        <file>img/add.png</file>
+        <file>img/remove.png</file>
+        <file>img/cancel.png</file>
+        <file>img/ok.png</file>
+        <file>img/bg_popup.jpg</file>
+        <file>img/bg_backup.jpg</file>
+        <file>img/bg_icon.png</file>
+        <file>img/color.png</file>
+        <file>img/grammar.png</file>
+        <file>img/grammar_hightlight.png</file>
     </qresource>
 </RCC>

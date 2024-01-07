@@ -2,9 +2,12 @@ import QtQuick 2.0
 
 Item {
     id: root
+    height: box.height
+    width: title.width + box.width
     property string title
     property string content
     property alias textInput: username.text
+    property alias textLeft: title.width
     property int fontSize: 30
     property int boxWidth
     property int boxHeight
@@ -20,6 +23,7 @@ Item {
     }
 
     Rectangle {
+        id: box
         width: root.boxWidth
         height: root.boxHeight
         anchors {

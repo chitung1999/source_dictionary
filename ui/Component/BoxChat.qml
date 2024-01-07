@@ -23,6 +23,7 @@ Item {
         id: box
         anchors.fill: content
         source: content
+        opacity: 0.8
     }
 
     Rectangle {

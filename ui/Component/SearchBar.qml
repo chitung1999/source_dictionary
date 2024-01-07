@@ -18,6 +18,7 @@ Item {
         }
         color: "#FFF"
         border.color: "#569bea"
+        opacity: 0.8
     }
 
     Image {
@@ -104,7 +105,7 @@ Item {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
             }
-            text: qsTr("VN")
+            text: "VN"
             font.pixelSize: 20
             font.bold: true
             color: "#45818E"
@@ -117,7 +118,7 @@ Item {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
             }
-            text: qsTr("EN")
+            text: "EN"
             font.pixelSize: 20
             font.bold: true
             opacity: root.isENG ? 1 : 0.5

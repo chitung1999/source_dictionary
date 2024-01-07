@@ -4,14 +4,22 @@
 <context>
     <name>DictionaryResults</name>
     <message>
-        <location filename="ui/Component/DictionaryResults.qml" line="15"/>
+        <location filename="ui/Component/DictionaryResults.qml" line="44"/>
         <source>Key</source>
-        <translation>Từ Tiếng Anh</translation>
+        <translation>Từ khoá</translation>
     </message>
     <message>
-        <location filename="ui/Component/DictionaryResults.qml" line="66"/>
+        <location filename="ui/Component/DictionaryResults.qml" line="57"/>
+        <source>Result</source>
+        <translation>Kết quả</translation>
+    </message>
+    <message>
+        <source>Means</source>
+        <translation type="vanished">Kết quả</translation>
+    </message>
+    <message>
         <source>Meanings</source>
-        <translation>Nghĩa</translation>
+        <translation type="vanished">Nghĩa</translation>
     </message>
 </context>
 <context>
@@ -22,83 +30,122 @@
         <translation>Danh Sách Từ Mới</translation>
     </message>
     <message>
-        <location filename="ui/Component/ListWord.qml" line="94"/>
+        <location filename="ui/Component/ListWord.qml" line="52"/>
+        <source>Count: </source>
+        <translation>Tổng số: </translation>
+    </message>
+    <message>
         <source>Update</source>
-        <translation>Cập nhật</translation>
+        <translation type="vanished">Cập nhật</translation>
+    </message>
+</context>
+<context>
+    <name>NewData</name>
+    <message>
+        <location filename="ui/Component/NewData.qml" line="44"/>
+        <source>Words</source>
+        <translation>Từ Tiếng Anh</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/NewData.qml" line="56"/>
+        <source>Means</source>
+        <translation>Từ Tiếng Việt</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/NewData.qml" line="69"/>
+        <source>Notes</source>
+        <translation>Ghi chú</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/NewData.qml" line="198"/>
+        <source>Cancel</source>
+        <translation>Huỷ</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/NewData.qml" line="213"/>
+        <source>OK</source>
+        <translation>Đồng ý</translation>
+    </message>
+</context>
+<context>
+    <name>NoteBook</name>
+    <message>
+        <location filename="src/scene/NoteBook.cpp" line="262"/>
+        <source>The keys or means are empty!</source>
+        <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
     </message>
 </context>
 <context>
     <name>NoteResults</name>
     <message>
-        <location filename="ui/Component/NoteResults.qml" line="13"/>
         <source>Keys</source>
-        <translation>Từ Tiếng Anh</translation>
+        <translation type="vanished">Từ Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteResults.qml" line="39"/>
         <source>Meanings</source>
-        <translation>Nghĩa</translation>
+        <translation type="vanished">Nghĩa</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteResults.qml" line="65"/>
         <source>Note</source>
-        <translation>Ghi Chú</translation>
-    </message>
-</context>
-<context>
-    <name>SearchBar</name>
-    <message>
-        <location filename="ui/Component/SearchBar.qml" line="111"/>
-        <source>VN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ui/Component/SearchBar.qml" line="124"/>
-        <source>EN</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Ghi Chú</translation>
     </message>
 </context>
 <context>
     <name>Setting</name>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="41"/>
+        <location filename="ui/Scene/Setting.qml" line="43"/>
         <source>Setting</source>
         <translation>Cài đặt</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="47"/>
+        <location filename="ui/Scene/Setting.qml" line="49"/>
         <source>Language</source>
         <translation>Ngôn ngữ</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="52"/>
+        <location filename="ui/Scene/Setting.qml" line="54"/>
         <source>User Name</source>
         <translation>Người dùng</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="57"/>
+        <location filename="ui/Scene/Setting.qml" line="59"/>
         <source>Connect</source>
         <translation>Kết nối</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="140"/>
+        <location filename="ui/Scene/Setting.qml" line="64"/>
+        <source>BackGround</source>
+        <translation>Hình nền</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="148"/>
         <source>English</source>
         <translation>Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="162"/>
+        <location filename="ui/Scene/Setting.qml" line="173"/>
         <source>Vietnamese</source>
         <translation>Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="198"/>
+        <location filename="ui/Scene/Setting.qml" line="185"/>
         <source>User name:</source>
-        <translation>Tên người dùng:</translation>
+        <translation>Tên người dùng: </translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="270"/>
+        <location filename="ui/Scene/Setting.qml" line="202"/>
         <source>IP Adress Connect:</source>
         <translation>IP Kết nối:</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="218"/>
+        <source>Port:</source>
+        <translation>Cổng: </translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="235"/>
+        <source>Path:</source>
+        <translation>Đường dẫn:</translation>
     </message>
 </context>
 <context>
@@ -123,14 +170,6 @@
         <source>You are Offline!</source>
         <oldsource>Bạn đang Offline!</oldsource>
         <translation>Bạn đang Offline!</translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <location filename="ui/main.qml" line="12"/>
-        <source>Dictionary</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

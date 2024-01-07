@@ -14,6 +14,7 @@ Item {
         width: 520
         height: parent.height
         border.color: "#000"
+        color: "transparent"
 
         Column {
             height: part_speech.height + synonyms_id.height + antonyms_id.height + spacing * 2
@@ -62,6 +63,7 @@ Item {
                 x: box.width
                 width: root.width - box.width
                 border.color: "black"
+                color: "transparent"
                 property int number: definition.height + example.height + 15
 
                 Text {

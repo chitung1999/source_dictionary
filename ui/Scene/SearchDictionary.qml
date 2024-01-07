@@ -17,6 +17,7 @@ Item {
         }
         color: "#FFF"
         border.color: "#569bea"
+        opacity: 0.8
     }
 
     Image {

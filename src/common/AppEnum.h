@@ -9,6 +9,7 @@ class AppEnum : public QObject
 public:
     enum APP {
         NOTEBOOK = 0,
+        GRAMMAR,
         SEARCH,
         VOICECHAT,
         SETTING
@@ -17,7 +18,9 @@ public:
     enum SETTING {
         LANGUAGE = 0,
         USERNAME,
-        CONNECT
+        CONNECT,
+        BACKGROUND,
+        COLOR
     }Q_ENUMS(SETTING);
 
     enum LANGUAGE {
@@ -29,7 +32,8 @@ public:
         LANGCHANGED = 0,
         NAMECHANGED,
         IPCHANGED,
-        PORTCHANGED
+        PORTCHANGED,
+        BGCHANGED
     };
 };
 

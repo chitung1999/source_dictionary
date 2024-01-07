@@ -22,16 +22,16 @@ Item {
             bottom: parent.bottom
             bottomMargin: 45
         }
-
-        TextInput {
-            id: text_input
-            font.pixelSize: 25
-            width: 1180
-            anchors.left: parent.left
-            anchors.leftMargin: 30
-            anchors.verticalCenter: parent.verticalCenter
-            clip: true
-        }
+        opacity: 0.8
+    }
+    TextInput {
+        id: text_input
+        font.pixelSize: 25
+        width: 1180
+        anchors.left: input.left
+        anchors.leftMargin: 30
+        anchors.verticalCenter: input.verticalCenter
+        clip: true
     }
 
     Image {

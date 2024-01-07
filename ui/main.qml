@@ -9,7 +9,7 @@ Window {
     visibility:  Window.Maximized
     minimumWidth: 960
     minimumHeight: 500
-    title: qsTr("Dictionary")
+    title: "Dictionary"
 
     Item {
         width: 1920
@@ -20,7 +20,7 @@ Window {
         Image {
             id: bg
             anchors.fill: parent
-            source: "qrc:/img/bg.jpg"
+            source: SETTING.background != "" ? "file:///" + SETTING.background : "qrc:/img/bg_backup.jpg"
         }
 
         Banner {
@@ -38,6 +38,10 @@ Window {
                 State {
                     name: AppEnum.NOTEBOOK
                     PropertyChanges {target: content; source: "qrc:/ui/Scene/NoteBook.qml"}
+                },
+                State {
+                    name: AppEnum.GRAMMAR
+//                    PropertyChanges {target: content; source: "qrc:/ui/Scene/SearchDictionary.qml"}
                 },
                 State {
                     name: AppEnum.SEARCH

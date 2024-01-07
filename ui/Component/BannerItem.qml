@@ -6,7 +6,7 @@ Item {
     signal click();
     property string source
 
-    width: parent.width / 4
+    width: parent.width / 5
     height: parent.height
     Image {
         id: img

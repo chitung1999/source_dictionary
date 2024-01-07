@@ -6,23 +6,6 @@ import "../Component/"
 Item {
     anchors.fill: parent
 
-    NoteResults {
-        id: results
-        width: 1160
-        height: 680
-        anchors {
-            top: parent.top
-            topMargin: 200
-            left: parent.left
-            leftMargin: 100
-        }
-    }
-
-    SearchBar {
-        id: search
-        anchors.fill: parent
-    }
-
     ListWord {
         id: list
         anchors.right: parent.right
@@ -34,11 +17,17 @@ Item {
         height: 70
         radius: 35
         anchors {
-            right: results.right
-            verticalCenter: results.verticalCenter
-            verticalCenterOffset: 400
+            left: parent.left
+            leftMargin: 560
+           verticalCenter: parent.verticalCenter
+           verticalCenterOffset: 440
         }
-        color: "#fff"
+        gradient: Gradient {
+                    GradientStop { position: -1; color: "transparent" }
+                    GradientStop { position: 0.5; color: "#fff" }
+//                    GradientStop { position: 0.7; color: "#fff" }
+                    GradientStop { position: 2; color: "transparent" }
+                }
         border.width: 3
         border.color: "#45818E"
 
@@ -55,6 +44,16 @@ Item {
                 randomKeyAni.start()
             }
         }
+    }
+
+    NoteResults {
+        id: results
+        anchors.fill: parent
+    }
+
+    PopUp {
+        id: popup
+        anchors.fill: parent
     }
 
     SequentialAnimation {

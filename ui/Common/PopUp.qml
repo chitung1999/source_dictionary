@@ -8,7 +8,7 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        color: "white"
+        color: "#000"
         opacity: 0.5
     }
 
@@ -18,16 +18,18 @@ Item {
 
     Rectangle {
         id: box
-        width: msg.width + 30
-        height: msg.height + 30
+        width: msg.width + 120
+        height: msg.height + 160
         radius: 10
         anchors.centerIn: parent
+        border.color: "#45818E"
+        border.width: 8
         color: "#eeeeee"
 
         Text {
             id: msg
             text: root.message
-            font.pixelSize: 30
+            font.pixelSize: 40
             color: "black"
             anchors.centerIn: parent
         }
