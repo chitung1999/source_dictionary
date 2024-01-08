@@ -4,7 +4,9 @@
 #include <QObject>
 #include <QTranslator>
 #include <QGuiApplication>
+#include <QColor>
 #include "scene/NoteBook.h"
+#include "scene/Grammar.h"
 #include "scene/Dictionary.h"
 #include "scene/VoiceChat.h"
 #include "scene/Setting.h"
@@ -25,6 +27,7 @@ public:
      QString translator();
 
      NoteBook *noteBook();
+     Grammar *grammar();
      Dictionary *dictionary();
      VoiceChat *voiceChat();
      Setting *setting();
@@ -34,14 +37,28 @@ signals:
      void translatorChanged();
 
 public slots:
+     //Setting
     void setLanguage(int lang);
     void setUserName(QString name);
     void setIpAddress(QString ip);
     void setPort(int port);
     void setBackground(QString path);
+    void setThemeColor(QString color);
+    void setBorderColor(QString color);
 
+    //Notebook
     void removeItemNote(int index);
     void changeItemNote(QStringList keys, QStringList means, QString notes);
+
+    //Grammar
+    void appendItemGrammar();
+    void removeItemGrammar(int index);
+    void changedItemGrammar(int index, QString form, QString structure);
+
+    //VoiceChat
+    void doConnect();
+    void disconnect();
+    void sendMessage(QString msg);
 
     void receiveNtf(QString ntf);
 
@@ -49,6 +66,7 @@ private:
     explicit Controller(QObject *parent = nullptr);
 
     NoteBook m_noteBook;
+    Grammar m_grammar;
     Dictionary m_dictionary;
     VoiceChat m_voiceChat;
     Setting m_setting;

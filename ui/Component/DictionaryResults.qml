@@ -29,6 +29,7 @@ Item {
         anchors.fill: parent
         source: box
         opacity: 0.8
+        borderWidth: 3
     }
 
     Text {

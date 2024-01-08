@@ -51,7 +51,7 @@ Item {
                 leftMargin: 30
             }
             visible: username.focus
-            source: "qrc:/img/done.png"
+            source: "qrc:/img/ok.png"
             MouseArea {
                 anchors.fill: parent
                 onPressed: parent.scale = 0.7

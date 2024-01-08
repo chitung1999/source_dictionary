@@ -80,7 +80,7 @@ Item {
             topMargin: 80
             leftMargin: 50
         }
-        border.color: "#569bea"
+        border.color: SETTING.borderColor
         border.width: 3
         color: "#eeeeee"
 
@@ -107,7 +107,7 @@ Item {
             right: box.right
             rightMargin: 50
         }
-        border.color: "#569bea"
+        border.color: SETTING.borderColor
         border.width: 3
         color: "#eeeeee"
 
@@ -126,11 +126,11 @@ Item {
 
     Image {
         id: add_key
-        width: 40
-        height: 40
+        width: 50
+        height: 50
         anchors {
             top: keys.bottom
-            topMargin: 20
+            topMargin: 15
             horizontalCenter: keys.horizontalCenter
         }
         source: "qrc:/img/add.png"
@@ -139,26 +139,26 @@ Item {
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
             onClicked: {
-                NOTEBOOK.requestAddItem(true, sendData(true))
+                NOTEBOOK.popupAddItem(true, sendData(true))
             }
         }
     }
 
     Image {
         id: add_mean
-        width: 40
-        height: 40
         anchors {
             top: add_key.top
             horizontalCenter: means.horizontalCenter
         }
+        width: 50
+        height: 50
         source: "qrc:/img/add.png"
         MouseArea {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
             onClicked: {
-                NOTEBOOK.requestAddItem(false, sendData(false))
+                NOTEBOOK.popupAddItem(false, sendData(false))
             }
         }
     }
@@ -177,7 +177,7 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            border.color: "#569bea"
+            border.color: SETTING.borderColor
             border.width: 3
             color: "transparent"
         }

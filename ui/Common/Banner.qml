@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
 import AppEnum 1.0
 import "../Component/"
 
@@ -17,7 +18,7 @@ Item {
             width: parent.width / 5
             height: 5
             anchors.bottom: banner_top.bottom
-            color: "#5ca5d1"
+            color: SETTING.themeColor
         }
 
         BannerItem {
@@ -66,6 +67,24 @@ Item {
                 left: parent.left
                 leftMargin: 60
             }
+            visible: false
+        }
+
+        Rectangle {
+            id: box_logo
+            anchors.fill: logo
+            gradient: Gradient {
+                GradientStop { position: -1; color: "transparent" }
+                GradientStop { position: 0.5; color: SETTING.themeColor }
+                GradientStop { position: 2; color: "transparent" }
+            }
+            visible: false
+        }
+
+        OpacityMask {
+            anchors.fill: box_logo
+            source: box_logo
+            maskSource: logo
         }
 
         Text {
@@ -81,7 +100,7 @@ Item {
             font.bold: true
             style: Text.Raised
             styleColor: "#FFF"
-            color: "#45818E"
+            color: SETTING.themeColor
         }
     }
 

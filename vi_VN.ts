@@ -2,14 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="vi_VN" sourcelanguage="en_US">
 <context>
+    <name>Controller</name>
+    <message>
+        <location filename="src/Controller.cpp" line="136"/>
+        <source>Cann&apos;t open file: </source>
+        <translation>Không thể mở file: </translation>
+    </message>
+    <message>
+        <location filename="src/Controller.cpp" line="153"/>
+        <location filename="src/Controller.cpp" line="170"/>
+        <source>Invalid color: </source>
+        <translation>Định dạng màu không tồn tại: </translation>
+    </message>
+    <message>
+        <location filename="src/Controller.cpp" line="219"/>
+        <source>The keys or means are empty!</source>
+        <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
+    </message>
+</context>
+<context>
     <name>DictionaryResults</name>
     <message>
-        <location filename="ui/Component/DictionaryResults.qml" line="44"/>
+        <location filename="ui/Component/DictionaryResults.qml" line="45"/>
         <source>Key</source>
         <translation>Từ khoá</translation>
     </message>
     <message>
-        <location filename="ui/Component/DictionaryResults.qml" line="57"/>
+        <location filename="ui/Component/DictionaryResults.qml" line="58"/>
         <source>Result</source>
         <translation>Kết quả</translation>
     </message>
@@ -20,6 +39,14 @@
     <message>
         <source>Meanings</source>
         <translation type="vanished">Nghĩa</translation>
+    </message>
+</context>
+<context>
+    <name>GrammarItem</name>
+    <message>
+        <location filename="ui/Component/GrammarItem.qml" line="63"/>
+        <source>Structure: </source>
+        <translation>Cấu trúc: </translation>
     </message>
 </context>
 <context>
@@ -70,9 +97,8 @@
 <context>
     <name>NoteBook</name>
     <message>
-        <location filename="src/scene/NoteBook.cpp" line="262"/>
         <source>The keys or means are empty!</source>
-        <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
+        <translation type="vanished">Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
     </message>
 </context>
 <context>
@@ -118,34 +144,49 @@
         <translation>Hình nền</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="148"/>
+        <location filename="ui/Scene/Setting.qml" line="69"/>
+        <source>Color</source>
+        <translation>Màu sắc</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="153"/>
         <source>English</source>
         <translation>Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="173"/>
+        <location filename="ui/Scene/Setting.qml" line="178"/>
         <source>Vietnamese</source>
         <translation>Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="185"/>
+        <location filename="ui/Scene/Setting.qml" line="190"/>
         <source>User name:</source>
         <translation>Tên người dùng: </translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="202"/>
+        <location filename="ui/Scene/Setting.qml" line="207"/>
         <source>IP Adress Connect:</source>
         <translation>IP Kết nối:</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="218"/>
+        <location filename="ui/Scene/Setting.qml" line="223"/>
         <source>Port:</source>
         <translation>Cổng: </translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="235"/>
+        <location filename="ui/Scene/Setting.qml" line="240"/>
         <source>Path:</source>
         <translation>Đường dẫn:</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="258"/>
+        <source>Theme Color:</source>
+        <translation>Màu nền:</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="274"/>
+        <source>Border Color:</source>
+        <translation>Màu viền:</translation>
     </message>
 </context>
 <context>

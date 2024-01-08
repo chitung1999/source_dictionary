@@ -56,9 +56,9 @@ public slots:
     void updateData(const QJsonArray &data);
     void updateCurrentData();
     void onChangedRandomKey();
-    void requestModifyData(int index);
-    void requestAddNewData();
-    void requestAddItem(bool isKey, QStringList list);
+    void popupModifyData(int index);
+    void popupAddNewData();
+    void popupAddItem(bool isKey, QStringList list);
 
 private:
     QString m_currentKey;

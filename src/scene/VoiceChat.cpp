@@ -10,7 +10,7 @@ VoiceChat::VoiceChat(QObject *parent) : QObject(parent)
     //request from VoiceChat to TCPClient
     connect(this, &VoiceChat::requestConnect, m_TCPClient, &TCPClient::doConnect);
     connect(this, &VoiceChat::requestDisconnect, m_TCPClient, &TCPClient::disconnect);
-    connect(this, &VoiceChat::requestMessage, m_TCPClient, &TCPClient::sendMessage);
+    connect(this, &VoiceChat::requestSendMessage, m_TCPClient, &TCPClient::sendMessage);
 
     //request from TCPClient to VoiceChat
     connect(m_TCPClient, &TCPClient::receiveMessage, this, &VoiceChat::receiveMessage);
@@ -43,19 +43,6 @@ void VoiceChat::setIsConnect(bool newIsConnect)
     emit isConnectChanged();
 }
 
-QString VoiceChat::userName() const
-{
-    return m_userName;
-}
-
-void VoiceChat::setUserName(QString newUserName)
-{
-    if (m_userName == newUserName)
-        return;
-    m_userName = newUserName;
-    emit userNameChanged();
-}
-
 MessageModel *VoiceChat::message()
 {
     return &m_message;
@@ -66,9 +53,9 @@ TCPClient *VoiceChat::tcpClient()
     return m_TCPClient;
 }
 
-void VoiceChat::doConnect()
+void VoiceChat::doConnect(QString ip, int port)
 {
-    emit requestConnect(m_ipAddress, m_port);
+    emit requestConnect(ip, port);
 }
 
 void VoiceChat::disconnect()
@@ -76,24 +63,14 @@ void VoiceChat::disconnect()
     emit requestDisconnect();
 }
 
-void VoiceChat::sendMessage(QString mess)
+void VoiceChat::sendMessage(QString name, QString mess)
 {
-    emit requestMessage(m_userName, mess);
+    emit requestSendMessage(name, mess);
 
     if (!m_isConnect)
         return;
-    MessageItem item(m_userName, mess, true);
+    MessageItem item(name, mess, true);
     m_message.append(item);
-}
-
-void VoiceChat::setIPAddress(QString ip)
-{
-    m_ipAddress = ip;
-}
-
-void VoiceChat::setPort(int port)
-{
-    m_port =port;
 }
 
 void VoiceChat::receiveMessage(QString name, QString msg)

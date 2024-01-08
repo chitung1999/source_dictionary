@@ -120,7 +120,7 @@ Item {
         width: 8
         height: 80
         anchors.left: box.left
-        color: "#5ca5d1"
+        color: SETTING.themeColor
     }
 
     Item {
@@ -246,6 +246,39 @@ Item {
 
             onTextChanged: CTRL.setBackground(background_input.textInput)
         }
+
+        TextInputBase {
+            id: theme_input
+            anchors {
+                verticalCenter: parent.verticalCenter
+                verticalCenterOffset: -40
+                left: border_input.left
+            }
+            visible: false
+            title: qsTr("Theme Color:") + CTRL.translator
+            boxWidth: 250
+            boxHeight: 60
+            boxLeft: border_input.textLeft + 20
+            content: SETTING.themeColor
+            onTextChanged: CTRL.setThemeColor(theme_input.textInput)
+        }
+
+        TextInputBase {
+            id: border_input
+            anchors {
+                verticalCenter: parent.verticalCenter
+                verticalCenterOffset: 40
+                left: ip_input.left
+            }
+            visible: false
+            title: qsTr("Border Color:") + CTRL.translator
+            boxWidth: 250
+            boxHeight: 60
+            boxLeft: border_input.textLeft + 20
+            content: SETTING.borderColor
+
+            onTextChanged: CTRL.setBorderColor(border_input.textInput)
+        }
     }
 
     PopUp {
@@ -279,7 +312,8 @@ Item {
         State {
             name: AppEnum.COLOR
             PropertyChanges {target: choose; y: 610}
-            PropertyChanges {target: background_input; visible: true}
+            PropertyChanges {target: theme_input; visible: true}
+            PropertyChanges {target: border_input; visible: true}
         }
     ]
 }

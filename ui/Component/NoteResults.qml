@@ -23,6 +23,7 @@ Item {
         anchors.fill: box
         source: box
         opacity: 0.8
+        borderWidth: 3
     }
 
 
@@ -41,21 +42,21 @@ Item {
 
     Image {
         id: add_new
+        width: 50
+        height: 50
         anchors {
             top: box.top
-            topMargin: 20
+            topMargin: 15
             right: box.right
             rightMargin: 20
         }
-        width: 40
-        height: 40
         source: "qrc:/img/add.png"
         MouseArea {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
             onClicked: {
-                NOTEBOOK.requestAddNewData()
+                NOTEBOOK.popupAddNewData()
             }
         }
     }

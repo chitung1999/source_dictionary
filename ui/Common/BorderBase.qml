@@ -7,7 +7,7 @@ Item {
     property Item source: Item
     property int radius: 20
     property int borderWidth: 1
-    property string borderColor: "#569bea"
+    property string borderColor: SETTING.borderColor
 
     OpacityMask {
         id: mask

@@ -24,6 +24,7 @@ Item {
         anchors.fill: content
         source: content
         opacity: 0.8
+        borderWidth: 3
     }
 
     Rectangle {
@@ -51,7 +52,7 @@ Item {
             leftMargin: 30
         }
         color: "white"
-        text: VOICECHAT.userName
+        text: SETTING.userName
     }
 
     Image {
@@ -68,13 +69,13 @@ Item {
             anchors.fill: parent
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: VOICECHAT.isConnect ? VOICECHAT.disconnect() : VOICECHAT.doConnect()
+            onClicked: VOICECHAT.isConnect ? CTRL.disconnect() : CTRL.doConnect()
         }
     }
 
     ListView {
         id: msg
-        width: parent.width * 4/5 - 40
+        width: parent.width * 4/5 - 20
         height: 780 - 40 - 80
         anchors {
             horizontalCenter: parent.horizontalCenter

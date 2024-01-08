@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("LISTNOTE", Controller::getInstance()->noteBook()->notes());
     engine.rootContext()->setContextProperty("NEWDATA", Controller::getInstance()->noteBook()->newData());
 
+    engine.rootContext()->setContextProperty("GRAMMAR", Controller::getInstance()->grammar());
+
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
     engine.rootContext()->setContextProperty("LISTMEAN", Controller::getInstance()->dictionary()->means());
 

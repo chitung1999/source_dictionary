@@ -25,11 +25,10 @@ Item {
         gradient: Gradient {
                     GradientStop { position: -1; color: "transparent" }
                     GradientStop { position: 0.5; color: "#fff" }
-//                    GradientStop { position: 0.7; color: "#fff" }
                     GradientStop { position: 2; color: "transparent" }
                 }
         border.width: 3
-        border.color: "#45818E"
+        border.color: SETTING.borderColor
 
         Text {
             id: randomKey

@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Item {
     id: root
-    width: parent.width
+    width: parent.width - 40
 
     property string partSpeed
     property string synonyms
@@ -13,6 +13,12 @@ Item {
         id: box
         width: 520
         height: parent.height
+        anchors {
+            top: parent.top
+            topMargin: 15
+            left: parent.left
+            leftMargin: 20
+        }
         border.color: "#000"
         color: "transparent"
 
@@ -56,13 +62,16 @@ Item {
     }
     property int itemHeight
     Column {
+        anchors {
+            top: box.top
+            left: box.right
+        }
         Repeater {
             id: repeat
             model: root.definitions.length / 2
             Rectangle {
-                x: box.width
                 width: root.width - box.width
-                border.color: "black"
+                border.color: "#000"
                 color: "transparent"
                 property int number: definition.height + example.height + 15
 

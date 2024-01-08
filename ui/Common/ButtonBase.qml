@@ -11,7 +11,7 @@ Rectangle {
     signal clickButton()
 
     radius: root.height / 2
-    border.color: "#569bea"
+    border.color: SETTING.borderColor
     border.width: 2
 
     gradient: Gradient {

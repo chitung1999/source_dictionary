@@ -67,7 +67,7 @@ Item {
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
             onClicked: {
-                NOTEBOOK.requestModifyData(root.index)
+                NOTEBOOK.popupModifyData(root.index)
             }
         }
     }

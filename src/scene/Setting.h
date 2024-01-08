@@ -18,6 +18,8 @@ class Setting : public QObject
     Q_PROPERTY(QString userName     READ userName       WRITE setUserName       NOTIFY userNameChanged)
     Q_PROPERTY(QString ipAddress    READ ipAddress      WRITE setIpAddress      NOTIFY ipAddressChanged)
     Q_PROPERTY(QString background   READ background     WRITE setBackground     NOTIFY backgroundChanged)
+    Q_PROPERTY(QString themeColor   READ themeColor     WRITE setThemeColor     NOTIFY themeColorChanged)
+    Q_PROPERTY(QString borderColor  READ borderColor    WRITE setBorderColor    NOTIFY borderColorChanged)
 public:
     explicit Setting(QObject *parent = nullptr);
 
@@ -35,6 +37,12 @@ public:
     QString background() const;
     void setBackground(QString newBackground);
 
+    QString themeColor() const;
+    void setThemeColor(QString newThemeColor);
+
+    QString borderColor() const;
+    void setBorderColor(QString newBorderColor);
+
     int port() const;
     void setPort(int newPort);
 
@@ -44,6 +52,8 @@ signals:
     void ipAddressChanged();
     void portChanged();
     void backgroundChanged();
+    void themeColorChanged();
+    void borderColorChanged();
 
 private:
     int m_language;
@@ -51,6 +61,8 @@ private:
     QString m_userName;
     QString m_ipAddress;
     QString m_backGround;
+    QString m_themeColor;
+    QString m_borderColor;
 };
 
 #endif // SETTING_H

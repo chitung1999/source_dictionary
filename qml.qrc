@@ -54,5 +54,7 @@
         <file>img/color.png</file>
         <file>img/grammar.png</file>
         <file>img/grammar_hightlight.png</file>
+        <file>ui/Scene/Grammar.qml</file>
+        <file>ui/Component/GrammarItem.qml</file>
     </qresource>
 </RCC>

@@ -11,6 +11,9 @@ void Setting::initialize(const QJsonObject &data)
     QString name = "Admin";
     QString background = "";
     int lang = AppEnum::LANGUAGE::ENGLISH;
+    QString themeColor = "#5ca5d1";
+    QString borderColor = "#5ca5d1";
+
     if(!data.isEmpty()) {
         if (!data.value("name").toString().isEmpty())
             name = data.value("name").toString();
@@ -21,6 +24,15 @@ void Setting::initialize(const QJsonObject &data)
         if (!data.value("port").isNull())
             port = data.value("port").toInt();
 
+        if (!data.value("background").isNull())
+            background = data.value("background").toString();
+
+        if (!data.value("themeColor").isNull())
+            themeColor = data.value("themeColor").toString();
+
+        if (!data.value("borderColor").isNull())
+            borderColor = data.value("borderColor").toString();
+
         if (!data.value("language").toString().isEmpty()) {
             if (data.value("language").toString() == "eng")
                 lang = AppEnum::LANGUAGE::ENGLISH;
@@ -28,9 +40,6 @@ void Setting::initialize(const QJsonObject &data)
                 lang = AppEnum::LANGUAGE::VIETNAMESE;
             }
         }
-
-        if (!data.value("background").isNull())
-            background = data.value("background").toString();
     }
 
     setUserName(name);
@@ -38,6 +47,8 @@ void Setting::initialize(const QJsonObject &data)
     setLanguage(lang);
     setPort(port);
     setBackground(background);
+    setThemeColor(themeColor);
+    setBorderColor(borderColor);
 }
 
 const int &Setting::language() const
@@ -90,6 +101,32 @@ void Setting::setBackground(QString newBackground)
         return;
     m_backGround = newBackground;
     emit backgroundChanged();
+}
+
+QString Setting::themeColor() const
+{
+    return m_themeColor;
+}
+
+void Setting::setThemeColor(QString newThemeColor)
+{
+    if (m_themeColor == newThemeColor)
+        return;
+    m_themeColor = newThemeColor;
+    emit themeColorChanged();
+}
+
+QString Setting::borderColor() const
+{
+    return m_borderColor;
+}
+
+void Setting::setBorderColor(QString newBorderColor)
+{
+    if (m_borderColor == newBorderColor)
+        return;
+    m_borderColor = newBorderColor;
+    emit borderColorChanged();
 }
 
 int Setting::port() const

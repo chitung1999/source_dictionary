@@ -14,9 +14,9 @@ Controller *Controller::getInstance()
 
 void Controller::initialize()
 {
-    if(!m_file.readFile(PATH_DATA + "/data.json", m_dataJson))
+    if(!m_file.readFile(PATH_DATA + QString("/data.json"), m_dataJson))
         return;
-
+    m_grammar.initialize(m_dataJson["grammar"].toArray());
     m_setting.initialize(m_dataJson["setting"].toObject());
     m_noteBook.updateData(m_dataJson["words"].toArray());
     m_noteBook.onChangedRandomKey();
@@ -31,9 +31,6 @@ void Controller::initialize()
             path_bg = "";
 
     m_setting.setBackground(path_bg);
-    m_voiceChat.setUserName(m_setting.userName());
-    m_voiceChat.setIPAddress(m_setting.ipAddress());
-    m_voiceChat.setPort(m_setting.port());
 }
 
 QString Controller::notifyMsg() const
@@ -55,6 +52,11 @@ QString Controller::translator()
 NoteBook *Controller::noteBook()
 {
     return &m_noteBook;
+}
+
+Grammar *Controller::grammar()
+{
+    return &m_grammar;
 }
 
 Dictionary *Controller::dictionary()
@@ -91,7 +93,7 @@ void Controller::setLanguage(int lang)
         break;
     }
 
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     emit translatorChanged();
     m_setting.setLanguage(lang);
@@ -102,10 +104,9 @@ void Controller::setUserName(QString name)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["name"] = name;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setUserName(name);
-    m_voiceChat.setUserName(name);
 }
 
 void Controller::setIpAddress(QString ip)
@@ -113,10 +114,9 @@ void Controller::setIpAddress(QString ip)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["IPAddress"] = ip;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setIpAddress(ip);
-    m_voiceChat.setIPAddress(ip);
 }
 
 void Controller::setPort(int port)
@@ -124,15 +124,15 @@ void Controller::setPort(int port)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["port"] = port;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setPort(port);
-    m_voiceChat.setPort(port);
 }
 
 void Controller::setBackground(QString path)
 {
     if(!m_file.checkFileImg(path)) {
+        qDebug() << "Cann't open file: " + path;
         setNotifyMsg((QString(tr("Cann't open file: ")) + path));
         return;
     }
@@ -140,9 +140,43 @@ void Controller::setBackground(QString path)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["background"] = path;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setBackground(path);
+}
+
+void Controller::setThemeColor(QString color)
+{
+    QColor check(color);
+    if (!check.isValid()) {
+        qDebug() << "Invalid color: " << color;
+        setNotifyMsg((QString(tr("Invalid color: ")) + color));
+        return;
+    }
+
+    QJsonObject obj = m_dataJson.value("setting").toObject();
+    obj["themeColor"] = color;
+    m_dataJson["setting"] = obj;
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+
+    m_setting.setThemeColor(color);
+}
+
+void Controller::setBorderColor(QString color)
+{
+    QColor check(color);
+    if (!check.isValid()) {
+        qDebug() << "Invalid color: " << color;
+        setNotifyMsg((QString(tr("Invalid color: ")) + color));
+        return;
+    }
+
+    QJsonObject obj = m_dataJson.value("setting").toObject();
+    obj["borderColor"] = color;
+    m_dataJson["setting"] = obj;
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+
+    m_setting.setBorderColor(color);
 }
 
 void Controller::removeItemNote(int index)
@@ -155,7 +189,7 @@ void Controller::removeItemNote(int index)
         arr.replace(i,obj);
     }
     m_dataJson["words"] = arr;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
     m_noteBook.updateData(arr);
     m_noteBook.notes()->removeAt(index);
 }
@@ -195,9 +229,67 @@ void Controller::changeItemNote(QStringList keys, QStringList means, QString not
     }
 
     m_dataJson["words"] = arr;
-    m_file.writeFileJson(PATH_DATA + "/data.json", m_dataJson);
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
     m_noteBook.updateData(arr);
     m_noteBook.updateCurrentData();
+}
+
+void Controller::appendItemGrammar()
+{
+    m_grammar.requestAppend();
+}
+
+void Controller::removeItemGrammar(int index)
+{
+    QJsonArray arr = m_dataJson["grammar"].toArray();
+    arr.removeAt(index);
+
+    m_dataJson["grammar"] = arr;
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+
+    m_grammar.removeAt(index);
+}
+
+void Controller::changedItemGrammar(int index, QString form, QString structure)
+{
+    if (form.isEmpty() || structure.isEmpty()) {
+        m_grammar.removeAt(index);
+        return;
+    }
+
+    QJsonArray arr = m_dataJson["grammar"].toArray();
+    QJsonObject obj;
+    obj["form"] = form;
+    obj["structure"] = structure;
+
+    if(index >= arr.size()) {
+        arr.append(obj);
+    } else {
+        arr.replace(index, obj);
+    }
+
+    m_dataJson["grammar"] = arr;
+    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+
+    GrammarItem item;
+    item.form = form;
+    item.structure = structure;
+    m_grammar.modify(index, item);
+}
+
+void Controller::doConnect()
+{
+    m_voiceChat.doConnect(m_setting.ipAddress(), m_setting.port());
+}
+
+void Controller::disconnect()
+{
+    m_voiceChat.disconnect();
+}
+
+void Controller::sendMessage(QString msg)
+{
+    m_voiceChat.sendMessage(m_setting.userName(), msg);
 }
 
 

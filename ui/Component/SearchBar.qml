@@ -17,7 +17,7 @@ Item {
             leftMargin: 300
         }
         color: "#FFF"
-        border.color: "#569bea"
+        border.color: SETTING.borderColor
         opacity: 0.8
     }
 

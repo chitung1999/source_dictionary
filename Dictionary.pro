@@ -22,6 +22,7 @@ SOURCES += \
     src/model/MessageModel.cpp \
     src/model/NoteModel.cpp \
     src/scene/Dictionary.cpp \
+    src/scene/Grammar.cpp \
     src/scene/NoteBook.cpp \
     src/scene/Setting.cpp \
     src/Controller.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     src/model/MessageModel.h \
     src/model/NoteModel.h \
     src/scene/Dictionary.h \
+    src/scene/Grammar.h \
     src/scene/NoteBook.h \
     src/scene/Setting.h \
     src/Controller.h \ \

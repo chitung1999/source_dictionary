@@ -41,7 +41,7 @@ Window {
                 },
                 State {
                     name: AppEnum.GRAMMAR
-//                    PropertyChanges {target: content; source: "qrc:/ui/Scene/SearchDictionary.qml"}
+                    PropertyChanges {target: content; source: "qrc:/ui/Scene/Grammar.qml"}
                 },
                 State {
                     name: AppEnum.SEARCH

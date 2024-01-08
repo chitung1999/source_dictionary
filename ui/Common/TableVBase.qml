@@ -11,8 +11,8 @@ Item {
         id: title
         width: parent.width
         height: root.heightTitle
-        border.color: "#569bea"
-        color: "#45818E"
+        border.color: SETTING.borderColor
+        color: SETTING.themeColor
 
         Text {
             anchors.centerIn: parent
@@ -30,7 +30,7 @@ Item {
         anchors {
             top: title.bottom
         }
-        border.color: "#569bea"
+        border.color: SETTING.borderColor
         color: "#FFF"
     }
 }

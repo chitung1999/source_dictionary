@@ -147,7 +147,7 @@ void NoteBook::onChangedRandomKey()
     setRandomKey(m_data.at(index).words.at(indexKey) + ": " + str);
 }
 
-void NoteBook::requestModifyData(int index)
+void NoteBook::popupModifyData(int index)
 {
     m_newData.setIndex(index);
     m_newData.setIsNewData(false);
@@ -155,14 +155,14 @@ void NoteBook::requestModifyData(int index)
     emit requestChangedData();
 }
 
-void NoteBook::requestAddNewData()
+void NoteBook::popupAddNewData()
 {
     m_newData.setIsNewData(true);
     m_newData.requestChangedData(QStringList(), QStringList(), QString());
     emit requestChangedData();
 }
 
-void NoteBook::requestAddItem(bool isKey, QStringList list)
+void NoteBook::popupAddItem(bool isKey, QStringList list)
 {
     isKey ? m_newData.setKeys(list << "") : m_newData.setMeans(list << "");
 }

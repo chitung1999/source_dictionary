@@ -33,7 +33,7 @@ Item {
             left: parent.left
         }
         border.width: 3
-        border.color: "#45818E"
+        border.color: SETTING.borderColor
         opacity: 0.9
 
         Rectangle {

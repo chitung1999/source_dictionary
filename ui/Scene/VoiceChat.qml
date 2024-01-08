@@ -15,7 +15,7 @@ Item {
         width: 1240
         height: 60
         radius: 30
-        border.color: "black"
+        border.color: SETTING.borderColor
         anchors {
             left: parent.left
             leftMargin: 400
@@ -57,7 +57,7 @@ Item {
 
     function sendMessage() {
         if(text_input.text != "") {
-            VOICECHAT.sendMessage(text_input.text)
+            CTRL.sendMessage(text_input.text)
             text_input.text = ""
         }
     }

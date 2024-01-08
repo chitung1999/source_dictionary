@@ -22,7 +22,7 @@ Item {
         height: msg.height + 160
         radius: 10
         anchors.centerIn: parent
-        border.color: "#45818E"
+        border.color: SETTING.borderColor
         border.width: 8
         color: "#eeeeee"
 
