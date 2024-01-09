@@ -33,15 +33,26 @@ void Controller::initialize()
     m_setting.setBackground(path_bg);
 }
 
-QString Controller::notifyMsg() const
+QString Controller::popupConfirm() const
 {
-    return m_notifyMsg;
+    return m_popupConfirm;
 }
 
-void Controller::setNotifyMsg(QString newNotifyMsg)
+void Controller::setPopupConfirm(QString newPopupConfirm)
 {
-    m_notifyMsg = newNotifyMsg;
-    emit notifyMsgChanged();
+    m_popupConfirm = newPopupConfirm;
+    emit popupConfirmChanged();
+}
+
+QString Controller::popupNotify() const
+{
+    return m_popupNotify;
+}
+
+void Controller::setPopupNotify(QString newPopupNotify)
+{
+    m_popupNotify = newPopupNotify;
+    emit popupNotifyChanged();
 }
 
 QString Controller::translator()
@@ -133,7 +144,7 @@ void Controller::setBackground(QString path)
 {
     if(!m_file.checkFileImg(path)) {
         qDebug() << "Cann't open file: " + path;
-        setNotifyMsg((QString(tr("Cann't open file: ")) + path));
+        setPopupNotify((QString(tr("Cann't open file: ")) + path));
         return;
     }
 
@@ -150,7 +161,7 @@ void Controller::setThemeColor(QString color)
     QColor check(color);
     if (!check.isValid()) {
         qDebug() << "Invalid color: " << color;
-        setNotifyMsg((QString(tr("Invalid color: ")) + color));
+        setPopupNotify((QString(tr("Invalid color: ")) + color));
         return;
     }
 
@@ -167,7 +178,7 @@ void Controller::setBorderColor(QString color)
     QColor check(color);
     if (!check.isValid()) {
         qDebug() << "Invalid color: " << color;
-        setNotifyMsg((QString(tr("Invalid color: ")) + color));
+        setPopupNotify((QString(tr("Invalid color: ")) + color));
         return;
     }
 
@@ -179,10 +190,10 @@ void Controller::setBorderColor(QString color)
     m_setting.setBorderColor(color);
 }
 
-void Controller::removeItemNote(int index)
+void Controller::removeItemNote()
 {
     QJsonArray arr = m_dataJson["words"].toArray();
-    arr.removeAt(index);
+    arr.removeAt(m_indexRemove);
     for(int i = 0; i < arr.size(); i++) {
         QJsonObject obj = arr.at(i).toObject();
         obj["index"] = i;
@@ -191,7 +202,7 @@ void Controller::removeItemNote(int index)
     m_dataJson["words"] = arr;
     m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
     m_noteBook.updateData(arr);
-    m_noteBook.notes()->removeAt(index);
+    m_noteBook.notes()->removeAt(m_indexRemove);
 }
 
 void Controller::changeItemNote(QStringList keys, QStringList means, QString notes)
@@ -216,7 +227,7 @@ void Controller::changeItemNote(QStringList keys, QStringList means, QString not
     obj["notes"] = notes;
 
     if(arrKey.isEmpty() || arrMean.isEmpty()) {
-        setNotifyMsg(tr("The keys or means are empty!"));
+        setPopupNotify(tr("The keys or means are empty!"));
         return;
     }
 
@@ -239,15 +250,15 @@ void Controller::appendItemGrammar()
     m_grammar.requestAppend();
 }
 
-void Controller::removeItemGrammar(int index)
+void Controller::removeItemGrammar()
 {
     QJsonArray arr = m_dataJson["grammar"].toArray();
-    arr.removeAt(index);
+    arr.removeAt(m_indexRemove);
 
     m_dataJson["grammar"] = arr;
     m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
-    m_grammar.removeAt(index);
+    m_grammar.removeAt(m_indexRemove);
 }
 
 void Controller::changedItemGrammar(int index, QString form, QString structure)
@@ -295,5 +306,11 @@ void Controller::sendMessage(QString msg)
 
 void Controller::receiveNtf(QString ntf)
 {
-    setNotifyMsg(ntf);
+    setPopupNotify(ntf);
+}
+
+void Controller::receiveConf(int index)
+{
+    m_indexRemove = index;
+    setPopupConfirm(tr("Are you sure you want to delete this item?"));
 }

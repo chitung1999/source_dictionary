@@ -24,7 +24,7 @@ Item {
         anchors.fill: content
         source: content
         opacity: 0.8
-        borderWidth: 3
+        borderWidth: 1
     }
 
     Rectangle {

@@ -50,7 +50,7 @@ Item {
         }
     }
 
-    PopUp {
+    PopupNotify {
         id: popup
         anchors.fill: parent
     }

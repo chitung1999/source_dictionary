@@ -4,20 +4,25 @@
 <context>
     <name>Controller</name>
     <message>
-        <location filename="src/Controller.cpp" line="136"/>
+        <location filename="src/Controller.cpp" line="147"/>
         <source>Cann&apos;t open file: </source>
         <translation>Không thể mở file: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="153"/>
-        <location filename="src/Controller.cpp" line="170"/>
+        <location filename="src/Controller.cpp" line="164"/>
+        <location filename="src/Controller.cpp" line="181"/>
         <source>Invalid color: </source>
         <translation>Định dạng màu không tồn tại: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="219"/>
+        <location filename="src/Controller.cpp" line="230"/>
         <source>The keys or means are empty!</source>
         <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
+    </message>
+    <message>
+        <location filename="src/Controller.cpp" line="315"/>
+        <source>Are you sure you want to delete this item?</source>
+        <translation>Bạn chắc chắn muốn xoá ghi chú này?</translation>
     </message>
 </context>
 <context>
@@ -44,7 +49,7 @@
 <context>
     <name>GrammarItem</name>
     <message>
-        <location filename="ui/Component/GrammarItem.qml" line="63"/>
+        <location filename="ui/Component/GrammarItem.qml" line="64"/>
         <source>Structure: </source>
         <translation>Cấu trúc: </translation>
     </message>
@@ -117,6 +122,19 @@
     </message>
 </context>
 <context>
+    <name>PopupConfirm</name>
+    <message>
+        <location filename="ui/Common/PopupConfirm.qml" line="57"/>
+        <source>Cancel</source>
+        <translation>Huỷ</translation>
+    </message>
+    <message>
+        <location filename="ui/Common/PopupConfirm.qml" line="73"/>
+        <source>OK</source>
+        <translation>Đồng ý</translation>
+    </message>
+</context>
+<context>
     <name>Setting</name>
     <message>
         <location filename="ui/Scene/Setting.qml" line="43"/>
@@ -149,44 +167,68 @@
         <translation>Màu sắc</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="153"/>
+        <location filename="ui/Scene/Setting.qml" line="154"/>
         <source>English</source>
         <translation>Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="178"/>
+        <location filename="ui/Scene/Setting.qml" line="180"/>
         <source>Vietnamese</source>
         <translation>Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="190"/>
+        <location filename="ui/Scene/Setting.qml" line="192"/>
+        <source>User name</source>
+        <translation>Tên người dùng</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="209"/>
+        <source>IP Adress Connect</source>
+        <translation>Địa chỉ IP</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="225"/>
+        <source>Port</source>
+        <translation>Cổng</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="242"/>
+        <source>Path</source>
+        <translation>Đường dẫn</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="260"/>
+        <source>Theme Color</source>
+        <translation>Màu nền</translation>
+    </message>
+    <message>
+        <location filename="ui/Scene/Setting.qml" line="276"/>
+        <source>Border Color</source>
+        <translation>Màu viền</translation>
+    </message>
+    <message>
         <source>User name:</source>
-        <translation>Tên người dùng: </translation>
+        <translation type="vanished">Tên người dùng: </translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="207"/>
         <source>IP Adress Connect:</source>
-        <translation>IP Kết nối:</translation>
+        <translation type="vanished">IP Kết nối:</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="223"/>
         <source>Port:</source>
-        <translation>Cổng: </translation>
+        <translation type="vanished">Cổng: </translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="240"/>
         <source>Path:</source>
-        <translation>Đường dẫn:</translation>
+        <translation type="vanished">Đường dẫn:</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="258"/>
         <source>Theme Color:</source>
-        <translation>Màu nền:</translation>
+        <translation type="vanished">Màu nền:</translation>
     </message>
     <message>
-        <location filename="ui/Scene/Setting.qml" line="274"/>
         <source>Border Color:</source>
-        <translation>Màu viền:</translation>
+        <translation type="vanished">Màu viền:</translation>
     </message>
 </context>
 <context>

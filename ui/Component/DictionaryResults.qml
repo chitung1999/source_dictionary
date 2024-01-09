@@ -29,7 +29,7 @@ Item {
         anchors.fill: parent
         source: box
         opacity: 0.8
-        borderWidth: 3
+        borderWidth: 1
     }
 
     Text {
@@ -102,8 +102,11 @@ Item {
 
     ListView {
         width: parent.width
-        height: parent.height - 120 - 50
-        anchors.bottom: parent.bottom
+        height: parent.height - 120 - 90
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: 20
+        }
         clip: true
         model: LISTMEAN
 
@@ -126,4 +129,6 @@ Item {
             }
         }
     }
+
+
 }

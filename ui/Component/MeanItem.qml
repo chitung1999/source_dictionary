@@ -11,13 +11,24 @@ Item {
 
     Rectangle {
         id: box
-        width: 520
-        height: parent.height
+        width: parent.width
+        height: part.height
         anchors {
             top: parent.top
-            topMargin: 15
             left: parent.left
             leftMargin: 20
+        }
+        color: "transparent"
+        border.color: "#000"
+        border.width: 2
+    }
+
+    Rectangle {
+        id: part
+        width: 520
+        anchors {
+            top: box.top
+            left: box.left
         }
         border.color: "#000"
         color: "transparent"
@@ -63,17 +74,17 @@ Item {
     property int itemHeight
     Column {
         anchors {
-            top: box.top
-            left: box.right
+            top: part.top
+            left: part.right
         }
         Repeater {
             id: repeat
             model: root.definitions.length / 2
             Rectangle {
-                width: root.width - box.width
+                width: root.width - part.width
                 border.color: "#000"
                 color: "transparent"
-                property int number: definition.height + example.height + 15
+                property int number: definition.height + example.height + 30
 
                 Text {
                     id: definition
@@ -81,7 +92,7 @@ Item {
                         left: parent.left
                         leftMargin: 20
                         top: parent.top
-                        topMargin: 5
+                        topMargin: 10
                     }
                     wrapMode: Text.Wrap
                     width: parent.width - 30
@@ -94,7 +105,7 @@ Item {
                     anchors {
                         left: definition.left
                         top: definition.bottom
-                        topMargin: 5
+                        topMargin: 10
                     }
                     wrapMode: Text.Wrap
                     width: parent.width - 30
@@ -118,5 +129,8 @@ Item {
         return (height < 150 ? 150 : height)
     }
 
-    Component.onCompleted: root.height = rootHeight()
+    Component.onCompleted: {
+        part.height = rootHeight()
+        root.height = rootHeight() - 2
+    }
 }

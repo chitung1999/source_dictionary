@@ -4,7 +4,7 @@ Item {
     id: root
     visible: false
 
-    property string message: CTRL.notifyMsg
+    property string message: CTRL.popupNotify
 
     Rectangle {
         anchors.fill: parent
@@ -20,10 +20,10 @@ Item {
         id: box
         width: msg.width + 120
         height: msg.height + 160
-        radius: 10
+        radius: 30
         anchors.centerIn: parent
         border.color: SETTING.borderColor
-        border.width: 8
+        border.width: 2
         color: "#eeeeee"
 
         Text {
@@ -37,13 +37,13 @@ Item {
 
     Timer {
         id: timer
-        interval: 1500
+        interval: 2000
         onTriggered: root.visible = false
     }
 
     Connections {
         target: CTRL
-        function onNotifyMsgChanged() {
+        function onPopupNotifyChanged() {
             root.visible = true
             timer.start()
         }

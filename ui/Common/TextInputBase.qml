@@ -26,13 +26,14 @@ Item {
         id: box
         width: root.boxWidth
         height: root.boxHeight
+        radius: 10
         anchors {
             verticalCenter: title.verticalCenter
             left: parent.left
             leftMargin: root.boxLeft
         }
         border.color: "#000"
-        border.width: 3
+        border.width: 2
 
         TextInput {
             id: username

@@ -55,7 +55,7 @@ Item {
             right: root.right
             rightMargin: 30
             verticalCenter: root.verticalCenter
-            verticalCenterOffset: -30
+            verticalCenterOffset: -40
         }
         opacity: 0.5
         source: "qrc:/img/edit.png"
@@ -77,7 +77,7 @@ Item {
         anchors {
             right: modify.right
             verticalCenter: root.verticalCenter
-            verticalCenterOffset: 30
+            verticalCenterOffset: 20
         }
         opacity: 0.5
         source: "qrc:/img/remove.png"
@@ -88,50 +88,7 @@ Item {
             onExited: parent.opacity = 0.4
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {
-                check_remove.visible = true
-                remove.visible = false
-            }
-        }
-    }
-
-    Item {
-        id: check_remove
-        anchors.fill: remove
-        visible: false
-        Image {
-            id: cancel
-            anchors.fill: parent
-            source: "qrc:/img/cancel.png"
-            MouseArea {
-                anchors.fill: parent
-                onPressed: parent.scale = 0.7
-                onReleased: parent.scale = 1
-                onClicked: {
-                    check_remove.visible = false
-                    remove.visible = true
-                }
-            }
-        }
-
-        Image {
-            id: ok
-            anchors {
-                top: cancel.bottom
-                topMargin: 15
-                left: cancel.left
-            }
-            source: "qrc:/img/ok.png"
-            MouseArea {
-                anchors.fill: parent
-                onPressed: parent.scale = 0.7
-                onReleased: parent.scale = 1
-                onClicked: {
-                    check_remove.visible = false
-                    remove.visible = true
-                    CTRL.removeItemNote(root.index)
-                }
-            }
+            onClicked: CTRL.receiveConf(root.index)
         }
     }
 

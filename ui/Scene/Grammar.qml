@@ -16,7 +16,7 @@ Item {
             verticalCenter: parent.verticalCenter
             verticalCenterOffset: -10
         }
-        border.width: 3
+        border.width: 1
         border.color: SETTING.borderColor
         opacity: 0.8
     }
@@ -64,5 +64,11 @@ Item {
                 onClicked: CTRL.appendItemGrammar();
             }
         }
+    }
+
+    PopupConfirm {
+        id: popup
+        anchors.fill: parent
+        onConfirm: CTRL.removeItemGrammar()
     }
 }

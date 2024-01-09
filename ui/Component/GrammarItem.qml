@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Item {
     id: root
-    width: 1560
+    width: 1580
     height: box.height + 10
 
     property bool isModify: false
@@ -18,7 +18,8 @@ Item {
             leftMargin: 20
         }
         height: form.height + structure.height + 15
-        border.color: "#000"
+        radius: 10
+        border.color: SETTING.borderColor
         border.width: 2
         visible: root.isModify
     }
@@ -85,7 +86,7 @@ Item {
         id: modify
         anchors {
             left: root.right
-            leftMargin: 30
+            leftMargin: 20
             verticalCenter: root.verticalCenter
             verticalCenterOffset: -25
         }
@@ -136,55 +137,7 @@ Item {
             onExited: parent.opacity = 0.4
             onPressed: parent.scale = 0.7
             onReleased: parent.scale = 1
-            onClicked: {
-                check_remove.visible = true
-                remove.visible = false
-            }
+            onClicked: CTRL.receiveConf(root.index)
         }
     }
-
-    Item {
-        id: check_remove
-        anchors.fill: remove
-        visible: false
-        Image {
-            id: cancel
-            anchors {
-                top: parent.top
-                left: parent.left
-                leftMargin: -10
-            }
-            source: "qrc:/img/cancel.png"
-            MouseArea {
-                anchors.fill: parent
-                onPressed: parent.scale = 0.7
-                onReleased: parent.scale = 1
-                onClicked: {
-                    check_remove.visible = false
-                    remove.visible = true
-                }
-            }
-        }
-
-        Image {
-            id: done_remove
-            anchors {
-                top: cancel.top
-                left: cancel.right
-                leftMargin: 10
-            }
-            source: "qrc:/img/ok.png"
-            MouseArea {
-                anchors.fill: parent
-                onPressed: parent.scale = 0.7
-                onReleased: parent.scale = 1
-                onClicked: {
-                    check_remove.visible = false
-                    remove.visible = true
-                    CTRL.removeItemGrammar(root.index)
-                }
-            }
-        }
-    }
-
 }

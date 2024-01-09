@@ -50,9 +50,15 @@ Item {
         anchors.fill: parent
     }
 
-    PopUp {
-        id: popup
+    PopupNotify {
+        id: popup_notify
         anchors.fill: parent
+    }
+
+    PopupConfirm {
+        id: popup_confirm
+        anchors.fill: parent
+        onConfirm: CTRL.removeItemNote()
     }
 
     SequentialAnimation {

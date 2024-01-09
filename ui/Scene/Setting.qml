@@ -26,7 +26,7 @@ Item {
         id: box
         anchors.fill: box_hide
         source: box_hide
-        borderWidth: 3
+        borderWidth: 1
         opacity: 0.8
     }
 
@@ -136,9 +136,10 @@ Item {
             id: eng
             width: 200
             height: 80
+            radius: 10
             visible: false
-            color: SETTING.language == AppEnum.ENGLISH ? "#5ca5d1" : "#fff"
-            border.color: "black"
+            color: SETTING.language == AppEnum.ENGLISH ? SETTING.themeColor : "#fff"
+            border.color: SETTING.language == AppEnum.ENGLISH ? SETTING.borderColor : "#000"
             border.width: 3
             property string textColor: "#000"
             anchors {
@@ -161,9 +162,10 @@ Item {
             id: vn
             width: 200
             height: 80
+            radius: 10
             visible: false
-            color: SETTING.language == AppEnum.VIETNAMESE ? "#5ca5d1" : "#fff"
-            border.color: "black"
+            color: SETTING.language == AppEnum.VIETNAMESE ? SETTING.themeColor : "#fff"
+            border.color: SETTING.language == AppEnum.VIETNAMESE ? SETTING.borderColor : "#000"
             border.width: 3
             property string textColor: "#000"
             anchors {
@@ -187,7 +189,7 @@ Item {
             id: username_input
             anchors.centerIn: parent
             visible: false
-            title: qsTr("User name:") + CTRL.translator
+            title: qsTr("User name") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
             boxLeft: username_input.textLeft + 20
@@ -204,7 +206,7 @@ Item {
                 horizontalCenter: parent.horizontalCenter
             }
             visible: false
-            title: qsTr("IP Adress Connect:") + CTRL.translator
+            title: qsTr("IP Adress Connect") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
             boxLeft: ip_input.textLeft + 20
@@ -220,7 +222,7 @@ Item {
                 left: ip_input.left
             }
             visible: false
-            title: qsTr("Port:") + CTRL.translator
+            title: qsTr("Port") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
             boxLeft: ip_input.textLeft + 20
@@ -237,7 +239,7 @@ Item {
                 leftMargin: 30
             }
             visible: false
-            title: qsTr("Path:") + CTRL.translator
+            title: qsTr("Path") + CTRL.translator
             boxWidth: 620
             boxHeight: 60
             boxLeft: background_input.textLeft + 20
@@ -255,7 +257,7 @@ Item {
                 left: border_input.left
             }
             visible: false
-            title: qsTr("Theme Color:") + CTRL.translator
+            title: qsTr("Theme Color") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
             boxLeft: border_input.textLeft + 20
@@ -271,7 +273,7 @@ Item {
                 left: ip_input.left
             }
             visible: false
-            title: qsTr("Border Color:") + CTRL.translator
+            title: qsTr("Border Color") + CTRL.translator
             boxWidth: 250
             boxHeight: 60
             boxLeft: border_input.textLeft + 20
@@ -281,7 +283,7 @@ Item {
         }
     }
 
-    PopUp {
+    PopupNotify {
         id: popup
         anchors.fill: parent
     }

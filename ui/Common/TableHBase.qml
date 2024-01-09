@@ -8,7 +8,7 @@ Item {
     property string title
     property string content
     property int widthTitle: 100
-    property int borderWidth: 3
+    property int borderWidth: 2
 
     Rectangle {
         id: title_id

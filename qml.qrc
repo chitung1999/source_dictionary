@@ -25,7 +25,7 @@
         <file>ui/Common/Banner.qml</file>
         <file>ui/Common/TableVBase.qml</file>
         <file>ui/Common/ButtonBase.qml</file>
-        <file>ui/Common/PopUp.qml</file>
+        <file>ui/Common/PopupNotify.qml</file>
         <file>ui/Common/BorderBase.qml</file>
         <file>ui/Component/BannerItem.qml</file>
         <file>ui/Component/BoxChat.qml</file>
@@ -56,5 +56,6 @@
         <file>img/grammar_hightlight.png</file>
         <file>ui/Scene/Grammar.qml</file>
         <file>ui/Component/GrammarItem.qml</file>
+        <file>ui/Common/PopupConfirm.qml</file>
     </qresource>
 </RCC>

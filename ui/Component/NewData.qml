@@ -28,7 +28,7 @@ Item {
         id: box
         anchors.fill: bg_box
         source: bg_box
-        borderWidth: 8
+        borderWidth: 1
     }
 
     Text {
@@ -81,7 +81,7 @@ Item {
             leftMargin: 50
         }
         border.color: SETTING.borderColor
-        border.width: 3
+        border.width: 1
         color: "#eeeeee"
 
         ListView {
@@ -108,7 +108,7 @@ Item {
             rightMargin: 50
         }
         border.color: SETTING.borderColor
-        border.width: 3
+        border.width: 1
         color: "#eeeeee"
 
         ListView {
@@ -178,7 +178,7 @@ Item {
         Rectangle {
             anchors.fill: parent
             border.color: SETTING.borderColor
-            border.width: 3
+            border.width: 1
             color: "transparent"
         }
     }

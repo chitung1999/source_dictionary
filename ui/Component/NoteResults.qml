@@ -23,7 +23,7 @@ Item {
         anchors.fill: box
         source: box
         opacity: 0.8
-        borderWidth: 3
+        borderWidth: 1
     }
 
 

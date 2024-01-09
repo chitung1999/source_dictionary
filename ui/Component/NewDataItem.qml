@@ -12,6 +12,7 @@ Item {
         id: box
         width: parent.width - 40
         height: 50
+        radius: 10
         anchors {
             left: parent.left
             leftMargin: 20
