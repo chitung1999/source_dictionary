@@ -10,7 +10,6 @@
         <file>img/chat_hightlight.png</file>
         <file>img/game.png</file>
         <file>img/game_hightlight.png</file>
-        <file>img/volume.png</file>
         <file>img/edit.png</file>
         <file>img/offline.png</file>
         <file>img/online.png</file>
@@ -45,7 +44,6 @@
         <file>img/remove.png</file>
         <file>img/cancel.png</file>
         <file>img/ok.png</file>
-        <file>img/bg_popup.jpg</file>
         <file>img/bg_backup.jpg</file>
         <file>img/bg_icon.png</file>
         <file>img/color.png</file>
@@ -59,5 +57,10 @@
         <file>ui/Common/SearchBar.qml</file>
         <file>ui/Component/NoteBook/SearchWord.qml</file>
         <file>ui/Component/NoteBook/RandomWord.qml</file>
+        <file>ui/Common/ButtonImage.qml</file>
+        <file>img/volume.png</file>
+        <file>ui/Component/VoiceChat/MessageInput.qml</file>
+        <file>ui/Component/Setting/ListOption.qml</file>
+        <file>ui/Component/Setting/Content.qml</file>
     </qresource>
 </RCC>

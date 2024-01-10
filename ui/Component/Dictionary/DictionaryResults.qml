@@ -78,22 +78,15 @@ Item {
         font.pixelSize: 25
         text: DICTIONARY.phonetic
     }
-    Image {
+    ButtonImage {
         id: audio_icon
         anchors {
             right: parent.right
             rightMargin: 300
             verticalCenter: key_word.verticalCenter
         }
-        width: 40
-        height: 40
         source: "qrc:/img/volume.png"
-        MouseArea {
-            anchors.fill: audio_icon
-            onPressed: audio_icon.scale = 0.7
-            onReleased: audio_icon.scale = 1
-            onClicked: audio.play()
-        }
+        onClickButton: audio.play()
     }
     Audio {
         id: audio
@@ -129,6 +122,4 @@ Item {
             }
         }
     }
-
-
 }

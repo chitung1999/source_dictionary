@@ -47,7 +47,7 @@ Item {
         }
     }
 
-    Image {
+    ButtonImage {
         id: add
         anchors {
             top: box.bottom
@@ -56,14 +56,7 @@ Item {
         }
 
         source: "qrc:/img/add.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                onClicked: CTRL.appendItemGrammar();
-            }
-        }
+        onClickButton: CTRL.appendItemGrammar()
     }
 
     PopupConfirm {

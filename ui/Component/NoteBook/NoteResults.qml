@@ -40,7 +40,7 @@ Item {
         text: NOTEBOOK.currentKey
     }
 
-    Image {
+    ButtonImage {
         id: add_new
         width: 50
         height: 50
@@ -51,14 +51,7 @@ Item {
             rightMargin: 20
         }
         source: "qrc:/img/add.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                NOTEBOOK.popupAddNewData()
-            }
-        }
+        onClickButton: NOTEBOOK.popupAddNewData()
     }
 
     ListView {
@@ -90,19 +83,6 @@ Item {
                 radius: 5
                 color: "gray"
             }
-        }
-    }
-
-    NewData {
-        id: change_data
-        anchors.fill: parent
-        visible: false
-    }
-
-    Connections {
-        target: NOTEBOOK
-        function onRequestChangedData() {
-            change_data.visible = true
         }
     }
 }

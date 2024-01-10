@@ -49,7 +49,7 @@ Item {
         content: root.notes
     }
 
-    Image {
+    ButtonImage {
         id: modify
         anchors {
             right: root.right
@@ -57,39 +57,21 @@ Item {
             verticalCenter: root.verticalCenter
             verticalCenterOffset: -40
         }
-        opacity: 0.5
+        opacityExited: 0.5
         source: "qrc:/img/edit.png"
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: parent.opacity = 1
-            onExited: parent.opacity = 0.5
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                NOTEBOOK.popupModifyData(root.index)
-            }
-        }
+        onClickButton: NOTEBOOK.popupModifyData(root.index)
     }
 
-    Image {
+    ButtonImage {
         id: remove
         anchors {
             right: modify.right
             verticalCenter: root.verticalCenter
             verticalCenterOffset: 20
         }
-        opacity: 0.5
+        opacityExited: 0.5
         source: "qrc:/img/remove.png"
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: parent.opacity = 0.8
-            onExited: parent.opacity = 0.4
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: CTRL.receiveConf(root.index)
-        }
+        onClickButton: CTRL.receiveConf(root.index)
     }
 
     function formatList(list) {

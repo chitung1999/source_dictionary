@@ -17,7 +17,7 @@ Item {
 
     Text {
         id: title
-        text: root.title
+        text: root.title + CTRL.translator
         font.pixelSize: root.fontSize
         font.bold: true
     }
@@ -45,7 +45,8 @@ Item {
             clip: true
         }
 
-        Image {
+        ButtonImage {
+            id: done
             anchors {
                 verticalCenter: username.verticalCenter
                 left: username.right
@@ -53,15 +54,10 @@ Item {
             }
             visible: username.focus
             source: "qrc:/img/ok.png"
-            MouseArea {
-                anchors.fill: parent
-                onPressed: parent.scale = 0.7
-                onReleased: parent.scale = 1
-                onClicked: {
-                    if (username.focus) {
-                        username.focus = false
-                        root.textChanged()
-                    }
+            onClickButton: {
+                if (username.focus) {
+                    username.focus = false
+                    root.textChanged()
                 }
             }
         }

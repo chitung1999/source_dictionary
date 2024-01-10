@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import "../../Common"
 
 Item {
     id: root
@@ -82,7 +83,7 @@ Item {
         }
     }
 
-    Image {
+    ButtonImage {
         id: modify
         anchors {
             left: root.right
@@ -90,54 +91,30 @@ Item {
             verticalCenter: root.verticalCenter
             verticalCenterOffset: -25
         }
-        opacity: 0.5
         visible: !root.isModify
+        opacityExited: 0.5
         source: "qrc:/img/edit.png"
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: parent.opacity = 1
-            onExited: parent.opacity = 0.5
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                root.isModify = true
-            }
-        }
+        onClickButton: root.isModify = true
     }
-    Image {
-        id: done_modify
+    ButtonImage {
+        id: done
         anchors.fill: modify
-        source: "qrc:/img/ok.png"
         visible: root.isModify
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                root.isModify = false
-                CTRL.changedItemGrammar(root.index, form.text, structure.text)
-            }
+        source: "qrc:/img/ok.png"
+        onClickButton: {
+            root.isModify = false
+            CTRL.changedItemGrammar(root.index, form.text, structure.text)
         }
     }
-
-    Image {
+    ButtonImage {
         id: remove
         anchors {
             right: modify.right
             verticalCenter: root.verticalCenter
             verticalCenterOffset: 15
         }
-        opacity: 0.5
+        opacityExited: 0.5
         source: "qrc:/img/remove.png"
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: parent.opacity = 0.8
-            onExited: parent.opacity = 0.4
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: CTRL.receiveConf(root.index)
-        }
+        onClickButton: CTRL.receiveConf(root.index)
     }
 }

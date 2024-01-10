@@ -18,7 +18,7 @@ Item {
         font.pixelSize: 30
         font.bold: true
         style: Text.Raised
-        styleColor: "#FFF"
+        styleColor: "#000"
         color: SETTING.themeColor
     }
 

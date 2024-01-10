@@ -55,7 +55,7 @@ Item {
         text: SETTING.userName
     }
 
-    Image {
+    ButtonImage {
         id: connect_button
         width: 50
         height: 50
@@ -65,12 +65,7 @@ Item {
             rightMargin: 40
         }
         source: VOICECHAT.isConnect ? "qrc:/img/online.png" : "qrc:/img/offline.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: VOICECHAT.isConnect ? CTRL.disconnect() : CTRL.doConnect()
-        }
+        onClickButton: VOICECHAT.isConnect ? CTRL.disconnect() : CTRL.doConnect()
     }
 
     ListView {

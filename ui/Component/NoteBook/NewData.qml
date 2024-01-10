@@ -15,20 +15,19 @@ Item {
         }
     }
 
-    Image {
-        id: bg_box
+    Rectangle {
+        id: box
         width: 1000
         height: 900
+        radius: 30
+        border.width: 2
+        border.color: SETTING.borderColor
         anchors.centerIn: parent
-        source: "qrc:/img/bg_popup.jpg"
-        visible: false
-    }
-
-    BorderBase {
-        id: box
-        anchors.fill: bg_box
-        source: bg_box
-        borderWidth: 1
+        gradient: Gradient {
+            GradientStop { position: - 0.3; color: "#969696" }
+            GradientStop { position: 0.5; color: SETTING.themeColor }
+            GradientStop { position: 1.3; color: "#969696" }
+        }
     }
 
     Text {
@@ -124,7 +123,7 @@ Item {
         }
     }
 
-    Image {
+    ButtonImage {
         id: add_key
         width: 50
         height: 50
@@ -134,33 +133,19 @@ Item {
             horizontalCenter: keys.horizontalCenter
         }
         source: "qrc:/img/add.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                NOTEBOOK.popupAddItem(true, sendData(true))
-            }
-        }
+        onClickButton: NOTEBOOK.popupAddItem(true, sendData(true))
     }
 
-    Image {
+    ButtonImage {
         id: add_mean
+        width: 50
+        height: 50
         anchors {
             top: add_key.top
             horizontalCenter: means.horizontalCenter
         }
-        width: 50
-        height: 50
         source: "qrc:/img/add.png"
-        MouseArea {
-            anchors.fill: parent
-            onPressed: parent.scale = 0.7
-            onReleased: parent.scale = 1
-            onClicked: {
-                NOTEBOOK.popupAddItem(false, sendData(false))
-            }
-        }
+        onClickButton: NOTEBOOK.popupAddItem(false, sendData(false))
     }
 
     TextArea {

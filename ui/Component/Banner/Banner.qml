@@ -98,9 +98,9 @@ Item {
             id: box_logo
             anchors.fill: logo
             gradient: Gradient {
-                GradientStop { position: 0; color: SETTING.borderColor }
+                GradientStop { position: -0.5; color: "#000" }
                 GradientStop { position: 0.5; color: SETTING.themeColor }
-                GradientStop { position: 1; color: SETTING.borderColor }
+                GradientStop { position: 1.5; color: "#000" }
             }
             visible: false
         }
@@ -123,7 +123,7 @@ Item {
             font.pixelSize: 30
             font.bold: true
             style: Text.Raised
-            styleColor: "#FFF"
+            styleColor: "#000"
             color: SETTING.themeColor
         }
     }

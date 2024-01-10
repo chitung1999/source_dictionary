@@ -8,6 +8,8 @@ Item {
     property int textLeft
     property alias textInput: input.text
 
+    signal requestSearch()
+
     Rectangle {
         id: box
         anchors.fill: parent
@@ -25,6 +27,10 @@ Item {
             rightMargin: 15
         }
         source: "qrc:/img/search.png"
+        MouseArea {
+            anchors.fill: parent
+            onClicked: root.requestSearch()
+        }
     }
 
     TextInput {

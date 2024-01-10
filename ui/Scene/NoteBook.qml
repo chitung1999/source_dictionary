@@ -33,6 +33,19 @@ Item {
         anchors.fill: parent
     }
 
+    NewData {
+        id: new_data
+        anchors.fill: parent
+        visible: false
+    }
+
+    Connections {
+        target: NOTEBOOK
+        function onRequestChangedData() {
+            new_data.visible = true
+        }
+    }
+
     PopupNotify {
         id: popup_notify
         anchors.fill: parent
