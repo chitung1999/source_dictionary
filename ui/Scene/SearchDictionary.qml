@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import "../Common/"
-import "../Component/"
+import "../Component/Dictionary"
 
 Item {
     id: root

@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import AppEnum 1.0
-import "Common/"
+import "Component/Banner"
 
 Window {
     id: root
@@ -32,30 +32,7 @@ Window {
         Loader {
             id: content
             anchors.fill: parent
-            state: banner.state
-            source: "qrc:/ui/Scene/NoteBook.qml"
-            states: [
-                State {
-                    name: AppEnum.NOTEBOOK
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/NoteBook.qml"}
-                },
-                State {
-                    name: AppEnum.GRAMMAR
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/Grammar.qml"}
-                },
-                State {
-                    name: AppEnum.SEARCH
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/SearchDictionary.qml"}
-                },
-                State {
-                    name: AppEnum.VOICECHAT
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/VoiceChat.qml"}
-                },
-                State {
-                    name: AppEnum.SETTING
-                    PropertyChanges {target: content; source: "qrc:/ui/Scene/Setting.qml"}
-                }
-            ]
+            source: banner.loader
         }
     }
 }

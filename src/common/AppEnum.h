@@ -12,6 +12,7 @@ public:
         GRAMMAR,
         SEARCH,
         VOICECHAT,
+        GAME,
         SETTING
     }Q_ENUMS(APP);
 

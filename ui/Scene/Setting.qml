@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import AppEnum 1.0
 import "../Common/"
-import "../Component/"
+//import "../Component/Setting"
 
 Item {
     id: root
@@ -240,7 +240,7 @@ Item {
             }
             visible: false
             title: qsTr("Path") + CTRL.translator
-            boxWidth: 620
+            boxWidth: parent.width - background_input.boxLeft - background_input.anchors.leftMargin - 80
             boxHeight: 60
             boxLeft: background_input.textLeft + 20
             fontSize: 25

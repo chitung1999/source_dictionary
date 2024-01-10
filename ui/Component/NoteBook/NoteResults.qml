@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import "../Common"
+import "../../Common"
 
 Item {
     id: root
@@ -71,7 +71,6 @@ Item {
             verticalCenterOffset: 40
         }
         clip: true
-        visible: false
         model: LISTNOTE
 
         delegate: NoteItem {
@@ -94,11 +93,6 @@ Item {
         }
     }
 
-    SearchBar {
-        id: search
-        anchors.fill: parent
-    }
-
     NewData {
         id: change_data
         anchors.fill: parent
@@ -107,10 +101,6 @@ Item {
 
     Connections {
         target: NOTEBOOK
-        function onRequestSearch() {
-            results.visible = true
-        }
-
         function onRequestChangedData() {
             change_data.visible = true
         }

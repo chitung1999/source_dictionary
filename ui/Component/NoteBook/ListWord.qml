@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import "../Common"
+import "../../Common"
 
 Item {
     id: root
@@ -19,7 +19,7 @@ Item {
         font.bold: true
         style: Text.Raised
         styleColor: "#FFF"
-        color: "#45818E"
+        color: SETTING.themeColor
     }
 
     Rectangle {
