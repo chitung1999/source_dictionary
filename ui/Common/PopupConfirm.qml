@@ -14,10 +14,6 @@ Item {
         opacity: 0.5
     }
 
-    MouseArea {
-        anchors.fill: parent
-    }
-
     Rectangle {
         id: box
         width: msg.width + 120
@@ -51,8 +47,7 @@ Item {
             horizontalCenter: box.horizontalCenter
             horizontalCenterOffset: - 150
         }
-        colorCenter: "#dadddb"
-        colorOutside: "#fff"
+        color: "#dadddb"
         textColor: "#000"
         name: qsTr("Cancel") + CTRL.translator
         onClickButton: root.visible = false
@@ -67,8 +62,7 @@ Item {
             horizontalCenter: box.horizontalCenter
             horizontalCenterOffset: 150
         }
-        colorCenter: "#dadddb"
-        colorOutside: "#fff"
+        color: "#dadddb"
         textColor: "#000"
         name: qsTr("OK") + CTRL.translator
         onClickButton: {

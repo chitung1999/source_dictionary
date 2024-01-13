@@ -28,14 +28,6 @@ public:
         ENGLISH = 0,
         VIETNAMESE
     }Q_ENUMS(LANGUAGE);
-
-    enum NOTIFYCHANGED {
-        LANGCHANGED = 0,
-        NAMECHANGED,
-        IPCHANGED,
-        PORTCHANGED,
-        BGCHANGED
-    };
 };
 
 #endif // APPENUM_H

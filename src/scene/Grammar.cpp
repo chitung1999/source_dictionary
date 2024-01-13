@@ -52,22 +52,26 @@ void Grammar::removeAt(int index)
 {
     if(index < 0 || index >= m_listGrammar.length())
         return;
-    beginResetModel();
+    beginRemoveRows(QModelIndex(), index, index);
     m_listGrammar.removeAt(index);
-    endResetModel();
+    endRemoveRows();
 }
 
-void Grammar::modify(int index, GrammarItem &item)
+void Grammar::modify(int index, GrammarItem item)
 {
-    if(index < 0 || index > m_listGrammar.length())
+    if(index < 0 || index > m_listGrammar.length()) {
         return;
+    }
 
-    beginResetModel();
     if (index == m_listGrammar.length()) {
         m_listGrammar.replace(m_listGrammar.length() - 1, item);
     } else {
         m_listGrammar.replace(index, item);
     }
+}
+
+void Grammar::update()
+{
     endResetModel();
 }
 

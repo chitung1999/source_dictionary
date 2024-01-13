@@ -4,11 +4,13 @@
 #include <QObject>
 #include <QTranslator>
 #include <QGuiApplication>
+#include <QMediaPlayer>
 #include <QColor>
 #include "scene/NoteBook.h"
 #include "scene/Grammar.h"
 #include "scene/Dictionary.h"
 #include "scene/VoiceChat.h"
+#include "scene/Game.h"
 #include "scene/Setting.h"
 #include "common/FileControl.h"
 
@@ -30,11 +32,12 @@ public:
 
      QString translator();
 
-     NoteBook *noteBook();
-     Grammar *grammar();
+     NoteBook   *noteBook();
+     Grammar    *grammar();
      Dictionary *dictionary();
-     VoiceChat *voiceChat();
-     Setting *setting();
+     VoiceChat  *voiceChat();
+     Game       *game();
+     Setting    *setting();
 
 signals:
      void popupNotifyChanged();
@@ -67,18 +70,22 @@ public slots:
 
     void receiveNtf(QString ntf);
     void receiveConf(int index);
+    void receiveAudio(QString path);
 
 private:
     explicit Controller(QObject *parent = nullptr);
 
-    NoteBook m_noteBook;
-    Grammar m_grammar;
-    Dictionary m_dictionary;
-    VoiceChat m_voiceChat;
-    Setting m_setting;
+    NoteBook    m_noteBook;
+    Grammar     m_grammar;
+    Dictionary  m_dictionary;
+    VoiceChat   m_voiceChat;
+    Game        m_game;
+    Setting     m_setting;
+
     QString m_popupNotify;
     QString m_popupConfirm;
     QTranslator m_translator;
+    QMediaPlayer m_audio;
     QJsonObject m_dataJson;
     FileControl m_file;
     int m_indexRemove;

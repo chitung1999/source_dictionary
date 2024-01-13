@@ -48,6 +48,8 @@ signals:
     void searchKeysChanged();
     void requestSearch();
     void requestChangedData();
+    //send to Game
+    void sendQuestion(QString, QString);
 
 
 public slots:
@@ -59,6 +61,8 @@ public slots:
     void popupModifyData(int index);
     void popupAddNewData();
     void popupAddItem(bool isKey, QStringList list);
+    //request from Game
+    void onRequestQuestion();
 
 private:
     QString m_currentKey;

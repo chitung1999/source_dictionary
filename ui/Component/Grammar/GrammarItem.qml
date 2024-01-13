@@ -27,20 +27,20 @@ Item {
     Text {
         id: icon_form
         anchors {
-            verticalCenter: form.verticalCenter
+            top: parent.top
+            topMargin: 5
             left: box.left
-            leftMargin: 20
+            leftMargin: 30
         }
         font.pixelSize: 30
         font.bold: true
-        text: "❁    "
+        text: "❁  "
     }
     TextInput {
         id: form
         width: parent.width - icon_form.width - icon_form.anchors.leftMargin - 40
         anchors {
-            top: parent.top
-            topMargin: 5
+            verticalCenter: icon_form.verticalCenter
             left: icon_form.right
         }
         wrapMode: Text.Wrap
@@ -55,22 +55,23 @@ Item {
         }
     }
     Text {
-        id: icon_structure
-        anchors {
-            top: structure.top
-            left: box.left
-            leftMargin: 100
-        }
+        id: form_backup
+        text: qsTr("Form")
         font.pixelSize: 30
-        text: qsTr("Structure: ")
+        font.bold: true
+        anchors.fill: form
+        opacity: 0.4
+        visible: form.text == ""
     }
+
     TextInput {
         id: structure
-        width: parent.width - icon_structure.width - icon_structure.anchors.leftMargin - 40
+        width: parent.width - structure.anchors.leftMargin - 40
         anchors {
             top: form.bottom
             topMargin: 5
-            left: icon_structure.right
+            left: box.left
+            leftMargin: 100
         }
         wrapMode: Text.Wrap
         font.pixelSize: 30
@@ -81,6 +82,14 @@ Item {
             root.isModify = false
             CTRL.changedItemGrammar(root.index, form.text, structure.text)
         }
+    }
+    Text {
+        id: structure_backup
+        text: qsTr("Structure")
+        font.pixelSize: 30
+        anchors.fill: structure
+        opacity: 0.4
+        visible: structure.text == ""
     }
 
     ButtonImage {

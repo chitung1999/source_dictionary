@@ -1,4 +1,4 @@
-QT += quick
+QT += quick multimedia
 
 CONFIG += c++11
 
@@ -22,6 +22,7 @@ SOURCES += \
     src/model/MessageModel.cpp \
     src/model/NoteModel.cpp \
     src/scene/Dictionary.cpp \
+    src/scene/Game.cpp \
     src/scene/Grammar.cpp \
     src/scene/NoteBook.cpp \
     src/scene/Setting.cpp \
@@ -55,6 +56,7 @@ HEADERS += \
     src/model/MessageModel.h \
     src/model/NoteModel.h \
     src/scene/Dictionary.h \
+    src/scene/Game.h \
     src/scene/Grammar.h \
     src/scene/NoteBook.h \
     src/scene/Setting.h \

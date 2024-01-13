@@ -62,5 +62,25 @@
         <file>ui/Component/VoiceChat/MessageInput.qml</file>
         <file>ui/Component/Setting/ListOption.qml</file>
         <file>ui/Component/Setting/Content.qml</file>
+        <file>ui/Scene/Game.qml</file>
+        <file>img/play.png</file>
+        <file>ui/Component/Game/Introduce.qml</file>
+        <file>img/logo_D.png</file>
+        <file>img/logo_A.png</file>
+        <file>img/logo_C.png</file>
+        <file>img/logo_I.png</file>
+        <file>img/logo_N.png</file>
+        <file>img/logo_O.png</file>
+        <file>img/logo_R.png</file>
+        <file>img/logo_T.png</file>
+        <file>img/logo_Y.png</file>
+        <file>ui/Component/Game/LogoItem.qml</file>
+        <file>img/mute.png</file>
+        <file>img/unmute.png</file>
+        <file>img/help.png</file>
+        <file>ui/Component/Game/PlayingGame.qml</file>
+        <file>img/award.png</file>
+        <file>ui/Component/Game/PlayInfo.qml</file>
+        <file>img/right_arrow.png</file>
     </qresource>
 </RCC>

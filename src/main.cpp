@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("VOICECHAT", Controller::getInstance()->voiceChat());
     engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->voiceChat()->message());
 
+    engine.rootContext()->setContextProperty("GAME", Controller::getInstance()->game());
+
     engine.rootContext()->setContextProperty("SETTING", Controller::getInstance()->setting());
 
 

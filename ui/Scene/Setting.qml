@@ -60,6 +60,12 @@ Item {
         state: option.state
     }
 
+    MouseArea {
+        id: lock_screen
+        anchors.fill: parent
+        enabled: popup.visible
+    }
+
     PopupNotify {
         id: popup
         anchors.fill: parent

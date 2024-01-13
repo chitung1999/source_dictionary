@@ -62,12 +62,26 @@ Item {
     TextInputBase {
         id: text_input1
         visible: true
+        boxWidth: 250
+        boxHeight: 60
+        boxLeft: text_input1.textLeft + 20
+        anchors {
+            horizontalCenter: root.horizontalCenter
+            verticalCenter: root.verticalCenter
+        }
         onTextChanged: input1_request()
     }
 
     TextInputBase {
         id: text_input2
         visible: true
+        boxWidth: 250
+        boxHeight: 60
+        boxLeft: text_input1.textLeft + 20
+        anchors {
+            verticalCenter: root.verticalCenter
+            left: text_input1.left
+        }
         onTextChanged: input2_request()
     }
 
@@ -82,11 +96,7 @@ Item {
             name: AppEnum.USERNAME
             PropertyChanges {
                 target: text_input1
-                anchors.centerIn: root
                 title: qsTr("User name")
-                boxWidth: 250
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
                 content: SETTING.userName
             }
             PropertyChanges {target: text_input2; visible: false}
@@ -95,28 +105,14 @@ Item {
             name: AppEnum.CONNECT
             PropertyChanges {
                 target: text_input1
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    verticalCenterOffset: -40
-                    horizontalCenter: root.horizontalCenter
-                }
+                anchors.verticalCenterOffset: -40
                 title: qsTr("IP Adress Connect")
-                boxWidth: 250
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
                 content: SETTING.ipAddress
             }
             PropertyChanges {
                 target: text_input2
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    verticalCenterOffset: 40
-                    left: text_input1.left
-                }
+                anchors.verticalCenterOffset: 40
                 title: qsTr("Port")
-                boxWidth: 250
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
                 content: SETTING.port
             }
         },
@@ -124,15 +120,9 @@ Item {
             name: AppEnum.BACKGROUND
             PropertyChanges {
                 target: text_input1
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
-                    leftMargin: 30
-                }
+                anchors.horizontalCenterOffset: - 20
                 title: qsTr("Path")
-                boxWidth: parent.width - text_input1.boxLeft - text_input1.anchors.leftMargin - 80
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
+                boxWidth: root.width - text_input1.boxLeft - 100
                 content: SETTING.background
             }
             PropertyChanges {target: text_input2; visible: false}
@@ -141,28 +131,14 @@ Item {
             name: AppEnum.COLOR
             PropertyChanges {
                 target: text_input1
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    verticalCenterOffset: -40
-                    left: text_input2.left
-                }
+                anchors.verticalCenterOffset: - 40
                 title: qsTr("Theme Color")
-                boxWidth: 250
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
                 content: SETTING.themeColor
             }
             PropertyChanges {
                 target: text_input2
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    verticalCenterOffset: 40
-                    horizontalCenter: root.horizontalCenter
-                }
+                anchors.verticalCenterOffset: 40
                 title: qsTr("Border Color")
-                boxWidth: 250
-                boxHeight: 60
-                boxLeft: text_input1.textLeft + 20
                 content: SETTING.borderColor
             }
         }

@@ -10,9 +10,6 @@ Item {
         anchors.fill: parent
         color: "#000"
         opacity: 0.5
-        MouseArea {
-            anchors.fill: parent
-        }
     }
 
     Rectangle {
@@ -177,8 +174,7 @@ Item {
             bottomMargin: 30
             horizontalCenter: keys.horizontalCenter
         }
-        colorCenter: "#dadddb"
-        colorOutside: "#fff"
+        color: "#dadddb"
         textColor: "#000"
         name: qsTr("Cancel") + CTRL.translator
         onClickButton: root.visible = false
@@ -192,13 +188,20 @@ Item {
             bottom: cancel_button.bottom
             horizontalCenter: means.horizontalCenter
         }
-        colorCenter: "#dadddb"
-        colorOutside: "#fff"
+        color: "#dadddb"
         textColor: "#000"
         name: qsTr("OK") + CTRL.translator
         onClickButton: {
             CTRL.changeItemNote(sendData(true), sendData(false), notes.text)
             root.visible = false
+        }
+    }
+
+
+    Connections {
+        target: NOTEBOOK
+        function onRequestChangedData() {
+            root.visible = true
         }
     }
 

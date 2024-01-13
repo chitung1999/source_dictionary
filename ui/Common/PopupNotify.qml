@@ -12,10 +12,6 @@ Item {
         opacity: 0.5
     }
 
-    MouseArea {
-        anchors.fill: parent
-    }
-
     Rectangle {
         id: box
         width: msg.width + 120

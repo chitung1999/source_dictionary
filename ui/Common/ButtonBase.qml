@@ -5,41 +5,38 @@ Rectangle {
 
     property string name
     property color textColor: "#FFF"
-    property var colorCenter
-    property var colorOutside
+    property int textSize: 20
 
     signal clickButton()
 
     radius: root.height / 2
     border.color: SETTING.borderColor
     border.width: 2
+    color: "transparent"
 
-    gradient: Gradient {
-        GradientStop { position: -0.5; color: root.colorOutside }
-        GradientStop { position: 0.3; color: root.colorCenter }
-        GradientStop { position: 0.7; color: root.colorCenter }
-        GradientStop { position: 1.5; color: root.colorOutside }
+    Rectangle {
+        id: center_button
+        width: parent.width - parent.border.width * 2
+        height: parent.height - parent.border.width * 2
+        anchors.centerIn: parent
+        radius: parent.radius - parent.border.width
+        opacity: 0
     }
 
     Text {
         anchors.centerIn: parent
         text: root.name
-        font.pixelSize: 20
+        font.pixelSize: root.textSize
         font.bold: true
         color: root.textColor
     }
     MouseArea {
         anchors.fill: parent
-        onPressed: {
-            parent.scale = 0.8
-            parent.opacity = 0.6
-        }
-        onReleased: {
-            parent.scale = 1
-            parent.opacity = 1
-        }
-        onClicked: {
-            root.clickButton()
-        }
+        hoverEnabled: true
+        onEntered: center_button.opacity = 0.5
+        onExited: center_button.opacity = 0
+        onPressed: parent.scale = 0.8
+        onReleased: parent.scale = 1
+        onClicked: root.clickButton()
     }
 }

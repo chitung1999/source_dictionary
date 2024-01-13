@@ -166,3 +166,25 @@ void NoteBook::popupAddItem(bool isKey, QStringList list)
 {
     isKey ? m_newData.setKeys(list << "") : m_newData.setMeans(list << "");
 }
+
+void NoteBook::onRequestQuestion()
+{
+    int index = QRandomGenerator::global()->bounded(0, m_data.length());
+    int indexKey = QRandomGenerator::global()->bounded(0, m_data[index].words.length());
+
+    QString question;
+    QString answer = m_data.at(index).words.at(indexKey);
+    foreach (auto &value, m_data.at(index).means) {
+        if (!question.isEmpty())
+            question += ", ";
+        question += value;
+    }
+
+    question += ": ";
+
+    foreach (auto &value, m_data.at(index).words) {
+        if (value != answer)
+            question += (value + ", ");
+    }
+    emit sendQuestion(question, answer);
+}

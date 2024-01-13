@@ -4,6 +4,7 @@ import "../Common/"
 import "../Component/NoteBook"
 
 Item {
+    id: root
     anchors.fill: parent
 
     ListWord {
@@ -33,17 +34,16 @@ Item {
         anchors.fill: parent
     }
 
+    MouseArea {
+        id: lock_screen
+        anchors.fill: parent
+        enabled: (new_data.visible || popup_notify.visible || popup_confirm.visible)
+    }
+
     NewData {
         id: new_data
         anchors.fill: parent
         visible: false
-    }
-
-    Connections {
-        target: NOTEBOOK
-        function onRequestChangedData() {
-            new_data.visible = true
-        }
     }
 
     PopupNotify {

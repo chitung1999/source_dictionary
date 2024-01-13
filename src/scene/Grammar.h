@@ -8,6 +8,11 @@
 #include "../common/Define.h"
 
 struct GrammarItem {
+    GrammarItem() {}
+    GrammarItem(QString f, QString s) {
+        form = f;
+        structure = s;
+    }
     QString form;
     QString structure;
 };
@@ -30,7 +35,8 @@ public:
 
     void requestAppend();
     void removeAt(int index);
-    void modify(int index, GrammarItem &item);
+    void modify(int index, GrammarItem item);
+    void update();
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

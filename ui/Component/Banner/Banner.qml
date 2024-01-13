@@ -51,7 +51,7 @@ Item {
             }
             ListElement {
                 stateItem: AppEnum.GAME
-                loaderItem: ""
+                loaderItem: "qrc:/ui/Scene/Game.qml"
                 sourceItem: "qrc:/img/game.png"
                 sourceItemHL: "qrc:/img/game_hightlight.png"
             }
