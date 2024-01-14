@@ -22,7 +22,7 @@ Item {
         id: cancel
         anchors {
             left: count.right
-            leftMargin: 10
+            leftMargin: 20
         }
         source: "qrc:/img/cancel.png"
         onClickButton: root.cancel()

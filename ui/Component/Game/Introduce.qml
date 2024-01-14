@@ -19,6 +19,31 @@ Item {
         }
         scale: 0.8
         source: "qrc:/img/help.png"
+        onClickButton: help_box.visible = !help_box.visible
+    }
+
+    Rectangle {
+        id: help_box
+        width: help_text.width + 40
+        height: 50
+        radius: 10
+        border.width: 2
+        border.color: "#008896"
+        visible: false
+        color: "transparent"
+        anchors {
+            verticalCenter: help.verticalCenter
+            right: help.left
+            rightMargin: 20
+        }
+
+        Text {
+            id: help_text
+            font.pixelSize: 20
+            anchors.centerIn: parent
+            color: "#008896"
+            text: qsTr("Fill in the blank with the missing word in the group.")
+        }
     }
 
     ButtonBase {

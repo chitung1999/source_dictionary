@@ -47,28 +47,28 @@
 <context>
     <name>Controller</name>
     <message>
-        <location filename="src/Controller.cpp" line="156"/>
+        <location filename="src/Controller.cpp" line="158"/>
         <source>Cann&apos;t open file: </source>
         <translation>Không thể mở file: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="173"/>
-        <location filename="src/Controller.cpp" line="190"/>
+        <location filename="src/Controller.cpp" line="175"/>
+        <location filename="src/Controller.cpp" line="192"/>
         <source>Invalid color: </source>
         <translation>Định dạng màu không tồn tại: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="239"/>
+        <location filename="src/Controller.cpp" line="241"/>
         <source>The keys or means are empty!</source>
         <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="277"/>
+        <location filename="src/Controller.cpp" line="279"/>
         <source>The form or structure is empty!</source>
         <translation>Kiểu câu hoặc Cấu trúc trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="322"/>
+        <location filename="src/Controller.cpp" line="324"/>
         <source>Are you sure you want to delete this item?</source>
         <translation>Bạn chắc chắn muốn xoá ghi chú này?</translation>
     </message>
@@ -76,12 +76,12 @@
 <context>
     <name>DictionaryResults</name>
     <message>
-        <location filename="ui/Component/Dictionary/DictionaryResults.qml" line="45"/>
+        <location filename="ui/Component/Dictionary/DictionaryResults.qml" line="46"/>
         <source>Key</source>
         <translation>Từ khoá</translation>
     </message>
     <message>
-        <location filename="ui/Component/Dictionary/DictionaryResults.qml" line="58"/>
+        <location filename="ui/Component/Dictionary/DictionaryResults.qml" line="59"/>
         <source>Result</source>
         <translation>Kết quả</translation>
     </message>
@@ -101,14 +101,22 @@
         <translation type="vanished">Cấu trúc: </translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="59"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="62"/>
         <source>Form</source>
         <translation>Kiểu câu</translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="88"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="91"/>
         <source>Structure</source>
         <translation>Cấu trúc</translation>
+    </message>
+</context>
+<context>
+    <name>Introduce</name>
+    <message>
+        <location filename="ui/Component/Game/Introduce.qml" line="45"/>
+        <source>Fill in the blank with the missing word in the group.</source>
+        <translation>Điền từ còn thiếu trong nhóm từ vào chỗ trống.</translation>
     </message>
 </context>
 <context>
