@@ -7,6 +7,7 @@ Item {
     height: box.height + 10
 
     property bool isModify: false
+    property bool isSearch: false
     property int index
     property string formText
     property string structureText
@@ -22,7 +23,9 @@ Item {
         radius: 10
         border.color: SETTING.borderColor
         border.width: 2
-        visible: root.isModify
+        opacity: 0.8
+        color: root.isSearch ? "#ede12a" : "#FFF"
+        visible: (root.isModify || root.isSearch)
     }
     Text {
         id: icon_form

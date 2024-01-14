@@ -21,7 +21,6 @@ Item {
         function searchKey() {
             DICTIONARY.search(search.textInput)
             search.textInput = ""
-            results.visible = true
         }
     }
 
@@ -32,6 +31,5 @@ Item {
             topMargin: 200
             horizontalCenter: parent.horizontalCenter
         }
-        visible: false
     }
 }

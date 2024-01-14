@@ -112,7 +112,7 @@ bool Game::check(QString answer)
     bool isTrue = (answer == m_answer);
     isTrue ? setCorrect(m_correct + 1) : setIncorrect(m_incorrect + 1);
     if(!m_isMute)
-        emit requestAudio(PATH_HOME + "/audio/" + (isTrue ? "" : "in") + "correct.mp3");
+        emit requestAudio(PATH_DATA + (isTrue ? "/" : "/in") + "correct.mp3");
     return isTrue;
 }
 

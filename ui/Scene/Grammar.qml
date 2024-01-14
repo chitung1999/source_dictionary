@@ -4,6 +4,7 @@ import "../Common/"
 import "../Component/Grammar"
 
 Item {
+    id: root
     anchors.fill: parent
 
     Rectangle {
@@ -45,6 +46,12 @@ Item {
                 color: "gray"
             }
         }
+
+        function reset() {
+            for(var i = 0; i < list.count; i++) {
+                list.itemAtIndex(i).isSearch = false
+            }
+        }
     }
 
     ButtonImage {
@@ -53,10 +60,53 @@ Item {
             top: box.bottom
             topMargin: 20
             horizontalCenter: box.horizontalCenter
+            horizontalCenterOffset: -200
         }
 
         source: "qrc:/img/add.png"
         onClickButton: CTRL.appendItemGrammar()
+    }
+
+    SearchBar {
+        id: search
+
+        property bool isSearch: false
+
+        width: search.isSearch ? 800 : 600
+        height: 60
+        anchors {
+            top: box.bottom
+            topMargin: 20
+            right: box.right
+        }
+        textLeft: search.isSearch ? 40 + result.width : 30
+        onRequestSearch: requestButton(true)
+        Keys.onReturnPressed: requestButton(true)
+
+        ResultSearch {
+            id: result
+            anchors {
+                left: parent.left
+                leftMargin: 20
+                verticalCenter: parent.verticalCenter
+            }
+            visible: search.isSearch
+            onCancel: search.requestButton(false)
+        }
+
+        function requestButton(isSearch) {
+            search.isSearch = isSearch
+            if(isSearch) {
+                list.reset()
+                var listSearch = GRAMMAR.search(search.textInput)
+                for(var i = 0; i < listSearch.length; i++) {
+                    list.itemAtIndex(listSearch[i]).isSearch = true
+                }
+            } else {
+                search.textInput = ""
+                list.reset()
+            }
+        }
     }
 
     MouseArea {

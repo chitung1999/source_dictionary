@@ -32,11 +32,13 @@ public:
 public slots:
     void search(QString key);
     void getDataRequest(QString data);
+    void playAudio();
 
 signals:
     void keyChanged();
     void phoneticChanged();
     void urlAudioChanged();
+    void requestAudio(QString path);
 
 private:
     QString m_key;

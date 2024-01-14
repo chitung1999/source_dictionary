@@ -1,12 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import QtMultimedia 5.14
 import "../../Common"
 
 Item {
     id: root
     width: 1700
     height: 680
+
+    visible: false
 
     Item {
         id: box
@@ -86,11 +87,7 @@ Item {
             verticalCenter: key_word.verticalCenter
         }
         source: "qrc:/img/volume.png"
-        onClickButton: audio.play()
-    }
-    Audio {
-        id: audio
-        source: DICTIONARY.urlAudio
+        onClickButton: DICTIONARY.playAudio()
     }
 
     ListView {
@@ -108,6 +105,7 @@ Item {
             synonyms: model.synonyms
             antonyms: model.antonyms
             definitions: model.definitions
+            onPartSpeedChanged: root.visible = true
         }
 
         ScrollBar.vertical: ScrollBar {

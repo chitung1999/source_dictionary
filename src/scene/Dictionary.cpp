@@ -118,3 +118,8 @@ void Dictionary::getDataRequest(QString data)
         }
     }
 }
+
+void Dictionary::playAudio()
+{
+    emit requestAudio(m_urlAudio);
+}

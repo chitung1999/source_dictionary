@@ -42,6 +42,19 @@ QVariant Grammar::data(const QModelIndex &index, int role) const
     }
 }
 
+const int &Grammar::result() const
+{
+    return m_result;
+}
+
+void Grammar::setResult(const int newResult)
+{
+    if (m_result == newResult)
+        return;
+    m_result = newResult;
+    emit resultChanged();
+}
+
 void Grammar::requestAppend() {
     beginInsertRows(QModelIndex(), m_listGrammar.count(), m_listGrammar.count());
     m_listGrammar.append(GrammarItem());
@@ -73,6 +86,19 @@ void Grammar::modify(int index, GrammarItem item)
 void Grammar::update()
 {
     endResetModel();
+}
+
+QList<int> Grammar::search(QString str)
+{
+    QList<int> result;
+    if (str != "") {
+        for (int i = 0;i < m_listGrammar.length();i++) {
+            if(m_listGrammar[i].form.contains(str) || m_listGrammar[i].structure.contains(str))
+                result.append(i);
+        }
+    }
+    setResult(result.length());
+    return result;
 }
 
 QHash<int, QByteArray> Grammar::roleNames() const

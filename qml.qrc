@@ -82,5 +82,7 @@
         <file>img/award.png</file>
         <file>ui/Component/Game/PlayInfo.qml</file>
         <file>img/right_arrow.png</file>
+        <file>translate/vi_VN.qm</file>
+        <file>ui/Component/Grammar/ResultSearch.qml</file>
     </qresource>
 </RCC>
