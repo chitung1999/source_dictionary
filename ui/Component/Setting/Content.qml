@@ -93,30 +93,6 @@ Item {
             PropertyChanges {target: text_input2; visible: false}
         },
         State {
-            name: AppEnum.USERNAME
-            PropertyChanges {
-                target: text_input1
-                title: qsTr("User name")
-                content: SETTING.userName
-            }
-            PropertyChanges {target: text_input2; visible: false}
-        },
-        State {
-            name: AppEnum.CONNECT
-            PropertyChanges {
-                target: text_input1
-                anchors.verticalCenterOffset: -40
-                title: qsTr("IP Adress Connect")
-                content: SETTING.ipAddress
-            }
-            PropertyChanges {
-                target: text_input2
-                anchors.verticalCenterOffset: 40
-                title: qsTr("Port")
-                content: SETTING.port
-            }
-        },
-        State {
             name: AppEnum.BACKGROUND
             PropertyChanges {
                 target: text_input1
@@ -146,12 +122,6 @@ Item {
 
     function input1_request() {
         switch(parseInt(root.state)) {
-        case AppEnum.USERNAME:
-            CTRL.setUserName(text_input1.textInput)
-            break
-        case AppEnum.CONNECT:
-            CTRL.setIpAddress(text_input1.textInput)
-            break
         case AppEnum.BACKGROUND:
             CTRL.setBackground(text_input1.textInput)
             break
@@ -165,9 +135,6 @@ Item {
 
     function input2_request() {
         switch(parseInt(root.state)) {
-        case AppEnum.CONNECT:
-            CTRL.setPort(text_input2.textInput)
-            break
         case AppEnum.COLOR:
             CTRL.setBorderColor(text_input2.textInput)
             break

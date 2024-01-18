@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import AppEnum 1.0
 import "../../Common"
 
 Item {
@@ -127,6 +128,6 @@ Item {
         }
         opacityExited: 0.5
         source: "qrc:/img/remove.png"
-        onClickButton: CTRL.receiveConf(root.index)
+        onClickButton: CTRL.receiveConf(AppEnum.GRAMMARITEM, root.index)
     }
 }

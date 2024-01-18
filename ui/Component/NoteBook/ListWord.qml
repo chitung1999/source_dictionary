@@ -57,7 +57,7 @@ Item {
     ListView {
         id: list_word
         width: 400
-        height: 780
+        height: 690
         clip: true
         anchors {
             top: box.top
@@ -107,5 +107,16 @@ Item {
                 color: "gray"
             }
         }
+    }
+
+    ButtonImage {
+        id: add_new
+        anchors {
+            top: list_word.bottom
+            topMargin: 70
+            horizontalCenter: list_word.horizontalCenter
+        }
+        source: "qrc:/img/add.png"
+        onClickButton: NOTEBOOK.popupAddNewData()
     }
 }

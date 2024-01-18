@@ -24,9 +24,6 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("DICTIONARY", Controller::getInstance()->dictionary());
     engine.rootContext()->setContextProperty("LISTMEAN", Controller::getInstance()->dictionary()->means());
 
-    engine.rootContext()->setContextProperty("VOICECHAT", Controller::getInstance()->voiceChat());
-    engine.rootContext()->setContextProperty("LISTMSG", Controller::getInstance()->voiceChat()->message());
-
     engine.rootContext()->setContextProperty("GAME", Controller::getInstance()->game());
 
     engine.rootContext()->setContextProperty("SETTING", Controller::getInstance()->setting());

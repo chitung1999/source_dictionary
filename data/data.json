@@ -17,18 +17,19 @@
         "IPAddress": "127.0.0.1",
         "background": "C:/Users/PVD/Downloads/pexels-christian-heitz-842711.jpg",
         "borderColor": "green",
-        "language": "vn",
-        "name": "Chi Tung",
+        "language": "eng",
+        "name": "Chi Tungg",
         "port": 8080,
-        "themeColor": "blue"
+        "themeColor": "red"
     },
     "words": [
         {
             "index": 0,
             "means": [
-                "về"
+                "về",
+                "hihi"
             ],
-            "notes": "",
+            "notes": "haha",
             "words": [
                 "about",
                 "regarding",
@@ -49,16 +50,6 @@
         {
             "index": 2,
             "means": [
-                "thấm hút tốt"
-            ],
-            "notes": "",
-            "words": [
-                "absorbent"
-            ]
-        },
-        {
-            "index": 3,
-            "means": [
                 "đi vào",
                 "truy cập"
             ],
@@ -69,7 +60,7 @@
             ]
         },
         {
-            "index": 4,
+            "index": 3,
             "means": [
                 "phụ kiện"
             ],
@@ -79,7 +70,7 @@
             ]
         },
         {
-            "index": 5,
+            "index": 4,
             "means": [
                 "chỗ ở"
             ],
@@ -90,7 +81,7 @@
             ]
         },
         {
-            "index": 6,
+            "index": 5,
             "means": [
                 "hoàn thành"
             ],
@@ -101,7 +92,7 @@
             ]
         },
         {
-            "index": 7,
+            "index": 6,
             "means": [
                 "giỏi"
             ],
@@ -114,7 +105,7 @@
             ]
         },
         {
-            "index": 8,
+            "index": 7,
             "means": [
                 "có được",
                 "tiếp thu"
@@ -125,7 +116,7 @@
             ]
         },
         {
-            "index": 9,
+            "index": 8,
             "means": [
                 "mua(doanh nghiệp)"
             ],
@@ -135,7 +126,7 @@
             ]
         },
         {
-            "index": 10,
+            "index": 9,
             "means": [
                 "đủ"
             ],
@@ -147,7 +138,7 @@
             ]
         },
         {
-            "index": 11,
+            "index": 10,
             "means": [
                 "yêu thích"
             ],
@@ -157,7 +148,7 @@
             ]
         },
         {
-            "index": 12,
+            "index": 11,
             "means": [
                 "ảnh hưởng"
             ],
@@ -167,7 +158,7 @@
             ]
         },
         {
-            "index": 13,
+            "index": 12,
             "means": [
                 "có thể",
                 "cho"
@@ -178,7 +169,7 @@
             ]
         },
         {
-            "index": 14,
+            "index": 13,
             "means": [
                 "phải chăng"
             ],
@@ -189,7 +180,7 @@
             ]
         },
         {
-            "index": 15,
+            "index": 14,
             "means": [
                 "sau đó"
             ],
@@ -199,7 +190,7 @@
             ]
         },
         {
-            "index": 16,
+            "index": 15,
             "means": [
                 "ngược lại"
             ],
@@ -209,7 +200,7 @@
             ]
         },
         {
-            "index": 17,
+            "index": 16,
             "means": [
                 "nội dung chương trình"
             ],
@@ -219,7 +210,7 @@
             ]
         },
         {
-            "index": 18,
+            "index": 17,
             "means": [
                 "máy bay"
             ],
@@ -232,7 +223,7 @@
             ]
         },
         {
-            "index": 19,
+            "index": 18,
             "means": [
                 "nhà giả kim"
             ],
@@ -242,7 +233,7 @@
             ]
         },
         {
-            "index": 20,
+            "index": 19,
             "means": [
                 "căn chỉnh"
             ],
@@ -252,7 +243,7 @@
             ]
         },
         {
-            "index": 21,
+            "index": 20,
             "means": [
                 "thay thế"
             ],
@@ -264,7 +255,7 @@
             ]
         },
         {
-            "index": 22,
+            "index": 21,
             "means": [
                 "phân tích"
             ],
@@ -274,7 +265,7 @@
             ]
         },
         {
-            "index": 23,
+            "index": 22,
             "means": [
                 "cổ kính"
             ],
@@ -284,7 +275,7 @@
             ]
         },
         {
-            "index": 24,
+            "index": 23,
             "means": [
                 "chú thích"
             ],
@@ -294,7 +285,7 @@
             ]
         },
         {
-            "index": 25,
+            "index": 24,
             "means": [
                 "trang phục"
             ],
@@ -307,7 +298,7 @@
             ]
         },
         {
-            "index": 26,
+            "index": 25,
             "means": [
                 "hình như"
             ],
@@ -317,7 +308,7 @@
             ]
         },
         {
-            "index": 27,
+            "index": 26,
             "means": [
                 "thu hút"
             ],
@@ -327,7 +318,7 @@
             ]
         },
         {
-            "index": 28,
+            "index": 27,
             "means": [
                 "thỏa hiệp"
             ],
@@ -338,7 +329,7 @@
             ]
         },
         {
-            "index": 29,
+            "index": 28,
             "means": [
                 "ngon"
             ],
@@ -349,7 +340,7 @@
             ]
         },
         {
-            "index": 30,
+            "index": 29,
             "means": [
                 "bổ nhiệm",
                 "chỉ định"
@@ -360,7 +351,7 @@
             ]
         },
         {
-            "index": 31,
+            "index": 30,
             "means": [
                 "cảm kích",
                 "đánh giá cao"
@@ -371,7 +362,7 @@
             ]
         },
         {
-            "index": 32,
+            "index": 31,
             "means": [
                 "đang đến gần"
             ],
@@ -381,7 +372,7 @@
             ]
         },
         {
-            "index": 33,
+            "index": 32,
             "means": [
                 "bể nuôi cá"
             ],
@@ -391,7 +382,7 @@
             ]
         },
         {
-            "index": 34,
+            "index": 33,
             "means": [
                 "kiến trúc"
             ],
@@ -401,7 +392,7 @@
             ]
         },
         {
-            "index": 35,
+            "index": 34,
             "means": [
                 "được cho là"
             ],
@@ -411,7 +402,7 @@
             ]
         },
         {
-            "index": 36,
+            "index": 35,
             "means": [
                 "cũng"
             ],
@@ -423,7 +414,7 @@
             ]
         },
         {
-            "index": 37,
+            "index": 36,
             "means": [
                 "khía cạnh"
             ],
@@ -434,7 +425,7 @@
             ]
         },
         {
-            "index": 38,
+            "index": 37,
             "means": [
                 "khát khao làm gì"
             ],
@@ -445,7 +436,7 @@
             ]
         },
         {
-            "index": 39,
+            "index": 38,
             "means": [
                 "đầy tham vọng"
             ],
@@ -456,7 +447,7 @@
             ]
         },
         {
-            "index": 40,
+            "index": 39,
             "means": [
                 "lắp ráp",
                 "tập hợp"
@@ -468,7 +459,7 @@
             ]
         },
         {
-            "index": 41,
+            "index": 40,
             "means": [
                 "khẳng định"
             ],
@@ -478,7 +469,7 @@
             ]
         },
         {
-            "index": 42,
+            "index": 41,
             "means": [
                 "sự xác nhận"
             ],
@@ -488,7 +479,7 @@
             ]
         },
         {
-            "index": 43,
+            "index": 42,
             "means": [
                 "chỉ định",
                 "giao phó"
@@ -499,7 +490,7 @@
             ]
         },
         {
-            "index": 44,
+            "index": 43,
             "means": [
                 "cộng tác viên"
             ],
@@ -509,7 +500,7 @@
             ]
         },
         {
-            "index": 45,
+            "index": 44,
             "means": [
                 "đảm bảo"
             ],
@@ -519,7 +510,7 @@
             ]
         },
         {
-            "index": 46,
+            "index": 45,
             "means": [
                 "bây giờ"
             ],
@@ -533,7 +524,7 @@
             ]
         },
         {
-            "index": 47,
+            "index": 46,
             "means": [
                 "cuối cùng"
             ],
@@ -546,7 +537,7 @@
             ]
         },
         {
-            "index": 48,
+            "index": 47,
             "means": [
                 "đính kèm"
             ],
@@ -556,7 +547,7 @@
             ]
         },
         {
-            "index": 49,
+            "index": 48,
             "means": [
                 "nỗ lực"
             ],
@@ -567,7 +558,7 @@
             ]
         },
         {
-            "index": 50,
+            "index": 49,
             "means": [
                 "gán cho",
                 "quy cho"
@@ -578,7 +569,7 @@
             ]
         },
         {
-            "index": 51,
+            "index": 50,
             "means": [
                 "vận động viên"
             ],
@@ -588,7 +579,7 @@
             ]
         },
         {
-            "index": 52,
+            "index": 51,
             "means": [
                 "khán phòng"
             ],
@@ -598,7 +589,7 @@
             ]
         },
         {
-            "index": 53,
+            "index": 52,
             "means": [
                 "bổ sung"
             ],
@@ -608,7 +599,7 @@
             ]
         },
         {
-            "index": 54,
+            "index": 53,
             "means": [
                 "ô tô"
             ],
@@ -620,7 +611,7 @@
             ]
         },
         {
-            "index": 55,
+            "index": 54,
             "means": [
                 "ủy quyền"
             ],
@@ -630,7 +621,7 @@
             ]
         },
         {
-            "index": 56,
+            "index": 55,
             "means": [
                 "đại lộ"
             ],
@@ -640,7 +631,7 @@
             ]
         },
         {
-            "index": 57,
+            "index": 56,
             "means": [
                 "nhận thức được"
             ],
@@ -650,7 +641,7 @@
             ]
         },
         {
-            "index": 58,
+            "index": 57,
             "means": [
                 "cấm"
             ],
@@ -662,7 +653,7 @@
             ]
         },
         {
-            "index": 59,
+            "index": 58,
             "means": [
                 "chuồng trại"
             ],
@@ -672,7 +663,7 @@
             ]
         },
         {
-            "index": 60,
+            "index": 59,
             "means": [
                 "rổ"
             ],
@@ -682,7 +673,7 @@
             ]
         },
         {
-            "index": 61,
+            "index": 60,
             "means": [
                 "pin"
             ],
@@ -692,7 +683,7 @@
             ]
         },
         {
-            "index": 62,
+            "index": 61,
             "means": [
                 "được tin tưởng, tín nhiệm làm gì"
             ],
@@ -702,7 +693,7 @@
             ]
         },
         {
-            "index": 63,
+            "index": 62,
             "means": [
                 "có khả năng"
             ],
@@ -712,7 +703,7 @@
             ]
         },
         {
-            "index": 64,
+            "index": 63,
             "means": [
                 "có thể chịu đựng được"
             ],
@@ -722,7 +713,7 @@
             ]
         },
         {
-            "index": 65,
+            "index": 64,
             "means": [
                 "cúi người",
                 "gập người"
@@ -733,7 +724,7 @@
             ]
         },
         {
-            "index": 66,
+            "index": 65,
             "means": [
                 "có ích"
             ],
@@ -743,7 +734,7 @@
             ]
         },
         {
-            "index": 67,
+            "index": 66,
             "means": [
                 "cay đắng"
             ],
@@ -753,7 +744,7 @@
             ]
         },
         {
-            "index": 68,
+            "index": 67,
             "means": [
                 "tự hào khi có gì"
             ],
@@ -763,7 +754,7 @@
             ]
         },
         {
-            "index": 69,
+            "index": 68,
             "means": [
                 "làm tăng"
             ],
@@ -773,7 +764,7 @@
             ]
         },
         {
-            "index": 70,
+            "index": 69,
             "means": [
                 "mở rộng"
             ],
@@ -783,7 +774,7 @@
             ]
         },
         {
-            "index": 71,
+            "index": 70,
             "means": [
                 "hấp dẫn"
             ],
@@ -793,7 +784,7 @@
             ]
         },
         {
-            "index": 72,
+            "index": 71,
             "means": [
                 "chiếm"
             ],
@@ -803,7 +794,7 @@
             ]
         },
         {
-            "index": 73,
+            "index": 72,
             "means": [
                 "quyền sở hữu xe"
             ],
@@ -813,7 +804,7 @@
             ]
         },
         {
-            "index": 74,
+            "index": 73,
             "means": [
                 "chu đáo"
             ],
@@ -823,7 +814,7 @@
             ]
         },
         {
-            "index": 75,
+            "index": 74,
             "means": [
                 "thảm to trải sàn"
             ],
@@ -833,7 +824,7 @@
             ]
         },
         {
-            "index": 76,
+            "index": 75,
             "means": [
                 "loại",
                 "danh mục"
@@ -844,7 +835,7 @@
             ]
         },
         {
-            "index": 77,
+            "index": 76,
             "means": [
                 "danh mục "
             ],
@@ -854,7 +845,7 @@
             ]
         },
         {
-            "index": 78,
+            "index": 77,
             "means": [
                 "chuyên gia (adj)"
             ],
@@ -864,7 +855,7 @@
             ]
         },
         {
-            "index": 79,
+            "index": 78,
             "means": [
                 "xác nhận"
             ],
@@ -874,7 +865,7 @@
             ]
         },
         {
-            "index": 80,
+            "index": 79,
             "means": [
                 "lưu hành"
             ],
@@ -884,7 +875,7 @@
             ]
         },
         {
-            "index": 81,
+            "index": 80,
             "means": [
                 "vị trí"
             ],
@@ -895,7 +886,7 @@
             ]
         },
         {
-            "index": 82,
+            "index": 81,
             "means": [
                 "nhân viên"
             ],
@@ -905,7 +896,7 @@
             ]
         },
         {
-            "index": 83,
+            "index": 82,
             "means": [
                 "lâm sàng"
             ],
@@ -915,7 +906,7 @@
             ]
         },
         {
-            "index": 84,
+            "index": 83,
             "means": [
                 "ven biển"
             ],
@@ -925,7 +916,7 @@
             ]
         },
         {
-            "index": 85,
+            "index": 84,
             "means": [
                 "đồng nghiệp"
             ],
@@ -937,7 +928,7 @@
             ]
         },
         {
-            "index": 86,
+            "index": 85,
             "means": [
                 "kết hợp với"
             ],
@@ -947,7 +938,7 @@
             ]
         },
         {
-            "index": 87,
+            "index": 86,
             "means": [
                 "hứa làm gì"
             ],
@@ -957,7 +948,7 @@
             ]
         },
         {
-            "index": 88,
+            "index": 87,
             "means": [
                 "sự cam kết"
             ],
@@ -967,7 +958,7 @@
             ]
         },
         {
-            "index": 89,
+            "index": 88,
             "means": [
                 "sự kết nối",
                 "giao tiếp"
@@ -978,7 +969,7 @@
             ]
         },
         {
-            "index": 90,
+            "index": 89,
             "means": [
                 "truyền thông"
             ],
@@ -988,7 +979,7 @@
             ]
         },
         {
-            "index": 91,
+            "index": 90,
             "means": [
                 "đền bù"
             ],
@@ -998,7 +989,7 @@
             ]
         },
         {
-            "index": 92,
+            "index": 91,
             "means": [
                 "cạnh tranh"
             ],
@@ -1008,7 +999,7 @@
             ]
         },
         {
-            "index": 93,
+            "index": 92,
             "means": [
                 "thành phần",
                 "tổ hợp"
@@ -1019,7 +1010,7 @@
             ]
         },
         {
-            "index": 94,
+            "index": 93,
             "means": [
                 "toàn diện"
             ],
@@ -1029,7 +1020,7 @@
             ]
         },
         {
-            "index": 95,
+            "index": 94,
             "means": [
                 "ngắn gọn"
             ],
@@ -1040,7 +1031,7 @@
             ]
         },
         {
-            "index": 96,
+            "index": 95,
             "means": [
                 "tiến hành"
             ],
@@ -1053,7 +1044,7 @@
             ]
         },
         {
-            "index": 97,
+            "index": 96,
             "means": [
                 "bí mật"
             ],
@@ -1063,7 +1054,7 @@
             ]
         },
         {
-            "index": 98,
+            "index": 97,
             "means": [
                 "đối mặt"
             ],
@@ -1074,7 +1065,7 @@
             ]
         },
         {
-            "index": 99,
+            "index": 98,
             "means": [
                 "sự hiểu lầm"
             ],
@@ -1084,7 +1075,7 @@
             ]
         },
         {
-            "index": 100,
+            "index": 99,
             "means": [
                 "liên tiếp"
             ],
@@ -1094,7 +1085,7 @@
             ]
         },
         {
-            "index": 101,
+            "index": 100,
             "means": [
                 "do đó"
             ],
@@ -1104,7 +1095,7 @@
             ]
         },
         {
-            "index": 102,
+            "index": 101,
             "means": [
                 "thận trọng"
             ],
@@ -1114,7 +1105,7 @@
             ]
         },
         {
-            "index": 103,
+            "index": 102,
             "means": [
                 "đáng kể"
             ],
@@ -1126,7 +1117,7 @@
             ]
         },
         {
-            "index": 104,
+            "index": 103,
             "means": [
                 "thận trọng"
             ],
@@ -1136,7 +1127,7 @@
             ]
         },
         {
-            "index": 105,
+            "index": 104,
             "means": [
                 "rõ ràng"
             ],
@@ -1146,7 +1137,7 @@
             ]
         },
         {
-            "index": 106,
+            "index": 105,
             "means": [
                 "mang tính xây dựng"
             ],
@@ -1156,7 +1147,7 @@
             ]
         },
         {
-            "index": 107,
+            "index": 106,
             "means": [
                 "tham khảo ý kiến"
             ],
@@ -1166,7 +1157,7 @@
             ]
         },
         {
-            "index": 108,
+            "index": 107,
             "means": [
                 "hấp thụ",
                 "tiêu thụ"
@@ -1177,7 +1168,7 @@
             ]
         },
         {
-            "index": 109,
+            "index": 108,
             "means": [
                 "hợp đồng",
                 "ký kết"
@@ -1188,7 +1179,7 @@
             ]
         },
         {
-            "index": 110,
+            "index": 109,
             "means": [
                 "nhà thầu"
             ],
@@ -1198,7 +1189,7 @@
             ]
         },
         {
-            "index": 111,
+            "index": 110,
             "means": [
                 "người đóng góp"
             ],
@@ -1208,7 +1199,7 @@
             ]
         },
         {
-            "index": 112,
+            "index": 111,
             "means": [
                 "hội nghị"
             ],
@@ -1218,7 +1209,7 @@
             ]
         },
         {
-            "index": 113,
+            "index": 112,
             "means": [
                 "có tính đối thoại"
             ],
@@ -1228,7 +1219,7 @@
             ]
         },
         {
-            "index": 114,
+            "index": 113,
             "means": [
                 "chuyển đổi"
             ],
@@ -1238,7 +1229,7 @@
             ]
         },
         {
-            "index": 115,
+            "index": 114,
             "means": [
                 "hợp tác"
             ],
@@ -1248,7 +1239,7 @@
             ]
         },
         {
-            "index": 116,
+            "index": 115,
             "means": [
                 "hợp tác"
             ],
@@ -1258,7 +1249,7 @@
             ]
         },
         {
-            "index": 117,
+            "index": 116,
             "means": [
                 "điều phối"
             ],
@@ -1268,7 +1259,7 @@
             ]
         },
         {
-            "index": 118,
+            "index": 117,
             "means": [
                 "xử lý",
                 "giải quyết"
@@ -1284,7 +1275,7 @@
             ]
         },
         {
-            "index": 119,
+            "index": 118,
             "means": [
                 "cốt lõi"
             ],
@@ -1294,7 +1285,7 @@
             ]
         },
         {
-            "index": 120,
+            "index": 119,
             "means": [
                 "phù hợp"
             ],
@@ -1304,7 +1295,7 @@
             ]
         },
         {
-            "index": 121,
+            "index": 120,
             "means": [
                 "giá"
             ],
@@ -1317,7 +1308,7 @@
             ]
         },
         {
-            "index": 122,
+            "index": 121,
             "means": [
                 "tính toán"
             ],
@@ -1328,7 +1319,7 @@
             ]
         },
         {
-            "index": 123,
+            "index": 122,
             "means": [
                 "lòng can đảm"
             ],
@@ -1338,7 +1329,7 @@
             ]
         },
         {
-            "index": 124,
+            "index": 123,
             "means": [
                 "nvien giao hàng"
             ],
@@ -1348,7 +1339,7 @@
             ]
         },
         {
-            "index": 125,
+            "index": 124,
             "means": [
                 "sân thể thao"
             ],
@@ -1358,7 +1349,7 @@
             ]
         },
         {
-            "index": 126,
+            "index": 125,
             "means": [
                 "tạo ra"
             ],
@@ -1368,7 +1359,7 @@
             ]
         },
         {
-            "index": 127,
+            "index": 126,
             "means": [
                 "sáng tạo"
             ],
@@ -1378,7 +1369,7 @@
             ]
         },
         {
-            "index": 128,
+            "index": 127,
             "means": [
                 "sáng tạo"
             ],
@@ -1388,7 +1379,7 @@
             ]
         },
         {
-            "index": 129,
+            "index": 128,
             "means": [
                 "tiêu chuẩn"
             ],
@@ -1399,7 +1390,7 @@
             ]
         },
         {
-            "index": 130,
+            "index": 129,
             "means": [
                 "nhà phê bình"
             ],
@@ -1409,7 +1400,7 @@
             ]
         },
         {
-            "index": 131,
+            "index": 130,
             "means": [
                 "chỉ trích"
             ],
@@ -1419,7 +1410,7 @@
             ]
         },
         {
-            "index": 132,
+            "index": 131,
             "means": [
                 "một cách phê phán",
                 "nghiêm trọng"
@@ -1430,7 +1421,7 @@
             ]
         },
         {
-            "index": 133,
+            "index": 132,
             "means": [
                 "quan trọng"
             ],
@@ -1441,7 +1432,7 @@
             ]
         },
         {
-            "index": 134,
+            "index": 133,
             "means": [
                 "theo thông lệ"
             ],
@@ -1451,7 +1442,7 @@
             ]
         },
         {
-            "index": 135,
+            "index": 134,
             "means": [
                 "làm theo yêu cầu"
             ],
@@ -1461,7 +1452,7 @@
             ]
         },
         {
-            "index": 136,
+            "index": 135,
             "means": [
                 "chuỗi cửa hàng"
             ],
@@ -1471,7 +1462,7 @@
             ]
         },
         {
-            "index": 137,
+            "index": 136,
             "means": [
                 "đặc điểm"
             ],
@@ -1481,7 +1472,7 @@
             ]
         },
         {
-            "index": 138,
+            "index": 137,
             "means": [
                 "tính phí vào"
             ],
@@ -1491,7 +1482,7 @@
             ]
         },
         {
-            "index": 139,
+            "index": 138,
             "means": [
                 "từ thiện"
             ],
@@ -1501,7 +1492,7 @@
             ]
         },
         {
-            "index": 140,
+            "index": 139,
             "means": [
                 "kiểm tra"
             ],
@@ -1514,7 +1505,7 @@
             ]
         },
         {
-            "index": 141,
+            "index": 140,
             "means": [
                 "đê"
             ],
@@ -1524,7 +1515,7 @@
             ]
         },
         {
-            "index": 142,
+            "index": 141,
             "means": [
                 "bình minh"
             ],
@@ -1534,7 +1525,7 @@
             ]
         },
         {
-            "index": 143,
+            "index": 142,
             "means": [
                 "môi giới"
             ],
@@ -1544,7 +1535,7 @@
             ]
         },
         {
-            "index": 144,
+            "index": 143,
             "means": [
                 "đại lý"
             ],
@@ -1554,7 +1545,7 @@
             ]
         },
         {
-            "index": 145,
+            "index": 144,
             "means": [
                 "ra mắt nhóm nhạc"
             ],
@@ -1564,7 +1555,7 @@
             ]
         },
         {
-            "index": 146,
+            "index": 145,
             "means": [
                 "khấu trừ"
             ],
@@ -1574,7 +1565,7 @@
             ]
         },
         {
-            "index": 147,
+            "index": 146,
             "means": [
                 "thâm hụt"
             ],
@@ -1584,7 +1575,7 @@
             ]
         },
         {
-            "index": 148,
+            "index": 147,
             "means": [
                 "hoãn"
             ],
@@ -1596,7 +1587,7 @@
             ]
         },
         {
-            "index": 149,
+            "index": 148,
             "means": [
                 "đại biểu"
             ],
@@ -1606,7 +1597,7 @@
             ]
         },
         {
-            "index": 150,
+            "index": 149,
             "means": [
                 "cẩn thận",
                 "có chủ ý"
@@ -1617,7 +1608,7 @@
             ]
         },
         {
-            "index": 151,
+            "index": 150,
             "means": [
                 "giới thiệu"
             ],
@@ -1627,7 +1618,7 @@
             ]
         },
         {
-            "index": 152,
+            "index": 151,
             "means": [
                 "phụ thuộc vào"
             ],
@@ -1637,7 +1628,7 @@
             ]
         },
         {
-            "index": 153,
+            "index": 152,
             "means": [
                 "tiền đặt cọc",
                 "đặt cọc"
@@ -1648,7 +1639,7 @@
             ]
         },
         {
-            "index": 154,
+            "index": 153,
             "means": [
                 "mô tả"
             ],
@@ -1658,7 +1649,7 @@
             ]
         },
         {
-            "index": 155,
+            "index": 154,
             "means": [
                 "thiết kế"
             ],
@@ -1668,7 +1659,7 @@
             ]
         },
         {
-            "index": 156,
+            "index": 155,
             "means": [
                 "mang tính phá hoại"
             ],
@@ -1678,7 +1669,7 @@
             ]
         },
         {
-            "index": 157,
+            "index": 156,
             "means": [
                 "tách ra",
                 "riêng lẻ"
@@ -1689,7 +1680,7 @@
             ]
         },
         {
-            "index": 158,
+            "index": 157,
             "means": [
                 "chi tiết"
             ],
@@ -1699,7 +1690,7 @@
             ]
         },
         {
-            "index": 159,
+            "index": 158,
             "means": [
                 "hư hỏng"
             ],
@@ -1710,7 +1701,7 @@
             ]
         },
         {
-            "index": 160,
+            "index": 159,
             "means": [
                 "quyết định"
             ],
@@ -1720,7 +1711,7 @@
             ]
         },
         {
-            "index": 161,
+            "index": 160,
             "means": [
                 "đào"
             ],
@@ -1730,7 +1721,7 @@
             ]
         },
         {
-            "index": 162,
+            "index": 161,
             "means": [
                 "ấn tượng",
                 "hấp dẫn"
@@ -1741,7 +1732,7 @@
             ]
         },
         {
-            "index": 163,
+            "index": 162,
             "means": [
                 "chăm chỉ"
             ],
@@ -1751,7 +1742,7 @@
             ]
         },
         {
-            "index": 164,
+            "index": 163,
             "means": [
                 "vận chuyển"
             ],
@@ -1761,7 +1752,7 @@
             ]
         },
         {
-            "index": 165,
+            "index": 164,
             "means": [
                 "trực tiếp",
                 "gửi (thư từ)",
@@ -1774,7 +1765,7 @@
             ]
         },
         {
-            "index": 166,
+            "index": 165,
             "means": [
                 "trực tiếp"
             ],
@@ -1785,7 +1776,7 @@
             ]
         },
         {
-            "index": 167,
+            "index": 166,
             "means": [
                 "tiết lộ"
             ],
@@ -1795,7 +1786,7 @@
             ]
         },
         {
-            "index": 168,
+            "index": 167,
             "means": [
                 "đa dạng hóa"
             ],
@@ -1805,7 +1796,7 @@
             ]
         },
         {
-            "index": 169,
+            "index": 168,
             "means": [
                 "chia"
             ],
@@ -1815,7 +1806,7 @@
             ]
         },
         {
-            "index": 170,
+            "index": 169,
             "means": [
                 "nội địa"
             ],
@@ -1825,7 +1816,7 @@
             ]
         },
         {
-            "index": 171,
+            "index": 170,
             "means": [
                 "chiếm ưu thế, thống trị"
             ],
@@ -1835,7 +1826,7 @@
             ]
         },
         {
-            "index": 172,
+            "index": 171,
             "means": [
                 "mạnh/ đáng kể"
             ],
@@ -1845,7 +1836,7 @@
             ]
         },
         {
-            "index": 173,
+            "index": 172,
             "means": [
                 "trong suốt"
             ],
@@ -1857,7 +1848,7 @@
             ]
         },
         {
-            "index": 174,
+            "index": 173,
             "means": [
                 "nhiệm vụ"
             ],
@@ -1867,7 +1858,7 @@
             ]
         },
         {
-            "index": 175,
+            "index": 174,
             "means": [
                 "háo hức"
             ],
@@ -1877,7 +1868,7 @@
             ]
         },
         {
-            "index": 176,
+            "index": 175,
             "means": [
                 "ăn mòn"
             ],
@@ -1887,7 +1878,7 @@
             ]
         },
         {
-            "index": 177,
+            "index": 176,
             "means": [
                 "tiết kiệm"
             ],
@@ -1897,7 +1888,7 @@
             ]
         },
         {
-            "index": 178,
+            "index": 177,
             "means": [
                 "hệ sinh thái sản phẩm"
             ],
@@ -1907,7 +1898,7 @@
             ]
         },
         {
-            "index": 179,
+            "index": 178,
             "means": [
                 "hiệu quả"
             ],
@@ -1918,7 +1909,7 @@
             ]
         },
         {
-            "index": 180,
+            "index": 179,
             "means": [
                 "cuộc bầu cử"
             ],
@@ -1928,7 +1919,7 @@
             ]
         },
         {
-            "index": 181,
+            "index": 180,
             "means": [
                 "nhã nhặn"
             ],
@@ -1938,7 +1929,7 @@
             ]
         },
         {
-            "index": 182,
+            "index": 181,
             "means": [
                 "có thể làm gì"
             ],
@@ -1949,7 +1940,7 @@
             ]
         },
         {
-            "index": 183,
+            "index": 182,
             "means": [
                 "khí thải công nghiệp"
             ],
@@ -1959,7 +1950,7 @@
             ]
         },
         {
-            "index": 184,
+            "index": 183,
             "means": [
                 "nhân viên"
             ],
@@ -1971,7 +1962,7 @@
             ]
         },
         {
-            "index": 185,
+            "index": 184,
             "means": [
                 "trống"
             ],
@@ -1984,7 +1975,7 @@
             ]
         },
         {
-            "index": 186,
+            "index": 185,
             "means": [
                 "sự đăng ký"
             ],
@@ -1995,7 +1986,7 @@
             ]
         },
         {
-            "index": 187,
+            "index": 186,
             "means": [
                 "doanh nghiệp"
             ],
@@ -2005,7 +1996,7 @@
             ]
         },
         {
-            "index": 188,
+            "index": 187,
             "means": [
                 "sự nhiệt tình"
             ],
@@ -2015,7 +2006,7 @@
             ]
         },
         {
-            "index": 189,
+            "index": 188,
             "means": [
                 "doanh nhân"
             ],
@@ -2025,7 +2016,7 @@
             ]
         },
         {
-            "index": 190,
+            "index": 189,
             "means": [
                 "động cơ"
             ],
@@ -2036,7 +2027,7 @@
             ]
         },
         {
-            "index": 191,
+            "index": 190,
             "means": [
                 "sự cải thiện"
             ],
@@ -2047,7 +2038,7 @@
             ]
         },
         {
-            "index": 192,
+            "index": 191,
             "means": [
                 "leo thang (chi phí)"
             ],
@@ -2057,7 +2048,7 @@
             ]
         },
         {
-            "index": 193,
+            "index": 192,
             "means": [
                 "thang cuốn"
             ],
@@ -2067,7 +2058,7 @@
             ]
         },
         {
-            "index": 194,
+            "index": 193,
             "means": [
                 "đạo đức"
             ],
@@ -2077,7 +2068,7 @@
             ]
         },
         {
-            "index": 195,
+            "index": 194,
             "means": [
                 "hưng phấn"
             ],
@@ -2087,7 +2078,7 @@
             ]
         },
         {
-            "index": 196,
+            "index": 195,
             "means": [
                 "đánh giá"
             ],
@@ -2098,7 +2089,7 @@
             ]
         },
         {
-            "index": 197,
+            "index": 196,
             "means": [
                 "thang máy"
             ],
@@ -2109,7 +2100,7 @@
             ]
         },
         {
-            "index": 198,
+            "index": 197,
             "means": [
                 "bằng"
             ],
@@ -2120,7 +2111,7 @@
             ]
         },
         {
-            "index": 199,
+            "index": 198,
             "means": [
                 "vượt quá"
             ],
@@ -2130,7 +2121,7 @@
             ]
         },
         {
-            "index": 200,
+            "index": 199,
             "means": [
                 "bên cạnh đó/ ngoại trừ"
             ],
@@ -2145,7 +2136,7 @@
             ]
         },
         {
-            "index": 201,
+            "index": 200,
             "means": [
                 "tuyệt vời"
             ],
@@ -2158,7 +2149,7 @@
             ]
         },
         {
-            "index": 202,
+            "index": 201,
             "means": [
                 "sự độc quyền",
                 "sự riêng biệt"
@@ -2169,7 +2160,7 @@
             ]
         },
         {
-            "index": 203,
+            "index": 202,
             "means": [
                 "nhà điều hành"
             ],
@@ -2180,7 +2171,7 @@
             ]
         },
         {
-            "index": 204,
+            "index": 203,
             "means": [
                 "gương mẫu"
             ],
@@ -2190,7 +2181,7 @@
             ]
         },
         {
-            "index": 205,
+            "index": 204,
             "means": [
                 "khí thải xe cộ"
             ],
@@ -2200,7 +2191,7 @@
             ]
         },
         {
-            "index": 206,
+            "index": 205,
             "means": [
                 "mở rộng"
             ],
@@ -2210,7 +2201,7 @@
             ]
         },
         {
-            "index": 207,
+            "index": 206,
             "means": [
                 "kỳ vọng"
             ],
@@ -2220,7 +2211,7 @@
             ]
         },
         {
-            "index": 208,
+            "index": 207,
             "means": [
                 "chi tiêu"
             ],
@@ -2230,7 +2221,7 @@
             ]
         },
         {
-            "index": 209,
+            "index": 208,
             "means": [
                 "đắt"
             ],
@@ -2241,7 +2232,7 @@
             ]
         },
         {
-            "index": 210,
+            "index": 209,
             "means": [
                 "chuyên gia"
             ],
@@ -2253,7 +2244,7 @@
             ]
         },
         {
-            "index": 211,
+            "index": 210,
             "means": [
                 "chuyên môn"
             ],
@@ -2264,7 +2255,7 @@
             ]
         },
         {
-            "index": 212,
+            "index": 211,
             "means": [
                 "hết hạn"
             ],
@@ -2274,7 +2265,7 @@
             ]
         },
         {
-            "index": 213,
+            "index": 212,
             "means": [
                 "bày tỏ"
             ],
@@ -2284,7 +2275,7 @@
             ]
         },
         {
-            "index": 214,
+            "index": 213,
             "means": [
                 "số điện thoại mở rộng"
             ],
@@ -2294,7 +2285,7 @@
             ]
         },
         {
-            "index": 215,
+            "index": 214,
             "means": [
                 "sâu rộng"
             ],
@@ -2304,7 +2295,7 @@
             ]
         },
         {
-            "index": 216,
+            "index": 215,
             "means": [
                 "tổ chức"
             ],
@@ -2315,7 +2306,7 @@
             ]
         },
         {
-            "index": 217,
+            "index": 216,
             "means": [
                 "yếu tố"
             ],
@@ -2325,7 +2316,7 @@
             ]
         },
         {
-            "index": 218,
+            "index": 217,
             "means": [
             ],
             "notes": "",
@@ -2336,7 +2327,7 @@
             ]
         },
         {
-            "index": 219,
+            "index": 218,
             "means": [
                 "giảng viên"
             ],
@@ -2346,7 +2337,7 @@
             ]
         },
         {
-            "index": 220,
+            "index": 219,
             "means": [
                 "khá",
                 "công bằng"
@@ -2357,7 +2348,7 @@
             ]
         },
         {
-            "index": 221,
+            "index": 220,
             "means": [
                 "vượt xa"
             ],
@@ -2367,7 +2358,7 @@
             ]
         },
         {
-            "index": 222,
+            "index": 221,
             "means": [
                 "thuận lợi",
                 "thiện chí"
@@ -2378,7 +2369,7 @@
             ]
         },
         {
-            "index": 223,
+            "index": 222,
             "means": [
                 "tính khả thi"
             ],
@@ -2388,7 +2379,7 @@
             ]
         },
         {
-            "index": 224,
+            "index": 223,
             "means": [
                 "đặc trưng ",
                 "miêu tả",
@@ -2400,7 +2391,7 @@
             ]
         },
         {
-            "index": 225,
+            "index": 224,
             "means": [
                 "thấy"
             ],
@@ -2411,7 +2402,7 @@
             ]
         },
         {
-            "index": 226,
+            "index": 225,
             "means": [
                 "hoàn thành"
             ],
@@ -2423,7 +2414,7 @@
             ]
         },
         {
-            "index": 227,
+            "index": 226,
             "means": [
                 "công ty"
             ],
@@ -2437,7 +2428,7 @@
             ]
         },
         {
-            "index": 228,
+            "index": 227,
             "means": [
                 "lỗi"
             ],
@@ -2449,7 +2440,7 @@
             ]
         },
         {
-            "index": 229,
+            "index": 228,
             "means": [
                 "tập trung vào"
             ],
@@ -2460,7 +2451,7 @@
             ]
         },
         {
-            "index": 230,
+            "index": 229,
             "means": [
                 "gấp"
             ],
@@ -2470,7 +2461,7 @@
             ]
         },
         {
-            "index": 231,
+            "index": 230,
             "means": [
                 "xe nâng hàng"
             ],
@@ -2480,7 +2471,7 @@
             ]
         },
         {
-            "index": 232,
+            "index": 231,
             "means": [
                 "tuân theo"
             ],
@@ -2493,7 +2484,7 @@
             ]
         },
         {
-            "index": 233,
+            "index": 232,
             "means": [
                 "đi theo",
                 "theo dõi",
@@ -2505,7 +2496,7 @@
             ]
         },
         {
-            "index": 234,
+            "index": 233,
             "means": [
                 "sau"
             ],
@@ -2517,7 +2508,7 @@
             ]
         },
         {
-            "index": 235,
+            "index": 234,
             "means": [
                 "buộc ai làm gì"
             ],
@@ -2527,7 +2518,7 @@
             ]
         },
         {
-            "index": 236,
+            "index": 235,
             "means": [
                 "thành lập"
             ],
@@ -2538,7 +2529,7 @@
             ]
         },
         {
-            "index": 237,
+            "index": 236,
             "means": [
                 "đoạn",
                 "mảnh"
@@ -2549,7 +2540,7 @@
             ]
         },
         {
-            "index": 238,
+            "index": 237,
             "means": [
                 "mong manh",
                 "dễ vỡ"
@@ -2560,7 +2551,7 @@
             ]
         },
         {
-            "index": 239,
+            "index": 238,
             "means": [
                 "miễn phí"
             ],
@@ -2573,7 +2564,7 @@
             ]
         },
         {
-            "index": 240,
+            "index": 239,
             "means": [
                 "đầy"
             ],
@@ -2584,7 +2575,7 @@
             ]
         },
         {
-            "index": 241,
+            "index": 240,
             "means": [
                 "chức năng"
             ],
@@ -2594,7 +2585,7 @@
             ]
         },
         {
-            "index": 242,
+            "index": 241,
             "means": [
                 "được trang bị nội thất"
             ],
@@ -2604,7 +2595,7 @@
             ]
         },
         {
-            "index": 243,
+            "index": 242,
             "means": [
                 "tiện ích bổ sung"
             ],
@@ -2614,7 +2605,7 @@
             ]
         },
         {
-            "index": 244,
+            "index": 243,
             "means": [
                 "tập hợp"
             ],
@@ -2625,7 +2616,7 @@
             ]
         },
         {
-            "index": 245,
+            "index": 244,
             "means": [
                 "tạo ra"
             ],
@@ -2635,7 +2626,7 @@
             ]
         },
         {
-            "index": 246,
+            "index": 245,
             "means": [
                 "thực sự"
             ],
@@ -2645,7 +2636,7 @@
             ]
         },
         {
-            "index": 247,
+            "index": 246,
             "means": [
                 "liên lạc"
             ],
@@ -2658,7 +2649,7 @@
             ]
         },
         {
-            "index": 248,
+            "index": 247,
             "means": [
                 "tìm hiểu"
             ],
@@ -2669,7 +2660,7 @@
             ]
         },
         {
-            "index": 249,
+            "index": 248,
             "means": [
                 "bước -> phương tiện"
             ],
@@ -2681,7 +2672,7 @@
             ]
         },
         {
-            "index": 250,
+            "index": 249,
             "means": [
                 "toàn cầu"
             ],
@@ -2691,7 +2682,7 @@
             ]
         },
         {
-            "index": 251,
+            "index": 250,
             "means": [
                 "ra mắt"
             ],
@@ -2702,7 +2693,7 @@
             ]
         },
         {
-            "index": 252,
+            "index": 251,
             "means": [
                 "đánh giá"
             ],
@@ -2713,7 +2704,7 @@
             ]
         },
         {
-            "index": 253,
+            "index": 252,
             "means": [
                 "cầm quyền",
                 "cai quản"
@@ -2724,7 +2715,7 @@
             ]
         },
         {
-            "index": 254,
+            "index": 253,
             "means": [
                 "chộp lấy",
                 "nắm lấy"
@@ -2735,7 +2726,7 @@
             ]
         },
         {
-            "index": 255,
+            "index": 254,
             "means": [
                 "dần dần"
             ],
@@ -2746,7 +2737,7 @@
             ]
         },
         {
-            "index": 256,
+            "index": 255,
             "means": [
                 "tốt nghiệp"
             ],
@@ -2756,7 +2747,7 @@
             ]
         },
         {
-            "index": 257,
+            "index": 256,
             "means": [
                 "sự hiệu biết"
             ],
@@ -2766,7 +2757,7 @@
             ]
         },
         {
-            "index": 258,
+            "index": 257,
             "means": [
                 "lòng biết ơn"
             ],
@@ -2776,7 +2767,7 @@
             ]
         },
         {
-            "index": 259,
+            "index": 258,
             "means": [
                 "đột phá"
             ],
@@ -2786,7 +2777,7 @@
             ]
         },
         {
-            "index": 260,
+            "index": 259,
             "means": [
                 "dẫn dắt",
                 "chỉ đạo"
@@ -2798,7 +2789,7 @@
             ]
         },
         {
-            "index": 261,
+            "index": 260,
             "means": [
                 "tội lỗi"
             ],
@@ -2808,7 +2799,7 @@
             ]
         },
         {
-            "index": 262,
+            "index": 261,
             "means": [
                 "công bố"
             ],
@@ -2818,7 +2809,7 @@
             ]
         },
         {
-            "index": 263,
+            "index": 262,
             "means": [
                 "môi trường sống"
             ],
@@ -2828,7 +2819,7 @@
             ]
         },
         {
-            "index": 264,
+            "index": 263,
             "means": [
                 "hành lang"
             ],
@@ -2839,7 +2830,7 @@
             ]
         },
         {
-            "index": 265,
+            "index": 264,
             "means": [
                 "ngập ngừng"
             ],
@@ -2849,7 +2840,7 @@
             ]
         },
         {
-            "index": 266,
+            "index": 265,
             "means": [
                 "tài liệu phát tay"
             ],
@@ -2859,7 +2850,7 @@
             ]
         },
         {
-            "index": 267,
+            "index": 266,
             "means": [
                 "mũ bảo vệ"
             ],
@@ -2870,7 +2861,7 @@
             ]
         },
         {
-            "index": 268,
+            "index": 267,
             "means": [
                 "thu hoạch"
             ],
@@ -2880,7 +2871,7 @@
             ]
         },
         {
-            "index": 269,
+            "index": 268,
             "means": [
                 "người thừa kế"
             ],
@@ -2890,7 +2881,7 @@
             ]
         },
         {
-            "index": 270,
+            "index": 269,
             "means": [
                 "mũ"
             ],
@@ -2900,7 +2891,7 @@
             ]
         },
         {
-            "index": 271,
+            "index": 270,
             "means": [
                 "địa điểm lịch sử"
             ],
@@ -2911,7 +2902,7 @@
             ]
         },
         {
-            "index": 272,
+            "index": 271,
             "means": [
                 "thể hiện kính trọng",
                 "danh dự"
@@ -2922,7 +2913,7 @@
             ]
         },
         {
-            "index": 273,
+            "index": 272,
             "means": [
                 "khách sạn"
             ],
@@ -2934,7 +2925,7 @@
             ]
         },
         {
-            "index": 274,
+            "index": 273,
             "means": [
                 "nhưng/ tuy nhiên"
             ],
@@ -2948,7 +2939,7 @@
             ]
         },
         {
-            "index": 275,
+            "index": 274,
             "means": [
                 "độ ẩm"
             ],
@@ -2958,7 +2949,7 @@
             ]
         },
         {
-            "index": 276,
+            "index": 275,
             "means": [
                 "nhận dạng",
                 "nhận biết"
@@ -2969,7 +2960,7 @@
             ]
         },
         {
-            "index": 277,
+            "index": 276,
             "means": [
                 "nếu"
             ],
@@ -2983,7 +2974,7 @@
             ]
         },
         {
-            "index": 278,
+            "index": 277,
             "means": [
                 "tác động"
             ],
@@ -2994,7 +2985,7 @@
             ]
         },
         {
-            "index": 279,
+            "index": 278,
             "means": [
                 "động lực"
             ],
@@ -3004,7 +2995,7 @@
             ]
         },
         {
-            "index": 280,
+            "index": 279,
             "means": [
                 "hoàn thành",
                 "thực hiện"
@@ -3015,7 +3006,7 @@
             ]
         },
         {
-            "index": 281,
+            "index": 280,
             "means": [
                 "trái với"
             ],
@@ -3028,7 +3019,7 @@
             ]
         },
         {
-            "index": 282,
+            "index": 281,
             "means": [
                 "đổi lại"
             ],
@@ -3038,7 +3029,7 @@
             ]
         },
         {
-            "index": 283,
+            "index": 282,
             "means": [
                 "kịp giờ"
             ],
@@ -3048,7 +3039,7 @@
             ]
         },
         {
-            "index": 284,
+            "index": 283,
             "means": [
                 "sự khuyến khích"
             ],
@@ -3059,7 +3050,7 @@
             ]
         },
         {
-            "index": 285,
+            "index": 284,
             "means": [
                 "chỉ ra",
                 "biểu thị"
@@ -3070,7 +3061,7 @@
             ]
         },
         {
-            "index": 286,
+            "index": 285,
             "means": [
                 "cá nhân"
             ],
@@ -3080,7 +3071,7 @@
             ]
         },
         {
-            "index": 287,
+            "index": 286,
             "means": [
                 "bắt đầu"
             ],
@@ -3092,7 +3083,7 @@
             ]
         },
         {
-            "index": 288,
+            "index": 287,
             "means": [
                 "ban đầu"
             ],
@@ -3102,7 +3093,7 @@
             ]
         },
         {
-            "index": 289,
+            "index": 288,
             "means": [
                 "yêu cầu"
             ],
@@ -3112,7 +3103,7 @@
             ]
         },
         {
-            "index": 290,
+            "index": 289,
             "means": [
                 "yêu cầu"
             ],
@@ -3122,7 +3113,7 @@
             ]
         },
         {
-            "index": 291,
+            "index": 290,
             "means": [
                 "giao dịch ttin nội bộ"
             ],
@@ -3132,7 +3123,7 @@
             ]
         },
         {
-            "index": 292,
+            "index": 291,
             "means": [
                 "mặc dù"
             ],
@@ -3144,7 +3135,7 @@
             ]
         },
         {
-            "index": 293,
+            "index": 292,
             "means": [
                 "lập tức",
                 "dùng được luôn"
@@ -3155,7 +3146,7 @@
             ]
         },
         {
-            "index": 294,
+            "index": 293,
             "means": [
                 "thay vì "
             ],
@@ -3167,7 +3158,7 @@
             ]
         },
         {
-            "index": 295,
+            "index": 294,
             "means": [
                 "hướng dẫn"
             ],
@@ -3179,7 +3170,7 @@
             ]
         },
         {
-            "index": 296,
+            "index": 295,
             "means": [
                 "bản hdan"
             ],
@@ -3190,7 +3181,7 @@
             ]
         },
         {
-            "index": 297,
+            "index": 296,
             "means": [
                 "thiết bị"
             ],
@@ -3202,7 +3193,7 @@
             ]
         },
         {
-            "index": 298,
+            "index": 297,
             "means": [
                 "công cụ",
                 "nhạc cụ"
@@ -3213,7 +3204,7 @@
             ]
         },
         {
-            "index": 299,
+            "index": 298,
             "means": [
                 "dự định"
             ],
@@ -3223,7 +3214,7 @@
             ]
         },
         {
-            "index": 300,
+            "index": 299,
             "means": [
                 "vô cùng"
             ],
@@ -3233,7 +3224,7 @@
             ]
         },
         {
-            "index": 301,
+            "index": 300,
             "means": [
                 "gián đoạn"
             ],
@@ -3246,7 +3237,7 @@
             ]
         },
         {
-            "index": 302,
+            "index": 301,
             "means": [
                 "kỳ thực tập"
             ],
@@ -3256,7 +3247,7 @@
             ]
         },
         {
-            "index": 303,
+            "index": 302,
             "means": [
                 "thân mật"
             ],
@@ -3266,7 +3257,7 @@
             ]
         },
         {
-            "index": 304,
+            "index": 303,
             "means": [
                 "hấp dẫn"
             ],
@@ -3276,7 +3267,7 @@
             ]
         },
         {
-            "index": 305,
+            "index": 304,
             "means": [
                 "giới thiệu"
             ],
@@ -3286,7 +3277,7 @@
             ]
         },
         {
-            "index": 306,
+            "index": 305,
             "means": [
                 "phát minh"
             ],
@@ -3296,7 +3287,7 @@
             ]
         },
         {
-            "index": 307,
+            "index": 306,
             "means": [
                 "hàng tồn kho"
             ],
@@ -3306,7 +3297,7 @@
             ]
         },
         {
-            "index": 308,
+            "index": 307,
             "means": [
                 "điều tra"
             ],
@@ -3316,7 +3307,7 @@
             ]
         },
         {
-            "index": 309,
+            "index": 308,
             "means": [
                 "bao gồm"
             ],
@@ -3327,7 +3318,7 @@
             ]
         },
         {
-            "index": 310,
+            "index": 309,
             "means": [
                 "nguyên liệu"
             ],
@@ -3337,7 +3328,7 @@
             ]
         },
         {
-            "index": 311,
+            "index": 310,
             "means": [
                 "bất thường"
             ],
@@ -3347,7 +3338,7 @@
             ]
         },
         {
-            "index": 312,
+            "index": 311,
             "means": [
                 "phát hành"
             ],
@@ -3360,7 +3351,7 @@
             ]
         },
         {
-            "index": 313,
+            "index": 312,
             "means": [
                 "chia thành từng khoản"
             ],
@@ -3370,7 +3361,7 @@
             ]
         },
         {
-            "index": 314,
+            "index": 313,
             "means": [
                 "liệt kê"
             ],
@@ -3380,7 +3371,7 @@
             ]
         },
         {
-            "index": 315,
+            "index": 314,
             "means": [
                 "bị kẹt",
                 "bị cản trở"
@@ -3391,7 +3382,7 @@
             ]
         },
         {
-            "index": 316,
+            "index": 315,
             "means": [
                 "xem xét"
             ],
@@ -3401,7 +3392,7 @@
             ]
         },
         {
-            "index": 317,
+            "index": 316,
             "means": [
                 "chứng thực"
             ],
@@ -3411,7 +3402,7 @@
             ]
         },
         {
-            "index": 318,
+            "index": 317,
             "means": [
                 "thích thú"
             ],
@@ -3422,7 +3413,7 @@
             ]
         },
         {
-            "index": 319,
+            "index": 318,
             "means": [
                 "sâu sắc"
             ],
@@ -3432,7 +3423,7 @@
             ]
         },
         {
-            "index": 320,
+            "index": 319,
             "means": [
                 "giữ",
                 "duy trì"
@@ -3445,7 +3436,7 @@
             ]
         },
         {
-            "index": 321,
+            "index": 320,
             "means": [
                 "thang trèo"
             ],
@@ -3455,7 +3446,7 @@
             ]
         },
         {
-            "index": 322,
+            "index": 321,
             "means": [
                 "cất/ hạ cánh"
             ],
@@ -3465,7 +3456,7 @@
             ]
         },
         {
-            "index": 323,
+            "index": 322,
             "means": [
                 "đạt được"
             ],
@@ -3480,7 +3471,7 @@
             ]
         },
         {
-            "index": 324,
+            "index": 323,
             "means": [
                 "đột xuất"
             ],
@@ -3490,7 +3481,7 @@
             ]
         },
         {
-            "index": 325,
+            "index": 324,
             "means": [
                 "gần đây"
             ],
@@ -3501,7 +3492,7 @@
             ]
         },
         {
-            "index": 326,
+            "index": 325,
             "means": [
                 "phát hành",
                 "phát động",
@@ -3513,7 +3504,7 @@
             ]
         },
         {
-            "index": 327,
+            "index": 326,
             "means": [
                 "bãi cỏ"
             ],
@@ -3523,7 +3514,7 @@
             ]
         },
         {
-            "index": 328,
+            "index": 327,
             "means": [
                 "bài học"
             ],
@@ -3533,7 +3524,7 @@
             ]
         },
         {
-            "index": 329,
+            "index": 328,
             "means": [
                 "pháp lý"
             ],
@@ -3543,7 +3534,7 @@
             ]
         },
         {
-            "index": 330,
+            "index": 329,
             "means": [
                 "cho vay"
             ],
@@ -3553,7 +3544,7 @@
             ]
         },
         {
-            "index": 331,
+            "index": 330,
             "means": [
                 "như nhau"
             ],
@@ -3563,7 +3554,7 @@
             ]
         },
         {
-            "index": 332,
+            "index": 331,
             "means": [
                 "tương tự"
             ],
@@ -3573,7 +3564,7 @@
             ]
         },
         {
-            "index": 333,
+            "index": 332,
             "means": [
                 "chất lỏng"
             ],
@@ -3583,7 +3574,7 @@
             ]
         },
         {
-            "index": 334,
+            "index": 333,
             "means": [
                 "khoản vay/ cho vay"
             ],
@@ -3593,7 +3584,7 @@
             ]
         },
         {
-            "index": 335,
+            "index": 334,
             "means": [
                 "vận động"
             ],
@@ -3606,7 +3597,7 @@
             ]
         },
         {
-            "index": 336,
+            "index": 335,
             "means": [
                 "bền"
             ],
@@ -3618,7 +3609,7 @@
             ]
         },
         {
-            "index": 337,
+            "index": 336,
             "means": [
                 "nhìn"
             ],
@@ -3631,7 +3622,7 @@
             ]
         },
         {
-            "index": 338,
+            "index": 337,
             "means": [
                 "bãi đất trống"
             ],
@@ -3641,7 +3632,7 @@
             ]
         },
         {
-            "index": 339,
+            "index": 338,
             "means": [
                 "phòng chờ"
             ],
@@ -3651,7 +3642,7 @@
             ]
         },
         {
-            "index": 340,
+            "index": 339,
             "means": [
                 "tráng lệ"
             ],
@@ -3661,7 +3652,7 @@
             ]
         },
         {
-            "index": 341,
+            "index": 340,
             "means": [
                 "phóng đại"
             ],
@@ -3671,7 +3662,7 @@
             ]
         },
         {
-            "index": 342,
+            "index": 341,
             "means": [
                 "duy trì"
             ],
@@ -3681,7 +3672,7 @@
             ]
         },
         {
-            "index": 343,
+            "index": 342,
             "means": [
                 "đa số"
             ],
@@ -3691,7 +3682,7 @@
             ]
         },
         {
-            "index": 344,
+            "index": 343,
             "means": [
                 "có hạn/ k lớn"
             ],
@@ -3702,7 +3693,7 @@
             ]
         },
         {
-            "index": 345,
+            "index": 344,
             "means": [
                 "phương pháp"
             ],
@@ -3713,7 +3704,7 @@
             ]
         },
         {
-            "index": 346,
+            "index": 345,
             "means": [
                 "đáp ứng"
             ],
@@ -3724,7 +3715,7 @@
             ]
         },
         {
-            "index": 347,
+            "index": 346,
             "means": [
                 "thương gia"
             ],
@@ -3734,7 +3725,7 @@
             ]
         },
         {
-            "index": 348,
+            "index": 347,
             "means": [
                 "sát nhập"
             ],
@@ -3744,7 +3735,7 @@
             ]
         },
         {
-            "index": 349,
+            "index": 348,
             "means": [
                 "nhỏ"
             ],
@@ -3755,7 +3746,7 @@
             ]
         },
         {
-            "index": 350,
+            "index": 349,
             "means": [
                 "thiểu số"
             ],
@@ -3765,7 +3756,7 @@
             ]
         },
         {
-            "index": 351,
+            "index": 350,
             "means": [
                 "hiện đại"
             ],
@@ -3778,7 +3769,7 @@
             ]
         },
         {
-            "index": 352,
+            "index": 351,
             "means": [
                 "hiện đại hóa"
             ],
@@ -3788,7 +3779,7 @@
             ]
         },
         {
-            "index": 353,
+            "index": 352,
             "means": [
                 "thay đổi",
                 "điều chỉnh"
@@ -3802,7 +3793,7 @@
             ]
         },
         {
-            "index": 354,
+            "index": 353,
             "means": [
                 "lau bằng chổi lau nhà"
             ],
@@ -3812,7 +3803,7 @@
             ]
         },
         {
-            "index": 355,
+            "index": 354,
             "means": [
                 "tinh thần"
             ],
@@ -3822,7 +3813,7 @@
             ]
         },
         {
-            "index": 356,
+            "index": 355,
             "means": [
                 "phần lớn"
             ],
@@ -3834,7 +3825,7 @@
             ]
         },
         {
-            "index": 357,
+            "index": 356,
             "means": [
                 "giấy ăn"
             ],
@@ -3844,7 +3835,7 @@
             ]
         },
         {
-            "index": 358,
+            "index": 357,
             "means": [
                 "thu hẹp"
             ],
@@ -3854,7 +3845,7 @@
             ]
         },
         {
-            "index": 359,
+            "index": 358,
             "means": [
                 "thiết bị định vị"
             ],
@@ -3864,7 +3855,7 @@
             ]
         },
         {
-            "index": 360,
+            "index": 359,
             "means": [
                 "xấp xỉ",
                 "gần"
@@ -3879,7 +3870,7 @@
             ]
         },
         {
-            "index": 361,
+            "index": 360,
             "means": [
                 "tiêu cực"
             ],
@@ -3889,7 +3880,7 @@
             ]
         },
         {
-            "index": 362,
+            "index": 361,
             "means": [
                 "đàm phán"
             ],
@@ -3899,7 +3890,7 @@
             ]
         },
         {
-            "index": 363,
+            "index": 362,
             "means": [
                 "quầy báo"
             ],
@@ -3909,7 +3900,7 @@
             ]
         },
         {
-            "index": 364,
+            "index": 363,
             "means": [
                 "đề cử"
             ],
@@ -3919,7 +3910,7 @@
             ]
         },
         {
-            "index": 365,
+            "index": 364,
             "means": [
                 "mới lạ"
             ],
@@ -3929,7 +3920,7 @@
             ]
         },
         {
-            "index": 366,
+            "index": 365,
             "means": [
                 "nhiều"
             ],
@@ -3939,7 +3930,7 @@
             ]
         },
         {
-            "index": 367,
+            "index": 366,
             "means": [
                 "dinh dưỡng"
             ],
@@ -3949,7 +3940,7 @@
             ]
         },
         {
-            "index": 368,
+            "index": 367,
             "means": [
                 "mục tiêu"
             ],
@@ -3962,7 +3953,7 @@
             ]
         },
         {
-            "index": 369,
+            "index": 368,
             "means": [
                 "chướng ngại"
             ],
@@ -3972,7 +3963,7 @@
             ]
         },
         {
-            "index": 370,
+            "index": 369,
             "means": [
                 "ít khi"
             ],
@@ -3982,7 +3973,7 @@
             ]
         },
         {
-            "index": 371,
+            "index": 370,
             "means": [
                 "nắm giữ"
             ],
@@ -3992,7 +3983,7 @@
             ]
         },
         {
-            "index": 372,
+            "index": 371,
             "means": [
                 "xảy ra"
             ],
@@ -4002,7 +3993,7 @@
             ]
         },
         {
-            "index": 373,
+            "index": 372,
             "means": [
                 "trên truyền hình"
             ],
@@ -4012,7 +4003,7 @@
             ]
         },
         {
-            "index": 374,
+            "index": 373,
             "means": [
                 "thay mặt cho"
             ],
@@ -4023,7 +4014,7 @@
             ]
         },
         {
-            "index": 375,
+            "index": 374,
             "means": [
                 "không thể tránh khỏi"
             ],
@@ -4033,7 +4024,7 @@
             ]
         },
         {
-            "index": 376,
+            "index": 375,
             "means": [
                 "đúng giờ"
             ],
@@ -4044,7 +4035,7 @@
             ]
         },
         {
-            "index": 377,
+            "index": 376,
             "means": [
                 "nói chung"
             ],
@@ -4054,7 +4045,7 @@
             ]
         },
         {
-            "index": 378,
+            "index": 377,
             "means": [
                 "trở đi"
             ],
@@ -4064,7 +4055,7 @@
             ]
         },
         {
-            "index": 379,
+            "index": 378,
             "means": [
                 "phản đối"
             ],
@@ -4074,7 +4065,7 @@
             ]
         },
         {
-            "index": 380,
+            "index": 379,
             "means": [
                 "tối ưu"
             ],
@@ -4084,7 +4075,7 @@
             ]
         },
         {
-            "index": 381,
+            "index": 380,
             "means": [
                 "ban đầu"
             ],
@@ -4095,7 +4086,7 @@
             ]
         },
         {
-            "index": 382,
+            "index": 381,
             "means": [
                 "tổng quan"
             ],
@@ -4105,7 +4096,7 @@
             ]
         },
         {
-            "index": 383,
+            "index": 382,
             "means": [
                 "giám sát",
                 "theo dõi"
@@ -4119,7 +4110,7 @@
             ]
         },
         {
-            "index": 384,
+            "index": 383,
             "means": [
                 "nhờ có",
                 "bởi vì"
@@ -4135,7 +4126,7 @@
             ]
         },
         {
-            "index": 385,
+            "index": 384,
             "means": [
                 "sở hữu"
             ],
@@ -4147,7 +4138,7 @@
             ]
         },
         {
-            "index": 386,
+            "index": 385,
             "means": [
                 "hội đồng"
             ],
@@ -4157,7 +4148,7 @@
             ]
         },
         {
-            "index": 387,
+            "index": 386,
             "means": [
                 "phần"
             ],
@@ -4168,7 +4159,7 @@
             ]
         },
         {
-            "index": 388,
+            "index": 387,
             "means": [
                 "đặc biệt"
             ],
@@ -4178,7 +4169,7 @@
             ]
         },
         {
-            "index": 389,
+            "index": 388,
             "means": [
                 "hợp tác"
             ],
@@ -4188,7 +4179,7 @@
             ]
         },
         {
-            "index": 390,
+            "index": 389,
             "means": [
                 "hiên"
             ],
@@ -4198,7 +4189,7 @@
             ]
         },
         {
-            "index": 391,
+            "index": 390,
             "means": [
                 "vật mẫu"
             ],
@@ -4210,7 +4201,7 @@
             ]
         },
         {
-            "index": 392,
+            "index": 391,
             "means": [
                 "con đường"
             ],
@@ -4220,7 +4211,7 @@
             ]
         },
         {
-            "index": 393,
+            "index": 392,
             "means": [
                 "trình diễn",
                 "vận hành",
@@ -4232,7 +4223,7 @@
             ]
         },
         {
-            "index": 394,
+            "index": 393,
             "means": [
                 "định kì"
             ],
@@ -4242,7 +4233,7 @@
             ]
         },
         {
-            "index": 395,
+            "index": 394,
             "means": [
                 "vĩnh viễn"
             ],
@@ -4252,7 +4243,7 @@
             ]
         },
         {
-            "index": 396,
+            "index": 395,
             "means": [
                 "giấy phép"
             ],
@@ -4262,7 +4253,7 @@
             ]
         },
         {
-            "index": 397,
+            "index": 396,
             "means": [
                 "cho phép"
             ],
@@ -4277,7 +4268,7 @@
             ]
         },
         {
-            "index": 398,
+            "index": 397,
             "means": [
                 "khăng khăng làm gì"
             ],
@@ -4287,7 +4278,7 @@
             ]
         },
         {
-            "index": 399,
+            "index": 398,
             "means": [
                 "cá nhân hóa"
             ],
@@ -4297,7 +4288,7 @@
             ]
         },
         {
-            "index": 400,
+            "index": 399,
             "means": [
                 "quan điểm",
                 "tầm nhìn"
@@ -4308,7 +4299,7 @@
             ]
         },
         {
-            "index": 401,
+            "index": 400,
             "means": [
                 "thuyết phục"
             ],
@@ -4321,7 +4312,7 @@
             ]
         },
         {
-            "index": 402,
+            "index": 401,
             "means": [
                 "thuốc trừ sâu"
             ],
@@ -4331,7 +4322,7 @@
             ]
         },
         {
-            "index": 403,
+            "index": 402,
             "means": [
                 "khó tích"
             ],
@@ -4341,7 +4332,7 @@
             ]
         },
         {
-            "index": 404,
+            "index": 403,
             "means": [
                 "cam kết"
             ],
@@ -4351,7 +4342,7 @@
             ]
         },
         {
-            "index": 405,
+            "index": 404,
             "means": [
                 "chính sách"
             ],
@@ -4361,7 +4352,7 @@
             ]
         },
         {
-            "index": 406,
+            "index": 405,
             "means": [
                 "nhóm",
                 "bể bơi"
@@ -4372,7 +4363,7 @@
             ]
         },
         {
-            "index": 407,
+            "index": 406,
             "means": [
                 "tích cực"
             ],
@@ -4382,7 +4373,7 @@
             ]
         },
         {
-            "index": 408,
+            "index": 407,
             "means": [
                 "cái cột"
             ],
@@ -4392,7 +4383,7 @@
             ]
         },
         {
-            "index": 409,
+            "index": 408,
             "means": [
                 "tiền thu được"
             ],
@@ -4402,7 +4393,7 @@
             ]
         },
         {
-            "index": 410,
+            "index": 409,
             "means": [
                 "xử lý",
                 "quá trình"
@@ -4413,7 +4404,7 @@
             ]
         },
         {
-            "index": 411,
+            "index": 410,
             "means": [
                 "đoán"
             ],
@@ -4427,7 +4418,7 @@
             ]
         },
         {
-            "index": 412,
+            "index": 411,
             "means": [
                 "sự tiến bộ"
             ],
@@ -4438,7 +4429,7 @@
             ]
         },
         {
-            "index": 413,
+            "index": 412,
             "means": [
                 "sơ bộ"
             ],
@@ -4448,7 +4439,7 @@
             ]
         },
         {
-            "index": 414,
+            "index": 413,
             "means": [
                 "thuyết trình",
                 "trình bày",
@@ -4461,7 +4452,7 @@
             ]
         },
         {
-            "index": 415,
+            "index": 414,
             "means": [
                 "chủ tịch hội đồng quản trị"
             ],
@@ -4474,7 +4465,7 @@
             ]
         },
         {
-            "index": 416,
+            "index": 415,
             "means": [
                 "danh giá"
             ],
@@ -4484,7 +4475,7 @@
             ]
         },
         {
-            "index": 417,
+            "index": 416,
             "means": [
                 "ngăn chặn"
             ],
@@ -4494,7 +4485,7 @@
             ]
         },
         {
-            "index": 418,
+            "index": 417,
             "means": [
                 "trước đây"
             ],
@@ -4505,7 +4496,7 @@
             ]
         },
         {
-            "index": 419,
+            "index": 418,
             "means": [
                 "chính xác"
             ],
@@ -4518,7 +4509,7 @@
             ]
         },
         {
-            "index": 420,
+            "index": 419,
             "means": [
                 "trước  "
             ],
@@ -4532,7 +4523,7 @@
             ]
         },
         {
-            "index": 421,
+            "index": 420,
             "means": [
                 "ưu tiên"
             ],
@@ -4542,7 +4533,7 @@
             ]
         },
         {
-            "index": 422,
+            "index": 421,
             "means": [
                 "tg thử việc"
             ],
@@ -4552,7 +4543,7 @@
             ]
         },
         {
-            "index": 423,
+            "index": 422,
             "means": [
                 "trình tự thủ tục"
             ],
@@ -4562,7 +4553,7 @@
             ]
         },
         {
-            "index": 424,
+            "index": 423,
             "means": [
                 "tiếp tục thực hiện hành động gì đó"
             ],
@@ -4572,7 +4563,7 @@
             ]
         },
         {
-            "index": 425,
+            "index": 424,
             "means": [
                 "thành thạo"
             ],
@@ -4582,7 +4573,7 @@
             ]
         },
         {
-            "index": 426,
+            "index": 425,
             "means": [
                 "lợi nhuận"
             ],
@@ -4592,7 +4583,7 @@
             ]
         },
         {
-            "index": 427,
+            "index": 426,
             "means": [
                 "đáng kể"
             ],
@@ -4602,7 +4593,7 @@
             ]
         },
         {
-            "index": 428,
+            "index": 427,
             "means": [
                 "thể hiện ra"
             ],
@@ -4612,7 +4603,7 @@
             ]
         },
         {
-            "index": 429,
+            "index": 428,
             "means": [
                 "tiềm năng"
             ],
@@ -4624,7 +4615,7 @@
             ]
         },
         {
-            "index": 430,
+            "index": 429,
             "means": [
                 "nhanh chóng"
             ],
@@ -4634,7 +4625,7 @@
             ]
         },
         {
-            "index": 431,
+            "index": 430,
             "means": [
                 "đề xuất"
             ],
@@ -4644,7 +4635,7 @@
             ]
         },
         {
-            "index": 432,
+            "index": 431,
             "means": [
                 "chứng minh"
             ],
@@ -4654,7 +4645,7 @@
             ]
         },
         {
-            "index": 433,
+            "index": 432,
             "means": [
                 "cung cấp"
             ],
@@ -4664,7 +4655,7 @@
             ]
         },
         {
-            "index": 434,
+            "index": 433,
             "means": [
                 "mua"
             ],
@@ -4674,7 +4665,7 @@
             ]
         },
         {
-            "index": 435,
+            "index": 434,
             "means": [
                 "theo đuổi"
             ],
@@ -4684,7 +4675,7 @@
             ]
         },
         {
-            "index": 436,
+            "index": 435,
             "means": [
                 "nhà cung cấp"
             ],
@@ -4695,7 +4686,7 @@
             ]
         },
         {
-            "index": 437,
+            "index": 436,
             "means": [
                 "đang mặc đồ"
             ],
@@ -4706,7 +4697,7 @@
             ]
         },
         {
-            "index": 438,
+            "index": 437,
             "means": [
                 "bằng cấp"
             ],
@@ -4716,7 +4707,7 @@
             ]
         },
         {
-            "index": 439,
+            "index": 438,
             "means": [
                 "chất lượng"
             ],
@@ -4726,7 +4717,7 @@
             ]
         },
         {
-            "index": 440,
+            "index": 439,
             "means": [
                 "số lượng"
             ],
@@ -4736,7 +4727,7 @@
             ]
         },
         {
-            "index": 441,
+            "index": 440,
             "means": [
                 "cái cào"
             ],
@@ -4746,7 +4737,7 @@
             ]
         },
         {
-            "index": 442,
+            "index": 441,
             "means": [
                 "đoạn đường dốc"
             ],
@@ -4756,7 +4747,7 @@
             ]
         },
         {
-            "index": 443,
+            "index": 442,
             "means": [
                 "hiếm"
             ],
@@ -4766,7 +4757,7 @@
             ]
         },
         {
-            "index": 444,
+            "index": 443,
             "means": [
                 "hầu như không"
             ],
@@ -4778,7 +4769,7 @@
             ]
         },
         {
-            "index": 445,
+            "index": 444,
             "means": [
                 "thay vì "
             ],
@@ -4790,7 +4781,7 @@
             ]
         },
         {
-            "index": 446,
+            "index": 445,
             "means": [
                 "thực hiện",
                 "nhận ra"
@@ -4801,7 +4792,7 @@
             ]
         },
         {
-            "index": 447,
+            "index": 446,
             "means": [
                 "nhớ lại",
                 "thu hồi ",
@@ -4814,7 +4805,7 @@
             ]
         },
         {
-            "index": 448,
+            "index": 447,
             "means": [
                 "hóa đơn"
             ],
@@ -4826,7 +4817,7 @@
             ]
         },
         {
-            "index": 449,
+            "index": 448,
             "means": [
                 "công thức"
             ],
@@ -4836,7 +4827,7 @@
             ]
         },
         {
-            "index": 450,
+            "index": 449,
             "means": [
                 "miễn cưỡng làm gì"
             ],
@@ -4846,7 +4837,7 @@
             ]
         },
         {
-            "index": 451,
+            "index": 450,
             "means": [
                 "ngại",
                 "do dự"
@@ -4858,7 +4849,7 @@
             ]
         },
         {
-            "index": 452,
+            "index": 451,
             "means": [
                 "tuyển dụng"
             ],
@@ -4870,7 +4861,7 @@
             ]
         },
         {
-            "index": 453,
+            "index": 452,
             "means": [
                 "nhìn thấy"
             ],
@@ -4881,7 +4872,7 @@
             ]
         },
         {
-            "index": 454,
+            "index": 453,
             "means": [
                 "lọc",
                 "tinh luyện"
@@ -4892,7 +4883,7 @@
             ]
         },
         {
-            "index": 455,
+            "index": 454,
             "means": [
                 "phản ánh"
             ],
@@ -4902,7 +4893,7 @@
             ]
         },
         {
-            "index": 456,
+            "index": 455,
             "means": [
                 "trại giáo dưỡng"
             ],
@@ -4912,7 +4903,7 @@
             ]
         },
         {
-            "index": 457,
+            "index": 456,
             "means": [
                 "cải tiến"
             ],
@@ -4922,7 +4913,7 @@
             ]
         },
         {
-            "index": 458,
+            "index": 457,
             "means": [
                 "ngưng"
             ],
@@ -4932,7 +4923,7 @@
             ]
         },
         {
-            "index": 459,
+            "index": 458,
             "means": [
                 "đồ ăn vặt"
             ],
@@ -4943,7 +4934,7 @@
             ]
         },
         {
-            "index": 460,
+            "index": 459,
             "means": [
                 "hoàn trả"
             ],
@@ -4957,7 +4948,7 @@
             ]
         },
         {
-            "index": 461,
+            "index": 460,
             "means": [
                 "trùng tu"
             ],
@@ -4967,7 +4958,7 @@
             ]
         },
         {
-            "index": 462,
+            "index": 461,
             "means": [
                 "đánh giá"
             ],
@@ -4977,7 +4968,7 @@
             ]
         },
         {
-            "index": 463,
+            "index": 462,
             "means": [
                 "bất chấp"
             ],
@@ -4987,7 +4978,7 @@
             ]
         },
         {
-            "index": 464,
+            "index": 463,
             "means": [
                 "đáng tiếc"
             ],
@@ -4997,7 +4988,7 @@
             ]
         },
         {
-            "index": 465,
+            "index": 464,
             "means": [
                 "quy định"
             ],
@@ -5007,7 +4998,7 @@
             ]
         },
         {
-            "index": 466,
+            "index": 465,
             "means": [
                 "từ chối"
             ],
@@ -5020,7 +5011,7 @@
             ]
         },
         {
-            "index": 467,
+            "index": 466,
             "means": [
                 "liên quan đến"
             ],
@@ -5030,7 +5021,7 @@
             ]
         },
         {
-            "index": 468,
+            "index": 467,
             "means": [
                 "nguồn thu nhập đáng tin cậy"
             ],
@@ -5040,7 +5031,7 @@
             ]
         },
         {
-            "index": 469,
+            "index": 468,
             "means": [
                 "rõ ràng"
             ],
@@ -5050,7 +5041,7 @@
             ]
         },
         {
-            "index": 470,
+            "index": 469,
             "means": [
                 "từ xa",
                 "xa lánh hẻo lánh"
@@ -5061,7 +5052,7 @@
             ]
         },
         {
-            "index": 471,
+            "index": 470,
             "means": [
                 "sửa chữa, cải tạo tòa nhà"
             ],
@@ -5075,7 +5066,7 @@
             ]
         },
         {
-            "index": 472,
+            "index": 471,
             "means": [
                 "khách quen"
             ],
@@ -5087,7 +5078,7 @@
             ]
         },
         {
-            "index": 473,
+            "index": 472,
             "means": [
                 "theo như đc nói/đưa tin"
             ],
@@ -5097,7 +5088,7 @@
             ]
         },
         {
-            "index": 474,
+            "index": 473,
             "means": [
                 "đại diện",
                 "cho thấy",
@@ -5109,7 +5100,7 @@
             ]
         },
         {
-            "index": 475,
+            "index": 474,
             "means": [
                 "uy tín"
             ],
@@ -5119,7 +5110,7 @@
             ]
         },
         {
-            "index": 476,
+            "index": 475,
             "means": [
                 "sự đặt chỗ"
             ],
@@ -5129,7 +5120,7 @@
             ]
         },
         {
-            "index": 477,
+            "index": 476,
             "means": [
                 "phản hồi"
             ],
@@ -5140,7 +5131,7 @@
             ]
         },
         {
-            "index": 478,
+            "index": 477,
             "means": [
                 "nhạy bén"
             ],
@@ -5150,7 +5141,7 @@
             ]
         },
         {
-            "index": 479,
+            "index": 478,
             "means": [
                 "giới hạn"
             ],
@@ -5160,7 +5151,7 @@
             ]
         },
         {
-            "index": 480,
+            "index": 479,
             "means": [
                 "doanh thu"
             ],
@@ -5170,7 +5161,7 @@
             ]
         },
         {
-            "index": 481,
+            "index": 480,
             "means": [
                 "xem xét lại"
             ],
@@ -5180,7 +5171,7 @@
             ]
         },
         {
-            "index": 482,
+            "index": 481,
             "means": [
                 "phân lô",
                 "quy hoạch"
@@ -5191,7 +5182,7 @@
             ]
         },
         {
-            "index": 483,
+            "index": 482,
             "means": [
                 "thảm nhỏ lau chân"
             ],
@@ -5201,7 +5192,7 @@
             ]
         },
         {
-            "index": 484,
+            "index": 483,
             "means": [
                 "giờ cao điểm",
                 "làm gấp",
@@ -5214,7 +5205,7 @@
             ]
         },
         {
-            "index": 485,
+            "index": 484,
             "means": [
                 "thánh thiện"
             ],
@@ -5224,7 +5215,7 @@
             ]
         },
         {
-            "index": 486,
+            "index": 485,
             "means": [
                 "doanh số"
             ],
@@ -5235,7 +5226,7 @@
             ]
         },
         {
-            "index": 487,
+            "index": 486,
             "means": [
                 "lấy mẫu"
             ],
@@ -5245,7 +5236,7 @@
             ]
         },
         {
-            "index": 488,
+            "index": 487,
             "means": [
                 "vết sẹo"
             ],
@@ -5255,7 +5246,7 @@
             ]
         },
         {
-            "index": 489,
+            "index": 488,
             "means": [
                 "cái khăn"
             ],
@@ -5265,7 +5256,7 @@
             ]
         },
         {
-            "index": 490,
+            "index": 489,
             "means": [
                 "mùi hương"
             ],
@@ -5275,7 +5266,7 @@
             ]
         },
         {
-            "index": 491,
+            "index": 490,
             "means": [
                 "xem xét kỹ lưỡng"
             ],
@@ -5285,7 +5276,7 @@
             ]
         },
         {
-            "index": 492,
+            "index": 491,
             "means": [
                 "tìm"
             ],
@@ -5296,7 +5287,7 @@
             ]
         },
         {
-            "index": 493,
+            "index": 492,
             "means": [
                 "tự cầm quyền"
             ],
@@ -5307,7 +5298,7 @@
             ]
         },
         {
-            "index": 494,
+            "index": 493,
             "means": [
                 "hợp lý",
                 "có ý thức"
@@ -5318,7 +5309,7 @@
             ]
         },
         {
-            "index": 495,
+            "index": 494,
             "means": [
                 "thực tế"
             ],
@@ -5330,7 +5321,7 @@
             ]
         },
         {
-            "index": 496,
+            "index": 495,
             "means": [
                 "nhạy cảm"
             ],
@@ -5340,7 +5331,7 @@
             ]
         },
         {
-            "index": 497,
+            "index": 496,
             "means": [
                 "tách",
                 "chia"
@@ -5351,7 +5342,7 @@
             ]
         },
         {
-            "index": 498,
+            "index": 497,
             "means": [
                 "làm việc ở đâu lâu năm/cống hiến cho"
             ],
@@ -5361,7 +5352,7 @@
             ]
         },
         {
-            "index": 499,
+            "index": 498,
             "means": [
                 "để dành"
             ],
@@ -5371,7 +5362,7 @@
             ]
         },
         {
-            "index": 500,
+            "index": 499,
             "means": [
                 "bộ dao dĩa nhỏ"
             ],
@@ -5381,7 +5372,7 @@
             ]
         },
         {
-            "index": 501,
+            "index": 500,
             "means": [
                 "an cư lạc nghiệp",
                 "giải quyết"
@@ -5392,7 +5383,7 @@
             ]
         },
         {
-            "index": 502,
+            "index": 501,
             "means": [
                 "cực đoan"
             ],
@@ -5403,7 +5394,7 @@
             ]
         },
         {
-            "index": 503,
+            "index": 502,
             "means": [
                 "người chăn cừu"
             ],
@@ -5413,7 +5404,7 @@
             ]
         },
         {
-            "index": 504,
+            "index": 503,
             "means": [
                 "cái xẻng"
             ],
@@ -5423,7 +5414,7 @@
             ]
         },
         {
-            "index": 505,
+            "index": 504,
             "means": [
                 "tín hiệu"
             ],
@@ -5433,7 +5424,7 @@
             ]
         },
         {
-            "index": 506,
+            "index": 505,
             "means": [
                 "lớn"
             ],
@@ -5443,7 +5434,7 @@
             ]
         },
         {
-            "index": 507,
+            "index": 506,
             "means": [
                 "suôn sẻ"
             ],
@@ -5453,7 +5444,7 @@
             ]
         },
         {
-            "index": 508,
+            "index": 507,
             "means": [
                 "cho đến nay rất tốt"
             ],
@@ -5463,7 +5454,7 @@
             ]
         },
         {
-            "index": 509,
+            "index": 508,
             "means": [
                 "sự nài nỉ",
                 "sự yêu cầu"
@@ -5474,7 +5465,7 @@
             ]
         },
         {
-            "index": 510,
+            "index": 509,
             "means": [
                 "chất rắn"
             ],
@@ -5484,7 +5475,7 @@
             ]
         },
         {
-            "index": 511,
+            "index": 510,
             "means": [
                 "giải pháp"
             ],
@@ -5494,7 +5485,7 @@
             ]
         },
         {
-            "index": 512,
+            "index": 511,
             "means": [
                 "êm dịu"
             ],
@@ -5504,7 +5495,7 @@
             ]
         },
         {
-            "index": 513,
+            "index": 512,
             "means": [
                 "chuyên môn hóa"
             ],
@@ -5514,7 +5505,7 @@
             ]
         },
         {
-            "index": 514,
+            "index": 513,
             "means": [
                 "chỉ rõ"
             ],
@@ -5524,7 +5515,7 @@
             ]
         },
         {
-            "index": 515,
+            "index": 514,
             "means": [
                 "ổn định"
             ],
@@ -5534,7 +5525,7 @@
             ]
         },
         {
-            "index": 516,
+            "index": 515,
             "means": [
                 "chất thành chồng"
             ],
@@ -5545,7 +5536,7 @@
             ]
         },
         {
-            "index": 517,
+            "index": 516,
             "means": [
                 "thang bộ"
             ],
@@ -5556,7 +5547,7 @@
             ]
         },
         {
-            "index": 518,
+            "index": 517,
             "means": [
                 "cá là"
             ],
@@ -5566,7 +5557,7 @@
             ]
         },
         {
-            "index": 519,
+            "index": 518,
             "means": [
                 "tự tin về"
             ],
@@ -5576,7 +5567,7 @@
             ]
         },
         {
-            "index": 520,
+            "index": 519,
             "means": [
                 "ghim"
             ],
@@ -5586,7 +5577,7 @@
             ]
         },
         {
-            "index": 521,
+            "index": 520,
             "means": [
                 "tuyên bố"
             ],
@@ -5599,7 +5590,7 @@
             ]
         },
         {
-            "index": 522,
+            "index": 521,
             "means": [
                 "cố định"
             ],
@@ -5609,7 +5600,7 @@
             ]
         },
         {
-            "index": 523,
+            "index": 522,
             "means": [
                 "văn phòng phẩm"
             ],
@@ -5620,7 +5611,7 @@
             ]
         },
         {
-            "index": 524,
+            "index": 523,
             "means": [
                 "đều đặn"
             ],
@@ -5630,7 +5621,7 @@
             ]
         },
         {
-            "index": 525,
+            "index": 524,
             "means": [
                 "bước xuống"
             ],
@@ -5641,7 +5632,7 @@
             ]
         },
         {
-            "index": 526,
+            "index": 525,
             "means": [
                 "sự khích lệ"
             ],
@@ -5651,7 +5642,7 @@
             ]
         },
         {
-            "index": 527,
+            "index": 526,
             "means": [
                 "ghế đẩu"
             ],
@@ -5661,7 +5652,7 @@
             ]
         },
         {
-            "index": 528,
+            "index": 527,
             "means": [
                 "ghé qua"
             ],
@@ -5672,7 +5663,7 @@
             ]
         },
         {
-            "index": 529,
+            "index": 528,
             "means": [
                 "kho hàng"
             ],
@@ -5685,7 +5676,7 @@
             ]
         },
         {
-            "index": 530,
+            "index": 529,
             "means": [
                 "có quy luật"
             ],
@@ -5695,7 +5686,7 @@
             ]
         },
         {
-            "index": 531,
+            "index": 530,
             "means": [
                 "sắp xếp hợp lý"
             ],
@@ -5705,7 +5696,7 @@
             ]
         },
         {
-            "index": 532,
+            "index": 531,
             "means": [
                 "làm mạnh",
                 "cải tiến"
@@ -5716,7 +5707,7 @@
             ]
         },
         {
-            "index": 533,
+            "index": 532,
             "means": [
                 "khắt khe",
                 "kỷ luật"
@@ -5727,7 +5718,7 @@
             ]
         },
         {
-            "index": 534,
+            "index": 533,
             "means": [
                 "đấu tranh"
             ],
@@ -5737,7 +5728,7 @@
             ]
         },
         {
-            "index": 535,
+            "index": 534,
             "means": [
                 "tuân theo",
                 "tùy thuộc vào"
@@ -5748,7 +5739,7 @@
             ]
         },
         {
-            "index": 536,
+            "index": 535,
             "means": [
                 "nộp"
             ],
@@ -5761,7 +5752,7 @@
             ]
         },
         {
-            "index": 537,
+            "index": 536,
             "means": [
                 "tiếp quản",
                 "kế nhiệm"
@@ -5774,7 +5765,7 @@
             ]
         },
         {
-            "index": 538,
+            "index": 537,
             "means": [
                 "liên tiếp"
             ],
@@ -5784,7 +5775,7 @@
             ]
         },
         {
-            "index": 539,
+            "index": 538,
             "means": [
                 "đủ"
             ],
@@ -5797,7 +5788,7 @@
             ]
         },
         {
-            "index": 540,
+            "index": 539,
             "means": [
                 "đề xuất"
             ],
@@ -5807,7 +5798,7 @@
             ]
         },
         {
-            "index": 541,
+            "index": 540,
             "means": [
                 "phù hợp"
             ],
@@ -5820,7 +5811,7 @@
             ]
         },
         {
-            "index": 542,
+            "index": 541,
             "means": [
                 "tóm tắt"
             ],
@@ -5830,7 +5821,7 @@
             ]
         },
         {
-            "index": 543,
+            "index": 542,
             "means": [
                 "khảo sát"
             ],
@@ -5840,7 +5831,7 @@
             ]
         },
         {
-            "index": 544,
+            "index": 543,
             "means": [
                 "treo lên",
                 "lơ lửng"
@@ -5851,7 +5842,7 @@
             ]
         },
         {
-            "index": 545,
+            "index": 544,
             "means": [
                 "chịu đựng"
             ],
@@ -5861,7 +5852,7 @@
             ]
         },
         {
-            "index": 546,
+            "index": 545,
             "means": [
                 "chuyển đổi"
             ],
@@ -5871,7 +5862,7 @@
             ]
         },
         {
-            "index": 547,
+            "index": 546,
             "means": [
                 "bộ đồ dùng trên bàn ăn"
             ],
@@ -5881,7 +5872,7 @@
             ]
         },
         {
-            "index": 548,
+            "index": 547,
             "means": [
                 "sửa chữa theo yêu cầu riêng",
                 "thợ may"
@@ -5892,7 +5883,7 @@
             ]
         },
         {
-            "index": 549,
+            "index": 548,
             "means": [
                 "tranh thủ",
                 "tận dụng"
@@ -5904,7 +5895,7 @@
             ]
         },
         {
-            "index": 550,
+            "index": 549,
             "means": [
                 "tham gia"
             ],
@@ -5916,7 +5907,7 @@
             ]
         },
         {
-            "index": 551,
+            "index": 550,
             "means": [
                 "có trách nhiệm làm gì"
             ],
@@ -5928,7 +5919,7 @@
             ]
         },
         {
-            "index": 552,
+            "index": 551,
             "means": [
                 "gián đoạn"
             ],
@@ -5938,7 +5929,7 @@
             ]
         },
         {
-            "index": 553,
+            "index": 552,
             "means": [
                 "người thuê nhà"
             ],
@@ -5948,7 +5939,7 @@
             ]
         },
         {
-            "index": 554,
+            "index": 553,
             "means": [
                 "làm chứng"
             ],
@@ -5958,7 +5949,7 @@
             ]
         },
         {
-            "index": 555,
+            "index": 554,
             "means": [
                 "dọn dẹp"
             ],
@@ -5968,7 +5959,7 @@
             ]
         },
         {
-            "index": 556,
+            "index": 555,
             "means": [
                 "cà vạt"
             ],
@@ -5978,7 +5969,7 @@
             ]
         },
         {
-            "index": 557,
+            "index": 556,
             "means": [
                 "buộc"
             ],
@@ -5990,7 +5981,7 @@
             ]
         },
         {
-            "index": 558,
+            "index": 557,
             "means": [
                 "hướng về "
             ],
@@ -6000,7 +5991,7 @@
             ]
         },
         {
-            "index": 559,
+            "index": 558,
             "means": [
                 "phí đóng khóa học ở trường"
             ],
@@ -6010,7 +6001,7 @@
             ]
         },
         {
-            "index": 560,
+            "index": 559,
             "means": [
                 "hầm"
             ],
@@ -6020,7 +6011,7 @@
             ]
         },
         {
-            "index": 561,
+            "index": 560,
             "means": [
                 "sự tham gia"
             ],
@@ -6031,7 +6022,7 @@
             ]
         },
         {
-            "index": 562,
+            "index": 561,
             "means": [
                 "đặc trưng hay diễn ra"
             ],
@@ -6041,7 +6032,7 @@
             ]
         },
         {
-            "index": 563,
+            "index": 562,
             "means": [
                 "thông thường"
             ],
@@ -6052,7 +6043,7 @@
             ]
         },
         {
-            "index": 564,
+            "index": 563,
             "means": [
                 "bsi tâm lý"
             ],
@@ -6062,7 +6053,7 @@
             ]
         },
         {
-            "index": 565,
+            "index": 564,
             "means": [
                 "bộ điều khiển nhiệt độ"
             ],
@@ -6072,7 +6063,7 @@
             ]
         },
         {
-            "index": 566,
+            "index": 565,
             "means": [
                 "cẩn trọng",
                 "toàn"
@@ -6083,7 +6074,7 @@
             ]
         },
         {
-            "index": 567,
+            "index": 566,
             "means": [
                 "xuyên qua"
             ],
@@ -6093,7 +6084,7 @@
             ]
         },
         {
-            "index": 568,
+            "index": 567,
             "means": [
                 "trên khắp"
             ],
@@ -6103,7 +6094,7 @@
             ]
         },
         {
-            "index": 569,
+            "index": 568,
             "means": [
                 "đường mòn"
             ],
@@ -6113,7 +6104,7 @@
             ]
         },
         {
-            "index": 570,
+            "index": 569,
             "means": [
                 "đặc tính"
             ],
@@ -6123,7 +6114,7 @@
             ]
         },
         {
-            "index": 571,
+            "index": 570,
             "means": [
                 "chuyển khoản"
             ],
@@ -6133,7 +6124,7 @@
             ]
         },
         {
-            "index": 572,
+            "index": 571,
             "means": [
                 "sự minh bạch"
             ],
@@ -6143,7 +6134,7 @@
             ]
         },
         {
-            "index": 573,
+            "index": 572,
             "means": [
                 "xét xử"
             ],
@@ -6153,7 +6144,7 @@
             ]
         },
         {
-            "index": 574,
+            "index": 573,
             "means": [
                 "xử lý sự cố"
             ],
@@ -6163,7 +6154,7 @@
             ]
         },
         {
-            "index": 575,
+            "index": 574,
             "means": [
                 "nhất trí"
             ],
@@ -6173,7 +6164,7 @@
             ]
         },
         {
-            "index": 576,
+            "index": 575,
             "means": [
                 "chịu"
             ],
@@ -6186,7 +6177,7 @@
             ]
         },
         {
-            "index": 577,
+            "index": 576,
             "means": [
                 "vô ý"
             ],
@@ -6196,7 +6187,7 @@
             ]
         },
         {
-            "index": 578,
+            "index": 577,
             "means": [
                 "nếu không",
                 "trừ khi"
@@ -6207,7 +6198,7 @@
             ]
         },
         {
-            "index": 579,
+            "index": 578,
             "means": [
                 "không thể",
                 "không chắc"
@@ -6218,7 +6209,7 @@
             ]
         },
         {
-            "index": 580,
+            "index": 579,
             "means": [
                 "không thể đoán"
             ],
@@ -6230,7 +6221,7 @@
             ]
         },
         {
-            "index": 581,
+            "index": 580,
             "means": [
                 "cao cấp"
             ],
@@ -6240,7 +6231,7 @@
             ]
         },
         {
-            "index": 582,
+            "index": 581,
             "means": [
                 "gấp rút"
             ],
@@ -6250,7 +6241,7 @@
             ]
         },
         {
-            "index": 583,
+            "index": 582,
             "means": [
                 "sử dụng"
             ],
@@ -6260,7 +6251,7 @@
             ]
         },
         {
-            "index": 584,
+            "index": 583,
             "means": [
                 "chỗ trống"
             ],
@@ -6272,7 +6263,7 @@
             ]
         },
         {
-            "index": 585,
+            "index": 584,
             "means": [
                 "mơ hồ",
                 "hơi đúng"
@@ -6283,7 +6274,7 @@
             ]
         },
         {
-            "index": 586,
+            "index": 585,
             "means": [
                 "mênh mông"
             ],
@@ -6293,7 +6284,7 @@
             ]
         },
         {
-            "index": 587,
+            "index": 586,
             "means": [
                 "k gian cho sự kiện"
             ],
@@ -6303,7 +6294,7 @@
             ]
         },
         {
-            "index": 588,
+            "index": 587,
             "means": [
                 "họp onl"
             ],
@@ -6314,7 +6305,7 @@
             ]
         },
         {
-            "index": 589,
+            "index": 588,
             "means": [
                 "bảo hành"
             ],
@@ -6325,7 +6316,7 @@
             ]
         },
         {
-            "index": 590,
+            "index": 589,
             "means": [
                 "bờ sông"
             ],
@@ -6335,7 +6326,7 @@
             ]
         },
         {
-            "index": 591,
+            "index": 590,
             "means": [
                 "số lượng lớn"
             ],
@@ -6345,7 +6336,7 @@
             ]
         },
         {
-            "index": 592,
+            "index": 591,
             "means": [
                 "chào đón"
             ],
@@ -6356,7 +6347,7 @@
             ]
         },
         {
-            "index": 593,
+            "index": 592,
             "means": [
                 "hàn kim loại"
             ],
@@ -6366,7 +6357,7 @@
             ]
         },
         {
-            "index": 594,
+            "index": 593,
             "means": [
                 "nổi tiếng"
             ],
@@ -6379,7 +6370,7 @@
             ]
         },
         {
-            "index": 595,
+            "index": 594,
             "means": [
                 "trong khi"
             ],
@@ -6390,7 +6381,7 @@
             ]
         },
         {
-            "index": 596,
+            "index": 595,
             "means": [
                 "nhà cung cấp số lượng lớn"
             ],
@@ -6400,7 +6391,7 @@
             ]
         },
         {
-            "index": 597,
+            "index": 596,
             "means": [
                 "lan rộng"
             ],
@@ -6410,7 +6401,7 @@
             ]
         },
         {
-            "index": 598,
+            "index": 597,
             "means": [
                 "sự sẵn lòng"
             ],
@@ -6420,7 +6411,7 @@
             ]
         },
         {
-            "index": 599,
+            "index": 598,
             "means": [
                 "kính chắn gió xe hơi"
             ],
@@ -6430,7 +6421,7 @@
             ]
         },
         {
-            "index": 600,
+            "index": 599,
             "means": [
                 "lau bằng khăn/tay"
             ],
@@ -6440,7 +6431,7 @@
             ]
         },
         {
-            "index": 601,
+            "index": 600,
             "means": [
                 "hợp tác cùng"
             ],
@@ -6454,7 +6445,7 @@
             ]
         },
         {
-            "index": 602,
+            "index": 601,
             "means": [
                 "cảnh báo"
             ],
@@ -6464,7 +6455,7 @@
             ]
         },
         {
-            "index": 603,
+            "index": 602,
             "means": [
                 "trung thành"
             ],
@@ -6474,7 +6465,7 @@
             ]
         },
         {
-            "index": 604,
+            "index": 603,
             "means": [
                 "chuyển thành"
             ],
@@ -6484,7 +6475,7 @@
             ]
         },
         {
-            "index": 605,
+            "index": 604,
             "means": [
                 "kỳ hạn",
                 "điều khoản"
@@ -6495,7 +6486,7 @@
             ]
         },
         {
-            "index": 606,
+            "index": 605,
             "means": [
                 "sự đổi mới",
                 "sự gia hạn"
@@ -6506,7 +6497,7 @@
             ]
         },
         {
-            "index": 607,
+            "index": 606,
             "means": [
                 "khuyên "
             ],
@@ -6516,7 +6507,7 @@
             ]
         },
         {
-            "index": 608,
+            "index": 607,
             "means": [
                 "nhân viên hậu cần"
             ],
@@ -6526,7 +6517,7 @@
             ]
         },
         {
-            "index": 609,
+            "index": 608,
             "means": [
                 "nhắc nhở"
             ],
@@ -6536,7 +6527,7 @@
             ]
         },
         {
-            "index": 610,
+            "index": 609,
             "means": [
                 "đề xuất"
             ],
@@ -6546,7 +6537,7 @@
             ]
         },
         {
-            "index": 611,
+            "index": 610,
             "means": [
                 "khẩn cấp"
             ],
@@ -6556,7 +6547,7 @@
             ]
         },
         {
-            "index": 612,
+            "index": 611,
             "means": [
                 "đầu tư"
             ],
@@ -6566,7 +6557,7 @@
             ]
         },
         {
-            "index": 613,
+            "index": 612,
             "means": [
                 "người xem",
                 "khán giả"
@@ -6577,7 +6568,7 @@
             ]
         },
         {
-            "index": 614,
+            "index": 613,
             "means": [
                 "lấn át"
             ],
@@ -6587,7 +6578,7 @@
             ]
         },
         {
-            "index": 615,
+            "index": 614,
             "means": [
                 "có hiệu lực"
             ],
@@ -6599,7 +6590,7 @@
             ]
         },
         {
-            "index": 616,
+            "index": 615,
             "means": [
                 "trang bị nội thất"
             ],
@@ -6609,7 +6600,7 @@
             ]
         },
         {
-            "index": 617,
+            "index": 616,
             "means": [
                 "sự thú nhận",
                 "sự nhận vào"
@@ -6620,7 +6611,7 @@
             ]
         },
         {
-            "index": 618,
+            "index": 617,
             "means": [
                 "khổng lồ"
             ],
@@ -6630,7 +6621,7 @@
             ]
         },
         {
-            "index": 619,
+            "index": 618,
             "means": [
                 "mức độ",
                 "phạm vi"
@@ -6641,7 +6632,7 @@
             ]
         },
         {
-            "index": 620,
+            "index": 619,
             "means": [
                 "đường xoắn ốc"
             ],
@@ -6651,7 +6642,7 @@
             ]
         },
         {
-            "index": 621,
+            "index": 620,
             "means": [
                 "bảo tồn"
             ],
@@ -6661,7 +6652,7 @@
             ]
         },
         {
-            "index": 622,
+            "index": 621,
             "means": [
                 "chứng chỉ"
             ],
@@ -6671,7 +6662,7 @@
             ]
         },
         {
-            "index": 623,
+            "index": 622,
             "means": [
                 "bắt buộc"
             ],
@@ -6681,7 +6672,7 @@
             ]
         },
         {
-            "index": 624,
+            "index": 623,
             "means": [
                 "nhu cầu"
             ],
@@ -6691,7 +6682,7 @@
             ]
         },
         {
-            "index": 625,
+            "index": 624,
             "means": [
                 "nhận xét",
                 "làm chú ý"
@@ -6702,7 +6693,7 @@
             ]
         },
         {
-            "index": 626,
+            "index": 625,
             "means": [
                 "thực tình"
             ],
@@ -6712,7 +6703,7 @@
             ]
         },
         {
-            "index": 627,
+            "index": 626,
             "means": [
                 "hội thảo"
             ],
@@ -6723,13 +6714,23 @@
             ]
         },
         {
-            "index": 628,
+            "index": 627,
             "means": [
                 "tương tự"
             ],
             "notes": "",
             "words": [
                 "resemble"
+            ]
+        },
+        {
+            "index": 628,
+            "means": [
+                "tung"
+            ],
+            "notes": "",
+            "words": [
+                "tung"
             ]
         }
     ]

@@ -16,10 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     src/common/APIRequest.cpp \
     src/common/FileControl.cpp \
-    src/common/TCPClient.cpp \
     src/component/NewData.cpp \
     src/model/MeanModel.cpp \
-    src/model/MessageModel.cpp \
     src/model/NoteModel.cpp \
     src/scene/Dictionary.cpp \
     src/scene/Game.cpp \
@@ -27,8 +25,7 @@ SOURCES += \
     src/scene/NoteBook.cpp \
     src/scene/Setting.cpp \
     src/Controller.cpp \
-    src/main.cpp \
-    src/scene/VoiceChat.cpp
+    src/main.cpp
 
 RESOURCES += qml.qrc
 
@@ -48,17 +45,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     src/common/APIRequest.h \
     src/common/FileControl.h \
-    src/common/TCPClient.h \
     src/common/Define.h \
     src/common/AppEnum.h \
     src/component/NewData.h \
     src/model/MeanModel.h \
-    src/model/MessageModel.h \
     src/model/NoteModel.h \
     src/scene/Dictionary.h \
     src/scene/Game.h \
     src/scene/Grammar.h \
     src/scene/NoteBook.h \
     src/scene/Setting.h \
-    src/Controller.h \ \
-    src/scene/VoiceChat.h
+    src/Controller.h \

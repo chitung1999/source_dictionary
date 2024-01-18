@@ -2,6 +2,34 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="vi_VN" sourcelanguage="en_US">
 <context>
+    <name>Banner</name>
+    <message>
+        <location filename="ui/Component/Banner/Banner.qml" line="33"/>
+        <source>Words</source>
+        <translation>Từ</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/Banner/Banner.qml" line="40"/>
+        <source>Grammar</source>
+        <translation>Ngữ pháp</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/Banner/Banner.qml" line="47"/>
+        <source>Dictionary</source>
+        <translation>Từ điển</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/Banner/Banner.qml" line="54"/>
+        <source>Game</source>
+        <translation>Trò chơi</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/Banner/Banner.qml" line="61"/>
+        <source>Setting</source>
+        <translation>Cài đặt</translation>
+    </message>
+</context>
+<context>
     <name>Content</name>
     <message>
         <location filename="ui/Component/Setting/Content.qml" line="30"/>
@@ -14,32 +42,29 @@
         <translation>Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="99"/>
         <source>User name</source>
-        <translation>Tên người dùng</translation>
+        <translation type="vanished">Tên người dùng</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="109"/>
         <source>IP Adress Connect</source>
-        <translation>Địa chỉ IP</translation>
+        <translation type="vanished">Địa chỉ IP</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="115"/>
         <source>Port</source>
-        <translation>Cổng</translation>
+        <translation type="vanished">Cổng</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="124"/>
+        <location filename="ui/Component/Setting/Content.qml" line="100"/>
         <source>Path</source>
         <translation>Đường dẫn</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="135"/>
+        <location filename="ui/Component/Setting/Content.qml" line="111"/>
         <source>Theme Color</source>
         <translation>Màu nền</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="141"/>
+        <location filename="ui/Component/Setting/Content.qml" line="117"/>
         <source>Border Color</source>
         <translation>Màu viền</translation>
     </message>
@@ -47,28 +72,28 @@
 <context>
     <name>Controller</name>
     <message>
-        <location filename="src/Controller.cpp" line="158"/>
+        <location filename="src/Controller.cpp" line="115"/>
         <source>Cann&apos;t open file: </source>
         <translation>Không thể mở file: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="175"/>
-        <location filename="src/Controller.cpp" line="192"/>
+        <location filename="src/Controller.cpp" line="132"/>
+        <location filename="src/Controller.cpp" line="149"/>
         <source>Invalid color: </source>
         <translation>Định dạng màu không tồn tại: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="241"/>
+        <location filename="src/Controller.cpp" line="198"/>
         <source>The keys or means are empty!</source>
         <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="279"/>
+        <location filename="src/Controller.cpp" line="236"/>
         <source>The form or structure is empty!</source>
         <translation>Kiểu câu hoặc Cấu trúc trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="324"/>
+        <location filename="src/Controller.cpp" line="278"/>
         <source>Are you sure you want to delete this item?</source>
         <translation>Bạn chắc chắn muốn xoá ghi chú này?</translation>
     </message>
@@ -101,12 +126,12 @@
         <translation type="vanished">Cấu trúc: </translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="62"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="63"/>
         <source>Form</source>
         <translation>Kiểu câu</translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="91"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="92"/>
         <source>Structure</source>
         <translation>Cấu trúc</translation>
     </message>
@@ -127,24 +152,19 @@
         <translation>Ngôn ngữ</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/ListOption.qml" line="17"/>
         <source>User Name</source>
-        <translation>Người dùng</translation>
+        <translation type="vanished">Người dùng</translation>
     </message>
     <message>
         <location filename="ui/Component/Setting/ListOption.qml" line="22"/>
-        <source>Connect</source>
-        <translation>Kết nối</translation>
+        <source>Color</source>
+        <oldsource>Connect</oldsource>
+        <translation>Màu sắc</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/ListOption.qml" line="27"/>
+        <location filename="ui/Component/Setting/ListOption.qml" line="17"/>
         <source>BackGround</source>
         <translation>Hình nền</translation>
-    </message>
-    <message>
-        <location filename="ui/Component/Setting/ListOption.qml" line="32"/>
-        <source>Color</source>
-        <translation>Màu sắc</translation>
     </message>
 </context>
 <context>
@@ -314,25 +334,21 @@
 <context>
     <name>TCPClient</name>
     <message>
-        <location filename="src/common/TCPClient.cpp" line="44"/>
         <source>Lost connection to the server!</source>
-        <translation>Mất kết nối với máy chủ!</translation>
+        <translation type="vanished">Mất kết nối với máy chủ!</translation>
     </message>
     <message>
-        <location filename="src/common/TCPClient.cpp" line="70"/>
         <source>Can not connect to server!</source>
-        <translation>Không thể kết nối với máy chủ!</translation>
+        <translation type="vanished">Không thể kết nối với máy chủ!</translation>
     </message>
     <message>
-        <location filename="src/common/TCPClient.cpp" line="87"/>
         <source>Disconnected from server!</source>
-        <translation>Ngắt kết nối với máy chủ!</translation>
+        <translation type="vanished">Ngắt kết nối với máy chủ!</translation>
     </message>
     <message>
-        <location filename="src/common/TCPClient.cpp" line="101"/>
         <source>You are Offline!</source>
         <oldsource>Bạn đang Offline!</oldsource>
-        <translation>Bạn đang Offline!</translation>
+        <translation type="vanished">Bạn đang Offline!</translation>
     </message>
 </context>
 </TS>

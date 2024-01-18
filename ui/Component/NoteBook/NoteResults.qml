@@ -40,20 +40,6 @@ Item {
         text: NOTEBOOK.currentKey
     }
 
-    ButtonImage {
-        id: add_new
-        width: 50
-        height: 50
-        anchors {
-            top: box.top
-            topMargin: 15
-            right: box.right
-            rightMargin: 20
-        }
-        source: "qrc:/img/add.png"
-        onClickButton: NOTEBOOK.popupAddNewData()
-    }
-
     ListView {
         id: results
         width: box.width

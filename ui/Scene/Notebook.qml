@@ -37,23 +37,12 @@ Item {
     MouseArea {
         id: lock_screen
         anchors.fill: parent
-        enabled: (new_data.visible || popup_notify.visible || popup_confirm.visible)
+        enabled: new_data.visible
     }
 
     NewData {
         id: new_data
         anchors.fill: parent
         visible: false
-    }
-
-    PopupNotify {
-        id: popup_notify
-        anchors.fill: parent
-    }
-
-    PopupConfirm {
-        id: popup_confirm
-        anchors.fill: parent
-        onConfirm: CTRL.removeItemNote()
     }
 }

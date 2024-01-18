@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import AppEnum 1.0
 import "Component/Banner"
+import "Common"
 
 Window {
     id: root
@@ -33,6 +34,22 @@ Window {
             id: content
             anchors.fill: parent
             source: banner.loader
+        }
+
+        MouseArea {
+            id: lock_screen
+            anchors.fill: parent
+            enabled: popup.visible
+        }
+
+        PopupNotify {
+            id: popup_notify
+            anchors.fill: parent
+        }
+
+        PopupConfirm {
+            id: popup
+            anchors.fill: parent
         }
     }
 }

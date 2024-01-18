@@ -9,7 +9,6 @@
 #include "scene/NoteBook.h"
 #include "scene/Grammar.h"
 #include "scene/Dictionary.h"
-#include "scene/VoiceChat.h"
 #include "scene/Game.h"
 #include "scene/Setting.h"
 #include "common/FileControl.h"
@@ -18,7 +17,7 @@ class Controller : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString popupNotify      READ popupNotify    WRITE setPopupNotify        NOTIFY popupNotifyChanged)
-    Q_PROPERTY(QString popupConfirm     READ popupConfirm   WRITE setPopupConfirm       NOTIFY popupConfirmChanged)
+    Q_PROPERTY(QString popupConfirm     READ popupConfirm                               NOTIFY popupConfirmChanged)
     Q_PROPERTY(QString translator       READ translator                                 NOTIFY translatorChanged)
 public:
      static Controller *getInstance();
@@ -28,48 +27,40 @@ public:
      void setPopupNotify(QString newPopupNotify);
 
      QString popupConfirm() const;
-     void setPopupConfirm(QString newPopupConfirm);
 
      QString translator();
 
      NoteBook   *noteBook();
      Grammar    *grammar();
      Dictionary *dictionary();
-     VoiceChat  *voiceChat();
      Game       *game();
      Setting    *setting();
 
 signals:
      void popupNotifyChanged();
-     void popupConfirmChanged();
+     void popupConfirmChanged(int item, int index);
      void translatorChanged();
 
 public slots:
      //Setting
     void setLanguage(int lang);
-    void setUserName(QString name);
-    void setIpAddress(QString ip);
-    void setPort(int port);
     void setBackground(QString path);
     void setThemeColor(QString color);
     void setBorderColor(QString color);
 
     //Notebook
-    void removeItemNote();
+    void removeItemNote(int index);
     void changeItemNote(QStringList keys, QStringList means, QString notes);
 
     //Grammar
     void appendItemGrammar();
-    void removeItemGrammar();
+    void removeItemGrammar(int index);
     void changedItemGrammar(int index, QString form, QString structure);
 
-    //VoiceChat
-    void doConnect();
-    void disconnect();
-    void sendMessage(QString msg);
+    void removeItem(int item, int index);
 
     void receiveNtf(QString ntf);
-    void receiveConf(int index);
+    void receiveConf(int item,int index);
     void receiveAudio(QString path);
 
 private:
@@ -78,7 +69,6 @@ private:
     NoteBook    m_noteBook;
     Grammar     m_grammar;
     Dictionary  m_dictionary;
-    VoiceChat   m_voiceChat;
     Game        m_game;
     Setting     m_setting;
 
@@ -87,8 +77,6 @@ private:
     QTranslator m_translator;
     QMediaPlayer m_audio;
     QJsonObject m_dataJson;
-    FileControl m_file;
-    int m_indexRemove;
 };
 
 #endif // CONTROLLER_H

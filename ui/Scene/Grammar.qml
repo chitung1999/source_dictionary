@@ -108,21 +108,4 @@ Item {
             }
         }
     }
-
-    MouseArea {
-        id: lock_screen
-        anchors.fill: parent
-        enabled: popup.visible
-    }
-
-    PopupNotify {
-        id: popup_notify
-        anchors.fill: parent
-    }
-
-    PopupConfirm {
-        id: popup
-        anchors.fill: parent
-        onConfirm: CTRL.removeItemGrammar()
-    }
 }

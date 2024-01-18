@@ -3,11 +3,9 @@
 Controller::Controller(QObject *parent) : QObject(parent)
 {
     initialize();
-    connect(m_voiceChat.tcpClient(),    &TCPClient::sendNtfUI,      this,           &Controller::receiveNtf);
 
     connect(&m_game,                    &Game::requestAudio,        this,           &Controller::receiveAudio);
     connect(&m_dictionary,              &Dictionary::requestAudio,  this,           &Controller::receiveAudio);
-
     connect(&m_game,                    &Game::requestQuestion,     &m_noteBook,    &NoteBook::onRequestQuestion);
     connect(&m_noteBook,                &NoteBook::sendQuestion,    &m_game,        &Game::receiveQuestion);
 }
@@ -20,7 +18,7 @@ Controller *Controller::getInstance()
 
 void Controller::initialize()
 {
-    if(!m_file.readFile(PATH_DATA + QString("/data.json"), m_dataJson))
+    if(!FileControl::readFile(PATH_DATA + QString("/data.json"), m_dataJson))
         return;
     m_grammar.initialize(m_dataJson["grammar"].toArray());
     m_setting.initialize(m_dataJson["setting"].toObject());
@@ -33,7 +31,7 @@ void Controller::initialize()
     }
 
     QString path_bg = m_setting.background();
-    if(!m_file.checkFileImg(path_bg))
+    if(!FileControl::checkFileImg(path_bg))
             path_bg = "";
 
     m_setting.setBackground(path_bg);
@@ -42,12 +40,6 @@ void Controller::initialize()
 QString Controller::popupConfirm() const
 {
     return m_popupConfirm;
-}
-
-void Controller::setPopupConfirm(QString newPopupConfirm)
-{
-    m_popupConfirm = newPopupConfirm;
-    emit popupConfirmChanged();
 }
 
 QString Controller::popupNotify() const
@@ -81,11 +73,6 @@ Dictionary *Controller::dictionary()
     return &m_dictionary;
 }
 
-VoiceChat *Controller::voiceChat()
-{
-    return &m_voiceChat;
-}
-
 Game *Controller::game()
 {
     return &m_game;
@@ -115,45 +102,15 @@ void Controller::setLanguage(int lang)
         break;
     }
 
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     emit translatorChanged();
     m_setting.setLanguage(lang);
 }
 
-void Controller::setUserName(QString name)
-{
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["name"] = name;
-    m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
-
-    m_setting.setUserName(name);
-}
-
-void Controller::setIpAddress(QString ip)
-{
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["IPAddress"] = ip;
-    m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
-
-    m_setting.setIpAddress(ip);
-}
-
-void Controller::setPort(int port)
-{
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["port"] = port;
-    m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
-
-    m_setting.setPort(port);
-}
-
 void Controller::setBackground(QString path)
 {
-    if(!m_file.checkFileImg(path)) {
+    if(!FileControl::checkFileImg(path)) {
         qDebug() << "Cann't open file: " + path;
         setPopupNotify((QString(tr("Cann't open file: ")) + path));
         return;
@@ -162,7 +119,7 @@ void Controller::setBackground(QString path)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["background"] = path;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setBackground(path);
 }
@@ -179,7 +136,7 @@ void Controller::setThemeColor(QString color)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["themeColor"] = color;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setThemeColor(color);
 }
@@ -196,24 +153,24 @@ void Controller::setBorderColor(QString color)
     QJsonObject obj = m_dataJson.value("setting").toObject();
     obj["borderColor"] = color;
     m_dataJson["setting"] = obj;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_setting.setBorderColor(color);
 }
 
-void Controller::removeItemNote()
+void Controller::removeItemNote(int index)
 {
     QJsonArray arr = m_dataJson["words"].toArray();
-    arr.removeAt(m_indexRemove);
+    arr.removeAt(index);
     for(int i = 0; i < arr.size(); i++) {
         QJsonObject obj = arr.at(i).toObject();
         obj["index"] = i;
         arr.replace(i,obj);
     }
     m_dataJson["words"] = arr;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
     m_noteBook.updateData(arr);
-    m_noteBook.notes()->removeAt(m_indexRemove);
+    m_noteBook.notes()->removeAt(index);
 }
 
 void Controller::changeItemNote(QStringList keys, QStringList means, QString notes)
@@ -251,7 +208,7 @@ void Controller::changeItemNote(QStringList keys, QStringList means, QString not
     }
 
     m_dataJson["words"] = arr;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
     m_noteBook.updateData(arr);
     m_noteBook.updateCurrentData();
 }
@@ -261,15 +218,15 @@ void Controller::appendItemGrammar()
     m_grammar.requestAppend();
 }
 
-void Controller::removeItemGrammar()
+void Controller::removeItemGrammar(int index)
 {
     QJsonArray arr = m_dataJson["grammar"].toArray();
-    arr.removeAt(m_indexRemove);
+    arr.removeAt(index);
 
     m_dataJson["grammar"] = arr;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
-    m_grammar.removeAt(m_indexRemove);
+    m_grammar.removeAt(index);
 }
 
 void Controller::changedItemGrammar(int index, QString form, QString structure)
@@ -292,36 +249,34 @@ void Controller::changedItemGrammar(int index, QString form, QString structure)
     }
 
     m_dataJson["grammar"] = arr;
-    m_file.writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
 
     m_grammar.modify(index, GrammarItem(form, structure));
 }
 
-void Controller::doConnect()
+void Controller::removeItem(int item, int index)
 {
-    m_voiceChat.doConnect(m_setting.ipAddress(), m_setting.port());
+    switch (item) {
+    case AppEnum::NOTEITEM:
+        removeItemNote(index);
+        break;
+    case AppEnum::GRAMMARITEM:
+        removeItemGrammar(index);
+        break;
+    default:
+        break;
+    }
 }
-
-void Controller::disconnect()
-{
-    m_voiceChat.disconnect();
-}
-
-void Controller::sendMessage(QString msg)
-{
-    m_voiceChat.sendMessage(m_setting.userName(), msg);
-}
-
 
 void Controller::receiveNtf(QString ntf)
 {
     setPopupNotify(ntf);
 }
 
-void Controller::receiveConf(int index)
+void Controller::receiveConf(int item, int index)
 {
-    m_indexRemove = index;
-    setPopupConfirm(tr("Are you sure you want to delete this item?"));
+    m_popupConfirm = tr("Are you sure you want to delete this item?");
+    emit popupConfirmChanged(item, index);
 }
 
 void Controller::receiveAudio(QString path)

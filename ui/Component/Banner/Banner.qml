@@ -10,7 +10,7 @@ Item {
     Rectangle {
         id: banner_top
         width: parent.width
-        height: 60
+        height: 70
         border.color: "#dddddd"
         border.width: 2
 
@@ -30,36 +30,35 @@ Item {
                 loaderItem: "qrc:/ui/Scene/NoteBook.qml"
                 sourceItem: "qrc:/img/notebook.png"
                 sourceItemHL: "qrc:/img/notebook_hightlight.png"
+                titleItem: qsTr("Words")
             }
             ListElement {
                 stateItem: AppEnum.GRAMMAR
                 loaderItem: "qrc:/ui/Scene/Grammar.qml"
                 sourceItem: "qrc:/img/grammar.png"
                 sourceItemHL: "qrc:/img/grammar_hightlight.png"
+                titleItem: qsTr("Grammar")
             }
             ListElement {
                 stateItem: AppEnum.SEARCH
                 loaderItem: "qrc:/ui/Scene/SearchDictionary.qml"
                 sourceItem: "qrc:/img/dictionary.png"
                 sourceItemHL: "qrc:/img/dictionary_hightlight.png"
-            }
-            ListElement {
-                stateItem: AppEnum.VOICECHAT
-                loaderItem: "qrc:/ui/Scene/VoiceChat.qml"
-                sourceItem: "qrc:/img/chat.png"
-                sourceItemHL: "qrc:/img/chat_hightlight.png"
+                titleItem: qsTr("Dictionary")
             }
             ListElement {
                 stateItem: AppEnum.GAME
                 loaderItem: "qrc:/ui/Scene/Game.qml"
                 sourceItem: "qrc:/img/game.png"
                 sourceItemHL: "qrc:/img/game_hightlight.png"
+                titleItem: qsTr("Game")
             }
             ListElement {
                 stateItem: AppEnum.SETTING
                 loaderItem: "qrc:/ui/Scene/Setting.qml"
                 sourceItem: "qrc:/img/setting.png"
                 sourceItemHL: "qrc:/img/setting_hightlight.png"
+                titleItem: qsTr("Setting")
             }
         }
 
@@ -70,6 +69,8 @@ Item {
                     width: root.width / list_banner.count
                     height: banner_top.height
                     source: root.state == stateItem ? sourceItemHL : sourceItem
+                    title: titleItem + CTRL.translator
+                    colorText: root.state == stateItem ? "#00a8f3" : "#000"
                     onClick: root.state = stateItem
                 }
             }

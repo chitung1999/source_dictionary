@@ -13,9 +13,9 @@ class FileControl
 public:
     FileControl();
 
-    bool readFile(QString path, QJsonObject &data);
-    bool writeFileJson(QString path, QJsonObject &data);
-    bool checkFileImg(QString &path);
+    static bool readFile(QString path, QJsonObject &data);
+    static bool writeFileJson(QString path, QJsonObject &data);
+    static bool checkFileImg(QString &path);
 };
 
 #endif // FILECONTROL_H

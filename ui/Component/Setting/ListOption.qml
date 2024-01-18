@@ -14,16 +14,6 @@ Item {
             sourceItem: "qrc:/img/language.png"
         }
         ListElement {
-            titleItem: qsTr("User Name")
-            stateItem: AppEnum.USERNAME
-            sourceItem: "qrc:/img/username.png"
-        }
-        ListElement {
-            titleItem: qsTr("Connect")
-            stateItem: AppEnum.CONNECT
-            sourceItem: "qrc:/img/connect.png"
-        }
-        ListElement {
             titleItem: qsTr("BackGround")
             stateItem: AppEnum.BACKGROUND
             sourceItem: "qrc:/img/bg_icon.png"

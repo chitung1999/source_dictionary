@@ -5,8 +5,8 @@ Item {
     visible: false
 
     property string message: CTRL.popupConfirm
-
-    signal confirm()
+    property int item
+    property int index
 
     Rectangle {
         anchors.fill: parent
@@ -66,15 +66,17 @@ Item {
         textColor: "#000"
         name: qsTr("OK") + CTRL.translator
         onClickButton: {
-            root.confirm()
+            CTRL.removeItem(root.item, root.index)
             root.visible = false
         }
     }
 
     Connections {
         target: CTRL
-        function onPopupConfirmChanged() {
+        function onPopupConfirmChanged(item, index) {
             root.visible = true
+            root.item = item
+            root.index = index
         }
     }
 }

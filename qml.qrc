@@ -25,15 +25,12 @@
         <file>ui/Common/ButtonBase.qml</file>
         <file>ui/Common/BorderBase.qml</file>
         <file>ui/Component/Banner/BannerItem.qml</file>
-        <file>ui/Component/VoiceChat/BoxChat.qml</file>
         <file>ui/Component/Dictionary/DictionaryResults.qml</file>
         <file>ui/Component/NoteBook/ListWord.qml</file>
         <file>ui/Component/Dictionary/MeanItem.qml</file>
-        <file>ui/Component/VoiceChat/MessageItem.qml</file>
         <file>ui/Component/NoteBook/NoteResults.qml</file>
         <file>ui/Scene/NoteBook.qml</file>
         <file>ui/Scene/SearchDictionary.qml</file>
-        <file>ui/Scene/VoiceChat.qml</file>
         <file>ui/Scene/Setting.qml</file>
         <file>ui/Common/TextInputBase.qml</file>
         <file>ui/Component/NoteBook/NoteItem.qml</file>
@@ -59,7 +56,6 @@
         <file>ui/Component/NoteBook/RandomWord.qml</file>
         <file>ui/Common/ButtonImage.qml</file>
         <file>img/volume.png</file>
-        <file>ui/Component/VoiceChat/MessageInput.qml</file>
         <file>ui/Component/Setting/ListOption.qml</file>
         <file>ui/Component/Setting/Content.qml</file>
         <file>ui/Scene/Game.qml</file>
