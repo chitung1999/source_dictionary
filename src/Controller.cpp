@@ -32,7 +32,7 @@ void Controller::initialize()
 
     QString path_bg = m_setting.background();
     if(!FileControl::checkFileImg(path_bg))
-            path_bg = "";
+            path_bg = PATH_DATA + "/bg.jpg";
 
     m_setting.setBackground(path_bg);
 }

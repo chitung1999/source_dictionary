@@ -21,7 +21,7 @@ Window {
         Image {
             id: bg
             anchors.fill: parent
-            source: SETTING.background != "" ? "file:///" + SETTING.background : "qrc:/img/bg_backup.jpg"
+            source: "file:///" + SETTING.background
         }
 
         Banner {

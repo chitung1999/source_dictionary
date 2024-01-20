@@ -14,12 +14,9 @@
         }
     ],
     "setting": {
-        "IPAddress": "127.0.0.1",
-        "background": "C:/Users/PVD/Downloads/pexels-christian-heitz-842711.jpg",
+        "background": "C:/Users/PVD/Downloads/pexels-christian-hitz-842711.jpg",
         "borderColor": "green",
         "language": "eng",
-        "name": "Chi Tungg",
-        "port": 8080,
         "themeColor": "red"
     },
     "words": [
