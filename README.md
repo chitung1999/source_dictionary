@@ -14,7 +14,7 @@ words.
 
 ## Install the Dictionary App
 ### Prerequisites:
-Installs OpenSSL **v1.1.1** for [Window](https://slproweb.com/products/Win32OpenSSL.html)
+Install OpenSSL **v1.1.1** for [Window](https://slproweb.com/products/Win32OpenSSL.html)
 
 ### Install:
 1. Download the latest version [here](https://github.com/chitung1999/source_dictionary/releases).
