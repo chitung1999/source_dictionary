@@ -27,6 +27,6 @@ The data file is **../DictionaryApp/data/data.json**. The data file location nee
 ## For developers
 1. Clone the repository:
 ```bash
-git clone https://github.com/ggerganov/whisper.cpp.git
+git clone https://github.com/chitung1999/source_dictionary.git
 ```
 2. Open the project using [QT](https://www.qt.io/).
