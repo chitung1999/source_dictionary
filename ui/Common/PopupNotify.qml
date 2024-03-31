@@ -18,7 +18,7 @@ Item {
         height: msg.height + 160
         radius: 30
         anchors.centerIn: parent
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         border.width: 2
         color: "#eeeeee"
 

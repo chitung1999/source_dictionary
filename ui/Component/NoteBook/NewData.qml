@@ -18,13 +18,9 @@ Item {
         height: 900
         radius: 30
         border.width: 2
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         anchors.centerIn: parent
-        gradient: Gradient {
-            GradientStop { position: - 0.3; color: "#969696" }
-            GradientStop { position: 0.5; color: SETTING.themeColor }
-            GradientStop { position: 1.3; color: "#969696" }
-        }
+        color: SETTING.isThemeLight ? "#eeeeee" : "#3b3b3b"
     }
 
     Text {
@@ -36,7 +32,7 @@ Item {
         }
         font.pixelSize: 30
         font.bold: true
-        color: "#fff"
+        color: SETTING.isThemeLight ? "#000" : "#fff"
         text: qsTr("Words") + CTRL.translator
     }
 
@@ -48,7 +44,7 @@ Item {
         }
         font.pixelSize: 30
         font.bold: true
-        color: "#fff"
+        color: SETTING.isThemeLight ? "#000" : "#fff"
         text: qsTr("Means") + CTRL.translator
     }
 
@@ -61,7 +57,7 @@ Item {
         }
         font.pixelSize: 30
         font.bold: true
-        color: "#fff"
+        color: SETTING.isThemeLight ? "#000" : "#fff"
         text: qsTr("Notes") + CTRL.translator
     }
 
@@ -76,9 +72,9 @@ Item {
             topMargin: 80
             leftMargin: 50
         }
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         border.width: 1
-        color: "#eeeeee"
+        color: SETTING.isThemeLight ? "#eeeeee" : "#3b3b3b"
 
         ListView {
             id: list_key
@@ -103,9 +99,9 @@ Item {
             right: box.right
             rightMargin: 50
         }
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         border.width: 1
-        color: "#eeeeee"
+        color: SETTING.isThemeLight ? "#eeeeee" : "#3b3b3b"
 
         ListView {
             id: list_mean
@@ -159,9 +155,10 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            border.color: SETTING.borderColor
+            border.color: "#45818E"
             border.width: 1
-            color: "transparent"
+            color: "#000"
+            opacity: SETTING.isThemeLight ? 0 : 0.5
         }
     }
 

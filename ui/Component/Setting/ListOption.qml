@@ -19,8 +19,13 @@ Item {
             sourceItem: "qrc:/img/bg_icon.png"
         }
         ListElement {
-            titleItem: qsTr("Color")
-            stateItem: AppEnum.COLOR
+            titleItem: qsTr("Data")
+            stateItem: AppEnum.DATA
+            sourceItem: "qrc:/img/data.png"
+        }
+        ListElement {
+            titleItem: qsTr("Theme")
+            stateItem: AppEnum.THEME
             sourceItem: "qrc:/img/color.png"
         }
     }
@@ -68,6 +73,6 @@ Item {
         y: choose.height * root.state
         width: 8
         height: 80
-        color: SETTING.themeColor
+        color: "#45818E"
     }
 }

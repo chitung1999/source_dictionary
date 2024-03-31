@@ -15,6 +15,7 @@ public:
 
     static bool readFile(QString path, QJsonObject &data);
     static bool writeFileJson(QString path, QJsonObject &data);
+    static bool checkFileJson(QString &path);
     static bool checkFileImg(QString &path);
 };
 

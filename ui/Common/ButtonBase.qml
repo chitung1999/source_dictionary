@@ -10,7 +10,7 @@ Rectangle {
     signal clickButton()
 
     radius: root.height / 2
-    border.color: SETTING.borderColor
+    border.color: "#07762D"
     border.width: 2
     color: "transparent"
 

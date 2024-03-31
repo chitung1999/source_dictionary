@@ -79,5 +79,6 @@
         <file>img/right_arrow.png</file>
         <file>translate/vi_VN.qm</file>
         <file>ui/Component/Grammar/ResultSearch.qml</file>
+        <file>img/data.png</file>
     </qresource>
 </RCC>

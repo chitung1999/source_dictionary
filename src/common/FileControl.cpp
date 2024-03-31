@@ -34,6 +34,19 @@ bool FileControl::writeFileJson(QString path, QJsonObject &data)
     return true;
 }
 
+bool FileControl::checkFileJson(QString &path)
+{
+    QFile file(path);
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug() << "Cannot open file: " << path;
+        qDebug() << "Error: " << file.errorString();
+        return false;
+    }
+    file.close();
+    return true;
+}
+
 bool FileControl::checkFileImg(QString &path)
 {
     path.replace("file:///", "").replace('\\',"/");

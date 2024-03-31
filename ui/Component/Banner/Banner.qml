@@ -11,8 +11,7 @@ Item {
         id: banner_top
         width: parent.width
         height: 70
-        border.color: "#dddddd"
-        border.width: 2
+        color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b"
 
         Rectangle {
             id: choose
@@ -20,7 +19,7 @@ Item {
             width: parent.width / list_banner.count
             height: 5
             anchors.bottom: banner_top.bottom
-            color: SETTING.themeColor
+            color: "#45818E"
         }
 
         ListModel {
@@ -83,6 +82,7 @@ Item {
         height: 100
         anchors.bottom: parent.bottom
 
+
         Image {
             id: logo
             source: "qrc:/img/LOGO_MINI.PNG"
@@ -99,9 +99,11 @@ Item {
             id: box_logo
             anchors.fill: logo
             gradient: Gradient {
-                GradientStop { position: -0.5; color: "#000" }
-                GradientStop { position: 0.5; color: SETTING.themeColor }
-                GradientStop { position: 1.5; color: "#000" }
+//                GradientStop { position: -0.5; color: "#000" }
+//                GradientStop { position: 0.5; color: "#45818E" }
+//                GradientStop { position: 1.5; color: "#000" }
+                GradientStop { position: 0; color: "#45818E" }
+                GradientStop { position: 1; color: "#45818E" }
             }
             visible: false
         }
@@ -124,8 +126,8 @@ Item {
             font.pixelSize: 30
             font.bold: true
             style: Text.Raised
-            styleColor: "#000"
-            color: SETTING.themeColor
+            styleColor: "#FFF"
+            color: "#45818E"
         }
     }
 }

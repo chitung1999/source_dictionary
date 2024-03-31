@@ -11,7 +11,7 @@ Item {
         id: title
         width: parent.width
         height: root.heightTitle
-        color: SETTING.themeColor
+        color: "#45818E"
 
         Text {
             anchors.centerIn: parent
@@ -29,6 +29,6 @@ Item {
         anchors {
             top: title.bottom
         }
-        color: "#FFF"
+        color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b"
     }
 }

@@ -18,8 +18,8 @@ Item {
         font.pixelSize: 30
         font.bold: true
         style: Text.Raised
-        styleColor: "#000"
-        color: SETTING.themeColor
+        styleColor: "#FFF"
+        color: "#45818E"
     }
 
     Rectangle {
@@ -33,7 +33,8 @@ Item {
             left: parent.left
         }
         border.width: 3
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
+        color: "transparent"
         opacity: 0.9
 
         Rectangle {
@@ -45,6 +46,7 @@ Item {
                 bottom: box.bottom
                 bottomMargin: box.border.width
             }
+
             Text {
                 anchors.centerIn: parent
                 font.pixelSize: 20
@@ -71,14 +73,16 @@ Item {
             Rectangle {
                 radius: 5
                 anchors.fill: parent
-                border.color: "#cccccc"
-                color: index == list_word.currentIndex ? "#bcbcbc" : "transparent"
+                border.color: SETTING.isThemeLight ? "#cccccc" : "#343434"
+                color: index == list_word.currentIndex ? "#bcbcbc" : (SETTING.isThemeLight ? "#FFF" : "#3b3b3b")
+                opacity: 0.8
             }
 
             Text {
                 text: NOTEBOOK.keys[index]
                 font.pixelSize: 20
                 anchors.centerIn: parent
+                color: SETTING.isThemeLight ? "#000" : "#FFF"
             }
 
             MouseArea {

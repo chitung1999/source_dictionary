@@ -72,11 +72,15 @@ Item {
             leftMargin: 30
         }
         model: NOTEBOOK.searchKeys.length
-        delegate: Rectangle {
+        delegate: Item {
             width: 420
             height: 40
-            border.color: "#cccccc"
-            color: index == list_search.currentIndex ? "#bcbcbc" : "#f8f8f8"
+            Rectangle {
+                anchors.fill: parent
+                border.color: SETTING.isThemeLight ? "#cccccc" : "#343434"
+                color: index == list_search.currentIndex ? "#bcbcbc" : (SETTING.isThemeLight ? "#f8f8f8" : "#3b3b3b")
+                opacity: 0.8
+            }
 
             Text {
                 text: NOTEBOOK.searchKeys[index]
@@ -86,6 +90,7 @@ Item {
                     left: parent.left
                     leftMargin: 20
                 }
+                color: SETTING.isThemeLight ? "#000" : "#FFF"
             }
             MouseArea {
                 anchors.fill: parent

@@ -18,7 +18,8 @@ public:
     enum SETTING {
         LANGUAGE = 0,
         BACKGROUND,
-        COLOR
+        DATA,
+        THEME
     }Q_ENUMS(SETTING);
 
     enum LANGUAGE {

@@ -18,8 +18,9 @@ Item {
             verticalCenterOffset: -10
         }
         border.width: 2
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         opacity: 0.8
+        color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b"
     }
 
     Introduce {

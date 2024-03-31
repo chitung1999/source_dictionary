@@ -24,6 +24,7 @@ Item {
         source: box
         opacity: 0.8
         borderWidth: 1
+
     }
 
 

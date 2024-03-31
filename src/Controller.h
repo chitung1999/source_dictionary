@@ -45,8 +45,8 @@ public slots:
      //Setting
     void setLanguage(int lang);
     void setBackground(QString path);
-    void setThemeColor(QString color);
-    void setBorderColor(QString color);
+    void setPathData(QString path);
+    void setTheme(bool isLight);
 
     //Notebook
     void removeItemNote(int index);

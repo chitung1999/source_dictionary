@@ -18,7 +18,7 @@ Item {
             left: parent.left
             top: parent.top
         }
-        border.color: "#000"
+        border.color: SETTING.isThemeLight ? "#000" : "#FFF"
         border.width: root.borderWidth
         color: "transparent"
         Text {
@@ -26,6 +26,7 @@ Item {
             text: root.title
             font.pixelSize: 25
             font.bold: true
+            color: SETTING.isThemeLight ? "#000" : "#FFF"
         }
     }
 
@@ -38,7 +39,7 @@ Item {
             leftMargin: - border.width
             top: parent.top
         }
-        border.color: "#000"
+        border.color: SETTING.isThemeLight ? "#000" : "#FFF"
         border.width: root.borderWidth
         color: "transparent"
         Text {
@@ -52,6 +53,7 @@ Item {
             wrapMode: Text.Wrap
             text: root.content
             font.pixelSize: 25
+            color: SETTING.isThemeLight ? "#000" : "#FFF"
         }
     }
 }

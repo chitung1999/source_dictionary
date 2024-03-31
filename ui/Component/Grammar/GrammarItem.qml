@@ -22,7 +22,7 @@ Item {
         }
         height: form.height + structure.height + 15
         radius: 10
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         border.width: 2
         opacity: 0.8
         color: root.isSearch ? "#ede12a" : "#FFF"
@@ -39,6 +39,7 @@ Item {
         font.pixelSize: 30
         font.bold: true
         text: "❁  "
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
     }
     TextInput {
         id: form
@@ -52,6 +53,7 @@ Item {
         font.bold: true
         readOnly: !root.isModify
         text: root.formText
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
 
         Keys.onReturnPressed: {
             root.isModify = false
@@ -65,6 +67,7 @@ Item {
         font.bold: true
         anchors.fill: form
         opacity: 0.4
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
         visible: form.text == ""
     }
 
@@ -81,6 +84,7 @@ Item {
         font.pixelSize: 30
         readOnly: !root.isModify
         text: root.structureText
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
 
         Keys.onReturnPressed: {
             root.isModify = false
@@ -93,6 +97,7 @@ Item {
         font.pixelSize: 30
         anchors.fill: structure
         opacity: 0.4
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
         visible: structure.text == ""
     }
 

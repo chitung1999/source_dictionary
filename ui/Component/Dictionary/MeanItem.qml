@@ -19,7 +19,7 @@ Item {
             leftMargin: 20
         }
         color: "transparent"
-        border.color: "#000"
+        border.color: SETTING.isThemeLight ? "#000" : "#FFF"
         border.width: 2
     }
 
@@ -30,7 +30,7 @@ Item {
             top: box.top
             left: box.left
         }
-        border.color: "#000"
+        border.color: SETTING.isThemeLight ? "#000" : "#FFF"
         color: "transparent"
 
         Column {
@@ -43,6 +43,7 @@ Item {
                 anchors.leftMargin: 20
                 font.pixelSize: 30
                 font.bold: true
+                color: SETTING.isThemeLight ? "#000" : "#FFF"
                 text:  root.partSpeed
             }
 
@@ -55,6 +56,7 @@ Item {
                 wrapMode: Text.Wrap
                 width: 460
                 font.pixelSize: 20
+                color: SETTING.isThemeLight ? "#000" : "#FFF"
                 text: "❁ Synonyms: " + root.synonyms
             }
 
@@ -67,6 +69,7 @@ Item {
                 wrapMode: Text.Wrap
                 width: 460
                 font.pixelSize: 20
+                color: SETTING.isThemeLight ? "#000" : "#FFF"
                 text: "❁ Antonyms: " + root.antonyms
             }
         }
@@ -82,7 +85,7 @@ Item {
             model: root.definitions.length / 2
             Rectangle {
                 width: root.width - part.width
-                border.color: "#000"
+                border.color: SETTING.isThemeLight ? "#000" : "#FFF"
                 color: "transparent"
                 property int number: definition.height + example.height + 30
 
@@ -97,6 +100,7 @@ Item {
                     wrapMode: Text.Wrap
                     width: parent.width - 30
                     font.pixelSize: 16
+                    color: SETTING.isThemeLight ? "#000" : "#FFF"
                     text: "<b>❁ Mean: </b>" + root.definitions[index * 2]
                 }
 
@@ -110,6 +114,7 @@ Item {
                     wrapMode: Text.Wrap
                     width: parent.width - 30
                     font.pixelSize: 16
+                    color: SETTING.isThemeLight ? "#000" : "#FFF"
                     text: "<b>❁ Ex: </b>" + root.definitions[index * 2 + 1]
                 }
             }

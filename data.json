@@ -13,6 +13,9 @@
             "structure": "S _ khoe + gre?"
         }
     ],
+    "setting": {
+        "pathData": "C:\\Users\\TT\\Desktop\\NCT\\source_dictionary\\data.json"
+    },
     "words": [
         {
             "index": 0,

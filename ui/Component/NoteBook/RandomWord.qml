@@ -12,11 +12,11 @@ Item {
 
         gradient: Gradient {
                     GradientStop { position: -1; color: "transparent" }
-                    GradientStop { position: 0.5; color: "#fff" }
+                    GradientStop { position: 0.5; color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b" }
                     GradientStop { position: 2; color: "transparent" }
                 }
         border.width: 3
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
 
         Text {
             id: key
@@ -25,6 +25,7 @@ Item {
             anchors.centerIn: parent
             horizontalAlignment: Text.AlignHCenter
             elide: Text.ElideRight
+            color: SETTING.isThemeLight ? "#000" : "#FFF"
             text: NOTEBOOK.randomKey
             onTextChanged: {
                 key.opacity = 0

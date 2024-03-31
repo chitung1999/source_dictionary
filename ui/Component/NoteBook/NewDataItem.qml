@@ -20,6 +20,7 @@ Item {
         }
         border.color: "#000"
         border.width: 2
+        color: SETTING.isThemeLight ? "#FFF" : "#898989"
 
         TextInput {
             id: content

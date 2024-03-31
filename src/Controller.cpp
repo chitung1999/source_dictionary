@@ -18,23 +18,30 @@ Controller *Controller::getInstance()
 
 void Controller::initialize()
 {
-    if(!FileControl::readFile(PATH_DATA + QString("/data.json"), m_dataJson))
+    QJsonObject configData;
+    if(!FileControl::readFile(PATH_DATA + QString("/config.json"), configData))
         return;
-    m_grammar.initialize(m_dataJson["grammar"].toArray());
-    m_setting.initialize(m_dataJson["setting"].toObject());
-    m_noteBook.updateData(m_dataJson["words"].toArray());
-    m_noteBook.onChangedRandomKey();
+    m_setting.initialize(configData);
+    QString path = m_setting.background();
+    if(!FileControl::checkFileImg(path))
+            path = PATH_DATA + "/bg.jpg";
+    m_setting.setBackground(path);
+
+    path = m_setting.pathData();
+    if(!FileControl::checkFileJson(path))
+            path = PATH_DATA + QString("/data.json");
+    m_setting.setPathData(path);
 
     if(m_setting.language() == AppEnum::LANGUAGE::VIETNAMESE) {
         m_translator.load(":/translate/vi_VN.qm");
         qApp->installTranslator(&m_translator);
     }
 
-    QString path_bg = m_setting.background();
-    if(!FileControl::checkFileImg(path_bg))
-            path_bg = PATH_DATA + "/bg.jpg";
-
-    m_setting.setBackground(path_bg);
+    if(!FileControl::readFile(m_setting.pathData(), m_dataJson))
+        return;
+    m_grammar.initialize(m_dataJson["grammar"].toArray());
+    m_noteBook.updateData(m_dataJson["words"].toArray());
+    m_noteBook.onChangedRandomKey();
 }
 
 QString Controller::popupConfirm() const
@@ -85,24 +92,25 @@ Setting *Controller::setting()
 
 void Controller::setLanguage(int lang)
 {
-    QJsonObject obj = m_dataJson.value("setting").toObject();
+    QJsonObject configData;
+    if(!FileControl::readFile(PATH_DATA + QString("/config.json"), configData))
+        return;
+
     switch (lang) {
     case AppEnum::LANGUAGE::VIETNAMESE:
-        obj["language"] = "vn";
-        m_dataJson["setting"] = obj;
+        configData["language"] = "vn";
         m_translator.load(":/translate/vi_VN.qm");
         qApp->installTranslator(&m_translator);
         break;
     case AppEnum::LANGUAGE::ENGLISH:
-        obj["language"] = "eng";
-        m_dataJson["setting"] = obj;
+        configData["language"] = "eng";
         qApp->removeTranslator(&m_translator);
         break;
     default:
         break;
     }
 
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(PATH_DATA + QString("/config.json"), configData);
 
     emit translatorChanged();
     m_setting.setLanguage(lang);
@@ -116,46 +124,45 @@ void Controller::setBackground(QString path)
         return;
     }
 
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["background"] = path;
-    m_dataJson["setting"] = obj;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    QJsonObject configData;
+    if(!FileControl::readFile(PATH_DATA + QString("/config.json"), configData))
+        return;
+
+    configData["background"] = path;
+    FileControl::writeFileJson(PATH_DATA + QString("/config.json"), configData);
 
     m_setting.setBackground(path);
 }
 
-void Controller::setThemeColor(QString color)
+void Controller::setPathData(QString path)
 {
-    QColor check(color);
-    if (!check.isValid()) {
-        qDebug() << "Invalid color: " << color;
-        setPopupNotify((QString(tr("Invalid color: ")) + color));
+
+    if(!FileControl::checkFileJson(path)) {
+        qDebug() << "Cann't open file: " + path;
+        setPopupNotify((QString(tr("Cann't open file: ")) + path));
         return;
     }
 
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["themeColor"] = color;
-    m_dataJson["setting"] = obj;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    QJsonObject configData;
+    if(!FileControl::readFile(PATH_DATA + QString("/config.json"), configData))
+        return;
 
-    m_setting.setThemeColor(color);
+    configData["pathData"] = path;
+    FileControl::writeFileJson(PATH_DATA + QString("/config.json"), configData);
+
+    m_setting.setPathData(path);
 }
 
-void Controller::setBorderColor(QString color)
+void Controller::setTheme(bool isLight)
 {
-    QColor check(color);
-    if (!check.isValid()) {
-        qDebug() << "Invalid color: " << color;
-        setPopupNotify((QString(tr("Invalid color: ")) + color));
+    QJsonObject configData;
+    if(!FileControl::readFile(PATH_DATA + QString("/config.json"), configData))
         return;
-    }
 
-    QJsonObject obj = m_dataJson.value("setting").toObject();
-    obj["borderColor"] = color;
-    m_dataJson["setting"] = obj;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    configData["theme"] = isLight;
+    FileControl::writeFileJson(PATH_DATA + QString("/config.json"), configData);
 
-    m_setting.setBorderColor(color);
+    m_setting.setIsThemeLight(isLight);
 }
 
 void Controller::removeItemNote(int index)
@@ -168,7 +175,7 @@ void Controller::removeItemNote(int index)
         arr.replace(i,obj);
     }
     m_dataJson["words"] = arr;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(m_setting.pathData(), m_dataJson);
     m_noteBook.updateData(arr);
     m_noteBook.notes()->removeAt(index);
 }
@@ -208,7 +215,7 @@ void Controller::changeItemNote(QStringList keys, QStringList means, QString not
     }
 
     m_dataJson["words"] = arr;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(m_setting.pathData(), m_dataJson);
     m_noteBook.updateData(arr);
     m_noteBook.updateCurrentData();
 }
@@ -224,7 +231,7 @@ void Controller::removeItemGrammar(int index)
     arr.removeAt(index);
 
     m_dataJson["grammar"] = arr;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(m_setting.pathData(), m_dataJson);
 
     m_grammar.removeAt(index);
 }
@@ -249,7 +256,7 @@ void Controller::changedItemGrammar(int index, QString form, QString structure)
     }
 
     m_dataJson["grammar"] = arr;
-    FileControl::writeFileJson(PATH_DATA + QString("/data.json"), m_dataJson);
+    FileControl::writeFileJson(m_setting.pathData(), m_dataJson);
 
     m_grammar.modify(index, GrammarItem(form, structure));
 }

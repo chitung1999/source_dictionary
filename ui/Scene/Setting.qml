@@ -12,7 +12,7 @@ Item {
         width: 1200
         height: 600
         anchors.centerIn: parent
-        color: "#fff"
+        color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b"
         Rectangle {
             width: 300
             height: 600

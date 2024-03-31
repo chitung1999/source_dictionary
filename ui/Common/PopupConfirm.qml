@@ -20,7 +20,7 @@ Item {
         height: msg.height + cancel_button.height + 180
         radius: 30
         anchors.centerIn: parent
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         border.width: 2
         color: "#eeeeee"
     }

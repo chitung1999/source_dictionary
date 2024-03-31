@@ -14,9 +14,9 @@ Item {
         id: box
         anchors.fill: parent
         radius: parent.height
-        color: "#FFF"
-        border.color: SETTING.borderColor
+        border.color: "#45818E"
         opacity: 0.8
+        color: SETTING.isThemeLight ? "#FFF" : "#3b3b3b"
     }
 
     Image {
@@ -46,5 +46,6 @@ Item {
         clip: true
         focus: root.textFocus
         verticalAlignment: Text.AlignVCenter
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
     }
 }

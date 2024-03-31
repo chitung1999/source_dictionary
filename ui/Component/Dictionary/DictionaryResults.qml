@@ -68,6 +68,7 @@ Item {
             topMargin: 70
         }
         font.pixelSize: 25
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
         text: DICTIONARY.key
     }
     Text {
@@ -77,6 +78,7 @@ Item {
             verticalCenter: key_word.verticalCenter
         }
         font.pixelSize: 25
+        color: SETTING.isThemeLight ? "#000" : "#FFF"
         text: DICTIONARY.phonetic
     }
     ButtonImage {
