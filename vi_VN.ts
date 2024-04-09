@@ -4,27 +4,27 @@
 <context>
     <name>Banner</name>
     <message>
-        <location filename="ui/Component/Banner/Banner.qml" line="33"/>
+        <location filename="ui/Component/Banner/Banner.qml" line="32"/>
         <source>Words</source>
         <translation>Từ</translation>
     </message>
     <message>
-        <location filename="ui/Component/Banner/Banner.qml" line="40"/>
+        <location filename="ui/Component/Banner/Banner.qml" line="39"/>
         <source>Grammar</source>
         <translation>Ngữ pháp</translation>
     </message>
     <message>
-        <location filename="ui/Component/Banner/Banner.qml" line="47"/>
+        <location filename="ui/Component/Banner/Banner.qml" line="46"/>
         <source>Dictionary</source>
         <translation>Từ điển</translation>
     </message>
     <message>
-        <location filename="ui/Component/Banner/Banner.qml" line="54"/>
+        <location filename="ui/Component/Banner/Banner.qml" line="53"/>
         <source>Game</source>
         <translation>Trò chơi</translation>
     </message>
     <message>
-        <location filename="ui/Component/Banner/Banner.qml" line="61"/>
+        <location filename="ui/Component/Banner/Banner.qml" line="60"/>
         <source>Setting</source>
         <translation>Cài đặt</translation>
     </message>
@@ -32,14 +32,12 @@
 <context>
     <name>Content</name>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="30"/>
         <source>English</source>
-        <translation>Tiếng Anh</translation>
+        <translation type="vanished">Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="53"/>
         <source>Vietnamese</source>
-        <translation>Tiếng Việt</translation>
+        <translation type="vanished">Tiếng Việt</translation>
     </message>
     <message>
         <source>User name</source>
@@ -54,48 +52,60 @@
         <translation type="vanished">Cổng</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="100"/>
+        <location filename="ui/Component/Setting/Content.qml" line="64"/>
+        <location filename="ui/Component/Setting/Content.qml" line="75"/>
         <source>Path</source>
         <translation>Đường dẫn</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="111"/>
-        <source>Theme Color</source>
-        <translation>Màu nền</translation>
+        <location filename="ui/Component/Setting/Content.qml" line="83"/>
+        <source>Light</source>
+        <translation>Sáng</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/Content.qml" line="117"/>
+        <location filename="ui/Component/Setting/Content.qml" line="84"/>
+        <source>Dark</source>
+        <translation>Tối</translation>
+    </message>
+    <message>
+        <source>Theme Color</source>
+        <translation type="vanished">Màu nền</translation>
+    </message>
+    <message>
         <source>Border Color</source>
-        <translation>Màu viền</translation>
+        <translation type="vanished">Màu viền</translation>
     </message>
 </context>
 <context>
     <name>Controller</name>
     <message>
-        <location filename="src/Controller.cpp" line="115"/>
+        <location filename="src/Controller.cpp" line="123"/>
+        <location filename="src/Controller.cpp" line="142"/>
         <source>Cann&apos;t open file: </source>
         <translation>Không thể mở file: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="132"/>
-        <location filename="src/Controller.cpp" line="149"/>
         <source>Invalid color: </source>
-        <translation>Định dạng màu không tồn tại: </translation>
+        <translation type="vanished">Định dạng màu không tồn tại: </translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="198"/>
+        <location filename="src/Controller.cpp" line="205"/>
         <source>The keys or means are empty!</source>
         <translation>Từ Tiếng anh hoặc Tiếng Việt trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="236"/>
+        <location filename="src/Controller.cpp" line="248"/>
         <source>The form or structure is empty!</source>
         <translation>Kiểu câu hoặc Cấu trúc trống!</translation>
     </message>
     <message>
-        <location filename="src/Controller.cpp" line="278"/>
+        <location filename="src/Controller.cpp" line="295"/>
+        <source>Delete this item?</source>
+        <translation>Đồng ý xoá item này?</translation>
+    </message>
+    <message>
         <source>Are you sure you want to delete this item?</source>
-        <translation>Bạn chắc chắn muốn xoá ghi chú này?</translation>
+        <translation type="vanished">Bạn chắc chắn muốn xoá ghi chú này?</translation>
     </message>
 </context>
 <context>
@@ -126,12 +136,12 @@
         <translation type="vanished">Cấu trúc: </translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="63"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="65"/>
         <source>Form</source>
         <translation>Kiểu câu</translation>
     </message>
     <message>
-        <location filename="ui/Component/Grammar/GrammarItem.qml" line="92"/>
+        <location filename="ui/Component/Grammar/GrammarItem.qml" line="96"/>
         <source>Structure</source>
         <translation>Cấu trúc</translation>
     </message>
@@ -152,14 +162,23 @@
         <translation>Ngôn ngữ</translation>
     </message>
     <message>
+        <location filename="ui/Component/Setting/ListOption.qml" line="22"/>
+        <source>Data</source>
+        <translation>Dữ liệu</translation>
+    </message>
+    <message>
+        <location filename="ui/Component/Setting/ListOption.qml" line="27"/>
+        <source>Theme</source>
+        <translation>Giao diện</translation>
+    </message>
+    <message>
         <source>User Name</source>
         <translation type="vanished">Người dùng</translation>
     </message>
     <message>
-        <location filename="ui/Component/Setting/ListOption.qml" line="22"/>
         <source>Color</source>
         <oldsource>Connect</oldsource>
-        <translation>Màu sắc</translation>
+        <translation type="vanished">Màu sắc</translation>
     </message>
     <message>
         <location filename="ui/Component/Setting/ListOption.qml" line="17"/>
@@ -175,7 +194,7 @@
         <translation>Danh Sách Từ Mới</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteBook/ListWord.qml" line="52"/>
+        <location filename="ui/Component/NoteBook/ListWord.qml" line="54"/>
         <source>Count: </source>
         <translation>Tổng số: </translation>
     </message>
@@ -187,27 +206,27 @@
 <context>
     <name>NewData</name>
     <message>
-        <location filename="ui/Component/NoteBook/NewData.qml" line="40"/>
+        <location filename="ui/Component/NoteBook/NewData.qml" line="36"/>
         <source>Words</source>
         <translation>Từ Tiếng Anh</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteBook/NewData.qml" line="52"/>
+        <location filename="ui/Component/NoteBook/NewData.qml" line="48"/>
         <source>Means</source>
         <translation>Từ Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteBook/NewData.qml" line="65"/>
+        <location filename="ui/Component/NoteBook/NewData.qml" line="61"/>
         <source>Notes</source>
         <translation>Ghi chú</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteBook/NewData.qml" line="179"/>
+        <location filename="ui/Component/NoteBook/NewData.qml" line="176"/>
         <source>Cancel</source>
         <translation>Huỷ</translation>
     </message>
     <message>
-        <location filename="ui/Component/NoteBook/NewData.qml" line="193"/>
+        <location filename="ui/Component/NoteBook/NewData.qml" line="190"/>
         <source>OK</source>
         <translation>Đồng ý</translation>
     </message>

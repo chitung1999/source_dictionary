@@ -220,6 +220,11 @@ void Controller::changeItemNote(QStringList keys, QStringList means, QString not
     m_noteBook.updateCurrentData();
 }
 
+void Controller::setPosNote(double position)
+{
+    m_noteBook.setPosScroll(position);
+}
+
 void Controller::appendItemGrammar()
 {
     m_grammar.requestAppend();
@@ -259,6 +264,11 @@ void Controller::changedItemGrammar(int index, QString form, QString structure)
     FileControl::writeFileJson(m_setting.pathData(), m_dataJson);
 
     m_grammar.modify(index, GrammarItem(form, structure));
+}
+
+void Controller::setPosGrammar(double position)
+{
+    m_grammar.setPosScroll(position);
 }
 
 void Controller::removeItem(int item, int index)

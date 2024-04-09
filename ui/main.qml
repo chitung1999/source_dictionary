@@ -50,4 +50,11 @@ Window {
             anchors.fill: parent
         }
     }
+
+    onWindowStateChanged: {
+        if (windowState === Qt.WindowNoState && root.width < 960) {
+            root.width = 960
+            root.height = 500
+        }
+    }
 }

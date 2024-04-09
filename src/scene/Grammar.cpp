@@ -2,7 +2,7 @@
 
 Grammar::Grammar(QObject *parent) : QAbstractListModel(parent)
 {
-    m_currentIndex = 0;
+    m_posScroll = 0.0;
 }
 
 void Grammar::initialize(const QJsonArray &data)
@@ -56,17 +56,17 @@ void Grammar::setResult(const int newResult)
     emit resultChanged();
 }
 
-const int &Grammar::currentIndex() const
+const double &Grammar::posScroll() const
 {
-    return m_currentIndex;
+    return m_posScroll;
 }
 
-void Grammar::setCurrentIndex(const int newCurrentIndex)
+void Grammar::setPosScroll(const double newPosScroll)
 {
-    if (m_currentIndex == newCurrentIndex)
+    if (m_posScroll == newPosScroll)
         return;
-    m_currentIndex = newCurrentIndex;
-    emit currentIndexChanged();
+    m_posScroll = newPosScroll;
+    emit posScrollChanged();
 }
 
 void Grammar::requestAppend() {

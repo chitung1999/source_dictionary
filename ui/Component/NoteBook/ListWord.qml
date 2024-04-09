@@ -110,6 +110,8 @@ Item {
                 radius: 5
                 color: "gray"
             }
+            onPositionChanged: CTRL.setPosNote(position)
+            Component.onCompleted: position = NOTEBOOK.posScroll
         }
     }
 

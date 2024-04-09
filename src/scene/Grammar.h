@@ -21,7 +21,7 @@ class Grammar : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(int result       READ result         WRITE setResult         NOTIFY resultChanged)
-    Q_PROPERTY(int currentIndex READ currentIndex   WRITE setCurrentIndex   NOTIFY currentIndexChanged)
+    Q_PROPERTY(double posScroll READ posScroll      WRITE setPosScroll    NOTIFY posScrollChanged)
 public:
     explicit Grammar(QObject *parent = nullptr);
 
@@ -37,8 +37,9 @@ public:
 
     const int &result() const;
     void setResult(const int newResult);
-    const int &currentIndex() const;
-    void setCurrentIndex(const int newCurrentIndex);
+
+    const double &posScroll() const;
+    void setPosScroll(const double newPosScroll);
 
     void requestAppend();
     void removeAt(int index);
@@ -47,7 +48,7 @@ public:
 
 signals:
     void resultChanged();
-    void currentIndexChanged();
+    void posScrollChanged();
 
 public slots:
     QList<int> search(QString str);
@@ -56,7 +57,7 @@ protected:
     QHash<int, QByteArray> roleNames() const override;
 private:
     QList<GrammarItem> m_listGrammar;
-    int m_currentIndex;
+    double m_posScroll;
     int m_result;
 };
 

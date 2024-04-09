@@ -4,6 +4,7 @@ NoteBook::NoteBook(QObject *parent) : QObject(parent)
 {
     connect(&m_timer, &QTimer::timeout, this, &NoteBook::onChangedRandomKey);
     m_timer.start(10000);
+    m_posScroll = 0.0;
 }
 
 const QStringList &NoteBook::keys() const
@@ -73,6 +74,19 @@ void NoteBook::setRandomKey(const QString &newRandomKey)
         return;
     m_randomKey = newRandomKey;
     emit randomKeyChanged();
+}
+
+const double &NoteBook::posScroll() const
+{
+    return m_posScroll;
+}
+
+void NoteBook::setPosScroll(const double newPosScroll)
+{
+    if (m_posScroll == newPosScroll)
+        return;
+    m_posScroll = newPosScroll;
+    emit posScrollChanged();
 }
 
 void NoteBook::search(QString key, bool isENG)

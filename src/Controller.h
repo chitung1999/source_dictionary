@@ -51,11 +51,13 @@ public slots:
     //Notebook
     void removeItemNote(int index);
     void changeItemNote(QStringList keys, QStringList means, QString notes);
+    void setPosNote(double position);
 
     //Grammar
     void appendItemGrammar();
     void removeItemGrammar(int index);
     void changedItemGrammar(int index, QString form, QString structure);
+    void setPosGrammar(double position);
 
     void removeItem(int item, int index);
 

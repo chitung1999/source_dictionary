@@ -29,20 +29,15 @@ Item {
         height: 740
         clip: true
         anchors.centerIn: box
-        currentIndex: GRAMMAR.currentIndex
         model: GRAMMAR
         delegate: GrammarItem {
             index: model.index
             formText: model.form
             structureText: model.structure
-
-            MouseArea {
-                anchors.fill: parent
-                //onClicked: GRAMMAR.se
-            }
         }
 
         ScrollBar.vertical: ScrollBar {
+            id: scroll
             background: Rectangle {
                 implicitWidth: 10
                 color: "transparent"
@@ -52,6 +47,8 @@ Item {
                 radius: 5
                 color: "gray"
             }
+            onPositionChanged: CTRL.setPosGrammar(position)
+            Component.onCompleted: position = GRAMMAR.posScroll
         }
 
         function reset() {
@@ -71,7 +68,10 @@ Item {
         }
 
         source: "qrc:/img/add.png"
-        onClickButton: CTRL.appendItemGrammar()
+        onClickButton: {
+            CTRL.appendItemGrammar()
+            scroll.position = 1
+        }
     }
 
     SearchBar {
