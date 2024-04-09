@@ -11,6 +11,7 @@ void Grammar::initialize(const QJsonArray &data)
         return;
 
     beginResetModel();
+    m_listGrammar.clear();
     foreach (QJsonValue value, data) {
         GrammarItem item;
         item.form = value.toObject()["form"].toString();

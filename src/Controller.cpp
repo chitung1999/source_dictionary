@@ -150,7 +150,8 @@ void Controller::setPathData(QString path)
     configData["pathData"] = path;
     FileControl::writeFileJson(PATH_DATA + QString("/config.json"), configData);
 
-    m_setting.setPathData(path);
+    //m_setting.setPathData(path);
+    initialize();
 }
 
 void Controller::setTheme(bool isLight)

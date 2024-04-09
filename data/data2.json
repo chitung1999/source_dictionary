@@ -1,0 +1,50 @@
+{
+    "grammar": [
+        {
+            "form": "fdfdfd",
+            "structure": "fdfdfdfd"
+        },
+        {
+            "form": "S + Vdfdd",
+            "structure": "S + A"
+        },
+        {
+            "form": "f",
+            "structure": "f"
+        },
+        {
+            "form": "f",
+            "structure": "f"
+        },
+        {
+            "form": "a",
+            "structure": "a"
+        }
+    ],
+    "words": [
+        {
+            "index": 0,
+            "means": [
+                "về",
+                "hihi"
+            ],
+            "notes": "haha",
+            "words": [
+                "about",
+                "regarding",
+                "concerning",
+                "pertaining to"
+            ]
+        },
+        {
+            "index": 1,
+            "means": [
+                "tuyệt đối"
+            ],
+            "notes": "",
+            "words": [
+                "absolute"
+            ]
+        }    
+]
+}
