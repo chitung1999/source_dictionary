@@ -282,7 +282,7 @@ void Controller::receiveNtf(QString ntf)
 
 void Controller::receiveConf(int item, int index)
 {
-    m_popupConfirm = tr("Are you sure you want to delete this item?");
+    m_popupConfirm = tr("Delete this item?");
     emit popupConfirmChanged(item, index);
 }
 

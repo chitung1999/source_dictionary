@@ -8,15 +8,13 @@ Window {
     id: root
     visible: true
     visibility:  Window.Maximized
-    minimumWidth: 960
-    minimumHeight: 500
     title: "Dictionary"
 
     Item {
         width: 1920
         height: 1001
         anchors.centerIn: parent
-        scale: parent.width / 1920
+        scale: (parent.width / 1920) > (parent.height / 1001) ? (parent.height / 1001) : (parent.width / 1920)
 
         Image {
             id: bg

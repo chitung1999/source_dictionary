@@ -16,7 +16,7 @@ Item {
 
     Rectangle {
         id: box
-        width: msg.width + 120
+        width: (msg.width + 120) > 600 ? (msg.width + 120) : 600
         height: msg.height + cancel_button.height + 180
         radius: 30
         anchors.centerIn: parent

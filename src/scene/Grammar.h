@@ -20,7 +20,8 @@ struct GrammarItem {
 class Grammar : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(int result READ result WRITE setResult NOTIFY resultChanged)
+    Q_PROPERTY(int result       READ result         WRITE setResult         NOTIFY resultChanged)
+    Q_PROPERTY(int currentIndex READ currentIndex   WRITE setCurrentIndex   NOTIFY currentIndexChanged)
 public:
     explicit Grammar(QObject *parent = nullptr);
 
@@ -36,6 +37,8 @@ public:
 
     const int &result() const;
     void setResult(const int newResult);
+    const int &currentIndex() const;
+    void setCurrentIndex(const int newCurrentIndex);
 
     void requestAppend();
     void removeAt(int index);
@@ -44,6 +47,7 @@ public:
 
 signals:
     void resultChanged();
+    void currentIndexChanged();
 
 public slots:
     QList<int> search(QString str);
@@ -52,6 +56,7 @@ protected:
     QHash<int, QByteArray> roleNames() const override;
 private:
     QList<GrammarItem> m_listGrammar;
+    int m_currentIndex;
     int m_result;
 };
 

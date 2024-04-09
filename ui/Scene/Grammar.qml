@@ -29,11 +29,17 @@ Item {
         height: 740
         clip: true
         anchors.centerIn: box
+        currentIndex: GRAMMAR.currentIndex
         model: GRAMMAR
         delegate: GrammarItem {
             index: model.index
             formText: model.form
             structureText: model.structure
+
+            MouseArea {
+                anchors.fill: parent
+                //onClicked: GRAMMAR.se
+            }
         }
 
         ScrollBar.vertical: ScrollBar {

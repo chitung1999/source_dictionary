@@ -31,7 +31,7 @@ Item {
         visible: false
     }
 
-    Text {
+    TextEdit {
         id: question
         width: 900
         height: 300
@@ -50,6 +50,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap
+        readOnly: true
     }
 
     Rectangle {

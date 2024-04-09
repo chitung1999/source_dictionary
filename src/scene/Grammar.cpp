@@ -2,6 +2,7 @@
 
 Grammar::Grammar(QObject *parent) : QAbstractListModel(parent)
 {
+    m_currentIndex = 0;
 }
 
 void Grammar::initialize(const QJsonArray &data)
@@ -53,6 +54,19 @@ void Grammar::setResult(const int newResult)
         return;
     m_result = newResult;
     emit resultChanged();
+}
+
+const int &Grammar::currentIndex() const
+{
+    return m_currentIndex;
+}
+
+void Grammar::setCurrentIndex(const int newCurrentIndex)
+{
+    if (m_currentIndex == newCurrentIndex)
+        return;
+    m_currentIndex = newCurrentIndex;
+    emit currentIndexChanged();
 }
 
 void Grammar::requestAppend() {
